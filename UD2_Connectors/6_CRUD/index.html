@@ -1,0 +1,2284 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../5_Metadata/">
+      
+      
+        <link rel="next" href="../7_Row_to_Object/">
+      
+      
+      <link rel="icon" href="../../assets/jaume.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+    
+    
+      
+        <title>Operacions CRUD - Accés a Dades</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-statements-and-crud-operations" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="../.." title="Accés a Dades" class="md-header__button md-logo" aria-label="Accés a Dades" data-md-component="logo">
+      
+  <img src="../../assets/jaume.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Accés a Dades
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Operacions CRUD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Selecciona la llengua">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../en/UD2_Connectors/6_CRUD/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ca" class="md-select__link">
+              Valencià
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Accés a Dades" class="md-nav__button md-logo" aria-label="Accés a Dades" data-md-component="logo">
+      
+  <img src="../../assets/jaume.png" alt="logo">
+
+    </a>
+    Accés a Dades
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unitat 1. Fitxers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Unitat 1. Fitxers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1_Files/1_File_System/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sistema de Fitxers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1_Files/2_Reading_and_writing_files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llegint i Escrivint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1_Files/3_XML_Files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Treball amb Arxius XML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1_Files/4_JSON_Files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Treball amb Arxius JSON
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1_Files/5_Extra_Formats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Altres formats de Fitxers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unitat 2. Connectors
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Unitat 2. Connectors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1_Object_relational_impedance_mismatch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desfase objecte-relacional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_Connectors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connectors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_Connecting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connectant-se a la base de dades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_Resultset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resultats de les consultes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_Metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Operacions CRUD
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Operacions CRUD
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-create-insert" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Create (Insert)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-read-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Read (Select)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. Read (Select)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-sentencies-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.1. Sentències fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-sentencies-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.2. Sentències variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-sentencies-preparades" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.3. Sentències preparades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-actualitzacio-update-i-esborrat-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Actualització (Update) i Esborrat (Delete)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. Actualització (Update) i Esborrat (Delete)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-exemple-desborrat" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.1. Exemple d'esborrat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-exemple-dactualitzacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2. Exemple d'Actualització
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Scripts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-transaccions" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5. Transaccions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-resultsets-actualitzables" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6. ResultSets actualitzables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6. ResultSets actualitzables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-moviment-del-resultset" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.1. Moviment del ResultSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-eliminacio-de-files-en-un-resultset" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.2. Eliminació de files en un ResultSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163-actualitzacio-de-files-en-un-resultset" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.3. Actualització de files en un ResultSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#164-insercio-de-files-en-un-resultset" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.4. Inserció de files en un ResultSet
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7_Row_to_Object/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    De les files als objectes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unitat 3. Hibernate
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Unitat 3. Hibernate
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3_Hibernate/1_Mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapeig d'objectes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3_Hibernate/2_Hibernate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccio a Hibernate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3_Hibernate/3_Entities_Beans/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entitats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3_Hibernate/4_Relationships/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Relacions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3_Hibernate/5_HQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consultes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unitat 4. Bases de Dades OO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Unitat 4. Bases de Dades OO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD4_BDOO/1_Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccio a les bases de dades OO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD4_BDOO/2_ORDB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bases de dades Objecte-Relacionals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD4_BDOO/3_OODB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bases de dades Orientades a Objectes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unitat 5. Spring
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Unitat 5. Spring
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD5_Spring/1_Data_Access_Services/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Serveis d'Acces a Dades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD5_Spring/2_Spring_SpringBoot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducció a Spring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD5_Spring/3_API_Rest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació de APIs REST
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD5_Spring/4_Spring_Security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Seguretat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD5_Spring/5_Spring_Hateoas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring Haetoas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD5_Spring/6_Postman_Swagger/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test. Postman i Swagger
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unitat 6. MongoDB
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Unitat 6. MongoDB
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD6_MongoDB/1_NoSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bases de Dades NoSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD6_MongoDB/2_MongoDB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducció a MongoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD6_MongoDB/3_ShellOperations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operacions amb Shell
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD6_MongoDB/4_Queries/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consultes CRUD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD6_MongoDB/5_Mongo_Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mongo i Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD6_MongoDB/6_Spring_MongoDB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring Data MongoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pràctiques
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practiques/APAC1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practiques/APAC2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practiques/APAC3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sobre mi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llicència
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-create-insert" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Create (Insert)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-read-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Read (Select)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. Read (Select)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-sentencies-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.1. Sentències fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-sentencies-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.2. Sentències variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-sentencies-preparades" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.3. Sentències preparades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-actualitzacio-update-i-esborrat-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Actualització (Update) i Esborrat (Delete)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. Actualització (Update) i Esborrat (Delete)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-exemple-desborrat" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.1. Exemple d'esborrat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-exemple-dactualitzacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2. Exemple d'Actualització
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Scripts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-transaccions" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5. Transaccions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-resultsets-actualitzables" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6. ResultSets actualitzables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6. ResultSets actualitzables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-moviment-del-resultset" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.1. Moviment del ResultSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-eliminacio-de-files-en-un-resultset" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.2. Eliminació de files en un ResultSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163-actualitzacio-de-files-en-un-resultset" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.3. Actualització de files en un ResultSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#164-insercio-de-files-en-un-resultset" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.4. Inserció de files en un ResultSet
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="1-statements-and-crud-operations">1. Statements and CRUD operations</h1>
+<p>En aquesta secció estudiarem l'objectiu principal de treballar amb bases de dades: manipular dades. Sempre treballarem amb la mateixa plantilla:</p>
+<ol>
+<li>Connectar a la base de dades.</li>
+<li>Preparar la consulta.</li>
+<li>Executar la consulta.</li>
+<li>Processament de les dades, si és necessari.</li>
+</ol>
+<p>El punt 1 s'ha estudiat a les seccions anteriors.</p>
+<p>Per crear les consultes, haurem d'utilitzar les següents classes/interfaces:</p>
+<ul>
+<li><code>Statement</code> <span class="arithmatex">\(\rightarrow\)</span> Es fa servir de manera general i és útil quan volem realitzar <strong>sentències SQL estàtiques</strong>, ja que no accepta paràmetres. Creem un <code>Statement</code> amb el mètode <code>createStatement()</code> de la classe <code>Connection</code>.</li>
+<li><code>PreparedStatement</code> <span class="arithmatex">\(\rightarrow\)</span> Es fa servir quan volem llançar diverses consultes i, a més, es permet realitzar <strong>sentències dinàmiques</strong>. Creem un <code>PreparedStatement</code> amb el mètode <code>prepareStatement()</code> de la classe <code>Connection</code>.</li>
+<li><code>CallableStatement</code> <span class="arithmatex">\(\rightarrow\)</span> Es fa servir per accedir a procediments emmagatzemats a la base de dades i també accepta paràmetres d'entrada. Creem un <code>CallableStatement</code> amb el mètode <code>prepareCall()</code> de la classe <code>Connection</code>.</li>
+</ul>
+<p>Quan la sentència està preparada, la podem executar amb:</p>
+<ul>
+<li><code>executeQuery</code> <span class="arithmatex">\(\rightarrow\)</span> Executa sentències que <strong>esperem que retornin dades</strong> (consultes SELECT). El valor de retorn d'aquesta execució és, com ja suposareu, un ResultSet.</li>
+<li><code>executeUpdate</code> <span class="arithmatex">\(\rightarrow\)</span> Executa sentències que <strong>no s'espera que retornin dades</strong>, però que s'utilitzaran per modificar la base de dades connectada (consultes INSERT, DELETE, UPDATE i CREATE TABLE).</li>
+</ul>
+<h2 id="11-create-insert">1.1. Create (Insert)</h2>
+<p>Anem a veure un exemple senzill de declaració <code>INSERT</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">ConnexioDB</span><span class="w"> </span><span class="n">conDB</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">ConnexioDB</span><span class="p">(</span><span class="s">&quot;BDJocs&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">Connection</span><span class="w"> </span><span class="n">con</span><span class="o">=</span><span class="n">conDB</span><span class="p">.</span><span class="na">getConnexio</span><span class="p">();</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">String</span><span class="w"> </span><span class="n">SQL</span><span class="o">=</span><span class="s">&quot;INSERT INTO Joc VALUES (1, &#39;Double Dragon&#39;, &#39;Dos germans bessons experts en arts marcials s`han de fer camí en un escenari urbà on  membres de bandes rivals volen deixar-los fora de combat.&#39;, 1);&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">Statement</span><span class="w"> </span><span class="n">st</span><span class="o">=</span><span class="n">con</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="kt">int</span><span class="w"> </span><span class="n">affectedRows</span><span class="o">=</span><span class="n">st</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">(</span><span class="n">SQL</span><span class="p">);</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">affectedRows</span><span class="o">+</span><span class="w"> </span><span class="s">&quot;row has been inserted&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p>Com podeu veure, és molt fàcil d'entendre el codi. Creem una declaració buida i després executem l'SQL "per se". L'execució retorna el nombre de files inserides. Veurem millors maneres d'inserir dades, utilitzant scripts.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Aquest codi és una versió reduïda, ja que quan treballem amb bases de dades poden aparèixer <code>SQLException</code>. Suposem que el procés de connexió ja s'ha realitzat.</p>
+</div>
+<h2 id="12-read-select">1.2. Read (Select)</h2>
+<p>La lectura és el procés més important que farem, ja que només amb el procés d'inici de sessió dins d'una aplicació estem recuperant informació d'una base de dades. En tots els casos, hem d'escriure la sentència (SQL), executar-la i finalment processar les dades retornades. Depenent de com preparem la sentència, podem distingir entre:</p>
+<ol>
+<li>Sentències fixes</li>
+<li>Sentències variables</li>
+<li>Sentències preparades</li>
+</ol>
+<p>Veurem amb detall ambdues maneres. Utilitzarem per això l'script <code>Instituto.sql</code> i la base de dades.</p>
+<h3 id="121-sentencies-fixes">1.2.1. Sentències fixes</h3>
+<p>Aquestes sentències, com el seu nom indica, són sentències fixes o constants. L'SQL és fixa i no té cap variable.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// The query</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">String</span><span class="w"> </span><span class="n">SQL</span><span class="o">=</span><span class="s">&quot;Select * from Persona&quot;</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="c1">// The statement</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">Statement</span><span class="w"> </span><span class="n">st</span><span class="o">=</span><span class="n">con</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="c1">// The execution</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">ResultSet</span><span class="w"> </span><span class="n">rst</span><span class="o">=</span><span class="n">st</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="n">SQL</span><span class="p">);</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="c1">// processing</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="k">while</span><span class="p">(</span><span class="n">rst</span><span class="p">.</span><span class="na">next</span><span class="p">()){</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">ConsoleColors</span><span class="p">.</span><span class="na">BLUE_BRIGHT</span><span class="o">+</span><span class="w"> </span><span class="s">&quot;Person: &quot;</span><span class="o">+</span><span class="w"> </span><span class="n">ConsoleColors</span><span class="p">.</span><span class="na">RESET</span><span class="p">);</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="cm">/*</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="cm">    System.out.println(</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="cm">            rst.getString(3)+ &quot;, &quot;+</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="cm">            rst.getString(2)+ &quot; &quot;+</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="cm">            rst.getInt(4));</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="cm">    */</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">            </span><span class="n">rst</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;apellidos&quot;</span><span class="p">)</span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="o">+</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">            </span><span class="n">rst</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;nombre&quot;</span><span class="p">)</span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="o">+</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">            </span><span class="n">rst</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;edad&quot;</span><span class="p">));</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="p">}</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="n">rst</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<p>En el processament de la informació, ResultSet té:</p>
+<ul>
+<li><code>type getType(int columnIndex)</code> <span class="arithmatex">\(\rightarrow\)</span> mètode sobrecarregat que retorna el tipus de dades donat, utilitzant l'índex de columna del ResultSet. Recorda que la primera columna és 1 en comptes de 0. El tipus pot ser Int, String, Double, etc. si coneixes el tipus. Per a columnes desconegudes, pots utilitzar <code>Object</code> com a tipus genèric.</li>
+<li><code>type getType(String columnName)</code> $\rightarrow` mateix que el mètode anterior, però accedint a la columna amb el nom que hem seleccionat a la consulta o el nom a la taula.</li>
+</ul>
+<h3 id="122-sentencies-variables">1.2.2. Sentències variables</h3>
+<p>Imagina que vols recuperar noms que continguen la cadena <code>Ma</code> dins seu.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">String</span><span class="w"> </span><span class="k">SQL</span><span class="o">=</span><span class="ss">&quot;Select * from Persona where nombre like &#39;%Ma%&#39;&quot;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>En aquest cas, aquesta consulta està codificada directament, i si vols canviar la part del text, has de modificar el teu codi. Per evitar la codificació directa, podem escriure:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">ConnexioDB</span><span class="w"> </span><span class="n">conDB</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">ConnexioDB</span><span class="p">(</span><span class="s">&quot;Instituto&quot;</span><span class="p">);</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">Connection</span><span class="w"> </span><span class="n">con</span><span class="o">=</span><span class="n">conDB</span><span class="p">.</span><span class="na">getConnexio</span><span class="p">();</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="c1">// hardcoded String</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="c1">// String SQL=&quot;Select * from Persona where nombre like &#39;%Ma%&#39;&quot;;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="o">=</span><span class="n">Utilitats</span><span class="p">.</span><span class="na">leerTextoC</span><span class="p">(</span><span class="s">&quot;Give me part of the name: &quot;</span><span class="p">);</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="c1">// The query</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="n">String</span><span class="w"> </span><span class="n">SQL</span><span class="o">=</span><span class="s">&quot;Select * from Persona where nombre like &#39;%&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;%&#39;&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="c1">// The statement</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="n">Statement</span><span class="w"> </span><span class="n">st</span><span class="o">=</span><span class="n">con</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="c1">// The execution</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="n">ResultSet</span><span class="w"> </span><span class="n">rst</span><span class="o">=</span><span class="n">st</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="n">SQL</span><span class="p">);</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="c1">// processing</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="k">while</span><span class="p">(</span><span class="n">rst</span><span class="p">.</span><span class="na">next</span><span class="p">()){</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">ConsoleColors</span><span class="p">.</span><span class="na">BLUE_BRIGHT</span><span class="o">+</span><span class="w"> </span><span class="s">&quot;People with &quot;</span><span class="w"> </span><span class="o">+</span><span class="n">nombre</span><span class="o">+</span><span class="s">&quot;: &quot;</span><span class="o">+</span><span class="w"> </span><span class="n">ConsoleColors</span><span class="p">.</span><span class="na">RESET</span><span class="p">);</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">            </span><span class="n">rst</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;apellidos&quot;</span><span class="p">)</span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="o">+</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">            </span><span class="n">rst</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;nombre&quot;</span><span class="p">)</span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="o">+</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">            </span><span class="n">rst</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;edad&quot;</span><span class="p">));</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="p">}</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="n">rst</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<p>Com podem veure, les dades ara estan en variables, però la construcció de l'SQL és més complexa. Cal tenir en compte que els textos han d'estar entre cometes i els números no, el que facilita cometre errors. Però pot ser pitjor, aquest tipus de codi pot incórrer en problemes d'injecció SQL, com veiem a l'exemple següent:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">String</span><span class="w"> </span><span class="n">idPersona</span><span class="o">=</span><span class="n">Read</span><span class="p">.</span><span class="na">readText</span><span class="p">(</span><span class="s">&quot;Tell me the id to consult: &quot;</span><span class="p">);</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">String</span><span class="w"> </span><span class="n">SQL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Select * from Person where idPersona=&quot;</span><span class="o">+</span><span class="n">idPersona</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Si l'usuari introdueix <code>4</code> <span class="arithmatex">\(\rightarrow\)</span> Es mostrarà la persona amb ID igual a 4</li>
+<li>Si l'usuari introdueix <code>4 o 1=1</code> <span class="arithmatex">\(\rightarrow\)</span> Es mostraran totes les persones</li>
+</ul>
+<p>Cal evitar aquest tipus de consultes en les declaracions de validació d'usuari, per a les quals farem servir les sentències preparades i, òbviament, ser molt cautelosos en la verificació de les entrades.</p>
+<h3 id="123-sentencies-preparades">1.2.3. Sentències preparades</h3>
+<p>Per evitar el problema de l'injecció SQL, sempre que tinguem paràmetres a la nostra consulta, farem servir sentències preparades. En les sentències preparades, on hem de fer servir un <strong>marcador</strong>, en lloc de compondre-la amb concatenacions dins de la cadena, l'indicarem amb un interrogant (<code>?</code>), un caràcter anomenat <strong>placeholder</strong>.</p>
+<p>A continuació, haurem d'assignar valors a aquests placeholders, utilitzant els mètodes <code>setType(int pos)</code> on <code>Type</code> és el tipus de dades que assignarem i <code>pos</code> és la posició del placeholder, començant per <code>1</code>. Veurem l'exemple:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span>
+<span class="normal"><a href="#__codelineno-5-22">22</a></span>
+<span class="normal"><a href="#__codelineno-5-23">23</a></span>
+<span class="normal"><a href="#__codelineno-5-24">24</a></span>
+<span class="normal"><a href="#__codelineno-5-25">25</a></span>
+<span class="normal"><a href="#__codelineno-5-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">ConnexioDB</span><span class="w"> </span><span class="n">conDB</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">ConnexioDB</span><span class="p">(</span><span class="s">&quot;Instituto&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">Connection</span><span class="w"> </span><span class="n">con</span><span class="o">=</span><span class="n">conDB</span><span class="p">.</span><span class="na">getConnexio</span><span class="p">();</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="n">String</span><span class="w"> </span><span class="n">ID</span><span class="o">=</span><span class="n">Utilitats</span><span class="p">.</span><span class="na">leerTextoC</span><span class="p">(</span><span class="s">&quot;Give me an id: &quot;</span><span class="p">);</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="c1">// The query</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="n">String</span><span class="w"> </span><span class="n">SQL</span><span class="o">=</span><span class="s">&quot;Select * from Persona where idPersona = ?&quot;</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="c1">// The statement</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">pst</span><span class="o">=</span><span class="n">con</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">SQL</span><span class="p">);</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="c1">// fill placeholders</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="n">pst</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">ID</span><span class="p">);</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="c1">// The execution</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="n">ResultSet</span><span class="w"> </span><span class="n">rst</span><span class="o">=</span><span class="n">pst</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">();</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="c1">// processing</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="k">while</span><span class="p">(</span><span class="n">rst</span><span class="p">.</span><span class="na">next</span><span class="p">()){</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">ConsoleColors</span><span class="p">.</span><span class="na">BLUE_BRIGHT</span><span class="o">+</span><span class="w"> </span><span class="s">&quot;People with &quot;</span><span class="w"> </span><span class="o">+</span><span class="n">ID</span><span class="o">+</span><span class="s">&quot;: &quot;</span><span class="o">+</span><span class="w"> </span><span class="n">ConsoleColors</span><span class="p">.</span><span class="na">RESET</span><span class="p">);</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">            </span><span class="n">rst</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;apellidos&quot;</span><span class="p">)</span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="o">+</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="w">            </span><span class="n">rst</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;nombre&quot;</span><span class="p">)</span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="o">+</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="w">            </span><span class="n">rst</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;edad&quot;</span><span class="p">));</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="p">}</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="n">rst</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Consell</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Pots combinar ResultSet amb ResultSetMetaData per obtenir els noms de les columnes i els tipus de dades emmagatzemats a la base de dades. Trobaràs un exemple a la plataforma.
+</code></pre></div></td></tr></table></div>
+</div>
+<h2 id="13-actualitzacio-update-i-esborrat-delete">1.3. Actualització (Update) i Esborrat (Delete)</h2>
+<p>L'actualització i l'esborrat d'una fila es consideren com a actualitzacions de la base de dades, ja que modifiquen l'estat de la base de dades. De fet, també considerem la inserció com una actualització de la base de dades. Totes dues tasques s'incloent en el mètode <code>executeUpdate()</code>. Anem a estudiar-ho a través d'exemples:</p>
+<h3 id="131-exemple-desborrat">1.3.1. Exemple d'esborrat</h3>
+<p>Anem a esborrar files d'una taula de persones entre les edats donades:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span>
+<span class="normal"><a href="#__codelineno-6-24">24</a></span>
+<span class="normal"><a href="#__codelineno-6-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">ConnexioDB</span><span class="w"> </span><span class="n">conDB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ConnexioDB</span><span class="p">(</span><span class="s">&quot;Instituto&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">Connection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conDB</span><span class="p">.</span><span class="na">getConnexio</span><span class="p">();</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="c1">// give the age&#39;s bounds</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">minAge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Utilitats</span><span class="p">.</span><span class="na">leerEnteroC</span><span class="p">(</span><span class="s">&quot;Give me minimal age: &quot;</span><span class="p">);</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">maxAge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Utilitats</span><span class="p">.</span><span class="na">leerEnteroC</span><span class="p">(</span><span class="s">&quot;Give me maximun age: &quot;</span><span class="p">);</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="c1">// The query</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="n">String</span><span class="w"> </span><span class="n">SQL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Delete from Persona where edad between ? and ?&quot;</span><span class="p">;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="c1">// The statement</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">pst</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">SQL</span><span class="p">);</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="c1">// fill placeholders            </span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="n">pst</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">minAge</span><span class="p">);</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="n">pst</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">maxAge</span><span class="p">);</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="c1">// show the query after resolve placeholders</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">pst</span><span class="p">);</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="c1">// The execution</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="kt">int</span><span class="w"> </span><span class="n">deletedtedRows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pst</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">();</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="c1">// how many roas affecte</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">deletedtedRows</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; has been deleted.&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition warning">
+<p class="admonition-title">Perill</p>
+<p>Eliminar dades és una operació molt delicada. Tingues cura de:</p>
+<ul>
+<li>No oblidis la clàusula <code>WHERE</code> quan elimines, ja que eliminaràs totes les dades de la taula.</li>
+<li>Si vols eliminar tota la taula, incloent l'estructura (definició + taula), has d'utilitzar <code>DROP TABLE</code> en compte de <code>DELETE</code>.</li>
+<li>Si intentes eliminar una fila que està referenciada per una clau externa, obtindràs l'excepció <code>SQLIntegrityConstraintViolationException</code> i un missatge com <em>No es pot eliminar o actualitzar una fila pare: falla una restricció de clau externa</em>.</li>
+</ul>
+</div>
+<h3 id="132-exemple-dactualitzacio">1.3.2. Exemple d'Actualització</h3>
+<p>Anem a afegir anys a les persones amb l'ID donat:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">ConnexioDB</span><span class="w"> </span><span class="n">conDB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ConnexioDB</span><span class="p">(</span><span class="s">&quot;Instituto&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">Connection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conDB</span><span class="p">.</span><span class="na">getConnexio</span><span class="p">();</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="c1">// give the age&#39;s bounds</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">difAge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Utilitats</span><span class="p">.</span><span class="na">leerEnteroC</span><span class="p">(</span><span class="s">&quot;Give me number oy years: &quot;</span><span class="p">);</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="kt">int</span><span class="w"> </span><span class="n">idMin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Utilitats</span><span class="p">.</span><span class="na">leerEnteroC</span><span class="p">(</span><span class="s">&quot;Give me minimum id: &quot;</span><span class="p">);</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="c1">// The query</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="n">String</span><span class="w"> </span><span class="n">SQL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Update Persona set edad=edad+ ? where idPersona &gt; ?&quot;</span><span class="p">;</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="c1">// The statement</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">pst</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">SQL</span><span class="p">);</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="c1">// fill placeholders            </span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="n">pst</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">difAge</span><span class="p">);</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="n">pst</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">idMin</span><span class="p">);</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">pst</span><span class="p">);</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="c1">// The execution</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="kt">int</span><span class="w"> </span><span class="n">updatedRows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pst</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">();</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">updatedRows</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; has been updated.&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Recorda que:</p>
+<ul>
+<li>La clàusula <code>UPDATE</code> no necessita <code>FROM</code> perquè indiquem directament el nom de la taula.</li>
+<li>Apareix la clàusula <code>SET</code>, amb parells <code>camp=valor_actualitzat</code>, per assignar el nou valor als camps seleccionats.</li>
+<li>Si oblidem la clàusula <code>FROM</code>, s'actualitzaran totes les files.</li>
+</ul>
+</div>
+<h2 id="14-scripts">1.4. Scripts</h2>
+<p>Un script, que normalment s'ha creat en un fitxer extern, és un conjunt d'instruccions SQL executades en ordre de dalt a baix. Podem prendre com a estratègia llegir el fitxer línia per línia i executar-lo una per una, però JDBC permet executar un conjunt d'instruccions en bloc. Per fer això, el primer que hem de fer és habilitar múltiples execucions afegint un paràmetre a la connexió, que és <code>allowMultiQueries=true</code>.</p>
+<p>A continuació, hem de carregar el fitxer i compondre una cadena amb tot el script. Per normalitzar-lo i fer-lo totalment portàtil, hem de tenir cura amb els salts de línia, ja que depenent del sistema és una combinació <code>\n</code> o <code>\r\n</code>. Podem llegir línia per línia i guardar-ho en un <code>StringBuilder</code>, afegint <code>System.getProperty("line.separator")</code> com a separadors.</p>
+<p>Després només necessitarem crear una declaració amb aquesta cadena i executar-la amb <code>executeUpdate()</code>. Ho veurem a continuació:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span>
+<span class="normal"><a href="#__codelineno-8-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">ConnexioDB</span><span class="w"> </span><span class="n">conDB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ConnexioDB</span><span class="p">(</span><span class="s">&quot;Instituto&quot;</span><span class="p">);</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="n">Connection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conDB</span><span class="p">.</span><span class="na">getConnexio</span><span class="p">();</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="n">File</span><span class="w"> </span><span class="n">script</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;sql/EsquemaCine.sql&quot;</span><span class="p">);</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="n">BufferedReader</span><span class="w"> </span><span class="n">bfr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bfr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">script</span><span class="p">));</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="n">String</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="n">StringBuilder</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="c1">// Obtenemos el salto de linea del sistema subyacente</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="n">String</span><span class="w"> </span><span class="n">breakLine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">getProperty</span><span class="p">(</span><span class="s">&quot;line.separator&quot;</span><span class="p">);</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bfr</span><span class="p">.</span><span class="na">readLine</span><span class="p">())</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">    </span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">line</span><span class="p">);</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">    </span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">breakLine</span><span class="p">);</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="p">}</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="n">String</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sb</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span><span class="w">   </span><span class="c1">// generemos el Script en un String</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="n">Statement</span><span class="w"> </span><span class="n">stm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stm</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">(</span><span class="n">query</span><span class="p">);</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Script ejecutado con salida &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Consell</p>
+<p>Recordes les classes <code>Files</code> i <code>Paths</code>? Reescriu l'últim exemple per obtenir un codi més net.</p>
+</div>
+<h2 id="15-transaccions">1.5. Transaccions</h2>
+<p>Si volem protegir la integritat de les dades, així com evitar situacions de bloqueig inesperades en aplicacions multithread, hem de protegir les nostres operacions, especialment aquelles que modifiquen les dades mitjançant l'ús de transaccions.</p>
+<p>Una transacció defineix un entorn d'execució en què les operacions de desament es mantenen emmagatzemades a la memòria fins que la transacció es completi. Si en un moment determinat alguna cosa falla, l'estat es torna al punt inicial de la mateixa (punt inicial) o a algun punt de marca intermedi. Per defecte, obrir una <strong>connexió inicia una transacció</strong>:</p>
+<ul>
+<li>Cada execució a la connexió genera una transacció per si mateixa.</li>
+<li>Si volem desactivar aquesta opció perquè la transacció abasti diverses execucions, hem de marcar-ho mitjançant <code>Connection.setAutoCommit(false);</code>.</li>
+<li>Per acceptar definitivament la transacció ho farem mitjançant <code>Connection.commit();</code></li>
+<li>Per cancel·lar la transacció <code>Connection.rollback();</code></li>
+</ul>
+<h2 id="16-resultsets-actualitzables">1.6. ResultSets actualitzables</h2>
+<p>Els mètodes de treball revisats a les seccions anteriors, especialment quan s'actualitzen o esborren files, funcionen directament a la base de dades. Això significa que esborreu o actualitzeu una fila sense carregar-la prèviament a la memòria. Què passa si voleu mostrar les dades a l'usuari i després l'usuari decideix esborrar o actualitzar la fila? En aquest cas, és millor utilitzar ResultSets actualitzables.</p>
+<p>Hem estudiat ResultSet com una col·lecció de files i l'hem utilitzat només per a la lectura. També podem utilitzar-lo per editar i esborrar dades. Per fer-ho, hem de obrir el ResultSet d'una manera diferent de la que hem vist fins ara. I, per últim, però no menys important, dependrà de la base de dades la disponibilitat de crear aquest tipus de ResultSets.</p>
+<p>Per aconseguir-ho, no depèn del ResultSet ni de com es va crear l'Statement. Hem d'utilitzar aquest constructor:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="n">Statement</span><span class="w"> </span><span class="nf">createStatement</span><span class="p">(</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">arg0</span><span class="p">,</span><span class="w">   </span><span class="c1">// resultSetType           </span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">arg1</span><span class="p">,</span><span class="w">   </span><span class="c1">// resultSetConcurrency</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">arg2</span><span class="p">)</span><span class="w">   </span><span class="c1">// resultSetHoldability</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="kd">throws</span><span class="w"> </span><span class="n">SQLException</span>
+</code></pre></div></td></tr></table></div>
+<p>Com podeu veure, hi ha 3 arguments per indicar quin tipus de ResultSet donem al final. Aquests tres arguments poden ser:</p>
+<ul>
+<li><code>resultSetType</code> <span class="arithmatex">\(\rightarrow\)</span> aquestes són opcions sobre com moure's i passar per les files del ResultSet:<ul>
+<li><code>TYPE_FORWARD_ONLY</code> <span class="arithmatex">\(\rightarrow\)</span> <strong>opció per defecte</strong>. El ResultSet només es pot passar una vegada.</li>
+<li><code>TYPE_SCROLL_INSENSITIVE</code> <span class="arithmatex">\(\rightarrow\)</span> Permet rebobinar i saltar a una posició absoluta o relativa.</li>
+<li><code>TYPE_SCROLL_SENSITIVE</code> <span class="arithmatex">\(\rightarrow\)</span> Igual que abans, però permet veure els canvis realitzats a la base de dades.</li>
+</ul>
+</li>
+<li><code>ResultSetConcurrency</code> <span class="arithmatex">\(\rightarrow\)</span> aquestes són opcions sobre si es pot actualitzar el ResultSet o no:<ul>
+<li><code>CONCUR_READ_ONLY</code> <span class="arithmatex">\(\rightarrow\)</span> <strong>opció per defecte</strong>. Només lectura. Si volem actualitzar alguna cosa, només podem utilitzar les clàusules <code>DELETE</code> o <code>UPDATE</code>.</li>
+<li><code>CONCUR_UPDATABLE</code> <span class="arithmatex">\(\rightarrow\)</span> Les files del ResultSet es poden actualitzar o esborrar.</li>
+</ul>
+</li>
+<li><code>ResultSetHoldability</code> aquestes opcions són sobre el comportament en tancar el ResultSet:<ul>
+<li><code>HOLD_CURSORS_OVER_COMMIT</code> <span class="arithmatex">\(\rightarrow\)</span> El ResultSet es manté obert després de confirmar la transacció.</li>
+<li><code>CLOSE_CURSORS_AT_COMMIT</code> <span class="arithmatex">\(\rightarrow\)</span> El ResultSet es tanca després de confirmar la transacció. Millora el rendiment.</li>
+</ul>
+</li>
+</ul>
+<p>En el següent exemple, podem preguntar al nostre DBMS si aquests tipus de ResultSet estan suportats:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span>
+<span class="normal"><a href="#__codelineno-10-7">7</a></span>
+<span class="normal"><a href="#__codelineno-10-8">8</a></span>
+<span class="normal"><a href="#__codelineno-10-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">ConnexioDB</span><span class="w"> </span><span class="n">conDB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ConnexioDB</span><span class="p">(</span><span class="s">&quot;Instituto&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">Connection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conDB</span><span class="p">.</span><span class="na">getConnexio</span><span class="p">();</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">DatabaseMetaData</span><span class="w"> </span><span class="n">dbmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">getMetaData</span><span class="p">();</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;TYPE_FORWARD_ONLY: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dbmd</span><span class="p">.</span><span class="na">supportsResultSetType</span><span class="p">(</span><span class="n">ResultSet</span><span class="p">.</span><span class="na">TYPE_FORWARD_ONLY</span><span class="p">));</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;TYPE_SCROLL_INSENSITIVE: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dbmd</span><span class="p">.</span><span class="na">supportsResultSetType</span><span class="p">(</span><span class="n">ResultSet</span><span class="p">.</span><span class="na">TYPE_SCROLL_INSENSITIVE</span><span class="p">));</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;TYPE_SCROLL_SENSITIVE: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dbmd</span><span class="p">.</span><span class="na">supportsResultSetType</span><span class="p">(</span><span class="n">ResultSet</span><span class="p">.</span><span class="na">TYPE_SCROLL_SENSITIVE</span><span class="p">));</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;CONCUR_READ_ONLY: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dbmd</span><span class="p">.</span><span class="na">supportsResultSetConcurrency</span><span class="p">(</span><span class="n">ResultSet</span><span class="p">.</span><span class="na">TYPE_SCROLL_INSENSITIVE</span><span class="p">,</span><span class="w"> </span><span class="n">ResultSet</span><span class="p">.</span><span class="na">CONCUR_READ_ONLY</span><span class="p">));</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;CONCUR_UPDATABLE: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dbmd</span><span class="p">.</span><span class="na">supportsResultSetConcurrency</span><span class="p">(</span><span class="n">ResultSet</span><span class="p">.</span><span class="na">TYPE_SCROLL_INSENSITIVE</span><span class="p">,</span><span class="w"> </span><span class="n">ResultSet</span><span class="p">.</span><span class="na">CONCUR_UPDATABLE</span><span class="p">));</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="161-moviment-del-resultset">1.6.1. Moviment del ResultSet</h3>
+<p>Com podem veure, no només podem moure el cursor cap endavant:</p>
+<ul>
+<li><code>next</code>, <code>previous</code>, <code>first</code> i <code>last</code> <span class="arithmatex">\(\rightarrow\)</span> com el seu nom indica, es mouen cap endavant, cap enrere, al principi i a l'última fila. Retorna true si el cursor apunta a una fila i false en cas contrari.</li>
+<li><code>beforeFirst</code> i <code>afterLast</code> <span class="arithmatex">\(\rightarrow\)</span> el cursor apuntarà fora de les files, abans de la primera o després de l'última fila.</li>
+<li><code>relative(int n)</code> <span class="arithmatex">\(\rightarrow\)</span> el cursor es mou <em>n</em> files (cap endavant o cap enrere, depenent del signe).</li>
+<li><code>absolute(int n)</code> <span class="arithmatex">\(\rightarrow\)</span> el cursor apunta a la fila <em>n</em>.</li>
+</ul>
+<h3 id="162-eliminacio-de-files-en-un-resultset">1.6.2. Eliminació de files en un ResultSet</h3>
+<p>Després de col·locar el cursor a la fila que es vol eliminar, es pot eliminar del ResultSet (i de la base de dades) amb el mètode <code>deleteRow()</code>. Quan s'elimina una fila, el cursor apuntarà a la fila anterior a la que s'ha eliminat.</p>
+<h3 id="163-actualitzacio-de-files-en-un-resultset">1.6.3. Actualització de files en un ResultSet</h3>
+<p>Després de col·locar el cursor a la fila desitjada, s'ha de:</p>
+<ol>
+<li>Actualitzar les columnes desitjades, utilitzant el mètode <code>updateType(int column, type newValue)</code>, on la columna i-èssima (o amb el seu nom) s'assigna el nou valor del tipus donat.</li>
+<li>Un cop s'hagin modificat totes les columnes desitjades, es guarden els canvis amb <code>updateRow()</code>.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Consell</p>
+<p>No podem actualitzar una fila sencera, hem de actualitzar columna per columna i després actualitzar la fila.</p>
+</div>
+<h3 id="164-insercio-de-files-en-un-resultset">1.6.4. Inserció de files en un ResultSet</h3>
+<p>Si volem inserir una nova fila en un ResultSet, hem de:</p>
+<ol>
+<li>Generar una nova fila buida, i això s'aconsegueix amb el mètode <code>moveToInsertRow()</code>.</li>
+<li>En aquesta fila, apliquem el mètode <code>updateType(int column, type newValue)</code> a totes les columnes a les quals volem assignar un valor, i finalment</li>
+<li>Procedim a inserir la nova fila amb <code>insertRow()</code>.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<ul>
+<li>Aquestes operacions d'actualització, eliminació i inserció només es poden realitzar en consultes que provenen d'una taula sense agrupacions.</li>
+<li>Per evitar complexitat en els nostres programes, val la pena avaluar la conveniència de traduir les actualitzacions del ResultSet a SQL pur i executar-les directament a les bases de dades mitjançant noves sentències.</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

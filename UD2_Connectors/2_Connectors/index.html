@@ -1,0 +1,1657 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../1_Object_relational_impedance_mismatch/">
+      
+      
+        <link rel="next" href="../3_Connecting/">
+      
+      
+      <link rel="icon" href="../../assets/jaume.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+    
+    
+      
+        <title>Connectors - Accés a Dades</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-connectors" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="../.." title="Accés a Dades" class="md-header__button md-logo" aria-label="Accés a Dades" data-md-component="logo">
+      
+  <img src="../../assets/jaume.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Accés a Dades
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Connectors
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Selecciona la llengua">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../en/UD2_Connectors/2_Connectors/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ca" class="md-select__link">
+              Valencià
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Accés a Dades" class="md-nav__button md-logo" aria-label="Accés a Dades" data-md-component="logo">
+      
+  <img src="../../assets/jaume.png" alt="logo">
+
+    </a>
+    Accés a Dades
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unitat 1. Fitxers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Unitat 1. Fitxers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1_Files/1_File_System/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sistema de Fitxers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1_Files/2_Reading_and_writing_files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llegint i Escrivint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1_Files/3_XML_Files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Treball amb Arxius XML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1_Files/4_JSON_Files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Treball amb Arxius JSON
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1_Files/5_Extra_Formats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Altres formats de Fitxers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unitat 2. Connectors
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Unitat 2. Connectors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1_Object_relational_impedance_mismatch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desfase objecte-relacional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Connectors
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Connectors
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-larquitectura-client-servidor-en-sgbd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. L'arquitectura client-servidor en SGBD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-protocols-dacces-a-bases-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Protocols d'accés a bases de dades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-jdbc" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. JDBC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. JDBC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-arquitectura-jdbc" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.1. Arquitectura JDBC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-mysql-docker-workbench" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. MySQL, Docker, Workbench
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_Connecting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connectant-se a la base de dades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_Resultset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resultats de les consultes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_Metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6_CRUD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operacions CRUD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7_Row_to_Object/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    De les files als objectes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unitat 3. Hibernate
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Unitat 3. Hibernate
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3_Hibernate/1_Mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapeig d'objectes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3_Hibernate/2_Hibernate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccio a Hibernate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3_Hibernate/3_Entities_Beans/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entitats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3_Hibernate/4_Relationships/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Relacions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3_Hibernate/5_HQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consultes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unitat 4. Bases de Dades OO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Unitat 4. Bases de Dades OO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD4_BDOO/1_Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccio a les bases de dades OO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD4_BDOO/2_ORDB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bases de dades Objecte-Relacionals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD4_BDOO/3_OODB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bases de dades Orientades a Objectes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unitat 5. Spring
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Unitat 5. Spring
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD5_Spring/1_Data_Access_Services/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Serveis d'Acces a Dades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD5_Spring/2_Spring_SpringBoot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducció a Spring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD5_Spring/3_API_Rest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creació de APIs REST
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD5_Spring/4_Spring_Security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Seguretat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD5_Spring/5_Spring_Hateoas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring Haetoas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD5_Spring/6_Postman_Swagger/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test. Postman i Swagger
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unitat 6. MongoDB
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Unitat 6. MongoDB
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD6_MongoDB/1_NoSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bases de Dades NoSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD6_MongoDB/2_MongoDB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducció a MongoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD6_MongoDB/3_ShellOperations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operacions amb Shell
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD6_MongoDB/4_Queries/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consultes CRUD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD6_MongoDB/5_Mongo_Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mongo i Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD6_MongoDB/6_Spring_MongoDB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring Data MongoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pràctiques
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practiques/APAC1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practiques/APAC2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practiques/APAC3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sobre mi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llicència
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-larquitectura-client-servidor-en-sgbd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. L'arquitectura client-servidor en SGBD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-protocols-dacces-a-bases-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Protocols d'accés a bases de dades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-jdbc" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. JDBC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. JDBC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-arquitectura-jdbc" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.1. Arquitectura JDBC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-mysql-docker-workbench" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. MySQL, Docker, Workbench
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="1-connectors">1. Connectors</h1>
+<h2 id="11-larquitectura-client-servidor-en-sgbd">1.1. L'arquitectura client-servidor en SGBD</h2>
+<p>Un cop coneixem el retard relacional-objecte, centrem-nos en com accedir a bases de dades relacionals des dels llenguatges de programació. Els SGBD, es van popularitzar als anys 80, i són els més estesos actualment. Llevat d'algunes excepcions, funcionen seguint una <strong>arquitectura client-servidor</strong>, de manera que tenim un servidor on executa el SGBD i diversos clients que es connecten al servidor i fan les peticions corresponents.</p>
+<p>Els SGBD oferien els seus propis llenguatges de programació, però estaven molt lligats a ells, i el manteniment de l'aplicació era molt car. Per aquest motiu, la tendència era desacoblar (separar) els SGBD del llenguatge de programació, i fer ús d'estàndards de connexió entre ells.</p>
+<p>Gràcies a l'arquitectura client-servidor, els SGBD van poder separar les dades d'una banda i els programes per accedir-hi per altres. Aquesta versatilitat tenia un petit inconvenient, i és que calia desenvolupar d'una banda el servidor, però de l'altra, també la part del client per poder connectar-se als servidors. Aquestes connexions entre clients i servidors requeriran protocols i llenguatges específics. Aquí neix el concepte de <strong>middleware</strong>, entès com una capa intermèdia de persistència, formada per biblioteques, llenguatges i protocols ubicats al client i al servidor i que permeten connectar la base de dades amb les aplicacions.</p>
+<p>Tot i que inicialment cada SGBD va implementar solucions específiques, es van imposar estàndards, entre els quals trobem el llenguatge de consulta SQL (Structured Query Language), i que va suposar un gran avanç, ja que va unificar la manera d'accedir a les bases de dades, encara que les aplicacions van continuar requereixen una API per fer ús de SQL.</p>
+<h2 id="12-protocols-dacces-a-bases-de-dades">1.2. Protocols d'accés a bases de dades</h2>
+<p>Quan parlem de protocols d'accés a bases de dades, ens trobem amb dues regles principals de connexió:</p>
+<ul>
+<li><strong>ODBC</strong> (Open Data Base Connectivity): Aquesta és una API (Application Program Interface) desenvolupada per <em>Microsoft per a sistemes Windows</em> que permet afegir diferents connectors a diverses bases de dades relacionals basades en SQL, d'una manera senzilla i transparent. Utilitzant ODBC, les aplicacions poden obrir connexions a la base de dades, enviar consultes, actualitzacions i gestionar els resultats.</li>
+<li><strong>JDBC</strong> (Java Database Connectivity), que defineix una API multiplataforma que els programes Java poden utilitzar per connectar-se al SGBD.</li>
+</ul>
+<h2 id="13-jdbc">1.3. JDBC</h2>
+<p>Com hem dit, JDBC és una API de connexió a bases de dades específica de Java. El seu mode de funcionament és el següent:</p>
+<ul>
+<li>S'ofereix una API, encapsulada en classes, que garanteix uniformitat en la manera en què les aplicacions es connecten a la base de dades, independentment del SGBD subjacent.</li>
+<li>Necessitarem un controlador per a cada base de dades a la qual volem connectar-nos. Java no té cap llibreria ODBC específica, però, per no perdre el potencial d'aquestes connexions, s'han incorporat controladors especials que actuen com a adaptadors entre JDBC i ODBC, de manera que és possible, a través d'aquest pont, connectar qualsevol aplicació Java amb qualsevol connexió ODBC. Actualment, gairebé tots els SGBD tenen controladors JDBC, però en cas que no en tingueu coneixement, podeu fer servir aquest pont ODBC-JDBC.</li>
+</ul>
+<h3 id="131-arquitectura-jdbc">1.3.1. Arquitectura JDBC</h3>
+<p>La biblioteca estàndard JDBC proporciona un conjunt d'interfícies independents de la implementació. Els controladors de cada DBMS seran els encarregats de la implementació. Les aplicacions, per accedir a la base de dades, hauran d'utilitzar les interfícies JDBC, de manera que la implementació de cada DBMS sigui completament transparent per a l'aplicació.</p>
+<p><center><img alt="JDBC" src="../img/JDBC.png" width="90%" /></center></p>
+<p>Com podem veure, les aplicacions Java accedeixen als diferents mètodes que l'API especifica com a interfícies, però són els controladors els que accedeixen a la base de dades.</p>
+<p>Cal dir que les aplicacions poden utilitzar diversos controladors JDBC simultàniament i accedir, per tant, a múltiples bases de dades. L'aplicació especifica un controlador JDBC utilitzant una URL (Universal Resource Locator) al gestor de controladors, i aquest és el responsable d'establir correctament les connexions amb les bases de dades a través dels controladors. Els controladors poden ser de diferents tipus:</p>
+<ul>
+<li>Tipus I o <strong>controladors de pont</strong>, caracteritzats per fer ús de tecnologia externa a JDBC i actuar com a adaptadors entre JDBC i la tecnologia específica utilitzada. Un exemple és el pont JDBC-ODBC.</li>
+<li>Tipus II o controladors amb API parcialment nativa, o <strong>controladors natius</strong>. Estan entrenats d'una banda en Java i de l'altra fan ús de llibreries del sistema operatiu. El seu ús es deu a alguns SGBD que incorporen connectors propietaris que no segueixen cap estàndard (normalment pre-ODBC/JDBC).</li>
+<li>Tipus III o <strong>controladors Java a través de protocol de xarxa</strong>, que són controladors desenvolupats en Java que tradueixen les crides JDBC a un protocol de xarxa contra un servidor intermedi. És un sistema molt flexible, ja que els canvis en la implementació de la base de dades no afecten les aplicacions.</li>
+<li>Tipus IV o <strong>100% Java pures</strong>, també anomenats protocol natius, i aquests són controladors escrits íntegrament en Java. Les sol·licituds al SGBD es realitzen a través del protocol de xarxa que utilitza el mateix SGBD, de manera que no és necessari cap codi natiu al client ni un servidor intermediari. És l'alternativa que s'ha acabat imposant, ja que no requereix cap tipus d'instal·lació.</li>
+</ul>
+<h2 id="14-mysql-docker-workbench">1.4. MySQL, Docker, Workbench</h2>
+<p>Aquest any farem servir MySQL com a SGBD, per la seva àmplia utilització en diversos contextos i per la seva simplicitat. Per utilitzar-lo, has d'instal·lar <code>mysql-server</code> com a servei al teu sistema, com has estudiat els últims anys.</p>
+<p>El servidor MySQL es pot instal·lar al teu ordinador, o bé pots instal·lar-lo en una màquina virtual o configurar-lo com a contenidor Docker. Per tenir un sistema més net, l'opció recomanada és amb contenidor Docker, ja que podràs executar diverses versions de MySQL sense interferències entre elles.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Teniu una documentació addicional sobre com crear un contenidor MySQL en un document anomenat <a href="../Docker_mysql.pdf">Docker per a MySQL</a>. Així doncs, i pel que fa a la resta del document, assumirem que ja teniu la imatge de Docker de MySQL i un contenidor en execució al port <code>3308</code> (MySQL utilitza el port 3306 per defecte, però en el nostre contenidor exposarem el servei al port 3308, en cas que ja tingueu un servidor MySQL local en execució al port 3306).</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># Remember that to create the container (only fisrt time)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>mysql-srv
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">      </span>-p<span class="w"> </span><span class="m">3308</span>:3306
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">      </span>-e<span class="w"> </span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span><span class="s2">&quot;root&quot;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">      </span>-d<span class="w"> </span>mysql:latest
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="c1"># It will create and start the container</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="c1"># To stop the container</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>docker<span class="w"> </span>stop<span class="w"> </span>mysql-srv
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="c1"># And to start the container ( AVOID TO run IT AGAIN !!!)</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>docker<span class="w"> </span>start<span class="w"> </span>mysql-srv
+</code></pre></div></td></tr></table></div>
+<p>I finalment, però no menys important, evidentment, podeu utilitzar una eina gràfica per accedir a MySQL, com ara <code>mysql-workbench</code> o <code>dbeaver</code>. Heu de configurar una connexió al port de Docker:</p>
+<p><center><img alt="Workbench" src="../img/WorkBench.png" width="90%" /></center></p>
+<div class="admonition warning">
+<p class="admonition-title">Espai</p>
+<p>Revisa les notes del teu mòdul de bases de dades sobre com treballar amb Workbench:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>- Carrega i executa scripts SQL
+- Recupera l&#39;estructura de la base de dades
+- Edita i crea SQL
+- Edita i guarda dades
+</code></pre></div></td></tr></table></div>
+</div>
+<p>Disposes del scrip <a href="../esquemaBDJocs.sql">Esquema BD Jocs</a> per carregar els exemples dels apunts</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
