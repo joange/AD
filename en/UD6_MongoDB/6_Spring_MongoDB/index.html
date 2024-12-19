@@ -20,7 +20,7 @@
     
     
       
-        <title>6. Spring MongoDB - Accés a Dades</title>
+        <title>6. Spring Data MongoDB y API REST - Accés a Dades</title>
       
     
     
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#6-spring-data-mongodb-y-api-rest" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              6. Spring MongoDB
+              6. Spring Data MongoDB y API REST
             
           </span>
         </div>
@@ -1063,7 +1068,7 @@
         
   
   <span class="md-ellipsis">
-    1. NoSQL Databases
+    1. NoSQL databases
   </span>
   
 
@@ -1084,7 +1089,7 @@
         
   
   <span class="md-ellipsis">
-    2. Introduction to MongoDB
+    2. MongoDB
   </span>
   
 
@@ -1105,7 +1110,7 @@
         
   
   <span class="md-ellipsis">
-    3. Shell Operations
+    3. Working with MongoDB: Basic shell operations
   </span>
   
 
@@ -1126,7 +1131,7 @@
         
   
   <span class="md-ellipsis">
-    4. CRUD Queries
+    4. Mongo Queries
   </span>
   
 
@@ -1147,7 +1152,7 @@
         
   
   <span class="md-ellipsis">
-    5. Mongo and Java
+    5. MongoDB and Java
   </span>
   
 
@@ -1170,16 +1175,84 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    6. Spring Data MongoDB y API REST
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    6. Spring MongoDB
+    6. Spring Data MongoDB y API REST
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-defining-the-model-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Defining the Model – Document
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-defining-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Defining the Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-defining-the-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3. Defining the service
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-defining-the-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4. Defining the controller
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1355,6 +1428,52 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-defining-the-model-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Defining the Model – Document
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-defining-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Defining the Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-defining-the-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3. Defining the service
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-defining-the-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4. Defining the controller
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1369,9 +1488,380 @@
                   
 
 
-  <h1>6. Spring MongoDB</h1>
+<h1 id="6-spring-data-mongodb-y-api-rest">6. Spring Data MongoDB y API REST</h1>
+<p>As we know, the <strong>Spring Data</strong> project, included in the Spring platform, provides a framework to simplify data access and persistence over different information repositories. Within this project is <strong>Spring Data MongoDB</strong>, which provides integration with MongoDB databases, through a model centered on <strong>POJOs</strong> that interact with document collections and provides a data access repository.</p>
+<p>In this section, and taking over from the previous unit, we are going to address the development of data access components through Spring Data, as well as microservices that offer this data through a REST API, all of this, following the MVC pattern that we already know.</p>
+<h2 id="61-defining-the-model-document">6.1. Defining the Model – Document</h2>
+<p>A MongoDB database is made up of <code>Document</code> collections. Although these Documents may have different structures from each other or different types of data, the model does require a static structure. So, the first thing we must do is create a class that represents this <em>Main Document for MongoDB</em>, which will be the one returned by the queries that are made.</p>
+<p>In this context, there are two main annotations that we will use:</p>
+<ul>
+<li><code>@Document</code> → to indicate that a class corresponds to a domain object (domain object) that can be mapped in the database to offer persistence. This annotation for MongoDB would be the equivalent of <code>@Entity</code> in JPA. If nothing is indicated, the name of the collection to be used will be interpreted as corresponding to the name of the class in <strong>lower case</strong>. So, if we have the class <code>com.jaume.ad.Person</code>, the collection <code>person</code> will be used. However, we can indicate the collection we are working with, either through the value or collection attributes, with the following syntax:</li>
+<li><code>@Document(value="collection")</code></li>
+<li><code>@Document("collection")</code></li>
+<li><code>@Document(collection="collection")</code></li>
+<li><code>@Id</code> It is applied to a field, and it is used to indicate that the field will be used as an identifier. As we know, every document in MongoDB requires an identifier. If one is not provided, the controller will assign an <code>ObjectID</code> automatically. It is important to note that the types of data that we can use as identifiers can be both <code>Strings</code> or <code>BigInteger</code>, since Spring will take care of converting them to the ObjectID type.</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>It exists an anotation <code>@DocumentReference</code> to relate Documents one inside other, for instance when we store in a class objects from another classes, like relationships on SQL databases. </p>
+</div>
+<p>In addition to these, there are other more specific annotations that we can use. If you wish, you can consult them in the Spring Data MongoDB reference documentation <a href="https://spring.io/projects/spring-data-mongodb">here</a>.</p>
+<h2 id="62-defining-the-repository">6.2. Defining the Repository</h2>
+<p>As we know, the repository is the interface in charge of managing access to data. In the case of MongoDB, this will derive from <code>MongoRepository</code>, which will be an interface parameterized by two arguments: </p>
+<ul>
+<li><code>MongoRepository&lt;T, Id&gt;</code>, who:</li>
+<li><code>T</code> → The type of document, which will correspond to the class defined in the model, and</li>
+<li><code>Id</code>→ The data type to which the identifier will belong.</li>
+</ul>
+<p>The MongoRepository interface, as we have said, will be specific to MongoDB, and will derive from the <code>CrudRepository</code> and <code>PagingAndSortingRepository</code> interfaces, from which it will inherit all its methods. In this way, in the repository we will only have to declare those methods that are more specific for our application, since all the methods to implement CRUD operations, as well as <code>findAll()</code> and <code>findById()</code> will be inherited from <code>MongoRepository</code>.</p>
+<p>To define our own queries in the repository, we will use the <code>@Query</code> annotation, providing the query in question as a value:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nd">@Query</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s">&quot;{ parameterized_query}&quot;</span><span class="p">)</span><span class="w">   </span><span class="c1">// regarding to repository&#39;s base class </span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">DocumentType</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">methodName</span><span class="p">(</span><span class="n">list_parameters</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p>To supply parameters to the query, these are received as arguments to the method, and are referenced by their order in the query: <code>?0</code> for the first argument, <code>?1</code> for the second, etc. MAybe in newer version can be parameters in a nominal way, as <code>:parameter_name</code></p>
+<h2 id="63-defining-the-service">6.3. Defining the service</h2>
+<p>The services take care of the business layer of our application, and access the data through the repository, sending the results to the controller. These services, in general, are characterized by:</p>
+<ul>
+<li>Use the <code>@Service</code> annotations, to indicate to Spring that a service is being implemented</li>
+<li>On the one hand, the Service interface is usually defined and, on the other hand, the implementation is carried out through the <code>ServiceImpl</code> class.</li>
+<li>The <code>@Autowired</code> annotation is used in references to repositories to link or inject the service in question with said repository.</li>
+<li>Once it gets the data from the repository, it sends it data  to the controller.</li>
+</ul>
+<h2 id="64-defining-the-controller">6.4. Defining the controller</h2>
+<p>Finally, we are left with the controller implementation, which we already know from Spring. Let's remember the main characteristics of this one:</p>
+<ul>
+<li>Use the <code>@RestController</code> annotation at the class level to indicate that you are dealing with a REST controller</li>
+<li>Use the <code>@RequestMapping</code> annotation at the class level to specify the base path for the service endpoints,</li>
+<li>Use the <code>@Autowired</code> annotation in the properties that refer to the service, to inject it automatically,</li>
+<li>Use the <code>@GetMapping</code>, <code>@PostMapping</code>, <code>@PutMapping</code>, <code>@DeleteMapping</code> annotations on the methods that will implement GET, POST, PUT or DELETE type requests, specifying their Endpoint.</li>
+<li>Use the <code>@PathVariable</code> or <code>@RequestParam</code> or <code>@RequestBody</code> annotation on the arguments of the above methods to get the values from path, request or body.</li>
+</ul>
+<h1 id="2-swagger">2. Swagger</h1>
+<p>Until now, we are testing our api rest with Postman, but now we offer a tool that integrates with Spring and Tomcat in order to test our API quickly and easily.</p>
+<p>Swagger (<a href="https://swagger.io">https://swagger.io</a>) is very simple to start:</p>
+<ol>
+<li>Add dependencies.</li>
+<li>Add a configuration class, who scans our controllers to find what entry points are defined.</li>
+<li>Create automoticaly a User Interface, who show what entries are defined and tools to test</li>
+</ol>
+<h2 id="21-dependency">2.1. Dependency</h2>
+<p>You must add at your <code>pom.xml</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">XML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">&lt;groupId&gt;</span>io.springfox<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>springfox-swagger2<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nt">&lt;version&gt;</span>2.9.2<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="22-configuration-class">2.2. Configuration class</h2>
+<p>We need to create a class like this:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span>
+<span class="normal"><a href="#__codelineno-2-26">26</a></span>
+<span class="normal"><a href="#__codelineno-2-27">27</a></span>
+<span class="normal"><a href="#__codelineno-2-28">28</a></span>
+<span class="normal"><a href="#__codelineno-2-29">29</a></span>
+<span class="normal"><a href="#__codelineno-2-30">30</a></span>
+<span class="normal"><a href="#__codelineno-2-31">31</a></span>
+<span class="normal"><a href="#__codelineno-2-32">32</a></span>
+<span class="normal"><a href="#__codelineno-2-33">33</a></span>
+<span class="normal"><a href="#__codelineno-2-34">34</a></span>
+<span class="normal"><a href="#__codelineno-2-35">35</a></span>
+<span class="normal"><a href="#__codelineno-2-36">36</a></span>
+<span class="normal"><a href="#__codelineno-2-37">37</a></span>
+<span class="normal"><a href="#__codelineno-2-38">38</a></span>
+<span class="normal"><a href="#__codelineno-2-39">39</a></span>
+<span class="normal"><a href="#__codelineno-2-40">40</a></span>
+<span class="normal"><a href="#__codelineno-2-41">41</a></span>
+<span class="normal"><a href="#__codelineno-2-42">42</a></span>
+<span class="normal"><a href="#__codelineno-2-43">43</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.jaumeii.moviesapi.swagger</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Collections</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.Bean</span><span class="p">;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.Configuration</span><span class="p">;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">springfox.documentation.service.Contact</span><span class="p">;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">springfox.documentation.builders.PathSelectors</span><span class="p">;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="kn">import</span><span class="w"> </span><span class="nn">springfox.documentation.builders.RequestHandlerSelectors</span><span class="p">;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="kn">import</span><span class="w"> </span><span class="nn">springfox.documentation.service.ApiInfo</span><span class="p">;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="kn">import</span><span class="w"> </span><span class="nn">springfox.documentation.spi.DocumentationType</span><span class="p">;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="kn">import</span><span class="w"> </span><span class="nn">springfox.documentation.spring.web.plugins.Docket</span><span class="p">;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="kn">import</span><span class="w"> </span><span class="nn">springfox.documentation.swagger2.annotations.EnableSwagger2</span><span class="p">;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="nd">@Configuration</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="nd">@EnableSwagger2</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SwaggerConfig</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">    </span><span class="nd">@Bean</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Docket</span><span class="w"> </span><span class="nf">apiDocket</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Docket</span><span class="p">(</span><span class="n">DocumentationType</span><span class="p">.</span><span class="na">SWAGGER_2</span><span class="p">)</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">                </span><span class="p">.</span><span class="na">select</span><span class="p">()</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">                </span><span class="p">.</span><span class="na">apis</span><span class="p">(</span><span class="n">RequestHandlerSelectors</span><span class="p">.</span><span class="na">basePackage</span><span class="p">(</span><span class="s">&quot;com.jaumeii.moviesapi.controller&quot;</span><span class="p">))</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">                </span><span class="p">.</span><span class="na">paths</span><span class="p">(</span><span class="n">PathSelectors</span><span class="p">.</span><span class="na">any</span><span class="p">())</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">                </span><span class="p">.</span><span class="na">build</span><span class="p">()</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">                </span><span class="p">.</span><span class="na">apiInfo</span><span class="p">(</span><span class="n">getApiInfo</span><span class="p">());</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30"></a>
+<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">ApiInfo</span><span class="w"> </span><span class="nf">getApiInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ApiInfo</span><span class="p">(</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="w">                </span><span class="s">&quot;Movies controller&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="w">                </span><span class="s">&quot;Tools for testing movies API&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="w">                </span><span class="s">&quot;1.0&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="w">                </span><span class="s">&quot;http://www.ieseljust.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-37" name="__codelineno-2-37"></a><span class="w">                </span><span class="k">new</span><span class="w"> </span><span class="n">Contact</span><span class="p">(</span><span class="s">&quot;admin&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;https://ieseljust.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;admin@ieseljust.com&quot;</span><span class="p">),</span>
+<a id="__codelineno-2-38" name="__codelineno-2-38"></a><span class="w">                </span><span class="s">&quot;LICENSE&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-39" name="__codelineno-2-39"></a><span class="w">                </span><span class="s">&quot;LICENSE URL&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-40" name="__codelineno-2-40"></a><span class="w">                </span><span class="n">Collections</span><span class="p">.</span><span class="na">emptyList</span><span class="p">()</span>
+<a id="__codelineno-2-41" name="__codelineno-2-41"></a><span class="w">                </span><span class="p">);</span>
+<a id="__codelineno-2-42" name="__codelineno-2-42"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-43" name="__codelineno-2-43"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Two methods need to be implemented:</p>
+<ul>
+<li><code>Docket apiDocket()</code> → who createa a <code>Docket</code>. This <code>Docket</code> contains references to work and test our API</li>
+<li><code>ApiInfo getApiInfo()</code> → who create an <code>ApiInfo</code>, and its name tells, is basic information about what is this API created for.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Attention</p>
+<p>In las sample we have our controllers defindd in <code>com.jaumeii.moviesapi.controller</code>, and it is all that we could do.</p>
+</div>
+<h2 id="23-testing">2.3. Testing</h2>
+<p>When our spring project starts, we could see the log information:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>2023-01-29 08:37:16.400  INFO 61951 --- [  restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+</code></pre></div></td></tr></table></div>
+<p>It means that we have a new entry point <code>/v2/api-docs</code>. If we test this entry point, we get something like:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span>
+<span class="normal"><a href="#__codelineno-4-27">27</a></span>
+<span class="normal"><a href="#__codelineno-4-28">28</a></span>
+<span class="normal"><a href="#__codelineno-4-29">29</a></span>
+<span class="normal"><a href="#__codelineno-4-30">30</a></span>
+<span class="normal"><a href="#__codelineno-4-31">31</a></span>
+<span class="normal"><a href="#__codelineno-4-32">32</a></span>
+<span class="normal"><a href="#__codelineno-4-33">33</a></span>
+<span class="normal"><a href="#__codelineno-4-34">34</a></span>
+<span class="normal"><a href="#__codelineno-4-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="w">  </span><span class="s2">&quot;swagger&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="s2">&quot;info&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="s2">&quot;description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Tools for testing movies API&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="s2">&quot;version&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Movies controller&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="s2">&quot;termsOfService&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://www.ieseljust.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="s2">&quot;contact&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">      </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">      </span><span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://ieseljust.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">      </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;admin@ieseljust.com&quot;</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">    </span><span class="s2">&quot;license&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">      </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;LICENSE&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">      </span><span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;LICENSE URL&quot;</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">  </span><span class="s2">&quot;host&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;localhost:8080&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">  </span><span class="s2">&quot;basePath&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">  </span><span class="s2">&quot;tags&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">      </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;movie-controller&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">      </span><span class="s2">&quot;description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Movie Controller&quot;</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">  </span><span class="s2">&quot;paths&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">    </span><span class="s2">&quot;/api/v1/movie/byNumDirectors/{how_many}&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="w">      </span><span class="s2">&quot;get&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="w">        </span><span class="s2">&quot;tags&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="w">          </span><span class="s2">&quot;movie-controller&quot;</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="w">        </span><span class="p">],</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="w">        </span><span class="s2">&quot;summary&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;findByYear&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="w">        </span><span class="s2">&quot;operationId&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;findByYearUsingGET&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="w">        </span><span class="s2">&quot;produces&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34"></a><span class="w">          </span><span class="s2">&quot;*/*&quot;</span>
+<a id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="w">  </span><span class="p">...</span>
+</code></pre></div></td></tr></table></div>
+<p>It is a json document who describes our API. But to work in a comfortable way, we can request <code>/swagger-ui.html</code>, and we get:</p>
+<p><center><img alt="swagger1" src="../../../UD6_MongoDB/img/Swagger-1.png" width="75%" /></center></p>
+<p>This UI page contains the basic information we set in <code>getApiInfo()</code> method. At the bottom we can see more element. If we open, we get:</p>
+<p><center><img alt="swagger2" src="../../../UD6_MongoDB/img/Swagger-2.png" width="75%" /></center></p>
+<p>We could see information about entry points and models that the API returns. Additionally, we could enter on each entry point to get information about parameters, and finally execute it. </p>
+<h1 id="3-appendix-solution-to-exercise-about-mongo-queries">3. Appendix. Solution to exercise about mongo queries</h1>
+<ol>
+<li>Obtain all the productions that either premiered in <code>2015</code> or are of the <code>series</code> type.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We need to use <code>$or</code> operator, with a condition array.</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">movies</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">$or</span><span class="o">:</span><span class="p">[{</span><span class="nx">year</span><span class="o">:</span><span class="mf">2015</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">type</span><span class="o">:</span><span class="s2">&quot;series&quot;</span><span class="p">}]})</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Get all the movies <strong>NOT</strong> released between the years <code>2000</code> and <code>2002</code>.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We need to use <code>$not</code> operator, with a condition to deny.</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">movies</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">year</span><span class="o">:</span><span class="p">{</span><span class="nx">$not</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$gte</span><span class="o">:</span><span class="w"> </span><span class="mf">2000</span><span class="p">,</span><span class="w"> </span><span class="nx">$lte</span><span class="o">:</span><span class="w"> </span><span class="mf">2002</span><span class="p">}}}).</span><span class="nx">pretty</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Get all movies for which the "directors" key is not defined</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We need to use <code>$exists</code> operator or checking for a <code>null</code> field.</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">movies</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">directors</span><span class="o">:</span><span class="p">{</span><span class="nx">$exists</span><span class="o">:</span><span class="kc">false</span><span class="p">}})</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="nx">or</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="nx">db</span><span class="p">.</span><span class="nx">movies</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">directors</span><span class="o">:</span><span class="kc">null</span><span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Get the title of all movies that start with the string <code>star wars</code>, regardless uppercase.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It is interesting using regular expressions. Remembre to use <code>i</code> option to inlude a non case sensitive check.</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">movies</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="sr">/^star wars/i</span><span class="p">},{</span><span class="nx">title</span><span class="o">:</span><span class="mf">1</span><span class="p">})</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="nx">or</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="nx">db</span><span class="p">.</span><span class="nx">movies</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$regex</span><span class="o">:</span><span class="s1">&#39;^star wars&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">$options</span><span class="o">:</span><span class="s1">&#39;i&#39;</span><span class="p">}},{</span><span class="nx">title</span><span class="o">:</span><span class="mf">1</span><span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Get the title of all movies that contain the comedy genre (<code>Comedy</code>)</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We look in the <code>genres</code> array for a given genre</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">movies</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">genres</span><span class="o">:</span><span class="s2">&quot;Comedy&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">genres</span><span class="o">:</span><span class="mf">1</span><span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Show the title and genres of the movies that contain either the comedy genre (<code>Comedy</code>) or adventure (<code>Adventure</code>).</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We need to prove that film math <code>$all</code> given genres.</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">movies</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">  </span><span class="p">{</span><span class="nx">genres</span><span class="o">:</span><span class="p">{</span><span class="w"> </span><span class="nx">$all</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Comedy&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Adventure&quot;</span><span class="p">]}},</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">  </span><span class="p">{</span><span class="nx">title</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">genres</span><span class="o">:</span><span class="mf">1</span><span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Get the title and genres of movies that have three genres.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We look for a <code>genres</code> array with three genres: <code>$size</code> operator.</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">movies</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="nx">genres</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$size</span><span class="o">:</span><span class="mf">3</span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">genres</span><span class="o">:</span><span class="mf">1</span><span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Get the movies whose <code>Rotten Tomatoes</code> rating is higher than <code>4</code></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+</div>
+<p>We need to check into embedded documents, via dot notation inside a String
+:::</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">movies</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="s2">&quot;tomatoes.viewer.rating&quot;</span><span class="o">:</span><span class="p">{</span><span class="nx">$gt</span><span class="o">:</span><span class="mf">4</span><span class="p">}})</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Make the same query as before, but limiting the number of documents to 10.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We need to <code>limit</code> results.</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">movies</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="s2">&quot;tomatoes.viewer.rating&quot;</span><span class="o">:</span><span class="p">{</span><span class="nx">$gt</span><span class="o">:</span><span class="mf">4</span><span class="p">}}).</span><span class="nx">limit</span><span class="p">(</span><span class="mf">10</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Now shows the title and rating of those movies with more than a 4 rating, ordered by rating (highest to lowest) and limiting the results to 10.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>And now adding an ordering filter</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">movies</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">    </span><span class="p">{</span><span class="s2">&quot;tomatoes.viewer.rating&quot;</span><span class="o">:</span><span class="p">{</span><span class="nx">$gt</span><span class="o">:</span><span class="mf">4</span><span class="p">}},</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="p">{</span><span class="nx">title</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;tomatoes.viewer.rating&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">})</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">    </span><span class="p">.</span><span class="nx">sort</span><span class="p">({</span><span class="s2">&quot;tomatoes.viewer.rating&quot;</span><span class="o">:-</span><span class="mf">1</span><span class="p">})</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">    </span><span class="p">.</span><span class="nx">limit</span><span class="p">(</span><span class="mf">10</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<!-- 
 
+API Rest amb 3 classes amb Spring Data MongoDB
+https://www.mongodb.com/blog/post/rest-apis-with-java-spring-boot-and-mongodb
 
+http://nicholasjohnson.com/mongo/course/workbook/
+
+-->
 
 
 

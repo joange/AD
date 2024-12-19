@@ -20,7 +20,7 @@
     
     
       
-        <title>3. Operacions amb Shell - Accés a Dades</title>
+        <title>3. Treballant amb MongoDB: Operacions bàsiques de shell - Accés a Dades</title>
       
     
     
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#3-treballant-amb-mongodb-operacions-basiques-de-shell" class="md-skip">
+          Salta el contingut
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3. Operacions amb Shell
+              3. Treballant amb MongoDB: Operacions bàsiques de shell
             
           </span>
         </div>
@@ -1063,7 +1068,7 @@
         
   
   <span class="md-ellipsis">
-    1. Bases de Dades NoSQL
+    1. Bases de dades NoSQL
   </span>
   
 
@@ -1084,7 +1089,7 @@
         
   
   <span class="md-ellipsis">
-    2. Introducció a MongoDB
+    2. MongoDB
   </span>
   
 
@@ -1107,16 +1112,207 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3. Treballant amb MongoDB: Operacions bàsiques de shell
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    3. Operacions amb Shell
+    3. Treballant amb MongoDB: Operacions bàsiques de shell
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-colleccions-i-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Col·leccions i Documents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-operacions-basiques-amb-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Operacions bàsiques amb MongoDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-tipus-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Tipus de dades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Tipus de dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1. Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2. Arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-documents-incrustats" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3. Documents incrustats
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334-que-son-els-objectids" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.4. Que són els OBjectIds?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-afegint-informacio-a-les-colleccions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Afegint informació a les col·leccions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. Afegint informació a les col·leccions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341-insertone" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.1. insertOne()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342-insertmany" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.2. insertMany()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-eliminant-informacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. Eliminant informació
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-actualitzacio-de-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6. Actualització de documents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6. Actualització de documents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-actualitzacio-de-reemplacament-replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1. Actualització de reemplaçament (replace)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6.1. Actualització de reemplaçament (replace)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3611-modificadors" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1.1. Modificadors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3612-upserts" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1.2. Upserts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1134,7 +1330,7 @@
         
   
   <span class="md-ellipsis">
-    4. Consultes CRUD
+    4. Consultese en Mongo
   </span>
   
 
@@ -1155,7 +1351,7 @@
         
   
   <span class="md-ellipsis">
-    5. Mongo i Java
+    5. MongoDB i Java
   </span>
   
 
@@ -1176,7 +1372,7 @@
         
   
   <span class="md-ellipsis">
-    6. Spring Data MongoDB
+    6. Spring Data MongoDB i API REST
   </span>
   
 
@@ -1355,6 +1551,175 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-colleccions-i-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Col·leccions i Documents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-operacions-basiques-amb-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Operacions bàsiques amb MongoDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-tipus-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Tipus de dades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Tipus de dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1. Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2. Arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-documents-incrustats" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3. Documents incrustats
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334-que-son-els-objectids" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.4. Que són els OBjectIds?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-afegint-informacio-a-les-colleccions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Afegint informació a les col·leccions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. Afegint informació a les col·leccions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341-insertone" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.1. insertOne()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342-insertmany" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.2. insertMany()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-eliminant-informacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. Eliminant informació
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-actualitzacio-de-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6. Actualització de documents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6. Actualització de documents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-actualitzacio-de-reemplacament-replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1. Actualització de reemplaçament (replace)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6.1. Actualització de reemplaçament (replace)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3611-modificadors" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1.1. Modificadors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3612-upserts" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1.2. Upserts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1369,9 +1734,379 @@
                   
 
 
-  <h1>3. Operacions amb Shell</h1>
-
-
+<h1 id="3-treballant-amb-mongodb-operacions-basiques-de-shell">3. Treballant amb MongoDB: Operacions bàsiques de shell</h1>
+<h2 id="31-colleccions-i-documents">3.1. Col·leccions i Documents</h2>
+<p>Com ja sabem, la unitat bàsica d'informació amb la qual treballa MongoDB és el <strong>document</strong>, que seria l'equivalent a un <em>registre</em> en un model relacional. Aquests són <strong>documents JSON</strong>, formats per parells <strong>clau-valor</strong>, i que representen la informació de manera força intuïtiva. Els servidors de MongoDB, per la seva banda, emmagatzemaran aquestes dades en format <strong>BSON</strong> (Binary JSON), un format de serialització binària.</p>
+<p>Pel que fa als documents JSON per a MongoDB, cal tenir en compte alguns aspectes:</p>
+<ul>
+<li>Pel que fa a les claus:<ul>
+<li>No poden ser nul·les.</li>
+<li>Poden consistir en qualsevol caràcter UTF-8, excepte els caràcters <code>.</code> o <code>$</code>.</li>
+<li>Són sensibles a majúscules i minúscules.</li>
+<li>Han de ser úniques dins del mateix document.</li>
+</ul>
+</li>
+<li>Pel que fa als valors:<ul>
+<li>Poden ser de qualsevol tipus permès.</li>
+</ul>
+</li>
+<li>Pel que fa al document:<ul>
+<li>Ha de tenir un camp <code>_id</code>, amb un valor únic, que actuarà com a identificador del document.</li>
+<li>Si no especifiquem aquesta clau, MongoDB la generarà automàticament, amb un objecte de tipus <code>ObjectId</code>.</li>
+</ul>
+</li>
+</ul>
+<p>Si els documents són l'equivalent als registres, les col·leccions són l'equivalent a les taules, amb la diferència que les col·leccions tenen un esquema dinàmic, amb el qual <strong>els documents de la mateixa col·lecció poden presentar claus o tipus de dades diferents entre ells</strong>.</p>
+<p>Els noms de les col·leccions estaran subjectes a les següents restriccions:</p>
+<ul>
+<li>No poden ser la cadena buida (<code>""</code>), ni el caràcter <code>null</code>, ni contenir el símbol <code>$</code>.</li>
+<li>Podem utilitzar el punt (<code>.</code>) en els noms de les col·leccions per afegir prefixos, però les col·leccions no es poden crear amb el prefix <code>system.</code>, ja que aquest s'utilitza per a col·leccions internes del <em>sistema</em>. Per exemple, <code>db.system.test</code> no seria vàlid, però <code>db.systema.test</code> sí que ho seria.</li>
+</ul>
+<h2 id="32-operacions-basiques-amb-mongodb">3.2. Operacions bàsiques amb MongoDB</h2>
+<p>A continuació, veurem algunes de les operacions bàsiques que podem realitzar a MongoDB:</p>
+<ul>
+<li><code>insertOne(document)</code> → Afegeix un document a la col·lecció:<ul>
+<li><code>db.collection.insertOne({ a:1 })</code></li>
+</ul>
+</li>
+<li><code>insertMany(documents)</code> → Afegeix un conjunt de documents a la col·lecció:<ul>
+<li><code>db.collection.insertMany([{ a:1 },{ a:2 },{ a:3,b:5 }])</code></li>
+</ul>
+</li>
+<li><code>find(criteria)</code> → Obté tots els documents d'una col·lecció que coincideixen amb el patró especificat.<ul>
+<li><code>db.collection.find({a:1})</code>. Tingueu en compte que el patró serà també un objecte JSON.</li>
+</ul>
+</li>
+<li><code>findOne(Criterion)</code> → Obté un element de la col·lecció que coincideix amb el patró.<ul>
+<li><code>db.collection.findOne()</code></li>
+</ul>
+</li>
+<li><code>updateOne(Criterion, Operation, [options])</code> i <code>updateMany(Criterion, Operation, [options])</code> → Actualitza un (o diversos en el cas d'updateMany) documents de la col·lecció. Requereix dos paràmetres:<ul>
+<li>els criteris de cerca del document a actualitzar i</li>
+<li>l'operació d'actualització.</li>
+<li>Admet un tercer paràmetre opcional per a opcions.<ul>
+<li><code>db.collection.updateOne({a:1}, {$set: {a:2}})</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>deleteOne(Criterion)</code> i <code>deleteMany(Criterion)</code> → Elimina els documents d'una col·lecció que coincideixen amb els criteris.<ul>
+<li><code>db.collection.deleteOne({a:1})</code></li>
+</ul>
+</li>
+</ul>
+<p>A les següents seccions aprofundirem en les diferents operacions.</p>
+<h2 id="33-tipus-de-dades">3.3. Tipus de dades</h2>
+<p>Els tipus de dades amb els quals treballa MongoDB són similars als que podem trobar en JavaScript i Java. MongoDB admet els tipus bàsics descrits a la taula següent:</p>
+<ul>
+<li><code>null</code> → Representa tant el valor nul com un camp que no existeix.</li>
+<li><code>boolean</code> → Permet els valors true i false.</li>
+<li><code>number</code> → Representa valors numèrics de punt flotant. Si volem utilitzar tipus enters o enters llargs, hem d'utilitzar les nostres pròpies classes: NumberInt (32 bits) o NumberLong (64 bits).</li>
+<li><code>String</code> → Representa qualsevol cadena de text UTF-8 vàlida.</li>
+<li><code>Date</code> → Representa dates, expressades en mil·lisegons.</li>
+<li><code>array</code> → Llistes de valors que es representen com a vectors.</li>
+<li><code>Documents incrustats</code> → Els documents poden tenir altres documents incrustats en ells.</li>
+<li><code>ObjectId</code> → Aquest és el tipus per defecte per als camps <code>_id</code>, i està dissenyat per generar fàcilment valors únics a nivell global.</li>
+</ul>
+<h3 id="331-data">3.3.1. Data</h3>
+<p>Mongo utilitza el tipus <code>Date</code> de JavaScript. Quan generem un nou objecte de tipus Date, hem d'utilitzar l'operador <code>New</code>, ja que en cas contrari obtindríem una representació de la data en forma de cadena.
+Per exemple, si definim les variables <code>a</code> i <code>b</code> de la següent manera:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="o">=</span><span class="nb">Date</span><span class="p">()</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nx">b</span><span class="o">=</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>els resultats serien prou diferents:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">a</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nx">Sun</span><span class="w"> </span><span class="nx">May</span><span class="w"> </span><span class="mf">08</span><span class="w"> </span><span class="mf">2022</span><span class="w"> </span><span class="mo">06</span><span class="o">:</span><span class="mf">46</span><span class="o">:</span><span class="mo">01</span><span class="w"> </span><span class="nx">GMT</span><span class="o">+</span><span class="mo">0200</span><span class="w"> </span><span class="p">(</span><span class="nx">Central</span><span class="w"> </span><span class="nx">European</span><span class="w"> </span><span class="nx">Summer</span><span class="w"> </span><span class="nx">Time</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="ow">typeof</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nx">string</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="nx">test</span><span class="o">&gt;</span><span class="nx">b</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="nx">ISODate</span><span class="p">(</span><span class="s2">&quot;2022-05-08T04:46:09.371Z&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="ow">typeof</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="nx">object</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="332-arrays">3.3.2. Arrays</h3>
+<p>Els arrays es poden utilitzar per representar col·leccions ordenades, com llistes o cues, o col·leccions desordenades, com conjunts. Com en JavaScript, i a diferència d'altres llenguatges, com Java, cada element del vector pot tenir un tipus de dada diferent, incloent-hi altres objectes de tipus vector.</p>
+<p>Vegem alguns exemples sobre vectors en JavaScript i, per tant, en MongoDB:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// array creation</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nx">v</span><span class="o">=</span><span class="p">{</span><span class="nx">objetos</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;casa&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">texto</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;hola&quot;</span><span class="p">},</span><span class="w"> </span><span class="kc">false</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1">// ask for objects components</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">v</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">{</span><span class="w"> </span><span class="nx">objetos</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s1">&#39;casa&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">texto</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;hola&#39;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">v</span><span class="p">.</span><span class="nx">objetos</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="p">[</span><span class="w"> </span><span class="s1">&#39;casa&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">texto</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;hola&#39;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">]</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="c1">// ask for array cells</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">v</span><span class="p">.</span><span class="nx">objetos</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="mf">10</span><span class="w"> </span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">v</span><span class="p">.</span><span class="nx">objetos</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="p">{</span><span class="w"> </span><span class="nx">texto</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;hola&#39;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="c1">// change values</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">v</span><span class="p">.</span><span class="nx">objetos</span><span class="p">[</span><span class="mf">3</span><span class="p">]</span><span class="o">=!</span><span class="nx">v</span><span class="p">.</span><span class="nx">objetos</span><span class="p">[</span><span class="mf">3</span><span class="p">]</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="kc">true</span><span class="w"> </span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">v</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="p">{</span><span class="w"> </span><span class="nx">objetos</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s1">&#39;casa&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">texto</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;hola&#39;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="333-documents-incrustats">3.3.3. Documents incrustats</h3>
+<p>Un parell clau-valor en un document pot tenir un altre document com a valor. Això es coneix com a <strong>documents incrustats</strong> (<em>embedded</em>), i seria quan s'utilitza un objecte JSON dins d'un altre. Per exemple:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nx">peli</span><span class="o">=</span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">        </span><span class="nx">titulo</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Rogue One. A Star Wars Story.&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">        </span><span class="nx">anyo</span><span class="o">:</span><span class="w"> </span><span class="mf">2016</span><span class="p">,</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">      </span><span class="nx">director</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">          </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Gareth&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">          </span><span class="nx">apellidos</span><span class="o">:</span><span class="w">  </span><span class="s2">&quot;Edwards&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">          </span><span class="nx">anyo_nacimiento</span><span class="o">:</span><span class="w"> </span><span class="mf">1975</span><span class="p">,</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">          </span><span class="nx">nacionalidad</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;británica&quot;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">   </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Com podem veure, el document en si mateix conté informació sobre la pel·lícula i el seu director. En un model relacional, normalment tindríem dues taules relacionades entre si. En aquest cas, és possible que si volem mantenir informació específica sobre els directors, acabem amb informació redundant.</p>
+<h3 id="334-que-son-els-objectids">3.3.4. Que són els OBjectIds?</h3>
+<p>La classe ObjectId utilitza 12 bytes, organitzats de la següent manera:</p>
+<p><center><img alt="ObjectID" src="../img/ObjectId.png" width="55%" /></center></p>
+<ul>
+<li><strong>Timestamp</strong> (bytes 0-3) → La marca de temps en segons des de l'1 de gener de 1970.</li>
+<li><strong>Machine ID</strong> (bytes 4-6) → Identificador únic de la màquina, normalment un hash del seu hostname.</li>
+<li><strong>PID</strong> (bytes 7-8) → Identificador del procés que genera l'ObjectID, per garantir la unicitat dins de la mateixa màquina.</li>
+<li><strong>Increment</strong> (bytes 9-11) → Valor auto-incremental, per garantir la unicitat en el mateix segon, màquina i procés.</li>
+</ul>
+<p>Com podem veure, és un mecanisme més robust que un camp auto-incremental com en MySQL. Això correspon a la naturalesa distribuïda de MongoDB, de manera que els objectes es poden generar en un entorn multi-host.</p>
+<h2 id="34-afegint-informacio-a-les-colleccions">3.4. Afegint informació a les col·leccions</h2>
+<p>La manera natural d'afegir elements a la base de dades és a través dels diferents mètodes d'inserció, disponibles en totes les col·leccions.</p>
+<h3 id="341-insertone">3.4.1. <code>insertOne()</code></h3>
+<p>Permet inserir un document a la col·lecció. Per exemple, per inserir l'objecte <em>peli</em> creat a la secció anterior, podem fer:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">misPelis</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">(</span><span class="nx">peli</span><span class="p">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="nx">acknowledged</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="nx">insertedId</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;6277510ab54867b80b742ddf&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Com podem veure, la resposta és un document JSON que conté un valor booleà que indica si l'operació ha estat exitosa, i un ObjectID, amb l'ID assignat automàticament.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+</div>
+<p>Tingueu en compte:</p>
+<ul>
+<li>Si la col·lecció a la qual afegim un document no existeix, es crearà automàticament.</li>
+<li>Pel que fa al camp <code>_id</code>, com podem veure, es va generar automàticament. No obstant això, podem indicar aquest identificador, sense que sigui de tipus ObjectId, l'única restricció és que sigui únic, per evitar duplicats.</li>
+<li>No hem utilitzat cap esquema per a la col·lecció, ja que cada document que inserim pot tenir un esquema diferent.</li>
+</ul>
+<h3 id="342-insertmany">3.4.2. <code>insertMany()</code></h3>
+<p>Permet afegir diversos documents a una col·lecció. Aleshores, hem de proporcionar un array de documents:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1">// we create three objects</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nx">peli2</span><span class="o">=</span><span class="p">{</span><span class="nx">titulo</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Star Wars. A new Hope&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">anyo</span><span class="o">:</span><span class="w"> </span><span class="mf">1977</span><span class="p">};</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nx">peli3</span><span class="o">=</span><span class="p">{</span><span class="nx">titulo</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Empire Strikes Back&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">anyo</span><span class="o">:</span><span class="w"> </span><span class="mf">1981</span><span class="p">};</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nx">peli4</span><span class="o">=</span><span class="p">{</span><span class="nx">titulo</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Return of the Jedi&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">anyo</span><span class="o">:</span><span class="w"> </span><span class="mf">1984</span><span class="p">};</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="c1">// insert them, in array way</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">misPelis</span><span class="p">.</span><span class="nx">insertMany</span><span class="p">([</span><span class="nx">peli2</span><span class="p">,</span><span class="w"> </span><span class="nx">peli3</span><span class="p">,</span><span class="w"> </span><span class="nx">peli4</span><span class="p">])</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="p">{</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">  </span><span class="nx">acknowledged</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">  </span><span class="nx">insertedIds</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="s1">&#39;0&#39;</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;627759a5b54867b80b742de0&quot;</span><span class="p">),</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="s1">&#39;1&#39;</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;627759a5b54867b80b742de1&quot;</span><span class="p">),</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="s1">&#39;2&#39;</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;627759a5b54867b80b742de2&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Si es produeix un error durant la inserció, ni el document que provoca l'error ni els documents següents s'inseriran a la col·lecció.</p>
+</div>
+<h2 id="35-eliminant-informacio">3.5. Eliminant informació</h2>
+<p>Per eliminar documents d'una col·lecció utilitzarem les ordres <code>deleteOne()</code>, <code>deleteMany()</code> o <code>findOneAndDelete()</code>, proporcionant-los com a paràmetre un JSON amb una <strong>condició</strong> que volem que compleixin el document o documents a eliminar.</p>
+<ul>
+<li>L'ordre <strong>deleteOne</strong> només eliminarà el primer element que coincideixi amb els criteris, així que si volem eliminar un document específic, hem d'utilitzar criteris que corresponguin a identificadors únics, com el <code>_id</code>.</li>
+<li>L'ordre <strong>deleteMany</strong> eliminarà tots els documents que coincideixin amb els criteris.</li>
+</ul>
+<p>Tant <code>deleteOne</code> com <code>deleteMany</code> retornen un document amb un booleà, indicant si l'operació s'ha realitzat, així com el nombre d'elements eliminats (<strong>deletedCount</strong>).</p>
+<p>Per la seva banda, <strong>findOneAndDelete</strong> també elimina un document, basant-se en criteris de selecció i ordenació, però també retornant el document que ha estat eliminat.</p>
+<p>Per exemple, creem una col·lecció amb diversos elements:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">pruebas</span><span class="p">.</span><span class="nx">insertMany</span><span class="p">([{</span><span class="nx">x</span><span class="o">:</span><span class="mf">1</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mf">2</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mf">3</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mf">4</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mf">5</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mf">6</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mf">7</span><span class="p">}]);</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="c1">// to delete one document</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">pruebas</span><span class="p">.</span><span class="nx">deleteOne</span><span class="p">({})</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="p">{</span><span class="w"> </span><span class="nx">acknowledged</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">deletedCount</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="c1">// as no confition is set, is satisfied by all documents, </span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="c1">// then first document will be deleted</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="c1">// to delete several documents, for instance its x&#39;s value greather than 3</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">pruebas</span><span class="p">.</span><span class="nx">deleteMany</span><span class="p">({</span><span class="nx">x</span><span class="o">:</span><span class="p">{</span><span class="nx">$gt</span><span class="o">:</span><span class="mf">3</span><span class="p">}})</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="p">{</span><span class="w"> </span><span class="nx">acknowledged</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">deletedCount</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="c1">// delete and return a document</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">pruebas</span><span class="p">.</span><span class="nx">findOneAndDelete</span><span class="p">({</span><span class="nx">x</span><span class="o">:</span><span class="mf">2</span><span class="p">})</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="p">{</span><span class="w"> </span><span class="nx">_id</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;6277687fb54867b80b742deb&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Si volem eliminar tots els documents d'una col·lecció, podríem utilitzar l'ordre <code>drop</code> en lloc d'això, però cal anar amb molta cura, ja que també eliminarà alguna metainformació.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">pruebas</span><span class="p">.</span><span class="nx">drop</span><span class="p">()</span><span class="w"> </span>
+</code></pre></div></td></tr></table></div>
+<h2 id="36-actualitzacio-de-documents">3.6. Actualització de documents</h2>
+<p>Per actualitzar documents, podem optar per actualitzacions de reemplaçament, utilitzant el mètode <code>replaceOne()</code>, o fer modificacions als documents existents, utilitzant els mètodes <code>updateOne()</code>, <code>updateMany()</code> i <code>findOneAndUpdate()</code>. Aquests mètodes rebran dos arguments: el primer serà els criteris o condicions que han de complir els documents a actualitzar, i el segon serà un document amb el nou document o les actualitzacions a aplicar.</p>
+<h3 id="361-actualitzacio-de-reemplacament-replace">3.6.1. Actualització de reemplaçament (replace)</h3>
+<p>L'operació de reemplaçament, com el seu nom indica, reemplaça un document sencer que compleix els criteris d'actualització amb un altre document nou. Per exemple, creem una nova col·lecció de calendaris, per emmagatzemar contactes, amb informació sobre telèfons:</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">agenda</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span><span class="nx">nombre</span><span class="o">:</span><span class="s2">&quot;Jose&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">telefonos</span><span class="o">:</span><span class="p">[{</span><span class="nx">trabajo</span><span class="o">:</span><span class="s2">&quot;55512345&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">casa</span><span class="o">:</span><span class="s2">&quot;555111222&quot;</span><span class="p">}]}</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="p">)</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="p">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">  </span><span class="nx">acknowledged</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">  </span><span class="nx">insertedId</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;627783dbb54867b80b742df8&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Com podem veure, aquest mètode retorna el <code>_id</code> de l'objecte, a través del qual podrem identificar aquest document de manera inequívoca. Així, podríem reemplaçar aquest document per un altre mitjançant:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">agenda</span><span class="p">.</span><span class="nx">replaceOne</span><span class="p">({</span><span class="s2">&quot;_id&quot;</span><span class="o">:</span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;62778439b54867b80b742df9&quot;</span><span class="p">)},</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">  </span><span class="p">{</span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Jose&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">  </span><span class="nx">correos</span><span class="o">:</span><span class="p">[{</span><span class="nx">trabajo</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;jose@empresa.com&quot;</span><span class="p">},</span><span class="w"> </span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">  </span><span class="p">{</span><span class="nx">personal</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;jose@proveedor.com&quot;</span><span class="p">}]}</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="c1">// and the response is</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="p">{</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">  </span><span class="nx">acknowledged</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">  </span><span class="nx">insertedId</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">  </span><span class="nx">matchedCount</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">  </span><span class="nx">modifiedCount</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">  </span><span class="nx">upsertedCount</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Com podem veure, es tracta de reemplaçar tot el document, amb la qual cosa podem fins i tot modificar la seva estructura.</p>
+<p>Com hem anticipat, les modificacions es realitzen utilitzant els mètodes <code>updateOne()</code>, <code>updateMany()</code> i <code>findOneAndUpdate()</code>. Similar a les operacions d'eliminació, el mètode <code>updateOne()</code> modificarà només el primer document que coincideixi amb els criteris donats i el mètode <code>updateMany()</code>, tots aquells que coincideixin amb els criteris. Per la seva banda, el mètode <code>findOneAndUpdate()</code> modifica el document i retorna el <em>document original</em> per defecte, tot i que això és configurable a través d'opcions.</p>
+<h4 id="3611-modificadors">3.6.1.1. Modificadors</h4>
+<p>Els modificadors són claus especials que ens permeten especificar operacions d'actualització més complexes. Normalment, no necessitarem reemplaçar tot el document, com en el cas anterior, sinó afegir o modificar camps específics:</p>
+<ul>
+<li><code>$set</code> → Assigna un valor a un camp del document. Si no existeix, el crearà.<ul>
+<li><code>db.collection.updateOne({criteri}, {$set: {camp:valor} });</code></li>
+</ul>
+</li>
+<li><code>$unset</code> → Elimina un camp d'un o més documents. Com que necessitem introduir un parell clau-valor, afegirem un booleà com a valor.<ul>
+<li><code>db.collection.updateMany({criteri}, {$unset: {camp:true} });</code></li>
+</ul>
+</li>
+<li><code>$inc</code> → Incrementa o decrementa el valor numèric d'una clau (no es refereix a l'identificador), creant-ne una de nova si no existeix.<ul>
+<li><code>db.collection.updateOne({criteri}, {$inc: {camp:increment} });</code></li>
+</ul>
+</li>
+<li><code>$push</code> → Afegeix elements a un array. Si l'array no existeix, el crea amb els elements que indiquem en el push, mentre que si ja existeix, els afegeix al final d'aquest.<ul>
+<li><code>db.collection.update({criteri}, {$push: {nom_array:{llista_de_valors} } });</code></li>
+</ul>
+</li>
+<li><code>$pull</code> → Elimina elements d'un array basant-se en algun criteri.<ul>
+<li><code>db.collection.update({criteri},{$pull:{vector:element}})</code>.</li>
+</ul>
+</li>
+<li><code>$pop</code> → Elimina elements d'un array tractat com una pila o cua, és a dir, eliminant el primer (-1) o últim (1) element.<ul>
+<li><code>db.collection.update({criteri},{$pop:{vector: [ -1 | 1 ] }})</code></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Information</p>
+<p>Aquests modificadors funcionen tant amb <code>updateOne</code> com amb <code>updateMany</code>.</p>
+</div>
+<h4 id="3612-upserts">3.6.1.2. Upserts</h4>
+<p>Quan no es troba cap document que coincideixi amb els criteris per a una actualització, com és d'esperar, no es produeix cap canvi a la col·lecció.
+D'altra banda, de vegades, podem desitjar que si un document amb certs criteris no existeix quan volem modificar-lo, es creï. Això s'aconsegueix a través d'actualitzacions especials, anomenades <code>upserts</code>. Amb aquesta operació, ens estalviem de buscar primer a la col·lecció per saber si hem de realitzar una operació d'inserció (si no existeix) o de modificació (si existeix).</p>
+<p>Per realitzar un upsert, utilitzarem el tercer argument de les actualitzacions, que consisteix en un document amb diferents opcions en format clau-valor, afegint la clau upsert a true.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">updateOne</span><span class="p">({</span><span class="nx">criteria</span><span class="p">},{</span><span class="nx">modification</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">upsert</span><span class="o">:</span><span class="kc">true</span><span class="p">});</span>
+</code></pre></div></td></tr></table></div>
 
 
 

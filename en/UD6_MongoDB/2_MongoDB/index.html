@@ -20,7 +20,7 @@
     
     
       
-        <title>2. Introduction to MongoDB - Accés a Dades</title>
+        <title>2. MongoDB - Accés a Dades</title>
       
     
     
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#2-mongodb" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2. Introduction to MongoDB
+              2. MongoDB
             
           </span>
         </div>
@@ -1063,7 +1068,7 @@
         
   
   <span class="md-ellipsis">
-    1. NoSQL Databases
+    1. NoSQL databases
   </span>
   
 
@@ -1086,16 +1091,57 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2. MongoDB
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    2. Introduction to MongoDB
+    2. MongoDB
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-setup-and-first-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Setup and first run
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1113,7 +1159,7 @@
         
   
   <span class="md-ellipsis">
-    3. Shell Operations
+    3. Working with MongoDB: Basic shell operations
   </span>
   
 
@@ -1134,7 +1180,7 @@
         
   
   <span class="md-ellipsis">
-    4. CRUD Queries
+    4. Mongo Queries
   </span>
   
 
@@ -1155,7 +1201,7 @@
         
   
   <span class="md-ellipsis">
-    5. Mongo and Java
+    5. MongoDB and Java
   </span>
   
 
@@ -1176,7 +1222,7 @@
         
   
   <span class="md-ellipsis">
-    6. Spring MongoDB
+    6. Spring Data MongoDB y API REST
   </span>
   
 
@@ -1355,6 +1401,25 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-setup-and-first-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Setup and first run
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1369,9 +1434,59 @@
                   
 
 
-  <h1>2. Introduction to MongoDB</h1>
-
-
+<h1 id="2-mongodb">2. MongoDB</h1>
+<p>MongoDB is a <strong>document-oriented database</strong>, based on storing its data structures in JSON-type documents with a <strong>dynamic schema</strong>. Although it began being developed by the 10gen company, today it is an open source project, with a large user community.</p>
+<p>A MongoDB server can contain several databases, and each of them made up of a set of collections, which we could compare to the tables of a relational database. Each collection stores a set of JSON documents, made up of key-value attributes, which would be the records of a relational database.</p>
+<p>Broadly speaking, we could establish the following comparisons:</p>
+<table>
+<thead>
+<tr>
+<th>Relational model</th>
+<th>MongoDB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relational DB</td>
+<td>Document-oriented DB</td>
+</tr>
+<tr>
+<td>Table</td>
+<td>Collection</td>
+</tr>
+<tr>
+<td>Record/Row</td>
+<td>JSON Documents</td>
+</tr>
+<tr>
+<td>Table columns and values</td>
+<td>Key:Value pairs</td>
+</tr>
+</tbody>
+</table>
+<h2 id="21-setup-and-first-run">2.1. Setup and first run</h2>
+<p>MongoDB covers a wide range of possibilities, from local database servers to cloud databases. On its website <a href="https://www.mongodb.com">https://www.mongodb.com</a>, we can discover the different products and services that are offered, among which we find:</p>
+<ul>
+<li><strong>MongoDB DB server</strong>, with its two versions, the Community, free and community version, and the Enterprise, its commercial version aimed at the business world and with additional features that improve performance and support. In addition to the server itself, the server prepared for use in containers is also offered on the web, through Kubernetes operators. The server is available on various platforms: Linux, Solaris, MacOS X and Windows.</li>
+<li>We can use the <strong>mongo shell</strong> or <strong>compass</strong>  or <strong>Robo3T</strong> graphical as a client, installed in our system</li>
+<li><strong>MongoDB Atlas</strong>, the MongoDB platform in the cloud (DBaaS or DataBase as a Service), which allows its deployment in services such as AWS, Azure or Google Cloud.</li>
+<li><strong>Realm</strong>, a data service designed for mobile and web applications, and which includes, in addition to DB in the cloud, several fully managed backend services.</li>
+</ul>
+<p>We are going to use, as current course, all servers via docker containers. We could download docker image via:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>mongo
+</code></pre></div></td></tr></table></div>
+<p>and then create a server in a working container with</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>mongodb-srv<span class="w"> </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">MONGO_INITDB_ROOT_USERNAME</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="w"> </span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">MONGO_INITDB_ROOT_PASSWORD</span><span class="o">=</span><span class="s2">&quot;toor&quot;</span><span class="w"> </span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">27017</span>:27017<span class="w"> </span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span>-d<span class="w"> </span>mongo
+</code></pre></div></td></tr></table></div>
+<p>We can connect with compass to work with graphic interface</p>
 
 
 

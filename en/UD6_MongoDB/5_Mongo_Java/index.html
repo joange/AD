@@ -20,7 +20,7 @@
     
     
       
-        <title>5. Mongo and Java - Accés a Dades</title>
+        <title>5. MongoDB and Java - Accés a Dades</title>
       
     
     
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#5-mongodb-and-java" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              5. Mongo and Java
+              5. MongoDB and Java
             
           </span>
         </div>
@@ -1063,7 +1068,7 @@
         
   
   <span class="md-ellipsis">
-    1. NoSQL Databases
+    1. NoSQL databases
   </span>
   
 
@@ -1084,7 +1089,7 @@
         
   
   <span class="md-ellipsis">
-    2. Introduction to MongoDB
+    2. MongoDB
   </span>
   
 
@@ -1105,7 +1110,7 @@
         
   
   <span class="md-ellipsis">
-    3. Shell Operations
+    3. Working with MongoDB: Basic shell operations
   </span>
   
 
@@ -1126,7 +1131,7 @@
         
   
   <span class="md-ellipsis">
-    4. CRUD Queries
+    4. Mongo Queries
   </span>
   
 
@@ -1149,16 +1154,105 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    5. MongoDB and Java
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    5. Mongo and Java
+    5. MongoDB and Java
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#51-drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Drivers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1. Drivers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511-the-java-driver" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1. The Java driver
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-connection-to-a-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Connection to a database
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2. Connection to a database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-mongodatabase" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1. MongoDatabase
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. Queries
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1176,7 +1270,7 @@
         
   
   <span class="md-ellipsis">
-    6. Spring MongoDB
+    6. Spring Data MongoDB y API REST
   </span>
   
 
@@ -1355,6 +1449,73 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#51-drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Drivers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1. Drivers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511-the-java-driver" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1. The Java driver
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-connection-to-a-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Connection to a database
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2. Connection to a database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-mongodatabase" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1. MongoDatabase
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. Queries
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1369,9 +1530,240 @@
                   
 
 
-  <h1>5. Mongo and Java</h1>
-
-
+<h1 id="5-mongodb-and-java">5. MongoDB and Java</h1>
+<p>Let's go to view hot to acces MongoDB from our Java programs. Firtsly, as we view in unit 2, we study how to acces directly and then with elements like ORM.</p>
+<h2 id="51-drivers">5.1. Drivers</h2>
+<p>As we already know, to connect from our applications to a database we need a controller or driver.
+MongoDB offers official drivers for a multitude of platforms, including C, C++, C#, NodeJS, Python, and of course, Java, among many others.</p>
+<p>Focusing on Java, MongoDB offers us two drivers: </p>
+<ul>
+<li>The Java driver for synchronous applications.</li>
+<li>The Reactive Streams driver for processing asynchronous Streams.</li>
+</ul>
+<p>Although currently there is a trend towards reactive programming, we are going to work with the Java synchronous driver to make it easier to understand and focus on the actual access to the data.</p>
+<h3 id="511-the-java-driver">5.1.1. The Java driver</h3>
+<p>Using the MongoDB Driver for Java we can connect to both a local or remote database, as well as a <em>MongoDB Atlas cluster</em>. This driver (MongoDB Java Driver) can be found in the Maven repositories, and provides a large number of classes and interfaces to facilitate working with MongoDB from Java.</p>
+<p>In a Gradle project we should use:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>implementation<span class="w"> </span>group:<span class="w"> </span><span class="s1">&#39;org.mongodb&#39;</span>,<span class="w"> </span>name:<span class="w"> </span><span class="s1">&#39;mongo-java-driver&#39;</span>,<span class="w"> </span>version:<span class="w"> </span><span class="s1">&#39;3.12.10&#39;</span>
+</code></pre></div></td></tr></table></div>
+<p>whereas in a Maven project:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">XML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.mongodb<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>mongo-java-driver<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>3.12.10<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="52-connection-to-a-database">5.2. Connection to a database</h2>
+<p>To connect and communicate with a database we need a client. In the case of the Java driver for MongoDB, the client is implemented through the <code>MongoClient</code> class.</p>
+<p>The <code>MongoClient</code> class represents a set of connections to a MongoDB server. These connections are thread-safe, that is, several threads of execution can safely access them.</p>
+<p>The way to create <code>MongoClient</code> instances is through the <code>MongoClients.create()</code> method. Also, generally, we only need one instance of this class, even in multi-threaded applications. The <code>MongoClients</code> create method takes as an argument a <code>Connection String</code>, with the following simplified format (the clearer parameters are optional):</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>mongodb://<span class="w"> </span><span class="o">[</span>user:password<span class="w"> </span>@<span class="o">]</span><span class="w"> </span>host<span class="o">[</span>:port<span class="o">]</span><span class="w"> </span>/?options
+</code></pre></div></td></tr></table></div>
+<p>So, a way to obtain, for example, a connection to the local server would be:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">String</span><span class="w"> </span><span class="n">uri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;mongodb://localhost:27017&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">MongoClient</span><span class="w"> </span><span class="n">mongoClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MongoClients</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="n">uri</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p>The MongoClient class, among others, supports the following methods:</p>
+<ul>
+<li><code>getDatabase(String name)</code> → Gets a reference to a database whose name is passed as an argument.</li>
+<li><code>listDatabaseNames()</code> Gets a list of Strings (<code>MongoIterable</code> interface) with the names of the server's databases.</li>
+<li><code>close()</code> Closes the connection to the server. It should always be done when it is no longer going to be used.</li>
+</ul>
+<h3 id="521-mongodatabase">5.2.1. MongoDatabase</h3>
+<p>The <code>getDatabase()</code> method of the <code>MongoClient</code> class returns a reference to an object that implements the <code>MongoDatabase</code> interface, which represents a connection to a database. This interface defines the following methods:</p>
+<ul>
+<li><code>getCollection(String name)</code> → Gets a reference to the collection.</li>
+<li><code>listCollectionNames()</code> → Gets a list of Strings (<code>MongoIterable interface</code>) with the names of the collections in the database.</li>
+<li><code>listCollections()</code> → Gets a list of references (<code>MongoCollection</code>) to the collections in the database.</li>
+<li><code>createCollection(String name)</code> → Creates a new collection with the specified name in the database</li>
+<li><code>drop()</code> → Drops the database</li>
+</ul>
+<p>Here you will find a sample of connection and list of database and collections of a given server:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span>
+<span class="normal"><a href="#__codelineno-4-27">27</a></span>
+<span class="normal"><a href="#__codelineno-4-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">MongoClient</span><span class="w"> </span><span class="nf">connectServer</span><span class="p">(){</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">uri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;mongodb://root:toor@localhost:27017&quot;</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="n">MongoClient</span><span class="w"> </span><span class="n">mongoClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MongoClients</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="n">uri</span><span class="p">);</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">mongoClient</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">}</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">disConnect</span><span class="p">(</span><span class="n">MongoClient</span><span class="w"> </span><span class="n">client</span><span class="p">){</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">  </span><span class="n">client</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="p">}</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getInfo</span><span class="p">(</span><span class="n">MongoClient</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">  </span><span class="c1">// get list of databases</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">dbname</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="na">listDatabaseNames</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">      </span><span class="c1">// Write its name</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Database: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dbname</span><span class="p">);</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">      </span><span class="c1">// Get a database reference</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">      </span><span class="n">MongoDatabase</span><span class="w"> </span><span class="n">db</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="na">getDatabase</span><span class="p">(</span><span class="n">dbname</span><span class="p">);</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">      </span><span class="c1">// Get database collections</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">      </span><span class="n">MongoIterable</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">colecciones</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">listCollectionNames</span><span class="p">();</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">      </span><span class="c1">// show collections name</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">coleccion</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">colecciones</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">          </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\t\t &gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">coleccion</span><span class="p">);</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="53-queries">5.3. Queries</h2>
+<p>The <code>getCollection()</code> method of <code>MongoDatabase()</code> provides us with a <code>Document</code> collection (<code>MongoCollection&lt;Document&gt;</code>), on which we will be able to perform queries using the <code>find()</code> method. This method, which we already know from the MongoDB shell, will allow us to filter documents based on certain criteria.</p>
+<p>These criteria are expressed as filters (query filters in the documentation), and can contain several query operators on some fields that will determine which documents in the collection are included as results.</p>
+<p>The <code>Filter</code> class provides us with factory methods to perform these queries, similar to how we worked with the MongoDB shell. This class gives us:</p>
+<ul>
+<li>Empty query, with <code>Filters.empty()</code>.</li>
+<li>Comparison operators: To perform queries based on values in the collection: </li>
+<li><code>Filters.eq(key, value)</code>, <code>Filters.gt(key, value)</code>, <code>Filters.gte(key, value)</code>, <code>Filters.lt(key, value)</code> or <code>Filters.lte(key, value)</code>.</li>
+<li>Logical operators: To perform logical operations on the result of other queries: <code>Filter.and(other_filters)</code>, <code>Filter.or(other_folters)</code>, etc.</li>
+<li>Array operators: They allow us to perform queries based on the value or number of elements of a vector: <code>Filters.size(vector, size)</code>.</li>
+<li>Other operators, such as <code>Filter.exists()</code> or <code>Filter.regex()</code>, to check for the existence of a key or perform a regular expression search.</li>
+</ul>
+<p>In addition to filters, we will also be able to include aggregation operations, through the <code>aggregate()</code> method of a <code>MongoCollection</code> instance. You can check the documentation about aggregations in the MongoDB aggregation operations guide.</p>
+<p>On the other hand, the MongoDB driver API also allows us to perform field projections using the <code>Projections</code> class, which offers the <code>Projections.fields()</code>, <code>Projections.include()</code> or <code>Projections.excludeID()</code> methods.</p>
+<p>Sample of find films from a given year, only 10 resuts:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getPelisAnyo</span><span class="p">(</span><span class="n">MongoClient</span><span class="w"> </span><span class="n">client</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">anyo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="c1">// get collection from database</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="n">MongoDatabase</span><span class="w"> </span><span class="n">db</span><span class="o">=</span><span class="n">client</span><span class="p">.</span><span class="na">getDatabase</span><span class="p">(</span><span class="s">&quot;mflix&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="c1">// get documents from that colection</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="n">MongoCollection</span><span class="o">&lt;</span><span class="n">Document</span><span class="o">&gt;</span><span class="w"> </span><span class="n">colPelis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">getCollection</span><span class="p">(</span><span class="s">&quot;movies&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">    </span><span class="c1">// And now, we apply a filter and limit</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="n">FindIterable</span><span class="o">&lt;</span><span class="n">Document</span><span class="o">&gt;</span><span class="w"> </span><span class="n">docsPelis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colPelis</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">            </span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="n">Filters</span><span class="p">.</span><span class="na">eq</span><span class="p">(</span><span class="s">&quot;year&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">anyo</span><span class="p">))</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">            </span><span class="p">.</span><span class="na">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">    </span><span class="c1">// we show it</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Document</span><span class="w"> </span><span class="n">doc</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">docsPelis</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">doc</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Remember</p>
+<p><code>Document</code> class have several method to work like Json Documents in unit 1. We can get each field by given <em>key</em>, getting its <em>value</em></p>
+</div>
+<p>Another sample with filters and projections:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span>
+<span class="normal"><a href="#__codelineno-6-24">24</a></span>
+<span class="normal"><a href="#__codelineno-6-25">25</a></span>
+<span class="normal"><a href="#__codelineno-6-26">26</a></span>
+<span class="normal"><a href="#__codelineno-6-27">27</a></span>
+<span class="normal"><a href="#__codelineno-6-28">28</a></span>
+<span class="normal"><a href="#__codelineno-6-29">29</a></span>
+<span class="normal"><a href="#__codelineno-6-30">30</a></span>
+<span class="normal"><a href="#__codelineno-6-31">31</a></span>
+<span class="normal"><a href="#__codelineno-6-32">32</a></span>
+<span class="normal"><a href="#__codelineno-6-33">33</a></span>
+<span class="normal"><a href="#__codelineno-6-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getPelisEntre</span><span class="p">(</span><span class="n">MongoClient</span><span class="w"> </span><span class="n">client</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">anyo1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">anyo2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="c1">// check anyo values</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">anyo1</span><span class="o">&gt;</span><span class="n">anyo2</span><span class="p">){</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">tmp</span><span class="o">=</span><span class="n">anyo1</span><span class="p">;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">        </span><span class="n">anyo1</span><span class="o">=</span><span class="n">anyo2</span><span class="p">;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">        </span><span class="n">anyo2</span><span class="o">=</span><span class="n">tmp</span><span class="p">;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">    </span><span class="c1">// get document collection</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">    </span><span class="n">MongoDatabase</span><span class="w"> </span><span class="n">db</span><span class="o">=</span><span class="n">client</span><span class="p">.</span><span class="na">getDatabase</span><span class="p">(</span><span class="s">&quot;mflix&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">    </span><span class="n">MongoCollection</span><span class="o">&lt;</span><span class="n">Document</span><span class="o">&gt;</span><span class="w"> </span><span class="n">colPelis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">getCollection</span><span class="p">(</span><span class="s">&quot;movies&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">    </span><span class="c1">// Creamos el filtro</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">    </span><span class="n">Bson</span><span class="w"> </span><span class="n">filter</span><span class="o">=</span><span class="n">Filters</span><span class="p">.</span><span class="na">and</span><span class="p">(</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">        </span><span class="n">Filters</span><span class="p">.</span><span class="na">gte</span><span class="p">(</span><span class="s">&quot;year&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">anyo1</span><span class="p">),</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">        </span><span class="n">Filters</span><span class="p">.</span><span class="na">lte</span><span class="p">(</span><span class="s">&quot;year&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">anyo2</span><span class="p">)</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">    </span><span class="p">);</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">    </span><span class="c1">// Create projecction</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">    </span><span class="n">Bson</span><span class="w"> </span><span class="n">projection</span><span class="o">=</span><span class="n">Projections</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="w">            </span><span class="p">.</span><span class="na">fields</span><span class="p">(</span><span class="n">Projections</span><span class="p">.</span><span class="na">include</span><span class="p">(</span><span class="s">&quot;title&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;year&quot;</span><span class="p">),</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="w">                    </span><span class="n">Projections</span><span class="p">.</span><span class="na">excludeId</span><span class="p">());</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="w">    </span><span class="c1">// Run the filters</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="w">    </span><span class="n">FindIterable</span><span class="o">&lt;</span><span class="n">Document</span><span class="o">&gt;</span><span class="w"> </span><span class="n">DocsPelis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colPelis</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a><span class="w">            </span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="n">filter</span><span class="p">)</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28"></a><span class="w">            </span><span class="p">.</span><span class="na">projection</span><span class="p">(</span><span class="n">projection</span><span class="p">);</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29"></a>
+<a id="__codelineno-6-30" name="__codelineno-6-30"></a><span class="w">    </span><span class="c1">// Show the films</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Document</span><span class="w"> </span><span class="n">doc</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">DocsPelis</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-32" name="__codelineno-6-32"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">doc</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-34" name="__codelineno-6-34"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 
 
 

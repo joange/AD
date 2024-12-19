@@ -20,7 +20,7 @@
     
     
       
-        <title>2. Introducció a MongoDB - Accés a Dades</title>
+        <title>2. MongoDB - Accés a Dades</title>
       
     
     
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#2-mongodb" class="md-skip">
+          Salta el contingut
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2. Introducció a MongoDB
+              2. MongoDB
             
           </span>
         </div>
@@ -1063,7 +1068,7 @@
         
   
   <span class="md-ellipsis">
-    1. Bases de Dades NoSQL
+    1. Bases de dades NoSQL
   </span>
   
 
@@ -1086,16 +1091,57 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2. MongoDB
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    2. Introducció a MongoDB
+    2. MongoDB
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-configuracio-i-primera-execucio" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Configuració i primera execució
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1113,7 +1159,7 @@
         
   
   <span class="md-ellipsis">
-    3. Operacions amb Shell
+    3. Treballant amb MongoDB: Operacions bàsiques de shell
   </span>
   
 
@@ -1134,7 +1180,7 @@
         
   
   <span class="md-ellipsis">
-    4. Consultes CRUD
+    4. Consultese en Mongo
   </span>
   
 
@@ -1155,7 +1201,7 @@
         
   
   <span class="md-ellipsis">
-    5. Mongo i Java
+    5. MongoDB i Java
   </span>
   
 
@@ -1176,7 +1222,7 @@
         
   
   <span class="md-ellipsis">
-    6. Spring Data MongoDB
+    6. Spring Data MongoDB i API REST
   </span>
   
 
@@ -1355,6 +1401,25 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-configuracio-i-primera-execucio" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Configuració i primera execució
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1369,9 +1434,61 @@
                   
 
 
-  <h1>2. Introducció a MongoDB</h1>
-
-
+<h1 id="2-mongodb">2. MongoDB</h1>
+<p>MongoDB és una <strong>base de dades orientada a documents</strong>, basada en l'emmagatzematge de les seves estructures de dades en documents de tipus JSON amb un <strong>esquema dinàmic</strong>. Tot i que va començar a ser desenvolupada per l'empresa 10gen, avui en dia és un projecte de codi obert, amb una gran comunitat d'usuaris.</p>
+<p>Un servidor MongoDB pot contenir diverses bases de dades, i cadascuna d'elles està formada per un conjunt de col·leccions, que podríem comparar amb les taules d'una base de dades relacional. Cada col·lecció emmagatzema un conjunt de documents JSON, formats per atributs clau-valor, que serien els registres d'una base de dades relacional.</p>
+<p>A grans trets, podríem establir les següents comparacions:</p>
+<table>
+<thead>
+<tr>
+<th>Model relacional</th>
+<th>MongoDB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base de dades relacional</td>
+<td>Base de dades orientada a documents</td>
+</tr>
+<tr>
+<td>Taula</td>
+<td>Col·lecció</td>
+</tr>
+<tr>
+<td>Registre/Fila</td>
+<td>Documents JSON</td>
+</tr>
+<tr>
+<td>Columnes i valors de la taula</td>
+<td>Parells Clau:Valor</td>
+</tr>
+</tbody>
+</table>
+<h2 id="21-configuracio-i-primera-execucio">2.1. Configuració i primera execució</h2>
+<p>MongoDB cobreix una àmplia gamma de possibilitats, des de servidors de bases de dades locals fins a bases de dades al núvol. Al seu lloc web <a href="https://www.mongodb.com">https://www.mongodb.com</a>, podem descobrir els diferents productes i serveis que s'ofereixen, entre els quals trobem:</p>
+<ul>
+<li><strong>Servidor MongoDB</strong>, amb les seves dues versions, la Community, versió gratuïta i comunitària, i l'Enterprise, la seva versió comercial orientada al món empresarial i amb característiques addicionals que milloren el rendiment i el suport. A més del servidor en si, també s'ofereix el servidor preparat per a ús en contenidors a través d'operadors de Kubernetes. El servidor està disponible en diverses plataformes: Linux, Solaris, MacOS X i Windows.<ul>
+<li>Podem utilitzar el <strong>mongo shell</strong> o <strong>compass</strong> o <strong>Robo3T</strong> gràfic com a client, instal·lat en el nostre sistema.</li>
+</ul>
+</li>
+<li><strong>MongoDB Atlas</strong>, la plataforma MongoDB al núvol (DBaaS o DataBase as a Service), que permet el seu desplegament en serveis com AWS, Azure o Google Cloud.</li>
+<li><strong>Realm</strong>, un servei de dades dissenyat per a aplicacions mòbils i web, i que inclou, a més de DB al núvol, diversos serveis de backend totalment gestionats.</li>
+</ul>
+<p>Utilitzarem, com a curs actual, tots els servidors a través de contenidors docker. Podríem descarregar la imatge docker via:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>mongo
+</code></pre></div></td></tr></table></div>
+<p>i llavors crear el contenidor amb:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>mongodb-srv<span class="w"> </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">MONGO_INITDB_ROOT_USERNAME</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="w"> </span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">MONGO_INITDB_ROOT_PASSWORD</span><span class="o">=</span><span class="s2">&quot;toor&quot;</span><span class="w"> </span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">27017</span>:27017<span class="w"> </span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span>-d<span class="w"> </span>mongo
+</code></pre></div></td></tr></table></div>
+<p>Llavors ja podem connectar des de l'eina escollida</p>
 
 
 

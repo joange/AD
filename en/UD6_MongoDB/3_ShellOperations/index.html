@@ -20,7 +20,7 @@
     
     
       
-        <title>3. Shell Operations - Accés a Dades</title>
+        <title>3. Working with MongoDB: Basic shell operations - Accés a Dades</title>
       
     
     
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#3-working-with-mongodb-basic-shell-operations" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3. Shell Operations
+              3. Working with MongoDB: Basic shell operations
             
           </span>
         </div>
@@ -1063,7 +1068,7 @@
         
   
   <span class="md-ellipsis">
-    1. NoSQL Databases
+    1. NoSQL databases
   </span>
   
 
@@ -1084,7 +1089,7 @@
         
   
   <span class="md-ellipsis">
-    2. Introduction to MongoDB
+    2. MongoDB
   </span>
   
 
@@ -1107,16 +1112,207 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3. Working with MongoDB: Basic shell operations
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    3. Shell Operations
+    3. Working with MongoDB: Basic shell operations
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-collections-and-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Collections and Documents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-basic-operations-with-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Basic operations with MongoDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Data types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Data types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1. Date
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2. Arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-embedded-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3. Embedded documents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334-about-objectids" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.4. About OBjectIds
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-adding-information-to-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Adding information to collections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. Adding information to collections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341-insertone" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.1. insertOne()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342-insertmany" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.2. insertMany()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-removing-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. Removing information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-documents-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6. Documents update
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6. Documents update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-replace-update-replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1. Replace Update (replace)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6.1. Replace Update (replace)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3611-modifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1.1. Modifiers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3612-upserts" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1.2. Upserts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1134,7 +1330,7 @@
         
   
   <span class="md-ellipsis">
-    4. CRUD Queries
+    4. Mongo Queries
   </span>
   
 
@@ -1155,7 +1351,7 @@
         
   
   <span class="md-ellipsis">
-    5. Mongo and Java
+    5. MongoDB and Java
   </span>
   
 
@@ -1176,7 +1372,7 @@
         
   
   <span class="md-ellipsis">
-    6. Spring MongoDB
+    6. Spring Data MongoDB y API REST
   </span>
   
 
@@ -1355,6 +1551,175 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-collections-and-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Collections and Documents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-basic-operations-with-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Basic operations with MongoDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Data types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Data types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1. Date
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2. Arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-embedded-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3. Embedded documents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334-about-objectids" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.4. About OBjectIds
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-adding-information-to-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Adding information to collections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. Adding information to collections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341-insertone" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.1. insertOne()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342-insertmany" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.2. insertMany()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-removing-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. Removing information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-documents-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6. Documents update
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6. Documents update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-replace-update-replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1. Replace Update (replace)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6.1. Replace Update (replace)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3611-modifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1.1. Modifiers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3612-upserts" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1.2. Upserts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1369,9 +1734,350 @@
                   
 
 
-  <h1>3. Shell Operations</h1>
-
-
+<h1 id="3-working-with-mongodb-basic-shell-operations">3. Working with MongoDB: Basic shell operations</h1>
+<h2 id="31-collections-and-documents">3.1. Collections and Documents</h2>
+<p>As we already know, the basic unit of information that MongoDB works with is the <strong>document</strong>, which would be the equivalent of a <em>record</em> in a relational model. These are <strong>JSON documents</strong>, made up of <strong>key-value</strong> pairs, and which represent the information in a fairly intuitive way. MongoDB servers, for their part, will store this data in <strong>BSON</strong> (Binary JSON) format, a binary serialization format.</p>
+<p>Regarding JSON documents for MongoDB, some aspects must be taken into account:</p>
+<ul>
+<li>Regarding the keys:</li>
+<li>They cannot be null.</li>
+<li>They can consist of any UTF-8 character, except the characters <code>.</code> or <code>$</code>.</li>
+<li>Are case-sensitive.</li>
+<li>They must be unique within the same document.</li>
+<li>Regarding your values:</li>
+<li>They can be of any type allowed.</li>
+<li>Regarding the document:</li>
+<li>It must have an <code>_id</code> field, with a unique value, which will act as a document identifier. </li>
+<li>If we do not specify this key, MongoDB will generate it automatically, with an object of type <code>ObjectId</code>.</li>
+</ul>
+<p>If the documents are the equivalent of the records, the collections are the equivalent of the tables, with the difference that the collections have a dynamic schema, with which <strong>documents of the same collection can present different keys or data types between them</strong>.</p>
+<p>Collection names will be subject to the following restrictions:</p>
+<ul>
+<li>They cannot be the empty string (<code>""</code>), nor the <code>null</code> character, nor contain the symbol <code>$</code>.</li>
+<li>We can use the period (<code>.</code>) in collection names to add prefixes to it, but collections cannot be created with the prefix by <code>system.</code>, since this is used for collections internal to the <em>system</em>. For example <code>db.system.test</code> would not be valid, but <code>db.systema.test</code> would.</li>
+</ul>
+<h2 id="32-basic-operations-with-mongodb">3.2. Basic operations with MongoDB</h2>
+<p>In the following, we are going to see some of the basic operations that we can perform on MongoDB:</p>
+<ul>
+<li><code>insertOne(document)</code> → Add a document to the collection:</li>
+<li><code>db.collection.insertOne({ a:1 })</code></li>
+<li><code>insertMany(documents)</code> → Add a set of document to the collection:</li>
+<li><code>db.collection.insertOne([{ a:1 },{ a:2 },{ a:3,b:5 }])</code></li>
+<li><code>find(criteria)</code> →  Gets all the documents in a collection that match the specified pattern.</li>
+<li><code>db.collection.find({a:1})</code>. Note that the patter will be a json object too.</li>
+<li><code>findOne(Criterion)</code> Gets an element of the collection matching the pattern</li>
+<li><code>db.collection.findOne()</code></li>
+<li><code>updateOne(Criterion, Operation, [options])</code> and <code>updateMany(Criterion, Operation, [options])</code> → Updates one (or several in the case of updateMany) documents in the collection. It requires two parameters: </li>
+<li>the search criteria of the document to update and</li>
+<li>the update operation. </li>
+<li>Supports an optional third parameter for options. <ul>
+<li><code>db.collection.updateOne({a:1}, {$set: {a:2}})</code></li>
+</ul>
+</li>
+<li><code>deleteOne(Criterion)</code> and <code>deleteMany(Criterion)</code> → Deletes the documents from a collection that match the criteria </li>
+<li><code>db.collection.deleteOne({a:1})</code></li>
+</ul>
+<p>In the following sections we will delve into the different operations.</p>
+<h2 id="33-data-types">3.3. Data types</h2>
+<p>The data types that MongoDB works with are similar to those that we can find in JavaScript and Java. MongoDB supports the basic types described in the following table:</p>
+<ul>
+<li><code>null</code> → Represents both the null value and a field that does not exist</li>
+<li><code>boolean</code> → Allows the values true and false</li>
+<li><code>number</code> → Represent floating point numeric values. If we want to use integer or long integer types, we must use our own classes: NumberInt (32 bits) or NumberLong (64 bits)</li>
+<li><code>String</code> → Represents any valid UTF-8 text string.</li>
+<li><code>Date</code> → Represents dates, expressed in milliseconds.</li>
+<li><code>array</code> → Lists of values that are represented as vectors</li>
+<li><code>Embedded documents</code> → Documents can have other documents embedded in them</li>
+<li><code>ObjectId</code> → This is the default type for <code>_id</code> fields, and is designed to easily generate globally unique values. </li>
+</ul>
+<h3 id="331-date">3.3.1. Date</h3>
+<p>Mongo uses the JavaScript <code>Date</code> type. When we generate a new object of type Date, we must use the <code>New</code> operator, since otherwise we would obtain a representation of the date in the form of a string.
+For example, if we define the variables <code>a</code> and <code>b</code> as follows:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="o">=</span><span class="nb">Date</span><span class="p">()</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nx">b</span><span class="o">=</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>We can see that the results are quite different:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">a</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nx">Sun</span><span class="w"> </span><span class="nx">May</span><span class="w"> </span><span class="mf">08</span><span class="w"> </span><span class="mf">2022</span><span class="w"> </span><span class="mo">06</span><span class="o">:</span><span class="mf">46</span><span class="o">:</span><span class="mo">01</span><span class="w"> </span><span class="nx">GMT</span><span class="o">+</span><span class="mo">0200</span><span class="w"> </span><span class="p">(</span><span class="nx">Central</span><span class="w"> </span><span class="nx">European</span><span class="w"> </span><span class="nx">Summer</span><span class="w"> </span><span class="nx">Time</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="ow">typeof</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nx">string</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="nx">test</span><span class="o">&gt;</span><span class="nx">b</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="nx">ISODate</span><span class="p">(</span><span class="s2">&quot;2022-05-08T04:46:09.371Z&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="ow">typeof</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="nx">object</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="332-arrays">3.3.2. Arrays</h3>
+<p>Arrays can be used to represent either ordered collections, such as lists or queues, or unordered collections, such as sets. As in JavaScript, and unlike other languages, such as Java, each element of the vector can have a different data type, including other objects of vector types.</p>
+<p>Let's see some examples about vectors in Javascript and therefore in MongoDB:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// array creation</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nx">v</span><span class="o">=</span><span class="p">{</span><span class="nx">objetos</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;casa&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">texto</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;hola&quot;</span><span class="p">},</span><span class="w"> </span><span class="kc">false</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1">// ask for objects components</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">v</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">{</span><span class="w"> </span><span class="nx">objetos</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s1">&#39;casa&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">texto</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;hola&#39;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">v</span><span class="p">.</span><span class="nx">objetos</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="p">[</span><span class="w"> </span><span class="s1">&#39;casa&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">texto</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;hola&#39;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">]</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="c1">// ask for array cells</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">v</span><span class="p">.</span><span class="nx">objetos</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="mf">10</span><span class="w"> </span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">v</span><span class="p">.</span><span class="nx">objetos</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="p">{</span><span class="w"> </span><span class="nx">texto</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;hola&#39;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="c1">// change values</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">v</span><span class="p">.</span><span class="nx">objetos</span><span class="p">[</span><span class="mf">3</span><span class="p">]</span><span class="o">=!</span><span class="nx">v</span><span class="p">.</span><span class="nx">objetos</span><span class="p">[</span><span class="mf">3</span><span class="p">]</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="kc">true</span><span class="w"> </span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">v</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="p">{</span><span class="w"> </span><span class="nx">objetos</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s1">&#39;casa&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">texto</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;hola&#39;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="333-embedded-documents">3.3.3. Embedded documents</h3>
+<p>A key-value pair in one document can have another document as value. This is known as embedded documents, and would be when using a JSON object inside another. For example:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nx">peli</span><span class="o">=</span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">        </span><span class="nx">titulo</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Rogue One. A Star Wars Story.&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">        </span><span class="nx">anyo</span><span class="o">:</span><span class="w"> </span><span class="mf">2016</span><span class="p">,</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">      </span><span class="nx">director</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">          </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Gareth&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">          </span><span class="nx">apellidos</span><span class="o">:</span><span class="w">  </span><span class="s2">&quot;Edwards&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">          </span><span class="nx">anyo_nacimiento</span><span class="o">:</span><span class="w"> </span><span class="mf">1975</span><span class="p">,</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">          </span><span class="nx">nacionalidad</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;británica&quot;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">   </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>As we can see, the document itself contains information about the film and its director. In a relational model, we would normally have two tables related to each other. In this case, it is possible that if we want to keep specific information about the directors, we end up with redundant information.</p>
+<h3 id="334-about-objectids">3.3.4. About OBjectIds</h3>
+<p>The ObjectId class uses 12 bytes, organized as follows:</p>
+<p><center><img alt="ObjectID" src="../../../UD6_MongoDB/img/ObjectId.png" width="55%" /></center></p>
+<ul>
+<li><strong>Timestamp</strong> (bytes 0-3) → The timestamp in seconds since January 1, 1970.</li>
+<li><strong>Machine ID</strong> (bytes 4-6)→ Unique identifier of the machine, usually a hash of its hostname,</li>
+<li><strong>PID</strong> (bytes 7-8) → Identifier of the process that generates the ObjectID, to guarantee uniqueness within the same machine,</li>
+<li><strong>Increment</strong> (bytes 9-11)→ Auto-incremental value, to guarantee uniqueness in the same second, machine and process.</li>
+</ul>
+<p>As we can see, it is a more robust mechanism than an auto-incremental field like in MySQL. This corresponds to the distributed nature of MongoDB, so that objects can be generated in a multi-hosted environment.</p>
+<h2 id="34-adding-information-to-collections">3.4. Adding information to collections</h2>
+<p>Natural way to add elements to the database is through the different insert methods, available in all collections.</p>
+<h3 id="341-insertone">3.4.1. <code>insertOne()</code></h3>
+<p>Allow to insert one document in the collection. For instance to insert las <em>peli</em> object created in last section we can do:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">misPelis</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">(</span><span class="nx">peli</span><span class="p">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="nx">acknowledged</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">  </span><span class="nx">insertedId</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;6277510ab54867b80b742ddf&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>As we can see, response is a JSON document that contains a boolean value indicating whether the operation was successful, and an ObjectID, with the automatically assigned ID.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Take into account:</p>
+<ul>
+<li>If the collection to which we add a document does not exists, it is created automatically.</li>
+<li>Regarding the <code>_id</code> field, as we can see, it was generated automatically. However, we can indicate this identifier, without it being an ObjectId type, the only restriction is that it be unique, to avoid duplicates.</li>
+<li>We have not used any schema for the collection, since each document that we insert can have a different schema.</li>
+</ul>
+</div>
+<h3 id="342-insertmany">3.4.2. <code>insertMany()</code></h3>
+<p>Allow adding several documents into a collection. Then we need to provide a document array:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1">// we create three objects</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nx">peli2</span><span class="o">=</span><span class="p">{</span><span class="nx">titulo</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Star Wars. A new Hope&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">anyo</span><span class="o">:</span><span class="w"> </span><span class="mf">1977</span><span class="p">};</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nx">peli3</span><span class="o">=</span><span class="p">{</span><span class="nx">titulo</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Empire Strikes Back&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">anyo</span><span class="o">:</span><span class="w"> </span><span class="mf">1981</span><span class="p">};</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nx">peli4</span><span class="o">=</span><span class="p">{</span><span class="nx">titulo</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Return of the Jedi&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">anyo</span><span class="o">:</span><span class="w"> </span><span class="mf">1984</span><span class="p">};</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="c1">// insert them, in array way</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">misPelis</span><span class="p">.</span><span class="nx">insertMany</span><span class="p">([</span><span class="nx">peli2</span><span class="p">,</span><span class="w"> </span><span class="nx">peli3</span><span class="p">,</span><span class="w"> </span><span class="nx">peli4</span><span class="p">])</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="p">{</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">  </span><span class="nx">acknowledged</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">  </span><span class="nx">insertedIds</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="s1">&#39;0&#39;</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;627759a5b54867b80b742de0&quot;</span><span class="p">),</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="s1">&#39;1&#39;</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;627759a5b54867b80b742de1&quot;</span><span class="p">),</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="s1">&#39;2&#39;</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;627759a5b54867b80b742de2&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If an error appears during the insertion, neither document that provokes error neither next documents will be inserted into the collection.</p>
+</div>
+<h2 id="35-removing-information">3.5. Removing information</h2>
+<p>To delete documents from a collection we will use the <code>deleteOne()</code>, <code>deleteMany()</code> or <code>findOneAndDelete()</code> commands, providing them as a parameter a JSON with a <strong>condition</strong> that we want the document or documents to be deleted to meet.</p>
+<ul>
+<li>The <strong>deleteOne</strong> order will only delete the first element that matches the criteria, so if we want to delete a specific document, we must use criteria that correspond to unique identifiers, such as the <code>_id</code>.</li>
+<li>The <strong>deleteMany</strong> command will delete all documents matching the criteria.</li>
+</ul>
+<p>Both deleteOne and deleteMany return a document with a boolean, indicating whether the operation has been performed, as well as the number of deleted elements (<strong>deletedCount</strong>).</p>
+<p>For its part, <strong>findOneAndDelete</strong> also deletes a document, based on selection and ordering criteria, but also returning the document that has been deleted.</p>
+<p>For example, we create a collection with several elements:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">pruebas</span><span class="p">.</span><span class="nx">insertMany</span><span class="p">([{</span><span class="nx">x</span><span class="o">:</span><span class="mf">1</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mf">2</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mf">3</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mf">4</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mf">5</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mf">6</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mf">7</span><span class="p">}]);</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="c1">// to delete one document</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">pruebas</span><span class="p">.</span><span class="nx">deleteOne</span><span class="p">({})</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="p">{</span><span class="w"> </span><span class="nx">acknowledged</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">deletedCount</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="c1">// as no confition is set, is satisfied by all documents, </span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="c1">// then first document will be deleted</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="c1">// to delete several documents, for instance its x&#39;s value greather than 3</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">pruebas</span><span class="p">.</span><span class="nx">deleteMany</span><span class="p">({</span><span class="nx">x</span><span class="o">:</span><span class="p">{</span><span class="nx">$gt</span><span class="o">:</span><span class="mf">3</span><span class="p">}})</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="p">{</span><span class="w"> </span><span class="nx">acknowledged</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">deletedCount</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="c1">// delete and return a document</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">pruebas</span><span class="p">.</span><span class="nx">findOneAndDelete</span><span class="p">({</span><span class="nx">x</span><span class="o">:</span><span class="mf">2</span><span class="p">})</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="p">{</span><span class="w"> </span><span class="nx">_id</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;6277687fb54867b80b742deb&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>If we want to delete all document's collection, we could use <code>drop</code> order instead, but be very carefull, due to it will remove some metainformation.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">pruebas</span><span class="p">.</span><span class="nx">drop</span><span class="p">()</span><span class="w"> </span>
+</code></pre></div></td></tr></table></div>
+<h2 id="36-documents-update">3.6. Documents update</h2>
+<p>To update documents, we can either opt for replacement updates, using the <code>replaceOne()</code> method, or make modifications to existing documents, using the <code>updateOne()</code>, <code>updateMany()</code> and <code>findOneAndUpdate()</code> methods. These methods will receive two arguments: the first will be the criteria or condition that the documents to be updated must meet, and the second will be a document with either the new document or the updates to be applied.</p>
+<h3 id="361-replace-update-replace">3.6.1. Replace Update (replace)</h3>
+<p>The replacement operation, as its name indicates, replaces an entire document that meets the update criteria with another new document. For example, we create a new calendar collection, to store contacts, with information about telephones:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">agenda</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span><span class="nx">nombre</span><span class="o">:</span><span class="s2">&quot;Jose&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">telefonos</span><span class="o">:</span><span class="p">[{</span><span class="nx">trabajo</span><span class="o">:</span><span class="s2">&quot;55512345&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">casa</span><span class="o">:</span><span class="s2">&quot;555111222&quot;</span><span class="p">}]}</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="p">)</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="p">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">  </span><span class="nx">acknowledged</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">  </span><span class="nx">insertedId</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;627783dbb54867b80b742df8&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>As we can see, this method returns the <code>_id</code> of the object, through which we will be able to unequivocally identify this document. So, we could replace this document with another by:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nx">test</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">agenda</span><span class="p">.</span><span class="nx">replaceOne</span><span class="p">({</span><span class="s2">&quot;_id&quot;</span><span class="o">:</span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;62778439b54867b80b742df9&quot;</span><span class="p">)},</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">  </span><span class="p">{</span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Jose&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">  </span><span class="nx">correos</span><span class="o">:</span><span class="p">[{</span><span class="nx">trabajo</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;jose@empresa.com&quot;</span><span class="p">},</span><span class="w"> </span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">  </span><span class="p">{</span><span class="nx">personal</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;jose@proveedor.com&quot;</span><span class="p">}]}</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="c1">// and the response is</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="p">{</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">  </span><span class="nx">acknowledged</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">  </span><span class="nx">insertedId</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">  </span><span class="nx">matchedCount</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">  </span><span class="nx">modifiedCount</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">  </span><span class="nx">upsertedCount</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>As we can see, it is about replacing the entire document, with which we can even modify its structure.
+updates.</p>
+<p>As we have anticipated, the modifications are made using the <code>updateOne()</code>, <code>updateMany()</code> and <code>findOneAndUpdate()</code> methods. Similar to the delete operations, the <code>updateOne()</code> method will modify only the first document that matches the given criteria and the <code>updateMany()</code> method, all those that match the criteria. For its part, the <code>findOneAndUpdate()</code> method modifies the document and returns the <em>original document</em> by default, although this is configurable through options. </p>
+<h4 id="3611-modifiers">3.6.1.1. Modifiers</h4>
+<p>Modifiers are special keys that allow us to specify more complex update operations. Normally, we will not need to replace the entire document, as in the previous case, but rather add or modify specific fields:</p>
+<ul>
+<li><code>$set</code> → Assigns a value to a field in the document. If it doesn't exist, it will create it.</li>
+<li><code>db.collection.updateOne({criteria}, {$set: {field:value} });</code></li>
+<li><code>$unset</code> → Removes a field from one or more documents. Since we need to introduce a key-value pair, we'll add a boolean as a value.</li>
+<li><code>db.collection.updateMany({criteria}, {$unset: {field:true} });</code></li>
+<li><code>$inc</code> → Increments or decrements the numeric value of a key (does not refer to the identifier), creating a new one if it does not exist.</li>
+<li><code>db.collection.updateOne({criteria}, {$inc: {field:increment} });</code></li>
+<li><code>$push</code> → Adds elements to an array. If the array does not exist, it creates it, with the elements that we indicate in the push, whereas if it already exists, it adds them to the end of it.</li>
+<li><code>db.collection.update({criteria}, {$push: {array_name:{list_of_values} } });</code></li>
+<li><code>$pull</code> → Remove elements from an array based on some criteria.</li>
+<li><code>db.collection.update({criteria},{$pull:{vector:element}})</code>.</li>
+<li><code>$pop</code> → Removes elements from an array treated as a stack or queue, ie removing the first (-1) or last (1) element.</li>
+<li><code>db.collection.update({criteria},{$pop:{vector: [ -1 | 1 ] }})</code></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Information</p>
+<p>This modifiers work with both <code>updateOne</code> or <code>updateMany</code>.</p>
+</div>
+<h4 id="3612-upserts">3.6.1.2. Upserts</h4>
+<p>When no document matching the criteria for an update is found, as expected, no change occurs to the collection.
+On the other hand, sometimes, we may wish that if a document with certain criteria does not exist when we want to modify it, it is created. This is achieved through special updates, called <code>upserts</code>. With this operation, we save ourselves from searching the collection first, to know if we have to perform an insert (if it doesn't exist) or modify (if it does) operation.</p>
+<p>To perform an upsert, we will use the third argument of updates, which consists of a document with different options in key-value format, adding the upsert key to true.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">updateOne</span><span class="p">({</span><span class="nx">criteria</span><span class="p">},{</span><span class="nx">modification</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">upsert</span><span class="o">:</span><span class="kc">true</span><span class="p">});</span>
+</code></pre></div></td></tr></table></div>
 
 
 

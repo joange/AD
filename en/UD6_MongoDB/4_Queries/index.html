@@ -20,7 +20,7 @@
     
     
       
-        <title>4. CRUD Queries - Accés a Dades</title>
+        <title>4. Mongo Queries - Accés a Dades</title>
       
     
     
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#4-mongo-queries" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4. CRUD Queries
+              4. Mongo Queries
             
           </span>
         </div>
@@ -1063,7 +1068,7 @@
         
   
   <span class="md-ellipsis">
-    1. NoSQL Databases
+    1. NoSQL databases
   </span>
   
 
@@ -1084,7 +1089,7 @@
         
   
   <span class="md-ellipsis">
-    2. Introduction to MongoDB
+    2. MongoDB
   </span>
   
 
@@ -1105,7 +1110,7 @@
         
   
   <span class="md-ellipsis">
-    3. Shell Operations
+    3. Working with MongoDB: Basic shell operations
   </span>
   
 
@@ -1128,16 +1133,252 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4. Mongo Queries
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    4. CRUD Queries
+    4. Mongo Queries
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-find" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. find()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1. find()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-what-keys-to-retrieve" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.1. What keys to retrieve?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-comparison-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.2. Comparison operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-or-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.3. OR operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-in-and-nin-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.4. $IN and $NIN operators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#415-the-or-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.5. The $OR operator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#416-the-not-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.6. The $NOT operator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-exists-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      The $EXISTS operator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-query-results-and-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Query results and data types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2. Query results and data types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-null-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.1. null values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-regular-expressions-and-character-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.2. Regular expressions and character strings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-query-data-type-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Query data type considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3. Query data type considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-queries-with-arrayas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.1. Queries with arrayas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-the-all-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.2. The $all operator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-the-size-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.3. The $size operator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434-the-slice-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.4. The $slice operator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-cursors" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4. Cursors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4. Cursors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limit-skip-and-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limit, Skip and Sort
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-introduction-to-the-aggregation-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5. Introduction to the Aggregation Framework
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6. Exercises
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1155,7 +1396,7 @@
         
   
   <span class="md-ellipsis">
-    5. Mongo and Java
+    5. MongoDB and Java
   </span>
   
 
@@ -1176,7 +1417,7 @@
         
   
   <span class="md-ellipsis">
-    6. Spring MongoDB
+    6. Spring Data MongoDB y API REST
   </span>
   
 
@@ -1355,6 +1596,220 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-find" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. find()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1. find()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-what-keys-to-retrieve" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.1. What keys to retrieve?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-comparison-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.2. Comparison operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-or-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.3. OR operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-in-and-nin-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.4. $IN and $NIN operators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#415-the-or-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.5. The $OR operator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#416-the-not-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.6. The $NOT operator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-exists-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      The $EXISTS operator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-query-results-and-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Query results and data types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2. Query results and data types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-null-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.1. null values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-regular-expressions-and-character-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.2. Regular expressions and character strings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-query-data-type-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Query data type considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3. Query data type considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-queries-with-arrayas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.1. Queries with arrayas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-the-all-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.2. The $all operator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-the-size-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.3. The $size operator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434-the-slice-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.4. The $slice operator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-cursors" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4. Cursors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4. Cursors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limit-skip-and-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limit, Skip and Sort
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-introduction-to-the-aggregation-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5. Introduction to the Aggregation Framework
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6. Exercises
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1369,9 +1824,168 @@
                   
 
 
-  <h1>4. CRUD Queries</h1>
-
-
+<h1 id="4-mongo-queries">4. Mongo Queries</h1>
+<h2 id="41-find">4.1. find()</h2>
+<p>The find command allows us to retrieve the documents from a collection that match a specified <strong>criteria as a JSON document</strong>. Its basic syntax is as follows:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">criteria_in_JSON_format</span><span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+<p>We must take into account aspects such as the types of data that we use, which is important, since the document <code>{edad:20}</code> is not the same as <code>{edad:"20"}</code>.</p>
+<p>On the other hand, we must also consider that <strong>the empty document <code>{}</code> matches all documents</strong>, so that the query 
+<code>db.collection.find({})</code> would return all the objects in the collection.</p>
+<h3 id="411-what-keys-to-retrieve">4.1.1. What keys to retrieve?</h3>
+<p>The find command returns the complete documents that match the selection criteria. If we don't want to get all the keys, we can specify which keys we want to query for, by enclosing them in a second parameter:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">query_document</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">key_1</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">key_2</span><span class="o">:</span><span class="mf">1</span><span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+<p>As we can see, this second parameter is also expressed in JSON format (again) and is made up of two keys (<code>key_1</code> and <code>key_2</code>), both with a value of 4. This numerical value is also interpreted with the value <code>true</code>. That is, we specify here which are the fields that we want to show. In case we want to show all the fields and hide some, we would use the same syntax, but now using a 0 for those fields that we want to hide.</p>
+<h3 id="412-comparison-operations">4.1.2. Comparison operations</h3>
+<p>MongoDB allows us to perform comparisons with numeric data, always using the JSON document format 
+<code>db.collection.find({key: {$operator:value} });</code></p>
+<p>The comparison operators that we can use in MongoDB are:</p>
+<ul>
+<li><code>$lt</code> → Less Than</li>
+<li><code>$lte</code> → Less than or equal to</li>
+<li><code>$gt</code> → Greater than</li>
+<li><code>$gte</code> → Greater than or equal to</li>
+</ul>
+<h3 id="413-or-operation">4.1.3. OR operation</h3>
+<p>If we want to perform a filter or query where several conditions are met (an AND operation), we will only have to separate them by commas in the same JSON document that we use as criteria. On the other hand, if what we want is to carry out an OR operation, we must use a special operator.</p>
+<h3 id="414-in-and-nin-operators">4.1.4. <code>$IN</code> and <code>$NIN</code> operators</h3>
+<p>A special case of OR is when we want to check if a field is within a specific set of values. That is, if it is one or another value. For this we use the <code>$in</code> operator, as follows:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">key</span><span class="o">:</span><span class="p">{</span><span class="nx">$in</span><span class="o">:</span><span class="p">[</span><span class="nx">vector_of_values</span><span class="p">]}})</span>
+</code></pre></div></td></tr></table></div>
+<p>Similarly, there is the operator <code>$nin</code> (<strong>Not In</strong>), which gets the documents, where the specified value is not found in the list. We must bear in mind that in this last case those documents that have a null value for the key will also be shown.</p>
+<h3 id="415-the-or-operator">4.1.5. The <code>$OR</code> operator</h3>
+<p>When we want to perform the OR operation on different fields of the document, we will use the <code>$OR</code> operator, to which we pass a vector of possible conditions, as follows:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">$or</span><span class="o">:</span><span class="p">[</span><span class="nx">condition1</span><span class="p">,</span><span class="w"> </span><span class="nx">condition2</span><span class="p">,...]})</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Attention</p>
+<p>Any of last condition is a json condition</p>
+</div>
+<h3 id="416-the-not-operator">4.1.6. The <code>$NOT</code> operator</h3>
+<p>The <code>$NOT</code> operator is a metaconditional operator, that is, it is always applied to another criterion, inverting its certainty value. Your syntax would be:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">key</span><span class="o">:</span><span class="p">{</span><span class="nx">$not</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">criterion</span><span class="p">}}}).</span><span class="nx">pretty</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="the-exists-operator">The <code>$EXISTS</code> operator</h3>
+<p>Let's remember that in MongoDB, the documents do not have a common structure or schema, so it is possible that there are keys defined in only some of them. The <code>$exists</code> operator is used to check the existence or not of a certain key.
+The syntax to use would be:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">key</span><span class="o">:</span><span class="p">{</span><span class="w"> </span><span class="nx">$exists</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="o">|</span><span class="kc">false</span><span class="w"> </span><span class="p">}})</span>
+</code></pre></div></td></tr></table></div>
+<p>With which we obtain the documents for which the key exists or not, depending on whether we have indicated true or false in the query.</p>
+<h2 id="42-query-results-and-data-types">4.2. Query results and data types</h2>
+<p>Data types in MongoDB can have some special behaviors. We are going to see some cases, to know what to do in certain situations.</p>
+<h3 id="421-null-values">4.2.1. null values</h3>
+<p>The null value matches the following situations:</p>
+<ul>
+<li>When the value of the key is null, or</li>
+<li>When the key does not exist in the document (in this case, it is usually said that the field is not informed)</li>
+</ul>
+<h3 id="422-regular-expressions-and-character-strings">4.2.2. Regular expressions and character strings</h3>
+<p>When we apply a document filter by a text field, we may not know exactly the value of the field we want to filter by. Regular expressions offer a very powerful mechanism for matching strings.</p>
+<p>MongoDB allows us to use these expressions in several ways, either by using regular Javascript expressions or by using the <code>$regex</code> operator, which uses <strong>Perl Compatible Regular Expressions</strong> (PCRE). Javascript regular expressions are expressed using the following syntax:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">{</span><span class="w"> </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="sr">/pattern/</span><span class="o">&lt;</span><span class="nx">options</span><span class="o">&gt;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>As we can see, we use a pattern similar to a text string, but using the slash <code>/</code> as the delimiter instead of the quotes (<code>'</code>). For its part, if we use the <code>$regex</code> operator, we can use the following syntax:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">{</span><span class="w"> </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$regex</span><span class="o">:</span><span class="w"> </span><span class="sr">/pattern/</span><span class="p">,</span><span class="w"> </span><span class="nx">$options</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;options&gt;&#39;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="p">{</span><span class="w"> </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$regex</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;pattern&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">$options</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;options&gt;&#39;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="p">{</span><span class="w"> </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$regex</span><span class="o">:</span><span class="w"> </span><span class="sr">/pattern/</span><span class="o">&lt;</span><span class="nx">options</span><span class="o">&gt;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>We could find several options for regular expressions:</p>
+<ul>
+<li><code>i</code> → Matches are case-insensitive:</li>
+<li><code>{name:/john/i}</code></li>
+<li><code>{name: { $regex: 'john',$options: 'i'}}</code></li>
+<li><code>m</code> → Allows you to include characters such as <code>^</code> or <code>$</code>, to match at the beginning or end, in strings with multiple lines. </li>
+<li><code>{name:/^John/m}</code></li>
+<li><code>{name: { $regex: 'John', $options: 'm'}}</code></li>
+<li><code>x</code> Ignores whitespace in the <code>$regex</code> pattern, as long as it is not escaped or included in a character class</li>
+<li><code>{name: { $regex: ' J oh n',$options: 'x'}}</code></li>
+<li><code>s</code> Allows the period character (<code>.</code>) to represent any character, including the new line character. </li>
+<li><code>{name:/ju.n/s}</code></li>
+<li><code>{name: { $regex: 'thu.n',$options: 's'}}</code></li>
+</ul>
+<p>You can find more information regarding regular expressions and particular cases in which it is recommended to use one type of expression or another in the official MongoDB documentation about <code>$regex</code> <a href="https://www.mongodb.com/docs/manual/reference/operator/query/regex/">here</a>.</p>
+<h2 id="43-query-data-type-considerations">4.3. Query data type considerations</h2>
+<h3 id="431-queries-with-arrayas">4.3.1. Queries with arrayas</h3>
+<p>To search for matching elements within an array, we proceed with the same syntax as if it were any other key, using the query document <code>{key:value}</code>, the key being an array, and the value, either <em>n value</em> that must contain the array, or another ordered vector that we want it to match exactly.</p>
+<p>For instance:</p>
+<ul>
+<li><code>db.collection.find({ my_vector : value })</code> →  It matches all the documents in whose vector <code>my_vector</code> appears, in the position that is the indicated value.</li>
+<li><code>db.users.find({roles:"admin"})</code> show users that in <code>roles</code> array has <em>admin</em> role (or others).</li>
+<li><code>db.collection.find({ my_vector : [value] })</code> → Matches all documents whose vector <code>my_vector</code> appears only the indicated value.</li>
+<li><code>db.users.find({roles:["admin"]})</code>show users who has exactely <em>admin</em> role.</li>
+</ul>
+<p>In addition, we can also use regular expressions or the rest of the operators that we have seen as conditions.</p>
+<p>On the other hand, we can also refer to a specific element of the vector by its index, using the dot notation and between quotes:</p>
+<ul>
+<li><code>db.collection.find({"my_vector.position" :[value]})</code></li>
+<li><code>db.users.find({"roles.2":["admin"]})</code> show user who third role is admin</li>
+</ul>
+<h3 id="432-the-all-operator">4.3.2. The <code>$all</code> operator</h3>
+<p>With <code>$all</code> we can specify more than one matching element within the array:</p>
+<ul>
+<li><code>db.collection.find({ my_vector : {$all:[value1, value2,...]}})</code></li>
+<li><code>db.users.find({roles:{$all:["mod","admin"]}})</code> show users who have <em>mod</em> and <em>admin</em> role (and possibly more).</li>
+</ul>
+<h3 id="433-the-size-operator">4.3.3. The <code>$size</code> operator</h3>
+<p>Using <code>$size</code> we can include conditions on the length of the vectors:</p>
+<ul>
+<li><code>db.collection.find({ my_vector : {$size:size} })</code></li>
+</ul>
+<h3 id="434-the-slice-operator">4.3.4. The <code>$slice</code> operator</h3>
+<p>The slice operator allows us to obtain a subset of the elements of the vector, with the following syntax:</p>
+<ul>
+<li><code>key: {$slice: x}</code>:</li>
+<li>if x&gt;0 gets the first x elements</li>
+<li>if x&lt;0, get the last x elements</li>
+<li><code>key: {$slice: [ x , y ] }</code> Gets <em>y</em> elements from the element at position <em>x</em> embedded document</li>
+</ul>
+<p>To query embedded documents, simply specify the full key path, enclosed in quotes and separated by dots:
+<code>db.collection.find({"path.to.key":value_or_condition})</code></p>
+<h2 id="44-cursors">4.4. Cursors</h2>
+<p>When we perform a query, MongoDB returns the results using cursors, which are pointers to the query results, like connectors in unit 2. Clients using Mongo iterate over these cursors to retrieve the results, and offer a set of functionality, such as limiting the results, etc.</p>
+<p>When we perform a query on a database with many results, the client (<code>mongosh</code>) returns only 20 results and the message <code>Type "it" for more</code>, to continue iterating the cursor.</p>
+<h3 id="limit-skip-and-sort">Limit, Skip and Sort</h3>
+<p>MongoDB allows us to make certain limitations on the results. Among them, we can highlight:</p>
+<ul>
+<li><code>limit</code> → To limit the number of results</li>
+<li><code>skip</code> →  Skips a specific number of results.</li>
+<li><code>sort</code> →  Sorts the results. You need a JSON object with the keys to sort, and a value of 1 to sort ascending or -1 to sort descending.</li>
+</ul>
+<h2 id="45-introduction-to-the-aggregation-framework">4.5. Introduction to the Aggregation Framework</h2>
+<p>The aggregation queries that we performed with operators such as <code>GROUP BY</code>, <code>SUM</code>, or <code>COUNT</code> in SQL can be performed with the MongoDB Aggregation Framework. Aggregate queries have the following syntax:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">(</span><span class="w"> </span><span class="p">[</span><span class="o">&lt;</span><span class="nx">pipeline</span><span class="o">&gt;</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>The pipeline or pipe has a concept similar to Unix pipes: the results of an order are passed as input to another, to obtain results jointly.</p>
+<p>The operations that we can perform within these aggregate queries are:</p>
+<ul>
+<li><code>$project</code> → To perform a projection on an input data set, adding, removing or recalculating fields so that the output is different.</li>
+<li><code>$match</code> → Filters the input to reduce the number of documents, leaving only those that meet certain conditions.</li>
+<li><code>$limit</code> → Restricts the number of results.</li>
+<li><code>$skip</code> → Skip a certain number of records.</li>
+<li><code>$unwind</code> → Converts an array to return it separated in documents.</li>
+<li><code>$group</code> → Groups documents according to a certain condition.</li>
+<li><code>$sort</code> → Sorts a set of documents, according to the specified field.</li>
+<li><code>$geoNear</code>→ It is used as geospatial data, returning the documents ordered by proximity according to a geospatial point.</li>
+</ul>
+<p>To perform calculations on the data produced by the pipes, we will use expressions. Expressions are functions that perform a certain operation on a group of documents, vector or specific field. Some of these expressions are <code>$max</code>, <code>$min</code>, <code>$divide</code>, or <code>$substr</code>.</p>
+<p>You can find much more information about the Aggregation Framework in the official MongoDB documentation.</p>
+<h2 id="46-exercises">4.6. Exercises</h2>
+<p>We are still working on the movie collection. In this case, we are going to use the mongosh terminal (or robo3t as you prefeer), and perform the following queries on this collection.</p>
+<ol>
+<li>Obtain all the productions that either premiered in <code>2015</code> or are of the <code>series</code> type.</li>
+<li>Get all the movies <strong>NOT</strong> released between the years <code>2000</code> and <code>2002</code>.</li>
+<li>Get all movies for which the "directors" key is not defined</li>
+<li>Get the title of all movies that start with the string <code>star wars</code>, regardless uppercase.</li>
+<li>Get the title of all movies that contain the comedy genre (<code>Comedy</code>)</li>
+<li>Show the title and genres of the movies that contain either the comedy genre (<code>Comedy</code>) or adventure (<code>Adventure</code>).</li>
+<li>Get the title and genres of movies that have three genres.</li>
+<li>Get the movies whose <code>Rotten Tomatoes</code> rating is higher than <code>4</code></li>
+<li>Make the same query as before, but limiting the number of documents to 10.</li>
+<li>Now shows the title and rating of those movies with more than a 4 rating, ordered by rating (highest to lowest) and limiting the results to 10.</li>
+</ol>
 
 
 

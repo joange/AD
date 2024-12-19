@@ -20,7 +20,7 @@
     
     
       
-        <title>1. NoSQL Databases - Accés a Dades</title>
+        <title>1. NoSQL databases - Accés a Dades</title>
       
     
     
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#1-nosql-databases" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1. NoSQL Databases
+              1. NoSQL databases
             
           </span>
         </div>
@@ -1065,16 +1070,57 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1. NoSQL databases
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    1. NoSQL Databases
+    1. NoSQL databases
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-database-kind" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Database kind
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1092,7 +1138,7 @@
         
   
   <span class="md-ellipsis">
-    2. Introduction to MongoDB
+    2. MongoDB
   </span>
   
 
@@ -1113,7 +1159,7 @@
         
   
   <span class="md-ellipsis">
-    3. Shell Operations
+    3. Working with MongoDB: Basic shell operations
   </span>
   
 
@@ -1134,7 +1180,7 @@
         
   
   <span class="md-ellipsis">
-    4. CRUD Queries
+    4. Mongo Queries
   </span>
   
 
@@ -1155,7 +1201,7 @@
         
   
   <span class="md-ellipsis">
-    5. Mongo and Java
+    5. MongoDB and Java
   </span>
   
 
@@ -1176,7 +1222,7 @@
         
   
   <span class="md-ellipsis">
-    6. Spring MongoDB
+    6. Spring Data MongoDB y API REST
   </span>
   
 
@@ -1355,6 +1401,25 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-database-kind" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Database kind
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1369,9 +1434,48 @@
                   
 
 
-  <h1>1. NoSQL Databases</h1>
-
-
+<h1 id="1-nosql-databases">1. NoSQL databases</h1>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Data</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Version 1.0</td>
+<td>January 2023</td>
+<td>Initial version</td>
+</tr>
+<tr>
+<td>Version 1.0</td>
+<td>December 2024</td>
+<td>Transaltion and minor changes</td>
+</tr>
+</tbody>
+</table>
+<p>© Joan Gerard Camarena Estruch</p>
+<p>These materials are based on previous years notes created by <strong>Joan Gerard Camarena</strong> and <strong>Jose Alfredo Murcia</strong></p>
+<p>The NoSQL movement (<strong>Not Only SQL</strong>) contemplates all those alternatives to traditional relational database management systems. Object-oriented databases, could be a first approach to these NoSQL databases. However, there are other models, with a totally different approach. These are databases based on documents, on key-value pairs or on graphs.</p>
+<p>Although some of the characteristics posed by these paradigms are being incorporated into SQL standards and relational DBMS, the current reality is that this type of database is growing considerably in many areas.
+At the beginning of the 2000s, web 2.0 emerged, which meant the conversion of users into content generators. Subsequently, with web 3.0 or semantic web, the Internet becomes a large database, and access to it is no longer exclusive to web applications, but to all kinds of applications and apps. Currently, we are facing the rise of artificial intelligence and web 4.0, as an evolution of all the above. With all this, we can imagine the huge amount of data that servers must store, and that requires a more delocalized, distributed and sufficiently efficient storage to support millions of daily queries.</p>
+<p>In this unit we are going to focus on document-type databases, specifically MongoDB, a database based on JSON documents, very popular on the web.</p>
+<h2 id="11-database-kind">1.1. Database kind</h2>
+<p>We could find</p>
+<ol>
+<li>
+<p><strong>Key-Value Databases</strong> → It is a fairly simple and popular database model, where each element is identified by a unique key, following the Hash table model, so that the data is recovered very quickly. Objects are generally stored as binary objects (BLOBs). Some databases of this type are <strong>Cassandra</strong> (Apache), <strong>Bigtable</strong> (Google), or <strong>Dynamo</strong> (Amazon).</p>
+</li>
+<li>
+<p><strong>Documentary databases</strong> → This model stores the information in the form of documents, generally <code>XML</code> or <code>JSON</code>, and a unique key is used for each record, so key-value searches are allowed. The difference with respect to previous key-value databases is that here the value is the document itself, not binary data.
+As we will see later, they are very versatile, so we don't even need to have a common structure for the documents we save. The maximum exponent of this type of database is MongoDB.</p>
+</li>
+<li>
+<p><strong>Databases in Graphs</strong> → A graph is a set of vertices or nodes joined by edges, which allow us to represent relationships between them. Graph databases attempt to follow this model, so that the information is represented as nodes in a graph, and the relationships between them are represented by edges. In this way, taking advantage of graph theory, we can go through the information in an optimal way. Some examples of this type of database are <strong>Amazon Neptune</strong>, <strong>JanusGraph</strong> (Apache), <strong>SQL Server</strong> (Miscrosoft) or <strong>Neo4j</strong>.</p>
+</li>
+</ol>
 
 
 

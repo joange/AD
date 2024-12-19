@@ -20,7 +20,7 @@
     
     
       
-        <title>1. Bases de Dades NoSQL - Accés a Dades</title>
+        <title>1. Bases de dades NoSQL - Accés a Dades</title>
       
     
     
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#1-bases-de-dades-nosql" class="md-skip">
+          Salta el contingut
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1. Bases de Dades NoSQL
+              1. Bases de dades NoSQL
             
           </span>
         </div>
@@ -1065,16 +1070,57 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1. Bases de dades NoSQL
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    1. Bases de Dades NoSQL
+    1. Bases de dades NoSQL
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-tipus-de-bases-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Tipus de bases de dades
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1092,7 +1138,7 @@
         
   
   <span class="md-ellipsis">
-    2. Introducció a MongoDB
+    2. MongoDB
   </span>
   
 
@@ -1113,7 +1159,7 @@
         
   
   <span class="md-ellipsis">
-    3. Operacions amb Shell
+    3. Treballant amb MongoDB: Operacions bàsiques de shell
   </span>
   
 
@@ -1134,7 +1180,7 @@
         
   
   <span class="md-ellipsis">
-    4. Consultes CRUD
+    4. Consultese en Mongo
   </span>
   
 
@@ -1155,7 +1201,7 @@
         
   
   <span class="md-ellipsis">
-    5. Mongo i Java
+    5. MongoDB i Java
   </span>
   
 
@@ -1176,7 +1222,7 @@
         
   
   <span class="md-ellipsis">
-    6. Spring Data MongoDB
+    6. Spring Data MongoDB i API REST
   </span>
   
 
@@ -1355,6 +1401,25 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-tipus-de-bases-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Tipus de bases de dades
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1369,9 +1434,48 @@
                   
 
 
-  <h1>1. Bases de Dades NoSQL</h1>
-
-
+<h1 id="1-bases-de-dades-nosql">1. Bases de dades NoSQL</h1>
+<table>
+<thead>
+<tr>
+<th>Versió</th>
+<th>Data</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Versió 1.0</td>
+<td>Gener 2023</td>
+<td>Versió inicial</td>
+</tr>
+<tr>
+<td>Versió 1.0</td>
+<td>Desembre 2024</td>
+<td>Traducció i canvis menors</td>
+</tr>
+</tbody>
+</table>
+<p>© Joan Gerard Camarena Estruch</p>
+<p>Aquests materials es basen en els apunts d'anys anteriors creats per <strong>Joan Gerard Camarena</strong> i <strong>Jose Alfredo Murcia</strong></p>
+<p>El moviment NoSQL (<strong>Not Only SQL</strong>) contempla totes aquelles alternatives als sistemes de gestió de bases de dades relacionals tradicionals. Les bases de dades orientades a objectes podrien ser un primer enfocament a aquestes bases de dades NoSQL. No obstant això, hi ha altres models, amb un enfocament totalment diferent. Aquestes són bases de dades basades en <strong>documents</strong>, en parells clau-valor o en gràfics.</p>
+<p>Encara que algunes de les característiques plantejades per aquests paradigmes s'estan incorporant als estàndards SQL i als SGBD relacionals, la realitat actual és que aquest tipus de bases de dades està creixent considerablement en moltes àrees.
+A principis dels anys 2000, va sorgir el web 2.0, que va suposar la conversió dels usuaris en generadors de contingut. Posteriorment, amb el web 3.0 o web semàntica, Internet es converteix en una gran base de dades, i l'accés a aquesta ja no és exclusiu de les aplicacions web, sinó de tot tipus d'aplicacions i apps. Actualment, estem davant l'auge de la intel·ligència artificial i el web 4.0, com una evolució de tot l'anterior. Amb tot això, podem imaginar la gran quantitat de dades que els servidors han d'emmagatzemar, i que requereix un emmagatzematge més deslocalitzat, distribuït i suficientment eficient per suportar milions de consultes diàries.</p>
+<p>En aquesta unitat ens centrarem en les bases de dades de tipus document, específicament MongoDB, una base de dades basada en documents JSON, molt popular a la web.</p>
+<h2 id="11-tipus-de-bases-de-dades">1.1. Tipus de bases de dades</h2>
+<p>Podem trobar</p>
+<ol>
+<li>
+<p><strong>Bases de dades clau-valor</strong> → És un model de base de dades bastant senzill i popular, on cada element s'identifica amb una clau única, seguint el model de taula de hash, de manera que les dades es recuperen molt ràpidament. Els objectes generalment s'emmagatzemen com a objectes binaris (BLOBs). Algunes bases de dades d'aquest tipus són <strong>Cassandra</strong> (Apache), <strong>Bigtable</strong> (Google) o <strong>Dynamo</strong> (Amazon).</p>
+</li>
+<li>
+<p><strong>Bases de dades documentals</strong> → Aquest model emmagatzema la informació en forma de documents, generalment <code>XML</code> o <code>JSON</code>, i s'utilitza una clau única per a cada registre, de manera que es permeten cerques clau-valor. La diferència respecte a les bases de dades clau-valor anteriors és que aquí el valor és el document en si mateix, no dades binàries.
+Com veurem més endavant, són molt versàtils, de manera que ni tan sols necessitem tenir una estructura comuna per als documents que guardem. El màxim exponent d'aquest tipus de base de dades és MongoDB.</p>
+</li>
+<li>
+<p><strong>Bases de dades en gràfics</strong> → Un gràfic és un conjunt de vèrtexs o nodes units per arestes, que ens permeten representar relacions entre ells. Les bases de dades en gràfics intenten seguir aquest model, de manera que la informació es representa com a nodes en un gràfic, i les relacions entre ells es representen per arestes. D'aquesta manera, aprofitant la teoria de gràfics, podem recórrer la informació de manera òptima. Alguns exemples d'aquest tipus de base de dades són <strong>Amazon Neptune</strong>, <strong>JanusGraph</strong> (Apache), <strong>SQL Server</strong> (Microsoft) o <strong>Neo4j</strong>.</p>
+</li>
+</ol>
 
 
 

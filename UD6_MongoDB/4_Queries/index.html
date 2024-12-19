@@ -20,7 +20,7 @@
     
     
       
-        <title>4. Consultes CRUD - Accés a Dades</title>
+        <title>4. Consultese en Mongo - Accés a Dades</title>
       
     
     
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#4-consultese-en-mongo" class="md-skip">
+          Salta el contingut
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4. Consultes CRUD
+              4. Consultese en Mongo
             
           </span>
         </div>
@@ -1063,7 +1068,7 @@
         
   
   <span class="md-ellipsis">
-    1. Bases de Dades NoSQL
+    1. Bases de dades NoSQL
   </span>
   
 
@@ -1084,7 +1089,7 @@
         
   
   <span class="md-ellipsis">
-    2. Introducció a MongoDB
+    2. MongoDB
   </span>
   
 
@@ -1105,7 +1110,7 @@
         
   
   <span class="md-ellipsis">
-    3. Operacions amb Shell
+    3. Treballant amb MongoDB: Operacions bàsiques de shell
   </span>
   
 
@@ -1128,16 +1133,252 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4. Consultese en Mongo
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    4. Consultes CRUD
+    4. Consultese en Mongo
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-find" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. find()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1. find()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-quines-claus-recuperar" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.1. Quines claus recuperar?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-operacions-de-comparacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.2. Operacions de comparació
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-operacio-or" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.3. Operació OR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-operadors-in-i-nin" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.4. Operadors $IN i $NIN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#415-operador-or" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.5. Operador $OR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#416-operador-not" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.6. Operador $NOT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#417-operador-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.7. Operador $EXISTS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-resultats-de-les-consultes-i-tipus-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Resultats de les consultes i tipus de dades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2. Resultats de les consultes i tipus de dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-valors-nulls" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.1. valors nulls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-expressions-regulars-i-cadenes-de-caracters" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.2. Expressions regulars i cadenes de caràcters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-consideracions-sobre-el-tipus-de-dades-de-les-consultes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Consideracions sobre el tipus de dades de les consultes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3. Consideracions sobre el tipus de dades de les consultes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-consultes-amb-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.1. Consultes amb arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-loperador-all" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.2. L'operador $all
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-loperador-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.3. L'operador $size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434-loperador-slice" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.4. L'operador $slice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-cursors" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4. Cursors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4. Cursors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441-limit-skip-i-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.1. Limit, Skip i Sort
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-introduccio-al-marc-dagrupacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5. Introducció al Marc d'Agrupació
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-exercicis" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6. Exercicis
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1155,7 +1396,7 @@
         
   
   <span class="md-ellipsis">
-    5. Mongo i Java
+    5. MongoDB i Java
   </span>
   
 
@@ -1176,7 +1417,7 @@
         
   
   <span class="md-ellipsis">
-    6. Spring Data MongoDB
+    6. Spring Data MongoDB i API REST
   </span>
   
 
@@ -1355,6 +1596,220 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-find" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. find()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1. find()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-quines-claus-recuperar" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.1. Quines claus recuperar?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-operacions-de-comparacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.2. Operacions de comparació
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-operacio-or" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.3. Operació OR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-operadors-in-i-nin" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.4. Operadors $IN i $NIN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#415-operador-or" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.5. Operador $OR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#416-operador-not" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.6. Operador $NOT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#417-operador-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.7. Operador $EXISTS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-resultats-de-les-consultes-i-tipus-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Resultats de les consultes i tipus de dades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2. Resultats de les consultes i tipus de dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-valors-nulls" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.1. valors nulls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-expressions-regulars-i-cadenes-de-caracters" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.2. Expressions regulars i cadenes de caràcters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-consideracions-sobre-el-tipus-de-dades-de-les-consultes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Consideracions sobre el tipus de dades de les consultes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3. Consideracions sobre el tipus de dades de les consultes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-consultes-amb-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.1. Consultes amb arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-loperador-all" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.2. L'operador $all
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-loperador-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.3. L'operador $size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434-loperador-slice" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.4. L'operador $slice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-cursors" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4. Cursors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4. Cursors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441-limit-skip-i-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.1. Limit, Skip i Sort
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-introduccio-al-marc-dagrupacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5. Introducció al Marc d'Agrupació
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-exercicis" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6. Exercicis
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1369,9 +1824,186 @@
                   
 
 
-  <h1>4. Consultes CRUD</h1>
-
-
+<h1 id="4-consultese-en-mongo">4. Consultese en Mongo</h1>
+<h2 id="41-find">4.1. find()</h2>
+<p>La comanda find ens permet recuperar els documents d'una col·lecció que coincideixen amb un <strong>criteri especificat com a document JSON</strong>. La seva sintaxi bàsica és la següent:</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">criteria_in_JSON_format</span><span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+Hem de tenir en compte aspectes com els tipus de dades que utilitzem, que és important, ja que el document <code>{edad:20}</code> no és el mateix que <code>{edad:"20"}</code>.</p>
+<p>D'altra banda, també hem de considerar que <strong>el document buit <code>{}</code> coincideix amb tots els documents</strong>, de manera que la consulta 
+<code>db.collection.find({})</code> retornaria tots els objectes de la col·lecció.</p>
+<h3 id="411-quines-claus-recuperar">4.1.1. Quines claus recuperar?</h3>
+<p>La comanda find retorna els documents complets que coincideixen amb els criteris de selecció. Si no volem obtenir totes les claus, podem especificar quines claus volem consultar, incloent-les en un segon paràmetre:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">query_document</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">key_1</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">key_2</span><span class="o">:</span><span class="mf">1</span><span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+<p>Com podem veure, aquest segon paràmetre també s'expressa en format JSON (de nou) i està format per dues claus (<code>key_1</code> i <code>key_2</code>), ambdues amb un valor d'1. Aquest valor numèric també s'interpreta com a <code>true</code>. És a dir, especifiquem aquí quins són els camps que volem mostrar. En cas que vulguem mostrar tots els camps i amagar-ne alguns, utilitzaríem la mateixa sintaxi, però ara fent servir un 0 per aquells camps que volem amagar.</p>
+<h3 id="412-operacions-de-comparacio">4.1.2. Operacions de comparació</h3>
+<p>MongoDB ens permet realitzar comparacions amb dades numèriques, sempre utilitzant el format de document JSON 
+<code>db.collection.find({key: {$operator:value} });</code></p>
+<p>Els operadors de comparació que podem utilitzar a MongoDB són:</p>
+<ul>
+<li><code>$lt</code> → Menor que</li>
+<li><code>$lte</code> → Menor o igual que</li>
+<li><code>$gt</code> → Major que</li>
+<li><code>$gte</code> → Major o igual que</li>
+</ul>
+<h3 id="413-operacio-or">4.1.3. Operació OR</h3>
+<p>Si volem realitzar un filtre o consulta on es compleixin diverses condicions (una operació AND), només haurem de separar-les per comes en el mateix document JSON que utilitzem com a criteri. D'altra banda, si el que volem és dur a terme una operació OR, hem d'utilitzar un operador especial.</p>
+<h3 id="414-operadors-in-i-nin">4.1.4. Operadors <code>$IN</code> i <code>$NIN</code></h3>
+<p>Un cas especial d'OR és quan volem comprovar si un camp es troba dins d'un conjunt específic de valors. És a dir, si és un valor o un altre. Per això utilitzem l'operador <code>$in</code>, de la següent manera:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">key</span><span class="o">:</span><span class="p">{</span><span class="nx">$in</span><span class="o">:</span><span class="p">[</span><span class="nx">vector_de_valors</span><span class="p">]}})</span>
+</code></pre></div></td></tr></table></div>
+<p>De manera similar, existeix l'operador <code>$nin</code> (<strong>Not In</strong>), que obté els documents on el valor especificat no es troba a la llista. Hem de tenir en compte que en aquest últim cas també es mostraran aquells documents que tinguin un valor nul per a la clau.</p>
+<h3 id="415-operador-or">4.1.5. Operador <code>$OR</code></h3>
+<p>Quan volem realitzar l'operació OR en diferents camps del document, utilitzarem l'operador <code>$OR</code>, al qual passem un vector de possibles condicions, de la següent manera:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">$or</span><span class="o">:</span><span class="p">[</span><span class="nx">condition1</span><span class="p">,</span><span class="w"> </span><span class="nx">condition2</span><span class="p">,...]})</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Attention</p>
+<p>Les condicions del array son condicions en json</p>
+</div>
+<h3 id="416-operador-not">4.1.6. Operador <code>$NOT</code></h3>
+<p>L'operador <code>$NOT</code> és un operador metacondicional, és a dir, sempre s'aplica a un altre criteri, invertint el seu valor de certesa. La seva sintaxi seria:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">key</span><span class="o">:</span><span class="p">{</span><span class="nx">$not</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">criterion</span><span class="p">}}}).</span><span class="nx">pretty</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="417-operador-exists">4.1.7. Operador <code>$EXISTS</code></h3>
+<p>Recordem que en MongoDB, els documents no tenen una estructura o esquema comú, per la qual cosa és possible que hi hagi claus definides només en alguns d'ells. L'operador <code>$exists</code> s'utilitza per comprovar l'existència o no d'una determinada clau.
+La sintaxi a utilitzar seria:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">key</span><span class="o">:</span><span class="p">{</span><span class="w"> </span><span class="nx">$exists</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="o">|</span><span class="kc">false</span><span class="w"> </span><span class="p">}})</span>
+</code></pre></div></td></tr></table></div>
+<p>Amb això obtenim els documents per als quals la clau existeix o no, depenent de si hem indicat true o false a la consulta.</p>
+<h2 id="42-resultats-de-les-consultes-i-tipus-de-dades">4.2. Resultats de les consultes i tipus de dades</h2>
+<p>Els tipus de dades a MongoDB poden tenir alguns comportaments especials. Veurem alguns casos per saber què fer en determinades situacions.</p>
+<h3 id="421-valors-nulls">4.2.1. valors nulls</h3>
+<p>El valor null coincideix amb les següents situacions:</p>
+<ul>
+<li>Quan el valor de la clau és null, o</li>
+<li>Quan la clau no existeix en el document (en aquest cas, normalment es diu que el camp no està informat)</li>
+</ul>
+<h3 id="422-expressions-regulars-i-cadenes-de-caracters">4.2.2. Expressions regulars i cadenes de caràcters</h3>
+<p>Quan apliquem un filtre de document per un camp de text, pot ser que no coneguem exactament el valor del camp pel qual volem filtrar. Les expressions regulars ofereixen un mecanisme molt potent per a la coincidència de cadenes.</p>
+<p>MongoDB ens permet utilitzar aquestes expressions de diverses maneres, ja sigui utilitzant expressions regulars de Javascript o utilitzant l'operador <code>$regex</code>, que utilitza <strong>Expressions Regulars Compatibles amb Perl</strong> (PCRE). Les expressions regulars de Javascript s'expressen utilitzant la següent sintaxi:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">{</span><span class="w"> </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="sr">/pattern/</span><span class="o">&lt;</span><span class="nx">options</span><span class="o">&gt;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Com podem veure, utilitzem un patró similar a una cadena de text, però utilitzant la barra inclinada <code>/</code> com a delimitador en lloc de les cometes (<code>'</code>). Per la seva banda, si utilitzem l'operador <code>$regex</code>, podem utilitzar la següent sintaxi:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">{</span><span class="w"> </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$regex</span><span class="o">:</span><span class="w"> </span><span class="sr">/pattern/</span><span class="p">,</span><span class="w"> </span><span class="nx">$options</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;options&gt;&#39;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="p">{</span><span class="w"> </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$regex</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;pattern&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">$options</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;options&gt;&#39;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="p">{</span><span class="w"> </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$regex</span><span class="o">:</span><span class="w"> </span><span class="sr">/pattern/</span><span class="o">&lt;</span><span class="nx">options</span><span class="o">&gt;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Podem trobar diverses opcions per a expressions regulars:</p>
+<ul>
+<li><code>i</code> → Les coincidències no distingeixen entre majúscules i minúscules:<ul>
+<li><code>{name:/john/i}</code></li>
+<li><code>{name: { $regex: 'john',$options: 'i'}}</code></li>
+</ul>
+</li>
+<li><code>m</code> → Permet incloure caràcters com <code>^</code> o <code>$</code>, per coincidir al principi o al final, en cadenes amb múltiples línies.<ul>
+<li><code>{name:/^John/m}</code></li>
+<li><code>{name: { $regex: 'John', $options: 'm'}}</code></li>
+</ul>
+</li>
+<li><code>x</code> Ignora els espais en blanc en el patró <code>$regex</code>, sempre que no estiguin escapats o inclosos en una classe de caràcters.<ul>
+<li><code>{name: { $regex: ' J oh n',$options: 'x'}}</code></li>
+</ul>
+</li>
+<li><code>s</code> Permet que el caràcter punt (<code>.</code>) representi qualsevol caràcter, incloent el caràcter de nova línia.<ul>
+<li><code>{name:/ju.n/s}</code></li>
+<li><code>{name: { $regex: 'thu.n',$options: 's'}}</code></li>
+</ul>
+</li>
+</ul>
+<p>Podeu trobar més informació sobre expressions regulars i casos particulars en què es recomana utilitzar un tipus d'expressió o una altra en la documentació oficial de MongoDB sobre <code>$regex</code> <a href="https://www.mongodb.com/docs/manual/reference/operator/query/regex/">aquí</a>.</p>
+<h2 id="43-consideracions-sobre-el-tipus-de-dades-de-les-consultes">4.3. Consideracions sobre el tipus de dades de les consultes</h2>
+<h3 id="431-consultes-amb-arrays">4.3.1. Consultes amb arrays</h3>
+<p>Per cercar elements coincidents dins d'un array, procedim amb la mateixa sintaxi com si fos qualsevol altra clau, utilitzant el document de consulta <code>{key:value}</code>, sent la clau un array, i el valor, ja sigui un <em>n valor</em> que ha de contenir l'array, o un altre vector ordenat que volem que coincideixi exactament.</p>
+<p>Per exemple:</p>
+<ul>
+<li><code>db.collection.find({ my_vector : value })</code> → Coincideix amb tots els documents en els quals el vector <code>my_vector</code> apareix, en la posició que sigui, el valor indicat.<ul>
+<li><code>db.users.find({roles:"admin"})</code> mostra els usuaris que en l'array <code>roles</code> tenen el rol <em>admin</em> (o altres).</li>
+</ul>
+</li>
+<li><code>db.collection.find({ my_vector : [value] })</code> → Coincideix amb tots els documents en els quals el vector <code>my_vector</code> apareix només el valor indicat.<ul>
+<li><code>db.users.find({roles:["admin"]})</code> mostra els usuaris que tenen exactament el rol <em>admin</em>.</li>
+</ul>
+</li>
+</ul>
+<p>A més, també podem utilitzar expressions regulars o la resta d'operadors que hem vist com a condicions.</p>
+<p>D'altra banda, també podem referir-nos a un element específic del vector pel seu índex, utilitzant la notació de punts i entre cometes:</p>
+<ul>
+<li><code>db.collection.find({"my_vector.position" :[value]})</code><ul>
+<li><code>db.users.find({"roles.2":["admin"]})</code> mostra l'usuari que té com a tercer rol admin</li>
+</ul>
+</li>
+</ul>
+<h3 id="432-loperador-all">4.3.2. L'operador <code>$all</code></h3>
+<p>Amb <code>$all</code> podem especificar més d'un element coincident dins de l'array:</p>
+<ul>
+<li><code>db.collection.find({ my_vector : {$all:[value1, value2,...]}})</code><ul>
+<li><code>db.users.find({roles:{$all:["mod","admin"]}})</code> mostra els usuaris que tenen els rols <em>mod</em> i <em>admin</em> (i possiblement altres).</li>
+</ul>
+</li>
+</ul>
+<h3 id="433-loperador-size">4.3.3. L'operador <code>$size</code></h3>
+<p>Utilitzant <code>$size</code> podem incloure condicions sobre la longitud dels vectors:</p>
+<ul>
+<li><code>db.collection.find({ my_vector : {$size:size} })</code></li>
+</ul>
+<h3 id="434-loperador-slice">4.3.4. L'operador <code>$slice</code></h3>
+<p>L'operador slice ens permet obtenir un subconjunt dels elements del vector, amb la següent sintaxi:</p>
+<ul>
+<li><code>key: {$slice: x}</code>:<ul>
+<li>si x&gt;0 obté els primers x elements</li>
+<li>si x&lt;0, obté els últims x elements</li>
+</ul>
+</li>
+<li><code>key: {$slice: [ x , y ] }</code> Obtén <em>y</em> elements des de l'element a la posició <em>x</em> del document embegut</li>
+</ul>
+<p>Per consultar documents embeguts, simplement especifiqueu el camí complet de la clau, tancat entre cometes i separat per punts:
+<code>db.collection.find({"path.to.key":value_or_condition})</code></p>
+<h2 id="44-cursors">4.4. Cursors</h2>
+<p>Quan realitzem una consulta, MongoDB retorna els resultats utilitzant cursos, que són punters als resultats de la consulta, com connectors a la unitat 2. Els clients que utilitzen Mongo iteren sobre aquests cursos per recuperar els resultats, i ofereixen un conjunt de funcionalitats, com limitar els resultats, etc.</p>
+<p>Quan realitzem una consulta en una base de dades amb molts resultats, el client (<code>mongosh</code>) retorna només 20 resultats i el missatge <code>Type "it" for more</code>, per continuar iterant el cursor.</p>
+<h3 id="441-limit-skip-i-sort">4.4.1. Limit, Skip i Sort</h3>
+<p>MongoDB ens permet fer certes limitacions en els resultats. Entre elles, podem destacar:</p>
+<ul>
+<li><code>limit</code> → Per limitar el nombre de resultats</li>
+<li><code>skip</code> → Salta un nombre específic de resultats.</li>
+<li><code>sort</code> → Ordena els resultats. Necessites un objecte JSON amb les claus per ordenar, i un valor de 1 per ordenar ascendentment o -1 per ordenar descendentment.</li>
+</ul>
+<h2 id="45-introduccio-al-marc-dagrupacio">4.5. Introducció al Marc d'Agrupació</h2>
+<p>Les consultes d'agrupació que realitzàvem amb operadors com <code>GROUP BY</code>, <code>SUM</code> o <code>COUNT</code> en SQL es poden realitzar amb el Marc d'Agrupació de MongoDB. Les consultes d'agrupació tenen la següent sintaxi:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">(</span><span class="w"> </span><span class="p">[</span><span class="o">&lt;</span><span class="nx">pipeline</span><span class="o">&gt;</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>El pipeline o <em>tuberia</em> té un concepte similar a les tiberies d'Unix: els resultats d'una ordre es passen com a entrada a una altra, per obtenir resultats conjuntament.</p>
+<p>Les operacions que podem realitzar dins d'aquestes consultes d'agrupació són:</p>
+<ul>
+<li><code>$project</code> → Per realitzar una projecció sobre un conjunt de dades d'entrada, afegint, eliminant o recalculant camps perquè la sortida sigui diferent.</li>
+<li><code>$match</code> → Filtra l'entrada per reduir el nombre de documents, deixant només aquells que compleixen certes condicions.</li>
+<li><code>$limit</code> → Restringeix el nombre de resultats.</li>
+<li><code>$skip</code> → Salta un cert nombre de registres.</li>
+<li><code>$unwind</code> → Converteix un array per retornar-lo separat en documents.</li>
+<li><code>$group</code> → Agrupa documents segons una certa condició.</li>
+<li><code>$sort</code> → Ordena un conjunt de documents, segons el camp especificat.</li>
+<li><code>$geoNear</code>→ S'utilitza com a dades geoespacials, retornant els documents ordenats per proximitat segons un punt geoespacial.</li>
+</ul>
+<p>Per realitzar càlculs sobre les dades produïdes per les canonades, utilitzarem expressions. Les expressions són funcions que realitzen una certa operació sobre un grup de documents, vector o camp específic. Algunes d'aquestes expressions són <code>$max</code>, <code>$min</code>, <code>$divide</code> o <code>$substr</code>.</p>
+<p>Podeu trobar molta més informació sobre agregacions a la documentació oficial de MongoDB.</p>
+<h2 id="46-exercicis">4.6. Exercicis</h2>
+<p>Seguim treballant amb la col·lecció de pel·lícules. En aquest cas, utilitzarem el terminal mongosh (o robo3t si ho prefereixes), i realitzarem les següents consultes sobre aquesta col·lecció.</p>
+<ol>
+<li>Obteniu totes les produccions que es van estrenar el <code>2015</code> o que són del tipus <code>sèrie</code>.</li>
+<li>Obteniu totes les pel·lícules que <strong>NO</strong> es van estrenar entre els anys <code>2000</code> i <code>2002</code>.</li>
+<li>Obteniu totes les pel·lícules per a les quals la clau "directors" no està definida.</li>
+<li>Obteniu el títol de totes les pel·lícules que comencen amb la cadena <code>star wars</code>, independentment de majúscules o minúscules.</li>
+<li>Obteniu el títol de totes les pel·lícules que contenen el gènere comèdia (<code>Comedy</code>).</li>
+<li>Mostreu el títol i els gèneres de les pel·lícules que contenen el gènere comèdia (<code>Comedy</code>) o aventura (<code>Adventure</code>).</li>
+<li>Obteniu el títol i els gèneres de les pel·lícules que tenen tres gèneres.</li>
+<li>Obteniu les pel·lícules amb una qualificació de <code>Rotten Tomatoes</code> superior a <code>4</code>.</li>
+<li>Feu la mateixa consulta que abans, però limitant el nombre de documents a 10.</li>
+<li>Ara mostreu el títol i la qualificació d'aquelles pel·lícules amb una qualificació superior a 4, ordenades per qualificació (de més alta a més baixa) i limitant els resultats a 10.</li>
+</ol>
 
 
 
