@@ -16,7 +16,7 @@
     
     
       
-        <title>1. Overview - Accés a Dades</title>
+        <title>1. Visió General - Accés a Dades. IES Jaume II El Just</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-overview" class="md-skip">
+        <a href="#1-visio-general" class="md-skip">
           Skip to content
         </a>
       
@@ -84,7 +84,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../" title="Accés a Dades" class="md-header__button md-logo" aria-label="Accés a Dades" data-md-component="logo">
+    <a href="../../" title="Accés a Dades. IES Jaume II El Just" class="md-header__button md-logo" aria-label="Accés a Dades. IES Jaume II El Just" data-md-component="logo">
       
   <img src="../../../assets/jaume.png" alt="logo">
 
@@ -97,13 +97,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Accés a Dades
+            Accés a Dades. IES Jaume II El Just
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1. Overview
+              1. Visió General
             
           </span>
         </div>
@@ -230,12 +230,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../" title="Accés a Dades" class="md-nav__button md-logo" aria-label="Accés a Dades" data-md-component="logo">
+    <a href="../../" title="Accés a Dades. IES Jaume II El Just" class="md-nav__button md-logo" aria-label="Accés a Dades. IES Jaume II El Just" data-md-component="logo">
       
   <img src="../../../assets/jaume.png" alt="logo">
 
     </a>
-    Accés a Dades
+    Accés a Dades. IES Jaume II El Just
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -622,6 +622,27 @@
   
   <span class="md-ellipsis">
     7. From rows to objects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2_Connectors/8_Exercises/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Exercicis proposats
   </span>
   
 
@@ -1336,18 +1357,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#11-server-mode" class="md-nav__link">
+  <a href="#11-mode-de-servidor" class="md-nav__link">
     <span class="md-ellipsis">
-      1.1. Server Mode
+      1.1. Mode de servidor
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#12-database-mode" class="md-nav__link">
+  <a href="#12-mode-de-base-de-dades" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2. Database Mode
+      1.2. Mode de Base de Dades
     </span>
   </a>
   
@@ -1368,10 +1389,10 @@
                   
 
 
-<h1 id="1-overview">1. Overview</h1>
-<p>Let's go to create a DBMS client, like MySQL workbench, but in a console version with a shell and a prompt. Our client allows us to connect to a server, select a database and finally throws several SQL queries.</p>
-<h2 id="11-server-mode">1.1. Server Mode</h2>
-<p>When starting our program, it will ask for server's data</p>
+<h1 id="1-visio-general">1. Visió General</h1>
+<p>Anem a crear un client de SGBD, com el MySQL Workbench, però en una versió de consola amb una shell i un prompt. El nostre client ens permet connectar-nos a un servidor, seleccionar una base de dades i finalment executar diverses consultes SQL.</p>
+<h2 id="11-mode-de-servidor">1.1. Mode de servidor</h2>
+<p>En iniciar el nostre programa, demanarà les dades del servidor.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -1386,37 +1407,37 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a>$<span class="w"> </span>Password:
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a>$<span class="w"> </span><span class="o">(</span>root<span class="o">)</span><span class="w"> </span>on<span class="w"> </span><span class="m">127</span>.0.0.1:3308&gt;
 </code></pre></div></td></tr></table></div>
-<p>As you can see on last line, prompt is <code>(user) on IP:port&gt;</code>. Our client show where we are connected always.</p>
-<p>List of order tha will be accepted by or client when connected are (<strong>server mode</strong>):</p>
+<p>Com podeu veure a l'última línia, el prompt és <code>(usuari) a IP:port&gt;</code>. El nostre client mostra sempre on estem connectats.</p>
+<p>La llista d'ordres que el nostre client acceptarà quan estigui connectat és (<strong>mode servidor</strong>):</p>
 <ul>
-<li><code>show databases</code> or <code>sh db</code> <span class="arithmatex">\(\rightarrow\)</span> show a list with all databases in our DBMS.</li>
-<li><code>info</code> <span class="arithmatex">\(\rightarrow\)</span> show information abaut DBMS and connection settings.</li>
-<li><code>import script_name</code> <span class="arithmatex">\(\rightarrow\)</span> Allow to load a sql scrip from a file.</li>
-<li><code>use db_name</code> <span class="arithmatex">\(\rightarrow\)</span> change our program to database mode.</li>
-<li><code>quit</code> <span class="arithmatex">\(\rightarrow\)</span> finish our program.</li>
+<li><code>show database</code> o <code>show db</code> <span class="arithmatex">\(\rightarrow\)</span> mostra una llista amb totes les bases de dades del nostre SGBD.</li>
+<li><code>info</code> <span class="arithmatex">\(\rightarrow\)</span> mostra informació sobre el SGBD i la configuració de la connexió.</li>
+<li><code>import nom_del_script</code> <span class="arithmatex">\(\rightarrow\)</span> permet carregar un script SQL des d'un fitxer.</li>
+<li><code>use nom_de_la_bd</code> <span class="arithmatex">\(\rightarrow\)</span> canvia el nostre programa al mode base de dades.</li>
+<li><code>quit</code> <span class="arithmatex">\(\rightarrow\)</span> finalitza el nostre programa.</li>
 </ul>
-<h2 id="12-database-mode">1.2. Database Mode</h2>
-<p>Once we are connected to a server, and selected a database, our client will enter in database mode:</p>
+<h2 id="12-mode-de-base-de-dades">1.2. Mode de Base de Dades</h2>
+<p>Un cop estiguem connectats a un servidor i haguem seleccionat una base de dades, el nostre client entrarà en el mode de base de dades:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>$<span class="w"> </span><span class="o">(</span>root<span class="o">)</span><span class="w"> </span>on<span class="w"> </span><span class="m">127</span>.0.0.1:3308&gt;use<span class="w"> </span>Ciclismo
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>$<span class="w"> </span><span class="o">(</span>root<span class="o">)</span><span class="w"> </span>on<span class="w"> </span><span class="m">127</span>.0.0.1:3308<span class="o">[</span>Ciclismo<span class="o">]</span>&gt;
 </code></pre></div></td></tr></table></div>
-<p>you can view that database name is added to the prompt, and now the program is waiting for commands to the database. You must implement these orders :</p>
+<p>Pots veure que el nom de la base de dades s'afegeix al prompt i ara el programa està esperant ordres per a la base de dades. Has d'implementar aquestes comandes:</p>
 <ul>
-<li><code>sh tables</code> <span class="arithmatex">\(\rightarrow\)</span> show all tables on selected database.</li>
-<li><code>describe table_name</code> <span class="arithmatex">\(\rightarrow\)</span> show description of this table: fields, data types and primary keys at least.</li>
-<li><code>insert Nom_de_la_Taula</code> <span class="arithmatex">\(\rightarrow\)</span>  on an interactive way, ask to the user for each field value, and insert a new row.</li>
-<li><code>sql</code> <span class="arithmatex">\(\rightarrow\)</span> It runs whatever query on selected database.</li>
-<li><code>quit</code> <span class="arithmatex">\(\rightarrow\)</span> returns to DBMS mode.</li>
+<li><code>sh tables</code> <span class="arithmatex">\(\rightarrow\)</span> mostra totes les taules de la base de dades seleccionada.</li>
+<li><code>describe nom_de_la_taula</code> <span class="arithmatex">\(\rightarrow\)</span> mostra la descripció d'aquesta taula: camps, tipus de dades i claus primàries com a mínim.</li>
+<li><code>insert Nom_de_la_Taula</code> <span class="arithmatex">\(\rightarrow\)</span> de manera interactiva, demana a l'usuari el valor de cada camp i insereix una nova fila.</li>
+<li><code>sql</code> <span class="arithmatex">\(\rightarrow\)</span> executa qualsevol consulta a la base de dades seleccionada.</li>
+<li><code>quit</code> <span class="arithmatex">\(\rightarrow\)</span> torna al mode SGBD.</li>
 </ul>
-<h1 id="2-project-structure-and-tips">2. Project structure and tips</h1>
-<p>The project contains theses classes:</p>
+<h1 id="2-estructura-del-projecte-i-consells">2. Estructura del projecte i consells</h1>
+<p>El projecte conté les següents classes:</p>
 <p><center><img alt="CEPA2" src="../../../Practiques/CEPA2.png" width="75%" /></center></p>
-<p>Let's go to revise the class functions</p>
+<p>Anem a revisar les funcions de classe</p>
 <h2 id="21-servermanager">2.1. ServerManager</h2>
-<p>It contains main, and when starting, ask the user for the server information. Then, it starts <code>ConnectionManager</code> class with the given values.</p>
+<p>Conté el <em>main</em>, i quan s'inicia, demana a l'usuari la informació del servidor. A continuació, inicia la classe <code>ConnectionManager</code> amb els valors proporcionats.</p>
 <h2 id="22-connectionmanager">2.2. ConnectionManager</h2>
-<p>It manages the main program shell, and has as attributes:</p>
+<p>Gestiona la consola principal del programa i té com a atributs:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -1425,18 +1446,18 @@
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">String</span><span class="w"> </span><span class="n">user</span><span class="p">;</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">String</span><span class="w"> </span><span class="n">pass</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
-<p>and as methods:</p>
+<p>i com a mètodes:</p>
 <ul>
-<li><code>ConnectionManager()</code> <span class="arithmatex">\(\rightarrow\)</span> default const.</li>
-<li><code>ConnectionManager(String server, String port, String user, String pass)</code> <span class="arithmatex">\(\rightarrow\)</span> general const.</li>
-<li><code>public Connection connectDBMS()</code> <span class="arithmatex">\(\rightarrow\)</span> starts and returns a connection.</li>
-<li><code>public void showInfo()</code> <span class="arithmatex">\(\rightarrow\)</span>  show server's information.</li>
-<li><code>public void showDatabases()</code> <span class="arithmatex">\(\rightarrow\)</span> show server's tables.</li>
-<li><code>public void importScript(String script)</code> <span class="arithmatex">\(\rightarrow\)</span> loads and run a script.</li>
-<li><code>public void startShell()</code> <span class="arithmatex">\(\rightarrow\)</span> inits the server's mode shell. This shell is almost implemented.</li>
+<li><code>ConnectionManager()</code> <span class="arithmatex">\(\rightarrow\)</span> constructor per defecte.</li>
+<li><code>ConnectionManager(String server, String port, String user, String pass)</code> <span class="arithmatex">\(\rightarrow\)</span> constructor general.</li>
+<li><code>public Connection connectDBMS()</code> <span class="arithmatex">\(\rightarrow\)</span> inicia i retorna una connexió.</li>
+<li><code>public void showInfo()</code> <span class="arithmatex">\(\rightarrow\)</span> mostra la informació del servidor.</li>
+<li><code>public void showDatabases()</code> <span class="arithmatex">\(\rightarrow\)</span> mostra les taules del servidor.</li>
+<li><code>public void importScript(String script)</code> <span class="arithmatex">\(\rightarrow\)</span> carrega i executa un script.</li>
+<li><code>public void startShell()</code> <span class="arithmatex">\(\rightarrow\)</span> inicia la consola del servidor. Aquesta consola ja està gairebé implementada.</li>
 </ul>
-<h2 id="23-databasemanager">2.3. DatabaseManager</h2>
-<p>It manage the database mode shell, and need an extra attribute than Connection manager:</p>
+<h2 id="23-gestor-de-base-de-dades">2.3. Gestor de Base de Dades</h2>
+<p>Gestiona la consola del mode base de dades i necessita un atribut addicional respecte al Gestor de Connexió:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -1447,43 +1468,45 @@
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">String</span><span class="w"> </span><span class="n">pass</span><span class="p">;</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">String</span><span class="w"> </span><span class="n">dbname</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
-<p>and as methods:</p>
+<p>i com a mètodes:</p>
 <ul>
-<li><code>DatabaseManager()</code> <span class="arithmatex">\(\rightarrow\)</span> default const.</li>
-<li><code>DatabaseManager(String server, String port, String user, String pass,String dbname)</code> <span class="arithmatex">\(\rightarrow\)</span> general const.</li>
-<li><code>public Connection connectDatabase()</code> <span class="arithmatex">\(\rightarrow\)</span> starts and returns a connection to the current database.</li>
-<li><code>public void insertIntoTable(String table)</code> <span class="arithmatex">\(\rightarrow\)</span> starts the insertion assistant to the given table.</li>
-<li><code>public void showDescTable(String table)</code> <span class="arithmatex">\(\rightarrow\)</span> show table metadata.</li>
-<li><code>public void executeSelect(String query)</code> <span class="arithmatex">\(\rightarrow\)</span> run a given query (of any type) and show results on screen, if any.</li>
-<li><code>public void startShell()</code> <span class="arithmatex">\(\rightarrow\)</span> inits the database's mode shell. You have to do a full implementation.</li>
+<li><code>DatabaseManager()</code> <span class="arithmatex">\(\rightarrow\)</span> constructor per defecte.</li>
+<li><code>DatabaseManager(String server, String port, String user, String pass,String dbname)</code> <span class="arithmatex">\(\rightarrow\)</span> constructor general.</li>
+<li><code>public Connection connectDatabase()</code> <span class="arithmatex">\(\rightarrow\)</span> inicia i retorna una connexió a la base de dades actual.</li>
+<li><code>public void insertIntoTable(String table)</code> <span class="arithmatex">\(\rightarrow\)</span> inicia l'assistent d'inserció per a la taula donada.</li>
+<li><code>public void showDescTable(String table)</code> <span class="arithmatex">\(\rightarrow\)</span> mostra la metadades de la taula.</li>
+<li><code>public void executeSelect(String query)</code> <span class="arithmatex">\(\rightarrow\)</span> executa una consulta donada (de qualsevol tipus) i mostra els resultats a la pantalla, si n'hi ha.</li>
+<li><code>public void startShell()</code> <span class="arithmatex">\(\rightarrow\)</span> inicia la consola del mode base de dades. Has de fer una implementació completa.</li>
 </ul>
-<h1 id="3-tables-insertions">3. Table's insertions.</h1>
-<p>The <code>insertIntoTable</code> is probably the hardest method in the task, due to need to ask for table metadata first, in order to know the table fields and data types, and then ask to the user for the values and formats.</p>
-<p>The advice that will be given is to set three list with:</p>
+<h1 id="3-insercions-a-les-taules">3. Insercions a les taules.</h1>
+<p>El mètode <code>insertIntoTable</code> és probablement el més difícil de la tasca, ja que cal demanar primer les metadades de la taula per conèixer els camps i els tipus de dades de la taula, i després demanar a l'usuari els valors i els formats.</p>
+<p>El consell que es donarà és crear tres llistes amb:</p>
 <ol>
-<li>Fields list that need to insert</li>
-<li>Values list to we are going to set</li>
-<li>Types list of each field</li>
+<li>Llista de camps que cal inserir.</li>
+<li>Llista de valors que s'assignaran.</li>
+<li>Llista de tipus de cada camp.</li>
 </ol>
-<p>Furthermore, you need to generate a placeholders list or String, with so many <code>?</code> as you need.</p>
+<p>A més, cal generar una llista o cadena de marcadors de posició amb tants <code>?</code> com sigui necessari.</p>
 <div class="admonition tip">
-<p class="admonition-title">Advice</p>
-<p>Remember that asking for table metadata, the columns that you need are:</p>
+<p class="admonition-title">Consell</p>
+<p>Recorda que, en demanar les metadades de la taula, les columnes que necessites són:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>- Columna 4: nom de la columna
+- Columna 6: tipus de dades de la columna
+- Columna 18: nullable o no. Aquest camp és obligatori si no és nullable.
+- Columna 23: incremental o no. No necessites aquest camp si és incremental.
+</code></pre></div></td></tr></table></div>
+<p>Finalment, verifica l'ajust dels placeholders, ja que depenen del tipus de dades. Tindre en compte que:</p>
 <ul>
-<li>Column 4 : column name</li>
-<li>Column 6: column data type</li>
-<li>Column 18 nullable or not. This field is mandatory if were not null.</li>
-<li>Column 23: incremental or not. You don't need this field, if were incremental.</li>
-</ul>
-<p>And last, a fine tunning is placeholders assignation, because it depends of data type. Take into account that:</p>
-<ul>
-<li>If data type is <code>INT</code>, we will use <code>setInt</code>.</li>
-<li>If data type is <code>DATETIME</code>, we will use <code>setDate</code> with a casting to <code>java.sql.Data</code> (not <code>java.Date</code>).</li>
-<li>For a default or very specific type, you could setString, and hope that casts works properly.</li>
+<li>Les dades <code>int</code> faran servir <code>setInt()</code></li>
+<li>Les dades <code>datetime</code> faran servir <code>setDate()</code>, amb un casting a <code>java.sql.Date</code> en compte de <code>java.Date</code></li>
+<li>Per defecte el <code>setString</code> i confiar que el casting automàtic faça la seua feina.</li>
 </ul>
 </div>
 <p>© Joan Gerard Camarena, October-2022</p>
-<p>© Last revision, October-2024</p>
+<p>© Última revisió, October-2024</p>
 
 
 

@@ -20,7 +20,7 @@
     
     
       
-        <title>1. Desfase objecte-relacional - Accés a Dades</title>
+        <title>1. Desfase objecte-relacional - Accés a Dades. IES Jaume II El Just</title>
       
     
     
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Capçalera">
-    <a href="../.." title="Accés a Dades" class="md-header__button md-logo" aria-label="Accés a Dades" data-md-component="logo">
+    <a href="../.." title="Accés a Dades. IES Jaume II El Just" class="md-header__button md-logo" aria-label="Accés a Dades. IES Jaume II El Just" data-md-component="logo">
       
   <img src="../../assets/jaume.png" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Accés a Dades
+            Accés a Dades. IES Jaume II El Just
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -234,12 +234,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegació" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Accés a Dades" class="md-nav__button md-logo" aria-label="Accés a Dades" data-md-component="logo">
+    <a href="../.." title="Accés a Dades. IES Jaume II El Just" class="md-nav__button md-logo" aria-label="Accés a Dades. IES Jaume II El Just" data-md-component="logo">
       
   <img src="../../assets/jaume.png" alt="logo">
 
     </a>
-    Accés a Dades
+    Accés a Dades. IES Jaume II El Just
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -710,6 +710,27 @@
   
   <span class="md-ellipsis">
     7. De les files als objectes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8_Exercises/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Exercicis proposats
   </span>
   
 
@@ -1506,7 +1527,7 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Atenció</p>
-<p>Primary keys have both properties: non-null value and uniqueness.</p>
+<p>Les claus primàries tenen ambdues propietats: no nules i úniques.</p>
 </div>
 <h3 id="111-exemple">1.1.1. Exemple</h3>
 <p>Una base de dades per emmagatzemar informació sobre jugadors, jocs, etc., pot ser així:</p>
@@ -1611,12 +1632,12 @@
 <a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="n">ENGINE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InnoDB</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="12-representacio-de-la-informacio-amb-el-model-orientat-a-objectes">1.2. Representació de la informació amb el model orientat a objectes</h2>
-<p>Com l'entitat-relació, el model orientat a objectes és un model de dades conceptual, però que dóna importància a la modelització dels objectes.</p>
+<p>A l'igual que l'entitat-relació, el model orientat a objectes és un model de dades conceptual, però que dóna importància a la modelització dels objectes.</p>
 <p>Un objecte pot representar qualsevol element conceptual: entitats, processos, accions... Un objecte no només representa les característiques o propietats, sinó que també es centra en els processos que pateixen. En termes del model orientat a objectes, diem que un objecte és dades més operacions o comportament.</p>
 <p>A la unitat introductòria ja vam revisar la programació orientada a objectes, així que ens limitarem a una breu revisió dels conceptes principals:</p>
 <ul>
 <li>Un objecte és una entitat amb certes propietats i cert comportament.</li>
-<li>En termes de POO, les propietats es coneixen com a <strong>atributs</strong>, i el conjunt dels seus valors determina l'estat de l'objecte en un moment donat.</li>
+<li>En termes de POO, les propietats es coneixen com a <strong>atributs</strong>, i el conjunt dels seus valors determina l'<strong>estat</strong> de l'objecte en un moment donat.</li>
 <li>El comportament està determinat per una sèrie de funcions i procediments que anomenem <strong>mètodes</strong>, i que modifiquen l'estat de l'objecte.</li>
 <li>Un objecte també tindrà un nom amb el qual s'identifica.</li>
 <li>Una <strong>classe</strong> és una abstracció d'un conjunt d'objectes, i un objecte ha de pertànyer necessàriament a alguna classe.</li>
@@ -1626,6 +1647,9 @@
 <p>El mateix exemple que hem representat recentment, amb una representació orientada a objectes podria ser:</p>
 <p><center><img alt="Orientació a Objectes" src="../img/O_O.png" width="90%" /></center></p>
 <p>Com podem veure, té una estructura similar, a la qual també hem afegit alguns mètodes com ara getters i setters. A més, les diferents classes no tenen un atribut identificador, ja que cada objecte s'identifica a si mateix. Aquí tenim una petita aproximació de com implementaríem aquesta jerarquia en Java.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Clase Gènere</label><label for="__tabbed_1_2">Classe Joc</label><label for="__tabbed_1_3">Classe Registre</label><label for="__tabbed_1_4">Classe Jugador</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>La classe <code>Genere</code> és una classe POJO, que només emmagatzema informació (nom i descripció del tipus de joc) i implementa getters i setters.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
@@ -1661,7 +1685,9 @@
 <a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>La classe <code>Joc</code> emmagatzema el nom, la descripció i el gènere del joc. A diferència del model relacional, on el que s'emmagatzema seria una clau externa al gènere, ja que aquí no tenim claus externes, emmagatzemem l'objecte mateix (la referència).</p>
+</div>
+<div class="tabbed-block">
+<p>La classe <code>Joc</code> emmagatzema el nom, la descripció i el gènere del joc. A diferència del model relacional, on el que s'emmagatzema seria una clau externa al gènere, ja que aquí no tenim claus externes, <strong>emmagatzemem l'objecte mateix</strong> (la <em>referència</em>).</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -1712,6 +1738,8 @@
 <a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setGenere</span><span class="p">(</span><span class="n">Genere</span><span class="w"> </span><span class="n">genere</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="na">genere</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">genere</span><span class="p">;}</span>
 <a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
 <p>La classe <code>Registre</code> presenta la relació entre <code>Jugador</code> i <code>Joc</code> (quan un jugador juga a un joc) i emmagatzema els punts i una referència al joc.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
@@ -1749,6 +1777,8 @@
 <a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setJoc</span><span class="p">(</span><span class="n">Joc</span><span class="w"> </span><span class="n">joc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="na">joc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">joc</span><span class="p">;}</span><span class="w">   </span>
 <a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
 <p>I finalment, la classe <code>Jugador</code> emmagatzema el sobrenom i la data de registre per a cada jugador, i després, un array amb tots els jocs que el jugador ha jugat:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
@@ -1800,16 +1830,19 @@
 <a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
 <div class="admonition info">
 <p class="admonition-title">La interfície <code>Set</code> i la classe <code>HashSet</code></p>
-<p><code>Set</code> és una interfície del paquet <code>java.util</code> que tracta una col·lecció o conjunt d'elements sense desordre i sense duplicats.</p>
+<p><code>Set</code> és una interfície del paquet <code>java.util</code> que tracta una col·lecció o conjunt d'elements sense ordre i sense duplicats.</p>
 <p>D'altra banda, <code>HashSet</code> és una classe que implementa la interfície <code>Set</code> i que es basa en una taula de hash, una estructura de dades que permet localitzar objectes basant-se en una clau que indica la posició a la taula, permetent l'accés directe a l'element, el que els fa ideals per a cerques, insercions i eliminacions.</p>
 </div>
 <h2 id="13-model-relacional-vs-model-orientat-a-objectes">1.3. Model Relacional vs Model Orientat a Objectes</h2>
-<p>Conceptualment, el model orientat a objectes és un <em>model dinàmic</em>, que es centra en els objectes i en els processos que aquests experimenten, però que no té en compte, des del principi, la seva persistència. Hem de ser capaços, per tant, de guardar els estats dels objectes de manera permanent i carregar-los quan l'aplicació els necessiti, així com mantenir la consistència entre aquestes dades emmagatzemades i els objectes que les representen a l'aplicació.</p>
-<p>Una manera d'oferir aquesta persistència als objectes seria utilitzar un <em>SGBD Relacional</em>, però ens trobarem amb algunes complicacions. La primera, des d'un punt de vista conceptual, és que el model Entitat-Relació es centra en les dades, mentre que el model orientat a objectes es centra en els objectes, entesos com a grups de dades i les operacions realitzades sobre ells.</p>
+<p>Conceptualment, el model orientat a objectes és un <strong>model dinàmic</strong>, que es centra en els objectes i en els processos que aquests experimenten, però que no té en compte, des del principi, la seva persistència. Hem de ser capaços, per tant, de guardar els estats dels objectes de manera permanent i carregar-los quan l'aplicació els necessiti, així com <strong>mantenir la consistència entre aquestes dades emmagatzemades i els objectes que les representen a l'aplicació</strong>.</p>
+<p>Una manera d'oferir aquesta persistència als objectes seria utilitzar un <strong>SGBD Relacional</strong>, però ens trobarem amb algunes complicacions. La primera, des d'un punt de vista conceptual, és que el model Entitat-Relació es centra en les dades, mentre que el model orientat a objectes es centra en els objectes, entesos com a grups de dades i les operacions realitzades sobre ells.</p>
 <p>Una altra diferència, força important, és la vinculació dels elements entre un model i un altre. D'una banda, el model relacional afegeix informació addicional a les taules en forma de clau externa, mentre que en el model orientat a objectes no necessitem aquesta dada externa, sinó que la vinculació entre objectes es fa a través de referències entre ells. Un objecte, per exemple, no necessitarà una clau primària, ja que l'objecte s'identifica per si mateix.</p>
-<p>Com hem vist a l'exemple de les seccions anteriors, les taules en el model relacional tenien una clau primària per identificar els objectes i claus externes per expressar les relacions, mentre que en el model orientat a objectes aquestes desapareixen, expressant les relacions entre objectes mitjançant referències. A més, la manera com s'expressen aquestes relacions també és diferent. En el model relacional, per exemple, el registre de puntuacions és una taula que enllaça la taula de jugadors amb la taula de jocs i afegeix la puntuació del jugador en el joc. D'altra banda, en la implementació en Java que hem fet, tenim objectes de tipus <code>Registre</code> que emmagatzemen una puntuació i una referència al joc, però és la classe Jugador la que manté el conjunt de registres de les seves puntuacions.</p>
+<p>Com hem vist a l'exemple de les seccions anteriors, les taules en el model relacional tenien una <strong>clau primària per identificar els objectes</strong> i <strong>claus externes per expressar les relacions</strong>, mentre que en el model orientat a objectes aquestes desapareixen, expressant les relacions entre objectes mitjançant <strong>referències</strong>. A més, la manera com s'expressen aquestes relacions també és diferent. En el model relacional, per exemple, el registre de puntuacions és una taula que enllaça la taula de jugadors amb la taula de jocs i afegeix la puntuació del jugador en el joc. D'altra banda, en la implementació en Java que hem fet, tenim objectes de tipus <code>Registre</code> que emmagatzemen una puntuació i una referència al joc, però és la classe Jugador la que manté el conjunt de registres de les seves puntuacions.</p>
 <p>D'altra banda, en manipular les dades, cal tenir en compte que el model relacional disposa de llenguatges (principalment SQL) dissenyats exclusivament per a aquest propòsit, mentre que en un llenguatge orientat a objectes funciona de manera diferent, per la qual cosa serà necessari incorporar mecanismes que permetin fer aquestes consultes des del llenguatge de programació. A més, quan obtenim els resultats de la consulta, també ens trobem amb un altre problema, i és la conversió dels resultats. Quan es fa una consulta a una base de dades, sempre es retorna un resultat en forma de <strong>taula</strong>, per la qual cosa serà necessari transformar aquests resultats en estats dels objectes de l'aplicació.</p>
 <p>Totes aquestes diferències impliquen el que es coneix com a <strong>desfassament relacional-objecte</strong>, i que ens obligarà a fer determinades conversions entre objectes i taules quan volem guardar la informació en un SGBD. En aquesta unitat i en les següents, veurem com superar aquest retard des de diferents enfocaments.</p>
 

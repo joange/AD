@@ -16,7 +16,7 @@
     
     
       
-        <title>1. Visió General - Accés a Dades</title>
+        <title>1. Visió General - Col·lecció i reviews de pel·lícules - Accés a Dades. IES Jaume II El Just</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-visio-general" class="md-skip">
+        <a href="#1-visio-general-colleccio-i-reviews-de-pellicules" class="md-skip">
           Salta el contingut
         </a>
       
@@ -84,7 +84,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Capçalera">
-    <a href="../.." title="Accés a Dades" class="md-header__button md-logo" aria-label="Accés a Dades" data-md-component="logo">
+    <a href="../.." title="Accés a Dades. IES Jaume II El Just" class="md-header__button md-logo" aria-label="Accés a Dades. IES Jaume II El Just" data-md-component="logo">
       
   <img src="../../assets/jaume.png" alt="logo">
 
@@ -97,13 +97,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Accés a Dades
+            Accés a Dades. IES Jaume II El Just
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1. Visió General
+              1. Visió General - Col·lecció i reviews de pel·lícules
             
           </span>
         </div>
@@ -230,12 +230,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegació" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Accés a Dades" class="md-nav__button md-logo" aria-label="Accés a Dades" data-md-component="logo">
+    <a href="../.." title="Accés a Dades. IES Jaume II El Just" class="md-nav__button md-logo" aria-label="Accés a Dades. IES Jaume II El Just" data-md-component="logo">
       
   <img src="../../assets/jaume.png" alt="logo">
 
     </a>
-    Accés a Dades
+    Accés a Dades. IES Jaume II El Just
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -622,6 +622,27 @@
   
   <span class="md-ellipsis">
     7. De les files als objectes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2_Connectors/8_Exercises/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Exercicis proposats
   </span>
   
 
@@ -1329,32 +1350,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Taula de continguts
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#11-mode-de-servidor" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.1. Mode de servidor
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#12-mode-de-base-de-dades" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.2. Mode de Base de Dades
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1368,124 +1363,265 @@
                   
 
 
-<h1 id="1-visio-general">1. Visió General</h1>
-<p>Anem a crear un client de SGBD, com el MySQL Workbench, però en una versió de consola amb una shell i un prompt. El nostre client ens permet connectar-nos a un servidor, seleccionar una base de dades i finalment executar diverses consultes SQL.</p>
-<h2 id="11-mode-de-servidor">1.1. Mode de servidor</h2>
-<p>En iniciar el nostre programa, demanarà les dades del servidor.</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>gradle<span class="w"> </span>run<span class="w"> </span>--console<span class="w"> </span>plain
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>...
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>$<span class="w"> </span>Server:<span class="w"> </span><span class="m">127</span>.0.0.1
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>$<span class="w"> </span>Port:<span class="w"> </span><span class="m">3308</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>$<span class="w"> </span>Username:<span class="w"> </span>root
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>$<span class="w"> </span>Password:
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>$<span class="w"> </span><span class="o">(</span>root<span class="o">)</span><span class="w"> </span>on<span class="w"> </span><span class="m">127</span>.0.0.1:3308&gt;
-</code></pre></div></td></tr></table></div>
-<p>Com podeu veure a l'última línia, el prompt és <code>(usuari) a IP:port&gt;</code>. El nostre client mostra sempre on estem connectats.</p>
-<p>La llista d'ordres que el nostre client acceptarà quan estigui connectat és (<strong>mode servidor</strong>):</p>
+<h1 id="1-visio-general-colleccio-i-reviews-de-pellicules">1. Visió General - Col·lecció i reviews de pel·lícules</h1>
+<p>Anem a crear una aplicació que ens permetrà gestionar una col·lecció de pel·lícules o sèries. </p>
+<p>Com a complement adiccional de la pràctica, les dades seran reals i les aconseguirem de <a href="https://www.filmaffinity.com/es/main.html">https://www.filmaffinity.com/es/main.html</a>, mitjançant una tècnica de <em>web scrapping</em>.</p>
+<p>Aquestes dades seran emmagatzemades en una BBDD relacional, que crearem des de zero.</p>
+<p>Afegirem un CRUD a aquestes dades recuperades.</p>
+<h1 id="2-web-scrapping-de-filmaffinity-completa">2. Web Scrapping de filmaffinity (completa)</h1>
+<p>El web scraping (o "raspat web") és la tècnica d'extreure informació de llocs web de manera automatitzada. En lloc de copiar i enganxar manualment les dades, creem un programa que visita la pàgina i n'extreu el contingut estructurat (DOM).</p>
+<p>A continuació processem el DOM i accedint a les etiquetes HTML (XML) recuperem les dades de les mateixes.</p>
+<h2 id="21-jsoup">2.1. JSOUP</h2>
+<p>És una llibreria Java dissenyada específicament per a aquesta tasca. És, essencialment, un analitzador d'HTML (HTML parser). Les seves funcions principals són:</p>
 <ul>
-<li><code>show database</code> o <code>show db</code> <span class="arithmatex">\(\rightarrow\)</span> mostra una llista amb totes les bases de dades del nostre SGBD.</li>
-<li><code>info</code> <span class="arithmatex">\(\rightarrow\)</span> mostra informació sobre el SGBD i la configuració de la connexió.</li>
-<li><code>import nom_del_script</code> <span class="arithmatex">\(\rightarrow\)</span> permet carregar un script SQL des d'un fitxer.</li>
-<li><code>use nom_de_la_bd</code> <span class="arithmatex">\(\rightarrow\)</span> canvia el nostre programa al mode base de dades.</li>
-<li><code>quit</code> <span class="arithmatex">\(\rightarrow\)</span> finalitza el nostre programa.</li>
+<li><strong>Connectar-se i descarregar</strong>: Pot fer una petició HTTP (com un <code>GET</code>) a una URL i rebre el codi font HTML inicial de la pàgina.</li>
+<li><strong>Analitzar (Parse)</strong>: Converteix aquest text HTML en una estructura de dades que podem manipular: el DOM (Document Object Model).</li>
+<li><strong>Extreure dades</strong>: Ofereix una API molt còmoda (similar a jQuery) per navegar per aquest DOM i seleccionar elements concrets utilitzant selectors CSS (per exemple, <code>doc.select("div.product-title")</code>).</li>
 </ul>
-<h2 id="12-mode-de-base-de-dades">1.2. Mode de Base de Dades</h2>
-<p>Un cop estiguem connectats a un servidor i haguem seleccionat una base de dades, el nostre client entrarà en el mode de base de dades:</p>
+<blockquote>
+<p>La gran dificultat del scrapping és:</p>
+<ul>
+<li>Navegar pel DOM de la web i trobar les etiquetes i classes on resideix la informació</li>
+<li>Vigilar els canivs, ja que qualssevol canvi en la web suposarà que el nostre programa deixe de funcionar</li>
+</ul>
+</blockquote>
+<p>El problema és que JSOUP només veu el que veuria un usuari si fes clic a "Veure codi font" al navegador. <strong>És una eina estàtica</strong>. </p>
+<h2 id="22-el-repte-el-javascript-dinamic">2.2. El Repte: El JavaScript Dinàmic</h2>
+<p>En el passat, els servidors web enviaven un fitxer HTML complet. JSOUP era perfecte per a això. Hui en dia, la majoria de llocs web moderns (especialment les Single Page Applications - SPA, fetes amb React, Angular o Vue) funcionen de manera diferent:</p>
+<ul>
+<li>El servidor envia un fitxer HTML quasi buit (un "shell" o esquelet).</li>
+<li>Aquest HTML conté enllaços a grans fitxers JavaScript (.js).</li>
+<li>És el navegador de l'usuari qui ha d'executar aquest JavaScript.</li>
+<li>Aquest script, un cop executat, fa peticions addicionals (AJAX/Fetch) a una API per obtenir les dades reals (sovint en format JSON).</li>
+<li>Finalment, el JavaScript construeix dinàmicament el contingut de la pàgina (les taules, els productes, els comentaris) i l'insereix al DOM.</li>
+</ul>
+<p>JSOUP no pot fer res d'això. JSOUP no és un navegador. No té un motor de JavaScript. Quan JSOUP descarrega la pàgina, només obté l'HTML buit del pas 1. Totes les dades que vols "raspar" simplement no existeixen en el codi font inicial que rep.</p>
+<h2 id="23-la-solucio-per-que-selenium-es-mes-adequat">2.3. La Solució: Per què Selenium és més adequat?</h2>
+<p>Selenium no és un analitzador d'HTML; és una eina d'automatització de navegadors. No només descarrega una pàgina, sinó que controla un navegador web real (com Chrome, Firefox o Edge, sovint en mode "headless" o sense interfície gràfica). Això ens permet manipular el navegador des de codi.</p>
+<p>El procés amb Selenium és el següent:</p>
+<ul>
+<li><strong>Automatització</strong>: Selenium obri una instància real del navegador.</li>
+<li><strong>Navegació</strong>: Li diu al navegador: "Visita aquesta URL".</li>
+<li><strong>Execució Completa</strong>: El navegador, en ser un navegador real, descarrega l'HTML, executa tot el JavaScript, fa les crides AJAX i construeix el DOM final, exactament com ho faria un usuari humà.</li>
+<li><strong>Espera</strong>: Podem dir-li a Selenium que "espere" fins que un element específic (que sabem que es carrega amb JavaScript) aparega a la pàgina.</li>
+<li><strong>Extracció</strong>: Un cop la pàgina està completament renderitzada, Selenium ens dona accés a aquest DOM final i complet. Si volem ara ja el podem processar amb  JSOUP.</li>
+</ul>
+<h2 id="24-classe-per-guardar-la-informacio">2.4. Classe per guardar la informació.</h2>
+<p>Haurem de definir una classe inicial per guardar la informació al nostre programa. Aquesta serà la següent:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FilmAffinity</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Serializable</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">serialVersionUID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17L</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">titulo</span><span class="p">;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">anyo</span><span class="p">;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">pais</span><span class="p">;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">actores</span><span class="p">;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">generos</span><span class="p">;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">sinopsis</span><span class="p">;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">nota</span><span class="p">;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<blockquote>
+<p>Farem servir el mateix objecte, ja siga per a sèries, pel·lícules i o documentals.</p>
+</blockquote>
+<div class="admonition question">
+<p class="admonition-title">Implementació de la classe</p>
+<p>Implementa la classe anterior de manera bàsica (constructors, getters, setters, etc). Confome avance la pràctica necessitaràs afegir noves funcionalitats</p>
+</div>
+<h1 id="3-connexio-al-servidor-de-la-base-de-dades">3. Connexió al servidor de la base de dades</h1>
+<h2 id="patro-singleton">Patró <code>Singleton</code></h2>
+<p>El patró Singleton és un dels patrons de disseny "creacionals" més coneguts. El seu objectiu és molt simple i específic: <strong>garantir que una classe tinga una única instància en tota l'aplicació i proporcionar un punt d'accés global a aquesta instància</strong>.</p>
+<p>Pensa en ell com l'interruptor general de la llum d'una casa. Només n'hi ha un, i des de qualsevol part de la casa, quan parles de "l'interruptor general", et refereixes sempre al mateix.</p>
+<p>Per a aconseguir-ho, el patró es basa en tres pilars:</p>
+<ul>
+<li><strong>Constructor Private</strong>: Per a evitar que qualsevol altra classe puga crear noves instàncies lliurement amb l'operador <code>new</code>.</li>
+<li><strong>Instància Estàtica Privada</strong>: La mateixa classe és responsable de crear i emmagatzemar la seua única instància.</li>
+<li><strong>Mètode Estàtic Públic</strong>: Un mètode (normalment anomenat <code>getInstance()</code>) que retorna la instància única. Si encara no existeix, la crea la primera vegada que es crida.</li>
+</ul>
+<h2 id="31-configuracio-de-la-connexio">3.1. Configuració de la connexió</h2>
+<p>En iniciar el nostre programa, demanarà les dades del servidor, que l'usuari les podrà indicar. Haurà d'existir un arxiu anomenat <code>connexio.props</code> de manera que si alguna propietat no s'indica de manera explícita la carregue de dit fitxer</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>$<span class="w"> </span><span class="o">(</span>root<span class="o">)</span><span class="w"> </span>on<span class="w"> </span><span class="m">127</span>.0.0.1:3308&gt;use<span class="w"> </span>Ciclismo
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>$<span class="w"> </span><span class="o">(</span>root<span class="o">)</span><span class="w"> </span>on<span class="w"> </span><span class="m">127</span>.0.0.1:3308<span class="o">[</span>Ciclismo<span class="o">]</span>&gt;
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>...
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>$<span class="w"> </span>Server:<span class="w"> </span><span class="m">127</span>.0.0.1
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>$<span class="w"> </span>Port:<span class="w"> </span><span class="m">3308</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>$<span class="w"> </span>Username:<span class="w"> </span>root
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>$<span class="w"> </span>Password:
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>$<span class="w"> </span><span class="o">(</span>root<span class="o">)</span><span class="w"> </span>on<span class="w"> </span><span class="m">127</span>.0.0.1:3308&gt;
 </code></pre></div></td></tr></table></div>
-<p>Pots veure que el nom de la base de dades s'afegeix al prompt i ara el programa està esperant ordres per a la base de dades. Has d'implementar aquestes comandes:</p>
+<div class="admonition question">
+<p class="admonition-title">Classe Connexió</p>
+<p>Es demana:</p>
 <ul>
-<li><code>sh tables</code> <span class="arithmatex">\(\rightarrow\)</span> mostra totes les taules de la base de dades seleccionada.</li>
-<li><code>describe nom_de_la_taula</code> <span class="arithmatex">\(\rightarrow\)</span> mostra la descripció d'aquesta taula: camps, tipus de dades i claus primàries com a mínim.</li>
-<li><code>insert Nom_de_la_Taula</code> <span class="arithmatex">\(\rightarrow\)</span> de manera interactiva, demana a l'usuari el valor de cada camp i insereix una nova fila.</li>
-<li><code>sql</code> <span class="arithmatex">\(\rightarrow\)</span> executa qualsevol consulta a la base de dades seleccionada.</li>
-<li><code>quit</code> <span class="arithmatex">\(\rightarrow\)</span> torna al mode SGBD.</li>
-</ul>
-<h1 id="2-estructura-del-projecte-i-consells">2. Estructura del projecte i consells</h1>
-<p>El projecte conté les següents classes:</p>
-<p><center><img alt="CEPA2" src="../CEPA2.png" width="75%" /></center></p>
-<p>Anem a revisar les funcions de classe</p>
-<h2 id="21-servermanager">2.1. ServerManager</h2>
-<p>Conté el <em>main</em>, i quan s'inicia, demana a l'usuari la informació del servidor. A continuació, inicia la classe <code>ConnectionManager</code> amb els valors proporcionats.</p>
-<h2 id="22-connectionmanager">2.2. ConnectionManager</h2>
-<p>Gestiona la consola principal del programa i té com a atributs:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">String</span><span class="w"> </span><span class="n">server</span><span class="p">;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">String</span><span class="w"> </span><span class="n">port</span><span class="p">;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">String</span><span class="w"> </span><span class="n">user</span><span class="p">;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">String</span><span class="w"> </span><span class="n">pass</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
-<p>i com a mètodes:</p>
-<ul>
-<li><code>ConnectionManager()</code> <span class="arithmatex">\(\rightarrow\)</span> constructor per defecte.</li>
-<li><code>ConnectionManager(String server, String port, String user, String pass)</code> <span class="arithmatex">\(\rightarrow\)</span> constructor general.</li>
-<li><code>public Connection connectDBMS()</code> <span class="arithmatex">\(\rightarrow\)</span> inicia i retorna una connexió.</li>
-<li><code>public void showInfo()</code> <span class="arithmatex">\(\rightarrow\)</span> mostra la informació del servidor.</li>
-<li><code>public void showDatabases()</code> <span class="arithmatex">\(\rightarrow\)</span> mostra les taules del servidor.</li>
-<li><code>public void importScript(String script)</code> <span class="arithmatex">\(\rightarrow\)</span> carrega i executa un script.</li>
-<li><code>public void startShell()</code> <span class="arithmatex">\(\rightarrow\)</span> inicia la consola del servidor. Aquesta consola ja està gairebé implementada.</li>
-</ul>
-<h2 id="23-gestor-de-base-de-dades">2.3. Gestor de Base de Dades</h2>
-<p>Gestiona la consola del mode base de dades i necessita un atribut addicional respecte al Gestor de Connexió:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">String</span><span class="w"> </span><span class="n">server</span><span class="p">;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">String</span><span class="w"> </span><span class="n">port</span><span class="p">;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">String</span><span class="w"> </span><span class="n">user</span><span class="p">;</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">String</span><span class="w"> </span><span class="n">pass</span><span class="p">;</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">String</span><span class="w"> </span><span class="n">dbname</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
-<p>i com a mètodes:</p>
-<ul>
-<li><code>DatabaseManager()</code> <span class="arithmatex">\(\rightarrow\)</span> constructor per defecte.</li>
-<li><code>DatabaseManager(String server, String port, String user, String pass,String dbname)</code> <span class="arithmatex">\(\rightarrow\)</span> constructor general.</li>
-<li><code>public Connection connectDatabase()</code> <span class="arithmatex">\(\rightarrow\)</span> inicia i retorna una connexió a la base de dades actual.</li>
-<li><code>public void insertIntoTable(String table)</code> <span class="arithmatex">\(\rightarrow\)</span> inicia l'assistent d'inserció per a la taula donada.</li>
-<li><code>public void showDescTable(String table)</code> <span class="arithmatex">\(\rightarrow\)</span> mostra la metadades de la taula.</li>
-<li><code>public void executeSelect(String query)</code> <span class="arithmatex">\(\rightarrow\)</span> executa una consulta donada (de qualsevol tipus) i mostra els resultats a la pantalla, si n'hi ha.</li>
-<li><code>public void startShell()</code> <span class="arithmatex">\(\rightarrow\)</span> inicia la consola del mode base de dades. Has de fer una implementació completa.</li>
-</ul>
-<h1 id="3-insercions-a-les-taules">3. Insercions a les taules.</h1>
-<p>El mètode <code>insertIntoTable</code> és probablement el més difícil de la tasca, ja que cal demanar primer les metadades de la taula per conèixer els camps i els tipus de dades de la taula, i després demanar a l'usuari els valors i els formats.</p>
-<p>El consell que es donarà és crear tres llistes amb:</p>
-<ol>
-<li>Llista de camps que cal inserir.</li>
-<li>Llista de valors que s'assignaran.</li>
-<li>Llista de tipus de cada camp.</li>
-</ol>
-<p>A més, cal generar una llista o cadena de marcadors de posició amb tants <code>?</code> com sigui necessari.</p>
-<div class="admonition tip">
-<p class="admonition-title">Consell</p>
-<p>Recorda que, en demanar les metadades de la taula, les columnes que necessites són:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>- Columna 4: nom de la columna
-- Columna 6: tipus de dades de la columna
-- Columna 18: nullable o no. Aquest camp és obligatori si no és nullable.
-- Columna 23: incremental o no. No necessites aquest camp si és incremental.
-</code></pre></div></td></tr></table></div>
-<p>Finalment, verifica l'ajust dels placeholders, ja que depenen del tipus de dades. Tindre en compte que:</p>
-<ul>
-<li>Les dades <code>int</code> faran servir <code>setInt()</code></li>
-<li>Les dades <code>datetime</code> faran servir <code>setDate()</code>, amb un casting a <code>java.sql.Date</code> en compte de <code>java.Date</code></li>
-<li>Per defecte el <code>setString</code> i confiar que el casting automàtic faça la seua feina.</li>
+<li>Implementa la classe <code>Connexió</code> que es comporte com un Singleton</li>
+<li>Fes el mètode <code>Connection getConexió()</code> que retorne la única connexió, creant-la la primera vegada que es demane</li>
+<li>Fes un mètode <code>createConnection()</code> que ha de complir lo següent:</li>
+<li>S'ha de cridar només començar el programa</li>
+<li>Ha de demanar les dades per a connectar-se al servidor a l'usuari</li>
+<li>Si hi ha alguna en blanc la carregarrà del <code>connexio.props</code></li>
+<li>Crearà un objecte de la classe <code>Connexió</code> (sense connectar-se encara a la BBDD)</li>
+<li>Retorna <code>true</code> si ha anat tot be o <code>false</code> en cas d'algun error</li>
 </ul>
 </div>
-<p>© Joan Gerard Camarena, October-2022</p>
-<p>© Última revisió, October-2024</p>
+<h1 id="4-aplicacio">4. Aplicació</h1>
+<p>Com podeu veure a l'última línia, el prompt és <code>(usuari) a IP:port&gt;</code>. El nostre client mostra sempre on estem connectats. El programa deu quedar-se esperant a que l'usuari faça laguna de les opcions indicades. El comando <code>help</code> mostrarà les següents opcions, que son a implementar:</p>
+<h2 id="41-menu">4.1. Menú</h2>
+<div class="admonition tip">
+<p class="admonition-title">Opcions de menú</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span>
+<span class="normal"><a href="#__codelineno-2-8">8</a></span>
+<span class="normal"><a href="#__codelineno-2-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>1. `init`  $\rightarrow$  crea i inicia la BBDD
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>2. `scrap [web]` $\rightarrow$ realitza el scrapping de la pàgina indicada
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>3. `list_all film|actor|genere [/p]` $\rightarrow$ llista tots els films, actors o gèneres
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>4. `list_by actor nom_actor|genere_nom_genere asc|desc` $\rightarrow$ mostrarà els films d&#39;un actor donat o d&#39;un gènere donat, en l&#39;ordre indicar 
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>5. `update idFilm` $\rightarrow$ actualitza la informació de la película indicada.
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>6.  lliure
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>7.  lliure
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>8.  lliure
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>9.  help $\rightarrow$ mostra aquest quadre
+</code></pre></div></td></tr></table></div>
+</div>
+<blockquote>
+<p>Les opcions de menú 6, 7  i 8 les heu de crear 
+vosaltres amb possibles opcions.</p>
+</blockquote>
+<h2 id="42-init">4.2. <code>init</code></h2>
+<p><span class="arithmatex">\(\rightarrow\)</span> crearà la BBDD <code>filmaffinity</code>. Ademés crearà la taula per a poder emmagatzemar el film anterior. Els actors i els gèneres guardar-los en una taula apart (sols el id i el nom), amb les corresponents claus alienes. Si la BBDD ja existeia deurà informar a l'usuari d'aquest fet i no crear-la de nou.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&gt; Es recomana escriure el script en un fitxer anomenar `initBBDD.sql` i executar-lo sobre la base de dades.
+</code></pre></div></td></tr></table></div>
+<p>Les classes que es corresponen a les taules seran alguna cosa com:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Actor</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Serializable</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">serialVersionUID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17L</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">}</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Genere</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Serializable</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">serialVersionUID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17L</span><span class="p">;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="p">}</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Film</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Serializable</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">serialVersionUID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17L</span><span class="p">;</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">titulo</span><span class="p">;</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">anyo</span><span class="p">;</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">pais</span><span class="p">;</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Actor</span><span class="o">&gt;</span><span class="w"> </span><span class="n">actores</span><span class="p">;</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Genere</span><span class="o">&gt;</span><span class="w"> </span><span class="n">generos</span><span class="p">;</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">sinopsis</span><span class="p">;</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">nota</span><span class="p">;</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="43-scrap-web">4.3. <code>scrap [web]</code></h2>
+<p>Realitza el scrapping de la pàgina indicada, dins de la plataforma <code>filmaffinity</code>. Haurà d'anar inserint les dades conforme es recuperen des de internet en les taules de <code>Film</code>, Actor i Genere. </p>
+<blockquote>
+<p>Es facilita una implementació del scrapping que genera un <code>ArrayList&lt;FilmAffinity&gt;</code>.  </p>
+</blockquote>
+<p>Com a programador has de continuar en aquest codi per a generar tots els <code>Film, Actor i Genere</code> que siguen necessari i inserir-los a la BBDD</p>
+<blockquote>
+<p>Es recomana métodes separats de inserció de cada taula. Com que <code>Film</code> conté <code>Actor</code> i <code>Genere</code>, desde <code>inserirFilm</code> hauràs de cridar a <code>inserirActor</code> i <code>inserirGenere</code>, si escau.</p>
+</blockquote>
+<h2 id="44-list_all-filmactorgenere-p">4.4. <code>list_all film|actor|genere [/p]</code></h2>
+<p>Aquesta part del menú seleccionarà i mostrarà per pantalla totes les dades existents a la base de dades.</p>
+<p>Deura de rebre 3 arguments:</p>
+<ol>
+<li><code>list_all</code>: nom del argument. Deu de ser exactamnet aquest. Si no és, informar a l'usuari de l'error i presentar de nou el menu.</li>
+<li><code>film|actor|genere</code>: deu ser un dels nom del que volem mostrar. Si no és, informar a l'usuari de l'error i presentar de nou el menu.</li>
+<li><code>[/p]</code>: aquest tercer argument és opcional, però cas d'estar ha de ser exactament <code>/p</code>. Això el que fa es mostrar les dades amb <em>pausa</em>, de manera que presentarà les 10 primeres, indicant de mostrar un lletra per mostrar les 10 següents, etc. </li>
+</ol>
+<blockquote>
+<p>Aquest tercer argument és una millora o ampliació de la pràctica. Fes-ho primer sense ell</p>
+</blockquote>
+<h2 id="45-list_by-actor-nom_actorgenere_nom_genere-ascdesc">4.5. <code>list_by actor nom_actor|genere_nom_genere asc|desc</code></h2>
+<p>Aques comandament rep exacmanter 4 argument:</p>
+<ol>
+<li><code>list_by</code>: nom del argument. Deu de ser exactamnet aquest. Si no és, informar a l'usuari de l'error i presentar de nou el menu.</li>
+<li>El segon i tercer poden ser:</li>
+<li><code>actor nom_actor</code>: mostrarà les pel·licules en les quals ha participat l'actor que el nom conté part del <code>nom_actor</code>. Si li passe <code>Will</code> mostrara les pelicules on ix <code>Robbie Williams</code>, <code>Will Smith</code>, <code>Dowill MAcKennie</code>, etc.</li>
+<li><code>genere_nom_genere</code>: mostrara les pel·lícules que tingen exactament algun d'eixos gèneres. Recorda que hi ha pel·lícules amb més d'un genere</li>
+<li><code>asc|desc</code>: mostrara les pel·lícules ordenades per títol de manera ascendent o descentent</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Exemples de consultes</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>list_by actor bardem asc
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>list_by actor BAR desc
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>list_by genere comedia asc
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>list_by genere thriller desc
+</code></pre></div></td></tr></table></div>
+</div>
+<h2 id="46-update-idfilm">4.6. <code>update idFilm</code></h2>
+<p>Per acabar implementarem la modificació de alguna pel·lícula. a partir del seu id. Exactament tindrà dos arguments:</p>
+<ol>
+<li><code>update</code>: nom del argument. Deu de ser exactamnet aquest. Si no és, informar a l'usuari de l'error i presentar de nou el menu.</li>
+<li><code>idFilm</code>: el id de una pel·lícula a modificar. </li>
+</ol>
+<p>A continuació el que farà el programa és:</p>
+<ol>
+<li>Es verificarà la existència d'aquesta pel·lícula. Cas de no existir s'informarà a l'usuari</li>
+<li>Aniran mostrant-se el valor actual dels camps de la pel·lícula, mostrant a continuació la pregunta <code>"Vols modificar aquest camp (s/n)? "</code>. </li>
+<li>Si es contesta que no es passa al següent camps.</li>
+<li>Si es contesta que si apareixerà una nova pregunta: <code>"Quin serà el nou valor del camp?: "</code>. S'arreplegarà aquest valor</li>
+<li>Un cop passats per tots els camps ja tindreem la pel·lícula a punt per modificar-la. Es farà efectiva dita modificació en la base de dades.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Atenció</p>
+<ol>
+<li>Al fer la lectura de les dades verificar que el valor introduit és del tipus requerit per cada camp (int, float o String)</li>
+<li>No modificar les llistes (ni Actors ni Genere)</li>
+</ol>
+</div>
+<h2 id="47-altres">4.7 Altres</h2>
+<p>Es demana fer 3 opcions de menú addicionals a les ja implementades, valorant la dificultat i creativitat. És un bon moment per a demostrar el que saps !!!</p>
+<p>© Primera versió Joan Gerard Camarena, October-2025</p>
 
 
 

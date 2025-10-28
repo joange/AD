@@ -20,7 +20,7 @@
     
     
       
-        <title>3. Connectant-se a la base de dades - Accés a Dades</title>
+        <title>3. Connectant-se a la base de dades - Accés a Dades. IES Jaume II El Just</title>
       
     
     
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Capçalera">
-    <a href="../.." title="Accés a Dades" class="md-header__button md-logo" aria-label="Accés a Dades" data-md-component="logo">
+    <a href="../.." title="Accés a Dades. IES Jaume II El Just" class="md-header__button md-logo" aria-label="Accés a Dades. IES Jaume II El Just" data-md-component="logo">
       
   <img src="../../assets/jaume.png" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Accés a Dades
+            Accés a Dades. IES Jaume II El Just
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -234,12 +234,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegació" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Accés a Dades" class="md-nav__button md-logo" aria-label="Accés a Dades" data-md-component="logo">
+    <a href="../.." title="Accés a Dades. IES Jaume II El Just" class="md-nav__button md-logo" aria-label="Accés a Dades. IES Jaume II El Just" data-md-component="logo">
       
   <img src="../../assets/jaume.png" alt="logo">
 
     </a>
-    Accés a Dades
+    Accés a Dades. IES Jaume II El Just
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -719,6 +719,27 @@
   
   <span class="md-ellipsis">
     7. De les files als objectes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8_Exercises/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Exercicis proposats
   </span>
   
 
@@ -1500,16 +1521,36 @@
 
 <h1 id="1-connectant-a-bases-de-dades">1. Connectant a bases de dades</h1>
 <h2 id="11-controlador-jdbc-de-mysql">1.1. Controlador JDBC de MySQL</h2>
-<p>Per tal de crear programes Java utilitzant el controlador de MySQL, necessitem carregar-lo en el nostre programa i prèviament en el nostre entorn de desenvolupament. Com utilitzarem <code>Gradle</code>, anem a veure com fer-ho:</p>
+<p>Per tal de crear programes Java utilitzant el controlador de MySQL, necessitem carregar-lo en el nostre programa i prèviament en el nostre entorn de desenvolupament. Si utilitzeu un IDE com IntelliJ IDEA o Eclipse, podeu afegir el controlador JDBC com a dependència del vostre projecte. Si utilitzeu Maven o Gradle, podeu afegir la dependència al vostre fitxer <code>pom.xml</code> o <code>build.gradle</code>.</p>
 <ol>
 <li>Hem de trobar la versió del controlador del nostre servidor JDBC, i ho podem trobar al repositori central de Maven <a href="https://mvnrepository.com">https://mvnrepository.com</a>.</li>
 <li>Cerquem <code>mysql jdbc</code>, i obtindrem com a primer resultat <a href="https://mvnrepository.com/artifact/mysql/mysql-connector-java">MySQL Connector/J</a>.</li>
 <li>Assegureu-vos de seleccionar la versió correcta, i després seleccioneu el gestor de paquets (gradle, maven, etc.) i obtindreu:</li>
 </ol>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>//<span class="w"> </span>https://mvnrepository.com/artifact/mysql/mysql-connector-java
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>implementation<span class="w"> </span>group:<span class="w"> </span><span class="s1">&#39;mysql&#39;</span>,<span class="w"> </span>name:<span class="w"> </span><span class="s1">&#39;mysql-connector-java&#39;</span>,<span class="w"> </span>version:<span class="w"> </span><span class="s1">&#39;8.0.30&#39;</span>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Maven</label><label for="__tabbed_1_2">Gradle</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">XML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cm">&lt;!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java --&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>mysql<span class="nt">&lt;/groupId&gt;</span><span class="w">    </span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>mysql-connector-java<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>8.0.30<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="nt">&lt;/dependency&gt;</span>
 </code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>//<span class="w"> </span>https://mvnrepository.com/artifact/mysql/mysql-connector-java
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>implementation<span class="w"> </span>group:<span class="w"> </span><span class="s1">&#39;mysql&#39;</span>,<span class="w"> </span>name:<span class="w"> </span><span class="s1">&#39;mysql-connector-java&#39;</span>,<span class="w"> </span>version:<span class="w"> </span><span class="s1">&#39;8.0.30&#39;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
 <ol>
 <li>Quan deseu o compileu el vostre projecte, podreu importar els controladors correctament.</li>
 </ol>
@@ -1530,28 +1571,28 @@
 </li>
 </ul>
 <p>Una mostra de URL de connexió pot ser:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">String</span><span class="w"> </span><span class="n">connectionUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://localhost:3308/Cycling?useUnicode=true&amp;characterEncoding=UTF-8&amp;user=root&amp;password=root&quot;</span><span class="p">;</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">String</span><span class="w"> </span><span class="n">connectionUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://localhost:3308/Cycling?useUnicode=true&amp;characterEncoding=UTF-8&amp;user=root&amp;password=root&quot;</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Una opció millor seria:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">String</span><span class="w"> </span><span class="n">server</span><span class="o">=</span><span class="s">&quot;localhost&quot;</span><span class="p">;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">port</span><span class="o">=</span><span class="mi">3308</span><span class="p">;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">String</span><span class="w"> </span><span class="n">user</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">String</span><span class="w"> </span><span class="n">pass</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">String</span><span class="w"> </span><span class="n">DBName</span><span class="o">=</span><span class="s">&quot;Cycling&quot;</span><span class="p">;</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">String</span><span class="w"> </span><span class="n">connectionUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://&quot;</span><span class="o">+</span><span class="n">server</span><span class="o">+</span><span class="s">&quot;:&quot;</span><span class="o">+</span><span class="n">port</span><span class="p">;</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">connectionUrl</span><span class="o">+=</span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DBName</span><span class="p">;</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="n">connectionUrl</span><span class="o">+=</span><span class="s">&quot;?useUnicode=true&amp;characterEncoding=UTF-8&quot;</span><span class="p">;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">connectionUrl</span><span class="o">+=</span><span class="s">&quot;&amp;user=&quot;</span><span class="o">+</span><span class="n">user</span><span class="p">;</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n">connectionUrl</span><span class="o">+=</span><span class="s">&quot;&amp;password=&quot;</span><span class="o">+</span><span class="n">pass</span><span class="p">;</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">String</span><span class="w"> </span><span class="n">server</span><span class="o">=</span><span class="s">&quot;localhost&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">port</span><span class="o">=</span><span class="mi">3308</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">String</span><span class="w"> </span><span class="n">user</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">String</span><span class="w"> </span><span class="n">pass</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">String</span><span class="w"> </span><span class="n">DBName</span><span class="o">=</span><span class="s">&quot;Cycling&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">String</span><span class="w"> </span><span class="n">connectionUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://&quot;</span><span class="o">+</span><span class="n">server</span><span class="o">+</span><span class="s">&quot;:&quot;</span><span class="o">+</span><span class="n">port</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="n">connectionUrl</span><span class="o">+=</span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DBName</span><span class="p">;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="n">connectionUrl</span><span class="o">+=</span><span class="s">&quot;?useUnicode=true&amp;characterEncoding=UTF-8&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">connectionUrl</span><span class="o">+=</span><span class="s">&quot;&amp;user=&quot;</span><span class="o">+</span><span class="n">user</span><span class="p">;</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="n">connectionUrl</span><span class="o">+=</span><span class="s">&quot;&amp;password=&quot;</span><span class="o">+</span><span class="n">pass</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <div class="admonition warning">
 <p class="admonition-title">Atenció</p>
@@ -1559,7 +1600,7 @@
 </div>
 <h2 id="13-classe-connection">1.3. Classe <code>Connection</code></h2>
 <p>En Java, la classe necessària per gestionar el controlador és <code>java.sql.DriverManager</code>. Intenta carregar els controladors del sistema quan llegeix la propietat dels controladors JDBC, però podem indicar que es carregui utilitzant la instrucció:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="s">&quot;com.mysql.cj.jdbc.Driver&quot;</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="s">&quot;com.mysql.cj.jdbc.Driver&quot;</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>La classe que centralitzarà totes les operacions amb la base de dades és <code>java.sql.Connection</code>, i l'hem d'obtenir des del <code>DriverManager</code> amb qualsevol dels 3 mètodes estàtics que té:</p>
 <ul>
@@ -1568,41 +1609,6 @@
 <li><code>static Connection getConnection(String url, String user, String pass)</code> <span class="arithmatex">\(\rightarrow\)</span> Retorna una connexió, si és possible, a la base de dades amb els paràmetres especificats a la URL. Les dades d'usuari i contrasenya es proporcionen en dos paràmetres addicionals, de manera que no cal escriure'ls a la URL de connexió.</li>
 </ul>
 <p>Una mostra inicial serà:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-4-10">10</a></span>
-<span class="normal"><a href="#__codelineno-4-11">11</a></span>
-<span class="normal"><a href="#__codelineno-4-12">12</a></span>
-<span class="normal"><a href="#__codelineno-4-13">13</a></span>
-<span class="normal"><a href="#__codelineno-4-14">14</a></span>
-<span class="normal"><a href="#__codelineno-4-15">15</a></span>
-<span class="normal"><a href="#__codelineno-4-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="kd">throws</span><span class="w"> </span><span class="n">ClassNotFoundException</span><span class="p">,</span><span class="w"> </span><span class="n">SQLException</span><span class="p">{</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="s">&quot;com.mysql.cj.jdbc.Driver&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">server</span><span class="o">=</span><span class="s">&quot;localhost&quot;</span><span class="p">;</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">port</span><span class="o">=</span><span class="mi">3308</span><span class="p">;</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">user</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">;</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">pass</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">;</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">DBName</span><span class="o">=</span><span class="s">&quot;Cycling&quot;</span><span class="p">;</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">connectionUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://&quot;</span><span class="o">+</span><span class="n">server</span><span class="o">+</span><span class="s">&quot;:&quot;</span><span class="o">+</span><span class="n">port</span><span class="p">;</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="n">connectionUrl</span><span class="o">+=</span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DBName</span><span class="p">;</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">    </span><span class="n">connectionUrl</span><span class="o">+=</span><span class="s">&quot;?useUnicode=true&amp;characterEncoding=UTF-8&quot;</span><span class="p">;</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a>
-<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">   </span><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">connectionUrl</span><span class="p">,</span><span class="n">user</span><span class="p">,</span><span class="n">pass</span><span class="p">);</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15"></a>
-<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">   </span><span class="c1">// if no exception is catched, you are connected to your DBMS</span>
-</code></pre></div></td></tr></table></div>
-<p>Amb l'objecte <code>Connection</code> que tenim ara connectat, enviarem les nostres consultes i demanarem informació, com veurem més endavant.</p>
-<h2 id="14-organitzant-la-nostra-connexio">1.4. Organitzant la nostra connexió</h2>
-<p>La nostra aplicació s'ha de connectar a una (o més) bases de dades. Podem fer moltes peticions a aquestes base de dades, i si estem implementant una aplicació multithreaded, el nombre de peticions pot augmentar molt. Per això, hem de controlar <strong>on</strong> i <strong>quan</strong> es creen i es tanquen les connexions. Una bona idea és crear una classe que encapsuli tots aquests processos. L'esquelet d'aquesta classe seria el següent:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
@@ -1618,44 +1624,79 @@
 <span class="normal"><a href="#__codelineno-5-13">13</a></span>
 <span class="normal"><a href="#__codelineno-5-14">14</a></span>
 <span class="normal"><a href="#__codelineno-5-15">15</a></span>
-<span class="normal"><a href="#__codelineno-5-16">16</a></span>
-<span class="normal"><a href="#__codelineno-5-17">17</a></span>
-<span class="normal"><a href="#__codelineno-5-18">18</a></span>
-<span class="normal"><a href="#__codelineno-5-19">19</a></span>
-<span class="normal"><a href="#__codelineno-5-20">20</a></span>
-<span class="normal"><a href="#__codelineno-5-21">21</a></span>
-<span class="normal"><a href="#__codelineno-5-22">22</a></span>
-<span class="normal"><a href="#__codelineno-5-23">23</a></span>
-<span class="normal"><a href="#__codelineno-5-24">24</a></span>
-<span class="normal"><a href="#__codelineno-5-25">25</a></span>
-<span class="normal"><a href="#__codelineno-5-26">26</a></span>
-<span class="normal"><a href="#__codelineno-5-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ConnexioBD</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Connection</span><span class="w"> </span><span class="n">laConnexio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="c1">// write here access variables, like user, server or whatever</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">connect</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">        </span><span class="c1">// do the connetion (look the sample). </span>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">        </span><span class="c1">// Take care. private method. It will be called inside the class</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="c1">// close connection, if it&#39;s opened</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">disConnect</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">laConnexio</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">            </span><span class="n">laConnexio</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a>
-<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">    </span><span class="c1">// returns the connection. </span>
-<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">    </span><span class="c1">// It will be create first time of after closed</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Connection</span><span class="w"> </span><span class="nf">getConexio</span><span class="p">(){</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">laConnexio</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">connect</span><span class="p">();</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">laConnexio</span><span class="p">;</span>
-<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
-<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">  </span><span class="kd">throws</span><span class="w"> </span><span class="n">ClassNotFoundException</span><span class="p">,</span><span class="w"> </span><span class="n">SQLException</span><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="s">&quot;com.mysql.cj.jdbc.Driver&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">server</span><span class="o">=</span><span class="s">&quot;localhost&quot;</span><span class="p">;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">port</span><span class="o">=</span><span class="mi">3308</span><span class="p">;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">user</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">pass</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">DBName</span><span class="o">=</span><span class="s">&quot;Cycling&quot;</span><span class="p">;</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">connectionUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://&quot;</span><span class="o">+</span><span class="n">server</span><span class="o">+</span><span class="s">&quot;:&quot;</span><span class="o">+</span><span class="n">port</span><span class="p">;</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="n">connectionUrl</span><span class="o">+=</span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DBName</span><span class="p">;</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="n">connectionUrl</span><span class="o">+=</span><span class="s">&quot;?useUnicode=true&amp;characterEncoding=UTF-8&quot;</span><span class="p">;</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">   </span><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">connectionUrl</span><span class="p">,</span><span class="n">user</span><span class="p">,</span><span class="n">pass</span><span class="p">);</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">   </span><span class="c1">// if no exception is catched, you are connected to your DBMS</span>
+</code></pre></div></td></tr></table></div>
+<p>Amb l'objecte <code>Connection</code> que tenim ara connectat, enviarem les nostres consultes i demanarem informació, com veurem més endavant.</p>
+<h2 id="14-organitzant-la-nostra-connexio">1.4. Organitzant la nostra connexió</h2>
+<p>La nostra aplicació s'ha de connectar a una (o més) bases de dades. Podem fer moltes peticions a aquestes base de dades, i si estem implementant una aplicació multithreaded, el nombre de peticions pot augmentar molt. Per això, hem de controlar <strong>on</strong> i <strong>quan</strong> es creen i es tanquen les connexions. Una bona idea és crear una classe que encapsuli tots aquests processos. L'esquelet d'aquesta classe seria el següent:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span>
+<span class="normal"><a href="#__codelineno-6-24">24</a></span>
+<span class="normal"><a href="#__codelineno-6-25">25</a></span>
+<span class="normal"><a href="#__codelineno-6-26">26</a></span>
+<span class="normal"><a href="#__codelineno-6-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ConnexioBD</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Connection</span><span class="w"> </span><span class="n">laConnexio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="c1">// write here access variables, like user, server or whatever</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">connect</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">        </span><span class="c1">// do the connetion (look the sample). </span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">        </span><span class="c1">// Take care. private method. It will be called inside the class</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">    </span><span class="c1">// close connection, if it&#39;s opened</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">disConnect</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">laConnexio</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">            </span><span class="n">laConnexio</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="w">    </span><span class="c1">// returns the connection. </span>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">    </span><span class="c1">// It will be create first time of after closed</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Connection</span><span class="w"> </span><span class="nf">getConexio</span><span class="p">(){</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">laConnexio</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">connect</span><span class="p">();</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">laConnexio</span><span class="p">;</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="141-exercici-resolt">1.4.1. Exercici resolt</h3>
 <p>Crea un projecte únic amb dues classes. Una per connectar-te a la teva base de dades, com l'últim exemple, i una classe principal que es connecti i mostri si hi ha hagut algun error.</p>
