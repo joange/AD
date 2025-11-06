@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../APAC1/">
+      
+      
+        <link rel="next" href="../../license/">
       
       
       <link rel="icon" href="../../assets/jaume.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>1. Visió General - Col·lecció i reviews de pel·lícules - Accés a Dades. IES Jaume II El Just</title>
+        <title>Col·lecció i reviews de pel·lícules - Accés a Dades. IES Jaume II El Just</title>
       
     
     
@@ -68,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-visio-general-colleccio-i-reviews-de-pellicules" class="md-skip">
+        <a href="#1-colleccio-i-reviews-de-pellicules" class="md-skip">
           Salta el contingut
         </a>
       
@@ -103,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1. Visió General - Col·lecció i reviews de pel·lícules
+              Col·lecció i reviews de pel·lícules
             
           </span>
         </div>
@@ -220,6 +224,8 @@
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -1251,17 +1257,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -1275,7 +1283,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Pràctiques
@@ -1298,6 +1306,37 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica 2
+  </span>
+  
+
+      </a>
+      
     </li>
   
 
@@ -1338,7 +1377,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1363,12 +1404,16 @@
                   
 
 
-<h1 id="1-visio-general-colleccio-i-reviews-de-pellicules">1. Visió General - Col·lecció i reviews de pel·lícules</h1>
+<h1 id="1-colleccio-i-reviews-de-pellicules">1. Col·lecció i reviews de pel·lícules</h1>
 <p>Anem a crear una aplicació que ens permetrà gestionar una col·lecció de pel·lícules o sèries. </p>
-<p>Com a complement adiccional de la pràctica, les dades seran reals i les aconseguirem de <a href="https://www.filmaffinity.com/es/main.html">https://www.filmaffinity.com/es/main.html</a>, mitjançant una tècnica de <em>web scrapping</em>.</p>
-<p>Aquestes dades seran emmagatzemades en una BBDD relacional, que crearem des de zero.</p>
-<p>Afegirem un CRUD a aquestes dades recuperades.</p>
-<h1 id="2-web-scrapping-de-filmaffinity-completa">2. Web Scrapping de filmaffinity (completa)</h1>
+<p>📕 Aquestes dades seran emmagatzemades en una BBDD relacional, que crearem des de zero.</p>
+<p>🧳 Haurem de fere login en la aplicaicó per a poder entrar</p>
+<p>🖥 Afegirem un CRUD a aquestes dades recuperades.</p>
+<p>💡 Proposates per part de l'alumnat</p>
+<blockquote>
+<p>🎥 Com a complement adiccional de la pràctica, les dades seran reals i les aconseguirem de <a href="https://www.filmaffinity.com/es/main.html">https://www.filmaffinity.com/es/main.html</a>, mitjançant una tècnica de <em>web scrapping</em>.</p>
+</blockquote>
+<h1 id="2-web-scrapping-de-filmaffinity-completa-pel-professor">2. Web Scrapping de filmaffinity (completa pel professor)</h1>
 <p>El web scraping (o "raspat web") és la tècnica d'extreure informació de llocs web de manera automatitzada. En lloc de copiar i enganxar manualment les dades, creem un programa que visita la pàgina i n'extreu el contingut estructurat (DOM).</p>
 <p>A continuació processem el DOM i accedint a les etiquetes HTML (XML) recuperem les dades de les mateixes.</p>
 <h2 id="21-jsoup">2.1. JSOUP</h2>
@@ -1441,7 +1486,36 @@
 <p class="admonition-title">Implementació de la classe</p>
 <p>Implementa la classe anterior de manera bàsica (constructors, getters, setters, etc). Confome avance la pràctica necessitaràs afegir noves funcionalitats</p>
 </div>
-<h1 id="3-connexio-al-servidor-de-la-base-de-dades">3. Connexió al servidor de la base de dades</h1>
+<h1 id="3-validacio-de-lusuari">3. Validació de l'usuari</h1>
+<p>Abans d'accedir a qualsevol funcionalitat de l'aplicació, l'usuari haurà d'identificar-se. Revisa l'exerici desenvolupat a classe, on fem servir una base de dades per a emmagatzemar els usuaris i les seues contrasenyes.</p>
+<h2 id="31-funcionament-de-lapartat-de-registre-i-login">3.1. Funcionament de l'apartat de registre i login</h2>
+<ul>
+<li>Quan arranque el programa quee et pregunte dos coses: login o registre.</li>
+<li>Cas de respondre login, introduïrem el nom d'usuari:<ul>
+<li>Posteriorment la contrasenya. Intenta fer que no es mostre la contrasenya per pantalla</li>
+<li>Es realitzarà la validació o no desde la base de dades</li>
+</ul>
+</li>
+<li>Cas de respondre registre, </li>
+<li>Introduïrem un nom d'usuari, </li>
+<li>una contrasenya </li>
+<li>Repetireem la contrasenya</li>
+<li>Es realitzarà l'alta a la base de dades.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Atenció</p>
+<ul>
+<li>Guarda el password encriptat</li>
+<li>La BBDD SQLite que estiga en la arrel del projecte, anomenada <code>usuaris.db</code></li>
+</ul>
+</div>
+<h2 id="32-implementacio">3.2. Implementació</h2>
+<ul>
+<li>No cal implemtar una interfície gràfica. Tot es farà per consola</li>
+<li>La base de dades, a l'igual que l'exercici serà implementada amb SQLite. </li>
+<li>Pots importar tota la lògica d'aquesta part del programa.</li>
+</ul>
+<h1 id="4-connexio-al-servidor-de-la-base-de-dades">4. Connexió al servidor de la base de dades</h1>
 <h2 id="patro-singleton">Patró <code>Singleton</code></h2>
 <p>El patró Singleton és un dels patrons de disseny "creacionals" més coneguts. El seu objectiu és molt simple i específic: <strong>garantir que una classe tinga una única instància en tota l'aplicació i proporcionar un punt d'accés global a aquesta instància</strong>.</p>
 <p>Pensa en ell com l'interruptor general de la llum d'una casa. Només n'hi ha un, i des de qualsevol part de la casa, quan parles de "l'interruptor general", et refereixes sempre al mateix.</p>
@@ -1451,8 +1525,8 @@
 <li><strong>Instància Estàtica Privada</strong>: La mateixa classe és responsable de crear i emmagatzemar la seua única instància.</li>
 <li><strong>Mètode Estàtic Públic</strong>: Un mètode (normalment anomenat <code>getInstance()</code>) que retorna la instància única. Si encara no existeix, la crea la primera vegada que es crida.</li>
 </ul>
-<h2 id="31-configuracio-de-la-connexio">3.1. Configuració de la connexió</h2>
-<p>En iniciar el nostre programa, demanarà les dades del servidor, que l'usuari les podrà indicar. Haurà d'existir un arxiu anomenat <code>connexio.props</code> de manera que si alguna propietat no s'indica de manera explícita la carregue de dit fitxer</p>
+<h2 id="41-configuracio-de-la-connexio">4.1. Configuració de la connexió</h2>
+<p>En iniciar el nostre programa i passar la fase de login, demanarà les dades del servidor, que l'usuari les podrà indicar. Haurà d'existir un arxiu anomenat <code>connexio.props</code> de manera que si alguna propietat no s'indica de manera explícita (deixant-la en blanc) la carregue de dit fitxer.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -1479,9 +1553,9 @@
 <li>Retorna <code>true</code> si ha anat tot be o <code>false</code> en cas d'algun error</li>
 </ul>
 </div>
-<h1 id="4-aplicacio">4. Aplicació</h1>
+<h1 id="5-aplicacio-propiament-dita">5. Aplicació pròpiament dita</h1>
 <p>Com podeu veure a l'última línia, el prompt és <code>(usuari) a IP:port&gt;</code>. El nostre client mostra sempre on estem connectats. El programa deu quedar-se esperant a que l'usuari faça laguna de les opcions indicades. El comando <code>help</code> mostrarà les següents opcions, que son a implementar:</p>
-<h2 id="41-menu">4.1. Menú</h2>
+<h2 id="51-menu">5.1. Menú</h2>
 <div class="admonition tip">
 <p class="admonition-title">Opcions de menú</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
@@ -1492,23 +1566,22 @@
 <span class="normal"><a href="#__codelineno-2-6">6</a></span>
 <span class="normal"><a href="#__codelineno-2-7">7</a></span>
 <span class="normal"><a href="#__codelineno-2-8">8</a></span>
-<span class="normal"><a href="#__codelineno-2-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>1. `init`  $\rightarrow$  crea i inicia la BBDD
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>2. `scrap [web]` $\rightarrow$ realitza el scrapping de la pàgina indicada
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>3. `list_all film|actor|genere [/p]` $\rightarrow$ llista tots els films, actors o gèneres
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>4. `list_by actor nom_actor|genere_nom_genere asc|desc` $\rightarrow$ mostrarà els films d&#39;un actor donat o d&#39;un gènere donat, en l&#39;ordre indicar 
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>5. `update idFilm` $\rightarrow$ actualitza la informació de la película indicada.
+<span class="normal"><a href="#__codelineno-2-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>1. `init`  →  crea i inicia la BBDD
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>2. `scrap [web]` → realitza el scrapping de la pàgina indicada
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>3. `list_all film|actor|genere [/p]` → llista tots els films, actors o gèneres
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>4. `list_by actor nom_actor|genere_nom_genere asc|desc` → mostrarà els films d&#39;un actor donat o d&#39;un gènere donat, en l&#39;ordre indicar 
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>5. `update idFilm` → actualitza la informació de la película indicada.
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a>6.  lliure
 <a id="__codelineno-2-7" name="__codelineno-2-7"></a>7.  lliure
 <a id="__codelineno-2-8" name="__codelineno-2-8"></a>8.  lliure
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>9.  help $\rightarrow$ mostra aquest quadre
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>9.  help → mostra aquest quadre
 </code></pre></div></td></tr></table></div>
 </div>
 <blockquote>
-<p>Les opcions de menú 6, 7  i 8 les heu de crear 
-vosaltres amb possibles opcions.</p>
+<p>Les opcions de menú 6, 7  i 8 les heu de crear vosaltres amb possibles opcions. Són lliures. Podeu fer consultes addicionals, esborrar pel·lícules, etc.</p>
 </blockquote>
-<h2 id="42-init">4.2. <code>init</code></h2>
-<p><span class="arithmatex">\(\rightarrow\)</span> crearà la BBDD <code>filmaffinity</code>. Ademés crearà la taula per a poder emmagatzemar el film anterior. Els actors i els gèneres guardar-los en una taula apart (sols el id i el nom), amb les corresponents claus alienes. Si la BBDD ja existeia deurà informar a l'usuari d'aquest fet i no crear-la de nou.</p>
+<h2 id="52-init">5.2. <code>init</code></h2>
+<p>Crearà la BBDD <code>filmaffinity</code>. Ademés crearà la taula per a poder emmagatzemar el film anterior. Els actors i els gèneres guardar-los en una taula apart (sols el id i el nom), amb les corresponents claus alienes. Si la BBDD ja existeia deurà informar a l'usuari d'aquest fet i no crear-la de nou.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&gt; Es recomana escriure el script en un fitxer anomenar `initBBDD.sql` i executar-lo sobre la base de dades.
 </code></pre></div></td></tr></table></div>
 <p>Les classes que es corresponen a les taules seran alguna cosa com:</p>
@@ -1558,16 +1631,25 @@ vosaltres amb possibles opcions.</p>
 <a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">nota</span><span class="p">;</span>
 <a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="43-scrap-web">4.3. <code>scrap [web]</code></h2>
-<p>Realitza el scrapping de la pàgina indicada, dins de la plataforma <code>filmaffinity</code>. Haurà d'anar inserint les dades conforme es recuperen des de internet en les taules de <code>Film</code>, Actor i Genere. </p>
-<blockquote>
-<p>Es facilita una implementació del scrapping que genera un <code>ArrayList&lt;FilmAffinity&gt;</code>.  </p>
-</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Atenció</p>
+<ul>
+<li>Recorda que les llistes d'actors i gèneres s'han de guardar en taules separades, amb les corresponents claus alienes</li>
+<li>Cada cop que es faça init deuria de crear-se de nou la BBDD, esborrant-se la anterior si existia i purgant totes les dades. Informa d'aquest fet a l'usuari.</li>
+</ul>
+</div>
+<h2 id="53-scrap-web">5.3. <code>scrap [web]</code></h2>
+<p>Realitza el scrapping de la pàgina indicada, dins de la plataforma <code>filmaffinity</code>. Haurà d'anar inserint les dades conforme es recuperen des de internet en les taules de <code>Film</code>, <code>Actor</code> i <code>Genere</code>. </p>
+<p>Es facilita una implementació del scrapping que genera un <code>ArrayList&lt;FilmAffinity&gt;</code>.  Sols has de recórrer-lo i anar inserint les dades a la BBDD a les taules corresponent</p>
 <p>Com a programador has de continuar en aquest codi per a generar tots els <code>Film, Actor i Genere</code> que siguen necessari i inserir-los a la BBDD</p>
-<blockquote>
-<p>Es recomana métodes separats de inserció de cada taula. Com que <code>Film</code> conté <code>Actor</code> i <code>Genere</code>, desde <code>inserirFilm</code> hauràs de cridar a <code>inserirActor</code> i <code>inserirGenere</code>, si escau.</p>
-</blockquote>
-<h2 id="44-list_all-filmactorgenere-p">4.4. <code>list_all film|actor|genere [/p]</code></h2>
+<div class="admonition tip">
+<p class="admonition-title">Recomanacions</p>
+<ul>
+<li>Es recomana métodes separats de inserció de cada taula. Com que <code>Film</code> conté <code>Actor</code> i <code>Genere</code>, desde <code>inserirFilm</code> hauràs de cridar a <code>inserirActor</code> i <code>inserirGenere</code>, si escau.</li>
+<li>Si alguna pel·lícula ja existia (mateix id) no l'hauràs d'inserir de nou. La botem i ja està. El mateix amb els actors i gèneres</li>
+</ul>
+</div>
+<h2 id="54-list_all-filmactorgenere-p">5.4. <code>list_all film|actor|genere [/p]</code></h2>
 <p>Aquesta part del menú seleccionarà i mostrarà per pantalla totes les dades existents a la base de dades.</p>
 <p>Deura de rebre 3 arguments:</p>
 <ol>
@@ -1578,7 +1660,7 @@ vosaltres amb possibles opcions.</p>
 <blockquote>
 <p>Aquest tercer argument és una millora o ampliació de la pràctica. Fes-ho primer sense ell</p>
 </blockquote>
-<h2 id="45-list_by-actor-nom_actorgenere_nom_genere-ascdesc">4.5. <code>list_by actor nom_actor|genere_nom_genere asc|desc</code></h2>
+<h2 id="55-list_by-actor-nom_actorgenere_nom_genere-ascdesc">5.5. <code>list_by actor nom_actor|genere_nom_genere asc|desc</code></h2>
 <p>Aques comandament rep exacmanter 4 argument:</p>
 <ol>
 <li><code>list_by</code>: nom del argument. Deu de ser exactamnet aquest. Si no és, informar a l'usuari de l'error i presentar de nou el menu.</li>
@@ -1598,7 +1680,7 @@ vosaltres amb possibles opcions.</p>
 <a id="__codelineno-4-4" name="__codelineno-4-4"></a>list_by genere thriller desc
 </code></pre></div></td></tr></table></div>
 </div>
-<h2 id="46-update-idfilm">4.6. <code>update idFilm</code></h2>
+<h2 id="56-update-idfilm">5.6. <code>update idFilm</code></h2>
 <p>Per acabar implementarem la modificació de alguna pel·lícula. a partir del seu id. Exactament tindrà dos arguments:</p>
 <ol>
 <li><code>update</code>: nom del argument. Deu de ser exactamnet aquest. Si no és, informar a l'usuari de l'error i presentar de nou el menu.</li>
@@ -1629,8 +1711,13 @@ vosaltres amb possibles opcions.</p>
 
 
 
+  
+  
 
 
+
+
+  
 
 
 
