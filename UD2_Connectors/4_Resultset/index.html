@@ -1615,8 +1615,7 @@
 <h1 id="1-classe-resultset">1. Classe <code>ResultSet</code>.</h1>
 <p>Ara que estem connectats a la base de dades, és hora de començar a demanar informació al DBMS. Aquesta informació es proporcionarà en forma de consultes (SQL) o altres mètodes, però gairebé el 90% de les vegades, com en el cas de les consultes SQL, la informació retornada es troba en un <strong>format tabular</strong>. Els formats tabulars són ben coneguts perquè programes com MySQL Workbench o DBeaver mostren les dades d'aquesta manera.</p>
 <p>En Java, la classe que permet treballar amb dades en format tabular provinents de bases de dades es diu <code>Resultset</code>. Un <code>Resultset</code> està compost per una taula (files i columnes) i un punter a una fila, anomenat <strong>cursor</strong>.</p>
-<center>![Resultset](./img/ResultSet.png){width=90%}</center>
-
+<p><img alt="Resultset" src="../img/ResultSet.png" width="90%" /></p>
 <ol>
 <li>Quan recuperem dades de les bases de dades, la informació es guarda a la taula i el cursor apunta a una fila imaginària buida anomenada <code>beforeFirst</code>.</li>
 <li><code>Resultset</code> conté un mètode especial anomenat <code>next()</code>, que fa dues accions:</li>

@@ -1680,8 +1680,7 @@
 </ul>
 <h3 id="131-arquitectura-jdbc">1.3.1. Arquitectura JDBC</h3>
 <p>La biblioteca estàndard JDBC proporciona un conjunt d'interfícies independents de la implementació. Els controladors de cada DBMS seran els encarregats de la implementació. Les aplicacions, per accedir a la base de dades, hauran d'utilitzar les interfícies JDBC, de manera que la implementació de cada DBMS sigui completament transparent per a l'aplicació.</p>
-<center>![JDBC](./img/JDBC.png){width=90%}</center>
-
+<p><img alt="JDBC" src="../img/JDBC.png" width="90%" /></p>
 <p>Com podem veure, les aplicacions Java accedeixen als diferents mètodes que l'API especifica com a interfícies, però són els controladors els que accedeixen a la base de dades.</p>
 <p>Cal dir que les aplicacions poden utilitzar diversos controladors JDBC simultàniament i accedir, per tant, a múltiples bases de dades. L'aplicació especifica un controlador JDBC utilitzant una URL (Universal Resource Locator) al gestor de controladors, i aquest és el responsable d'establir correctament les connexions amb les bases de dades a través dels controladors. Els controladors poden ser de diferents tipus:</p>
 <ul>
@@ -1726,8 +1725,7 @@
 <a id="__codelineno-0-14" name="__codelineno-0-14"></a>docker<span class="w"> </span>start<span class="w"> </span>mysql-srv
 </code></pre></div></td></tr></table></div>
 <p>I finalment, però no menys important, evidentment, podeu utilitzar una eina gràfica per accedir a MySQL, com ara <code>mysql-workbench</code> o <code>dbeaver</code>. Heu de configurar una connexió al port de Docker:</p>
-<center>![Workbench](./img/WorkBench.png){width=90%}</center>
-
+<p><img alt="Workbench" src="../img/WorkBench.png" width="90%" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Espai</p>
 <p>Revisa les notes del teu mòdul de bases de dades sobre com treballar amb Workbench:</p>

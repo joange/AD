@@ -1615,8 +1615,7 @@
 <h1 id="1-resultset-class">1. <code>ResultSet</code> class.</h1>
 <p>Now, we are connected to the database, is time to start asking for information to the DBMS. This information will be in form of queries (SQL) or others methods, but almost 90% of times, as the SQL's, the information returned is in a tabular format. Tabular formats are well known because programs like MySQL Workbench or DBeaver show data in these way.</p>
 <p>In Java, the class who allow to works with data in tabular format coming from databases is called <code>Resultset</code>. A <code>Resultset</code> is composed by a table (rows and columns) and a pointer to a row, called <code>cursor</code>.</p>
-<center>![Resultset](./img/ResultSet.png){width=90%}</center>
-
+<p><img alt="Resultset" src="../../../UD2_Connectors/img/ResultSet.png" width="90%" /></p>
 <ol>
 <li>When we retrieve data from databases, the information is stored in the table, and the cursor points to an imaginary void row called <code>beforeFisrt</code>. </li>
 <li><code>Resultset</code> contains a special method called <code>next()</code>, that do two actions:</li>

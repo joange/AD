@@ -1680,8 +1680,7 @@
 </ul>
 <h3 id="131-jdbc-architecture">1.3.1. JDBC architecture</h3>
 <p>The JDBC standard library provides a set of implementation-free interfaces. Controllers of each DBMS will be in charge of implementation. Applications, in order to access the database, will have to use the JDBC interfaces, so it is for the implementation of each DBMS is completely transparent to the application.</p>
-<center>![JDBC](./img/JDBC.png){width=90%}</center>
-
+<p><img alt="JDBC" src="../../../UD2_Connectors/img/JDBC.png" width="90%" /></p>
 <p>As we can see, Java applications access the different methods that the API specifies as interfaces, but it is the controllers that access the database.</p>
 <p>It should be said that applications can use several JDBC drivers simultaneously, and access, therefore, to multiple databases. The application specifies a JDBC driver using a URL (<em>Universal Resource Locator</em>) to the Drivers manager, and this is the one responsible for correctly establishing the connections with the databases through the drivers. Controllers can be of different types:</p>
 <ul>
