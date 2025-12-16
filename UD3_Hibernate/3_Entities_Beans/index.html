@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../../css/custom.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -861,9 +863,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-arxius-de-mapeix" class="md-nav__link">
+  <a href="#2-arxius-de-mapeig" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Arxius de Mapeix
+      2. Arxius de Mapeig
     </span>
   </a>
   
@@ -1591,9 +1593,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-arxius-de-mapeix" class="md-nav__link">
+  <a href="#2-arxius-de-mapeig" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Arxius de Mapeix
+      2. Arxius de Mapeig
     </span>
   </a>
   
@@ -1715,7 +1717,7 @@
 <p class="admonition-title">Recordatori</p>
 <p>Recorda que pots utilitzar la llibreria <code>Lombok</code> per crear beans de manera més ràpida.</p>
 </div>
-<h2 id="2-arxius-de-mapeix">2. Arxius de Mapeix</h2>
+<h2 id="2-arxius-de-mapeig">2. Arxius de Mapeig</h2>
 <p>El bean creat a la última secció encara no es pot persistir. Per fer-ho, hem de crear un fitxer extern a la classe, amb l'extensió <code>hbm.xml</code> i amb el mateix nom que la classe (<strong>Hibernate Mapping</strong>). La ubicació del fitxer no importa, però és una bona idea guardar les classes del model en un lloc i els fitxers de mapeig en un altre.</p>
 <p>Així que crearem un paquet <code>orm</code> i dins d'aquest, crearem el fitxer <code>Peli.hbm.xml</code>. Anem a explicar-ho amb un exemple, ja que la sintaxi és bastant extensa.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">XML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
@@ -1774,8 +1776,7 @@
 <li>Hibernate necessita mètodes get/set per accedir als camps dels nostres objectes. No obstant això, potser no vols crear cap mètode, però Hibernate ho necessita. La solució és afegir un nou atribut <code>access=field</code> que permet a Hibernate accedir als camps sense getters i setters.</li>
 </ul>
 </div>
-<center>![Types](./img/Hybernate_Types.png){width=90%}</center>
-
+<p><img alt="Types" class="al90" src="../img/Hybernate_Types.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Atenció</p>
 <p>Estudiarem més opcions com les claus externes en les pròximes seccions.</p>

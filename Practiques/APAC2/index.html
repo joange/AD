@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../../css/custom.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1617,14 +1619,22 @@
 <p>Abans d'accedir a qualsevol funcionalitat de l'aplicació, l'usuari haurà d'identificar-se. Revisa l'exerici desenvolupat a classe, on fem servir una base de dades per a emmagatzemar els usuaris i les seues contrasenyes.</p>
 <h2 id="31-funcionament-de-lapartat-de-registre-i-login">3.1. Funcionament de l'apartat de registre i login</h2>
 <ul>
-<li>Quan arranque el programa quee et pregunte dos coses: login o registre.</li>
-<li>Cas de respondre login, introduïrem el nom d'usuari:<ul>
+<li>
+<p>Quan arranque el programa que et pregunte dos coses: login o registre.</p>
+</li>
+<li>
+<p>Cas de respondre login, introduïrem el nom d'usuari:</p>
+<ul>
 <li>Posteriorment la contrasenya. Intenta fer que no es mostre la contrasenya per pantalla</li>
 <li>Es realitzarà la validació o no desde la base de dades</li>
 </ul>
 </li>
-<li>Cas de respondre registre, </li>
-<li>Introduïrem un nom d'usuari, </li>
+<li>
+<p>Cas de respondre registre:</p>
+</li>
+<li>
+<p>Introduïrem un nom d'usuari, </p>
+</li>
 <li>una contrasenya </li>
 <li>Repetireem la contrasenya</li>
 <li>Es realitzarà l'alta a la base de dades.</li>
@@ -1767,9 +1777,11 @@
 </div>
 <h2 id="53-scrap-web">5.3. <code>scrap [web]</code></h2>
 <p>Realitza el scrapping de la pàgina indicada, dins de la plataforma <code>filmaffinity</code>. Haurà d'anar inserint les dades conforme es recuperen des de internet en les taules de <code>Film</code>, <code>Actor</code> i <code>Genere</code>. </p>
-<p>Opcionalment pots:
-1. Es facilita una implementació del scrapping que genera un <code>ArrayList&lt;FilmAffinity&gt;</code>.  Sols has de recórrer-lo i anar inserint les dades a la BBDD a les taules corresponent. El projecte el tens en aquest <a href="../AD_P2_Inicial.zip">enllaç</a> per si vols fer-lo servir com a base. Es recomana la opció 2 a conitunuació.
-2. <strong>[RECOMANAT]</strong> Carregar un arxiu json amb les dades de les pel·lícules i anar inserint-les a la BBDD</p>
+<p>Opcionalment pots:</p>
+<ol>
+<li>Es facilita una implementació del scrapping que genera un <code>ArrayList&lt;FilmAffinity&gt;</code>.  Sols has de recórrer-lo i anar inserint les dades a la BBDD a les taules corresponent. El projecte el tens en aquest <a href="../AD_P2_Inicial.zip">enllaç</a> per si vols fer-lo servir com a base. Es recomana la opció 2 a conitunuació.</li>
+<li><strong>[RECOMANAT]</strong> Carregar un arxiu json amb les dades de les pel·lícules i anar inserint-les a la BBDD</li>
+</ol>
 <p>Com a programador has de continuar en aquest codi per a generar tots els <code>Film, Actor i Genere</code> que siguen necessari i inserir-los a la BBDD</p>
 <div class="admonition tip">
 <p class="admonition-title">Recomanacions</p>

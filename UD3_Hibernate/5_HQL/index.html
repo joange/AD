@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../../css/custom.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1909,8 +1911,7 @@
 </ul>
 <h2 id="2-recuperant-objectes">2. Recuperant objectes</h2>
 <p>A partir d'ara, els exemples es basen en aquest esquema <a href="../DocenciaConsultas.sql">Docencia</a></p>
-<center>![Docencia for HQL](./img/DocenciaHQL.png){width=90%}</center>
-
+<p><img alt="Docencia for HQL" class="al90" src="../img/DocenciaHQL.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Consell</p>
 <p>Ara és un bon moment per intentar fer un enfocament d'enginyeria inversa per construir el teu projecte a partir de la base de dades.</p>
@@ -1952,8 +1953,7 @@
 <a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Si volem filtrar o cercar qualsevol estudiant, necessitem utilitzar la clàusula <code>where</code>, com en una consulta SQL normal. Les expressions poden ser:</p>
-<center>![Where](./img/Where.png){width=90%}</center>
-
+<p><img alt="Where" class="al90" src="../img/Where.png" /></p>
 <p>Quan el filtre <code>where</code> només retorna un objecte, podríem emmagatzemar-lo en una llista i després accedir-hi, però és millor obtenir l'objecte directament, com segueix:</p>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
@@ -2185,8 +2185,7 @@ tingues en compte que creem la nostra consulta amb l'operador diamant, indicant 
 <p>Com a comentari final en aquesta secció, recorda el que s'ha dit anteriorment: en la manipulació d'objectes (eliminacions, modificacions, etc.) tenim prou eines per fer-ho sense consultes HQL. Aquestes consultes són més adequades per processar grans volums d'informació sense carregar aquesta informació al nostre programa per processar-la.</p>
 <h2 id="6-apendix-estat-dels-objectes">6. Apèndix, Estat dels objectes</h2>
 <p>Com hem dit al llarg d'aquesta unitat, els objectes es carreguen i es controlen pel gestor de sessions. Cada objecte podria tenir un estat dins de la sessió, i és interessant conèixer totes les possibilitats. En aquesta imatge, podeu veure tots els diferents estats i el mètode per canviar l'estat de l'objecte.</p>
-<center>![Object Status](./img/ObjectStatus.png){width=90%}</center>
-
+<p><img alt="Object Status" class="al90" src="../img/ObjectStatus.png" /></p>
 <ul>
 <li><strong>transient</strong> → L'objecte té identitat (existeix en memòria), però no té una identitat persistent, o clau primària.</li>
 <li><strong>persistent</strong> → L'objecte ha estat marcat per ser desat (persistit), i la identitat en memòria està relacionada amb la identitat de la base de dades. Quan carreguem un objecte de la base de dades, aquest és l'estat inicial.</li>

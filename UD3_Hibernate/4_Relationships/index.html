@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../../css/custom.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -940,6 +942,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#molts-a-molts-amb-atributs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Molts a Molts amb atributs
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1668,6 +1679,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#molts-a-molts-amb-atributs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Molts a Molts amb atributs
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1694,13 +1714,12 @@
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Avís</p>
-</div>
 <p>En aquest tipus de referències, com es pot deduir, hi ha una recursió intrínseca. Per tant, quan gestionem aquest tipus de relacions bidireccionals, tingueu molta cura de no causar bucles, ja que fins i tot una cosa tan senzilla com imprimir pot fer que el nostre programa es bloquegi i aparegui la coneguda <code>StackOverflowException</code>.</p>
+</div>
 <p>A partir d'ara, podríem estudiar totes les representacions amb JPA.</p>
 <h2 id="2-relacions-un-a-un">2. Relacions Un a Un</h2>
 <p>Per a l'explicació dels exemples, veurem el disseny i la implementació a la base de dades de cada cas i com es veu a Hibernate. Per a aquest exemple representarem una relació 1:1 entre Grup i Professor, on es pot veure que un Grup té un Tutor, i un Tutor només pot tutoritzar un Grup.</p>
-<center>![one_to_one](./img/1_1.png){width=90%}</center>
-
+<p><img alt="one_to_one" class="al90" src="../img/1_1.png" /></p>
 <p>Primerament, la classe que és apuntada per la clau forana. Molt fàcil, perquè no necessitem fer res.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
@@ -1826,7 +1845,7 @@ Tingueu en compte que la classe <code>Grupo</code> conté un camp anomenat <code
 <li><code>unique=true</code> per assegurar que la relació és 1:1 (un professor no pot estar relacionat amb cap altre grup)</li>
 <li>[opcional] per establir el nom de la restricció de clau forana, en cas que vulgueu canviar-lo o eliminar-lo en operacions futures.</li>
 </ul>
-<p>Més informació a la següent web<a href="https://www.baeldung.com/jpa-cascade-types">baeldung</a></p>
+<p>Més informació a la següent web <a href="https://www.baeldung.com/jpa-cascade-types">baeldung</a></p>
 <h3 id="21-un-a-un-bidireccional">2.1. Un a Un bidireccional</h3>
 <p>Si volem emmagatzemar en Professor els grups que està tutoritzant, necessitem afegir una referència al Grup. Com que hem fet la clau forana en Grup, serà molt fàcil:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
@@ -1836,8 +1855,7 @@ Tingueu en compte que la classe <code>Grupo</code> conté un camp anomenat <code
 <p>Amb <code>mappedBy="tutor"</code> estem dient que a la classe <code>Grupo</code> existeix un camp anomenat <code>tutor</code> amb tota la informació sobre la relació. Tingueu en compte que no s'afegiran camps addicionals a <code>Profesor</code>, perquè la informació sobre la relació es troba a la taula <code>Grupo</code>.</p>
 <h2 id="3-un-a-molts">3. Un a Molts</h2>
 <p>Per a aquesta explicació començarem amb el següent model, en el qual un <strong>Llibre</strong> té un <strong>Autor</strong> que l'ha escrit, i un Autor pot haver escrit diversos Llibres. En l'esquema relacional, la relació és des de <code>idAutor</code> en Llibres, que és clau forana a la taula Autor (ID).</p>
-<center>![one_to_many](./img/1_N.png){width=90%}</center>
-
+<p><img alt="one_to_many" class="al90" src="../img/1_N.png" /></p>
 <p>Primer, podem decidir qui és el propietari de la relació. Realment no importa, però en diversos dissenys és molt clar, per exemple entre <code>Estudiant</code> i <code>Email</code>, on òbviament el propietari és <code>Estudiant</code>. Normalment hauria de ser la classe amb cardinalitat <strong>molts</strong> el propietari. Vegem l'exemple.</p>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
@@ -1932,12 +1950,12 @@ En aquest exemple, un <code>Llibre</code> té un autor (únic). Ho implementem e
 </ul>
 <div class="admonition nota">
 <p class="admonition-title">Decisió</p>
-</div>
 <p>En lloc d'emmagatzemar llibres en un Set, es poden emmagatzemar en una Llista. La principal diferència és respondre a aquesta pregunta: <em>és important l'ordre?</em>. Si respons <em>sí</em>, has d'utilitzar una Llista. Si la resposta és <em>no</em>, has d'utilitzar un Set.</p>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Espai</p>
 <p>La relació <code>1:N</code> que hem explicat és bidireccional. Això vol dir que des d'un Autor podem obtenir tots els Llibres que ha escrit, i des d'un Llibre podem obtenir l'Autor.</p>
-<p><center><img alt="one_to_many_bidirectional" src="../img/1_N_B.png" width="90%" /></center></p>
+<p><a class="al90" href="../img/1_N_B.png">one_to_many_bidirectional</a></p>
 <p>Podeu trobar diverses pàgines i llibres que expliquen les relacions unidireccionals <code>1:N</code>. Això vol dir que amb aquest tipus d'implementació només podem viatjar en una direcció. En aquest cas, hem d'emmagatzemar només dins d'un Llibre qui és l'autor, perquè el Llibre és el propietari. Hem d'eliminar el conjunt de llibres en l'autor per obtenir una relació unidireccional.</p>
 </div>
 <h3 id="31-tipus-de-carrega-fetch">3.1. Tipus de Càrrega <strong>Fetch</strong></h3>
@@ -1946,13 +1964,15 @@ En aquest exemple, un <code>Llibre</code> té un autor (únic). Ho implementem e
 <li><code>DateType.EAGER</code> → Literalment traduït com <strong>ansiós</strong>. No podem esperar, i quan es carrega l'Autor, Hibernate resoldrà la relació i carregarà tots els llibres amb totes les dades internes de cada llibre. Tenim totes les dades en el moment.</li>
 <li><code>DateType.LAZY</code> → Literalment com <strong>mandrós</strong> (vago), però més representatiu com <em>càrrega mandrosa</em>. Si carreguem l'Autor, Hibernate només carrega els atributs propis de l'Autor, sense carregar els seus Llibres. Quan intentem accedir als seus llibres des del nostre programa, Hibernate s'<em>activa</em> i els carrega. És a dir, en mode LAZY, les dades es carreguen <strong>quan es necessiten</strong>.</li>
 </ul>
-<p><strong>Què farem?</strong>*</p>
+<div class="admonition warning">
+<p class="admonition-title">"Què farem?</p>
 <p>Què és millor o pitjor? La resposta no és senzilla, ja que ambdós tenen pros i contres:</p>
 <ul>
 <li>En <code>EAGER</code> només es fa un accés, mentre que en <code>LAZY</code> dos accessos o més.</li>
 <li>En <code>EAGER</code> es carreguen totes les dades, fins i tot si no són necessàries, en <code>LAZY</code> només es carrega el que és necessari.</li>
 </ul>
 <p>El programador ha de valorar i equilibrar la quantitat d'informació requerida en un moment donat i el cost d'accés a la base de dades.</p>
+</div>
 <h2 id="4-molts-a-molts">4. Molts a Molts</h2>
 <p>En aquesta secció acabarem amb l'últim tipus de relacions que podem trobar en el model E/R, que són les relacions molts a molts. Poden aparèixer altres relacions amb cardinalitats més altes, com les relacions ternàries, però com es va estudiar en el primer any, totes elles es poden modelar amb transformacions binàries.</p>
 <p>Dins de les relacions binàries, podem trobar dues possibilitats:</p>
@@ -1961,13 +1981,8 @@ En aquest exemple, un <code>Llibre</code> té un autor (únic). Ho implementem e
 <li>Relacions que, a més d'indicar-ho, afegeixen nous atributs. Per exemple, un actor participa en una pel·lícula en un tipus de paper: principal, secundari, etc.</li>
 </ul>
 <p>En el model relacional, ambdós casos acaben sent modelats com una nova taula (amb o sense l'atribut). Si ens trobem en el segon cas, una nova taula amb els atributs que posseeix ha de ser modelada amb una classe, així que la relació <code>N:M</code> entre dues taules es convertirà en <code>dues relacions un a molts 1:N i N:1</code> (actor-actuació i actuació-pel·lícula). Ens centrarem en el primer cas, ja que ja estem preparats per resoldre el segon.</p>
-<div class="admonition nota">
-<p class="admonition-title">Millora</p>
-</div>
-<p>Per a la segona part, aquest tutorial explica com fer-ho <a href="https://thorben-janssen.com/hibernate-tip-many-to-many-association-with-additional-attributes/">N_M amb atributs</a>. És molt recomanable implementar-ne un exemple.</p>
 <p>Anem a modelar el cas típic d'un Professor que imparteix diversos Mòduls, els quals poden ser impartits per diversos professors. L'esquema és el següent:</p>
-<center>![many to many](./img/N_M.png){width=90%}</center>
-
+<p><a class="al90" href="../img/N_M.png"> many to many</a></p>
 <p>Com podem veure, la típica taula central de la relació <code>N:M</code> es manté. Com es va esmentar anteriorment, la taula Docència no existirà en el model OO, ja que només serveix per relacionar els elements.</p>
 <p>Les classes Mòdul i Professor són les següents (només es mostra la part relacionada amb la relació) triant en aquest cas Professor com el propietari de la relació:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
@@ -2124,6 +2139,12 @@ En aquest exemple, un <code>Llibre</code> té un autor (únic). Ho implementem e
 <a id="__codelineno-8-29" name="__codelineno-8-29"></a>Hibernate:<span class="w"> </span>insert<span class="w"> </span>into<span class="w"> </span>Docencia<span class="w"> </span><span class="o">(</span>idProfesor,<span class="w"> </span>idModulo<span class="o">)</span><span class="w"> </span>values<span class="w"> </span><span class="o">(</span>?,<span class="w"> </span>?<span class="o">)</span>
 </code></pre></div></td></tr></table></div>
 <p>Despres de crear les taules, Hibernate crearà les claus alienes, i llavors inserirà els registres. Primer <code>Professor</code> i <code>Mòdul</code> i seguidament la relació entre ells de <code>Docència</code></p>
+<h2 id="molts-a-molts-amb-atributs">Molts a Molts amb atributs</h2>
+<blockquote>
+<p>Per a una visió completa, aquest tutorial explica com fer-ho <a href="https://thorben-janssen.com/hibernate-tip-many-to-many-association-with-additional-attributes/">N_M amb atributs</a>. </p>
+</blockquote>
+<p>Anem nosaltres a iplementar un exemple complet.</p>
+<p>TO DO</p>
 
 
 

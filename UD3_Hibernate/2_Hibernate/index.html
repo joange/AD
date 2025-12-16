@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../../css/custom.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1777,13 +1779,11 @@
   <h1>2. Introduccio a Hibernate</h1>
 
 <h2 id="1-hibernate">1. Hibernate</h2>
-<center>![Hibernate](./img/Hibernate.png){width=85%}</center>
-
+<p><img alt="Hibernate" class="al75" src="../img/Hibernate.png" /></p>
 <p><a href="https://hibernate.org">Hibernate</a> és un framework ORM per a Java, que facilita la correspondència d'atributs entre una base de dades relacional i el model d'objectes de la nostra aplicació mitjançant fitxers XML o anotacions en els beans d'entitat. És un programari lliure distribuït sota la llicència GPL 2.0, per la qual cosa es pot utilitzar en aplicacions comercials.</p>
 <p>La funció principal de Hibernate serà oferir a l'programador les eines per detallar el seu model de dades i les relacions entre ells, de manera que sigui l'ORM mateix el que interactuï amb la base de dades, mentre que el desenvolupador es dedica a manipular objectes.</p>
 <p>A més, ofereix un llenguatge de consulta, anomenat HQL (Hibernate Query Language), de manera que sigui l'ORM mateix el que tradueixi aquest llenguatge al de cada motor de base de dades, mantenint així la portabilitat a costa d'un lleuger augment en el temps d'execució.</p>
-<center>![Hibernate](./img/Hibernate-arquitecture.png){width=85%}</center>
-
+<p><img alt="Hibernate" class="al75" src="../img/Hibernate-arquitecture.png" /></p>
 <p>Quan es creen objectes, aquests són volàtils o temporals (es destruiran quan l'aplicació finalitzi). Quan volem emmagatzemar-los amb Hibernate, són rastrejats amb un mecanisme anomenat <code>Session</code>. També es rastrejen els objectes carregats des de les bases de dades. Si ho desitgem, podem finalitzar el rastreig, eliminant l'objecte quan ja no el necessitem.</p>
 <p>A més, es proporciona un llenguatge de consulta, HQL o <strong>Hibernate Query Language</strong>, basat en OQL. La part subjacent de la sessió, com es pot veure, permet l'ús de diverses tecnologies, incloent JDBC per connectar-se al SGBD necessari.</p>
 <h2 id="2-configuracio">2. Configuració</h2>
