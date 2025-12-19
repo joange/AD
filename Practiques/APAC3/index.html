@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../APAC2/">
+      
+      
+        <link rel="next" href="../../license/">
       
       
         
@@ -23,7 +27,7 @@
     
     
       
-        <title>APAC3 - Accés a Dades. IES Jaume II El Just</title>
+        <title>Olvident-nos de SQL - Accés a Dades. IES Jaume II El Just</title>
       
     
     
@@ -111,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              APAC3
+              Olvident-nos de SQL
             
           </span>
         </div>
@@ -231,6 +235,8 @@
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -1623,18 +1629,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -1655,7 +1663,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1728,6 +1736,47 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pràctica 3
+  
+
+    
+      <br>
+      <small>APAC3. 2DAM - Accés a Dades</small>
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1770,7 +1819,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1794,6 +1845,8 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+
 
 
 
@@ -1808,14 +1861,22 @@
 <li>Ha de contenir com a mínim tres relacions, una de cada classe: <code>1-1</code>, <code>1-M</code> i <code>N:M</code>. Si vols, pots crear una relació reflexiva.</li>
 <li>Utilitza MySQL com a SGBD.</li>
 </ul>
+<p>Has de tenir en compte que la BBDD ha de ser generada per les teues classes <code>Java</code> mitjançant <code>Hibernate</code>. Per tant, has de dissenyar la base de dades tenint en compte les limitacions i característiques d'aquest ORM.</p>
 <h1 id="2-el-programa">2. El programa</h1>
 <h2 id="21-estructura">2.1. Estructura</h2>
-<p>Crea un programa gestionat per <code>Hibernate</code> amb l'objectiu de realitzar les operacions bàsiques de CRUD a la base de dades (Create, Read, Update i Delete) Hauràs de mapejar totes les entitats i relacions de la base de dades per a guardar tota la informació.</p>
+<p>Crea un programa gestionat per <code>Hibernate</code> amb l'objectiu de realitzar les operacions bàsiques de CRUD a la base de dades (Create, Read, Update i Delete). Hauràs de mapejar totes les entitats i relacions de la base de dades per a guardar tota la informació. Amb aquest mapeig, hibernate et permetrà crear la base de dades des de zero (si no existeix) i realitzar totes les operacions necessàries.</p>
+<p>Amb alguna eixa del Workbench o similar que conegues, crea una imatge de l'estructura de la teua base de dades i afegeix-la al teu repositori.</p>
+<div class="admonition warning">
+<p class="admonition-title">CHECKPIONT 1</p>
+<p>Abans de continuar programant, has de presentar al professor el teu disseny de la base de dades. Aquest punt és obligatori per a continuar amb la pràctica.</p>
+<p>Sense el vist i plau del profeessor, es recomana no continuar amb la pràctica, ja que si es fa cap canvi, serà necessari reprogramar moltes parts del projecte.</p>
+<p>A la entrega de la tasca podràs deixar auqesta imatge junt a l'enllaç del repositori github del projecte.</p>
+</div>
 <h2 id="22-crud">2.2. CRUD</h2>
 <p>Com tot el treball de cada entitat és el mateix (canviant el nom de l'entitat), només has de crear un CRUD complet per a una entitat. A continuació, crea mètodes per <em>inserir</em>, <em>eliminar</em>, <em>actualitzar</em> i <em>seleccionar</em> informació d'una entitat.</p>
 <h2 id="23-relacions">2.3. Relacions</h2>
 <p>Imagina que tenim una relació <code>1:M</code>, un <code>Autor</code> escriu diversos <code>Llibres</code>. Has de fer un menu (lliure) per a gestionar les teues relacions i taules. Amb les teves pròpies relacions, fes el mateix de la següent manera:</p>
-<h3 id="231-tasca-1">2.3.1. Tasca 1</h3>
+<h3 id="231-tasca-1-llistats-basicscomplexos">2.3.1. Tasca 1. Llistats bàsics/complexos</h3>
 <p>Has de mostrar registres d'una entitat (tots els registres, sense cap mena de filtre):</p>
 <ul>
 <li>Per exemple que una opció de menú siga <code>mostra Autor</code>. Aquesta comanda mostrarà <strong>tots els autors</strong> de la base de dades. </li>
@@ -1828,37 +1889,43 @@
 <p class="admonition-title">Vigila</p>
 <p>Has de controlar que no es produeixin bucles infinits en les relacions. Per exemple, si un autor té llibres, i cada llibre té un autor (relacions bidireccionals), i aquest autor té llibres, i així successivament. Has de controlar que això no passe.</p>
 </div>
-<h3 id="232-tasca-2">2.3.2. Tasca 2</h3>
+<h3 id="232-tasca-2-noves-dades">2.3.2. Tasca 2. Noves Dades.</h3>
 <p>Quan vulguis inserir un nou Llibre:</p>
 <ul>
 <li>Pots executar <code>afegir Llibre</code>, a continuació, de manera interactiva, el programa demanarà els valors dels atributs del llibre i el crearà i emmagatzemarà a la base de dades, establint l'Autor com a <code>null</code>. </li>
 <li>Però si executes <code>afegir -r Llibre</code>, el programa desprès de demanar els atributs propis del llibre, voldrà saber quin és l'autor d'eixe llibre. Llavors mostrarà tots els autors de la base de dades. L'usuari en seleccionarà un, i aquest <code>Autor</code> es configurarà com a autor del llibre.</li>
 <li>En el procés de selecció de l'Autor (que podria ser el ID, un cop llistat els autors), hi haurà una opció addicional (Autor 0, per exemple), que indica que l'autor del llibre no estigui a la base de dades. Llavors el programa demanarà les dades del nou Autor  crearem un nou Autor i després l'assignarem al Llibre. Tant l'Autor com el Llibre es desaran a la base de dades.</li>
 </ul>
-<h3 id="tasca-3-filtrats-o-consultes">Tasca 3. Filtrats o consultes</h3>
-<p>Es tracta de deseenvolupar consultes sobre la base de dades que has creat. Has de crear un menú amb les següents consultes (adaptades a la teua base de dades):
-1. Llistat complet d'una entitat (per exemple, tots els Autors) que eel nom tingui una lletra o coincidisca.
-2. Llistat complet d'una entitat a partir de les seues relacions (per exemple, tots els Autors que han escrit un llibre que al títol tinga <code>Java</code>).
-3. Consultes amb dos paràmetres, per exemple:
-   1. Autors que han escrit <em>3</em> llibres de <em>França</em>.
-   2. Llibres publicats entree els anys <em>2020</em> i <em>2024</em>.
-   3. Autors que han escrit llibres amb més de <em>200</em> pàgines i publicats per una editorial concreta.
-   4. Altres 3 consultes que se t'ocurren a tu i quee tinguen sentit amb la teua base de dades.</p>
+<h3 id="233-tasca-3-filtrats-o-consultes">2.3.3. Tasca 3. Filtrats o consultes</h3>
+<p>Es tracta de deseenvolupar consultes sobre la base de dades que has creat. Has de crear un menú amb les següents consultes (adaptades a la teua base de dades):</p>
+<ol>
+<li>Llistat complet d'una entitat (per exemple, tots els Autors) que eel nom tingui una lletra o coincidisca.</li>
+<li>Llistat complet d'una entitat a partir de les seues relacions (per exemple, tots els Autors que han escrit un llibre que al títol tinga <code>Java</code>).</li>
+<li>
+<p>Consultes amb dos paràmetres, per exemple:</p>
+</li>
+<li>
+<p>Autors que han escrit <em>3</em> llibres de <em>França</em>.</p>
+</li>
+<li>Llibres publicats entree els anys <em>2020</em> i <em>2024</em>.</li>
+<li>Autors que han escrit llibres amb més de <em>200</em> pàgines i publicats per una editorial concreta.</li>
+<li>Altres 3 consultes que se t'ocurren a tu i quee tinguen sentit amb la teua base de dades.</li>
+</ol>
 <div class="admonition tip">
 <p class="admonition-title">Suggeriment</p>
 <p>Per a desenvolupar aquestes consultes, has d'utilitzar <code>HQL</code>. En la mesura que pugues crea les consultes amb <code>Named Queries</code> i <code>Criteria API</code>.</p>
 </div>
-<h1 id="3-entregues">3. Entregues.</h1>
+<h1 id="3-entregues-i-format-dentrega">3. Entregues i format d'entrega.</h1>
 <p>Per pujar la tasca a la plataforma, només cal que escriguis un enllaç a un repositori privat de GitHub de l'estudiant. Has d'afegir l'usuari del teu professor com a convidat del teu repositori (<code>joange</code> - jgcamarena@ieseljust.com). La tasca es presentarà amb els següents punts.</p>
-<p>En la carpeta del teu treball has de tenir:</p>
+<p>En la carpeta del teu treball has de tenir, en acabar tota la pràctica:</p>
 <ol>
-<li>Un script amb la creació de taules de la base de dades i alguna dada d'exemple. Has de generar-ho amb <strong>MySQL Workbench sql dump</strong>.</li>
-<li>Una imatge de l'estructura de la teva base de dades, creada amb <strong>MySQL Workbench reverse engineering</strong>.</li>
-<li>Un projecte Maven que implementi els requisits d'aquest text.</li>
-<li>Fitxer <code>Readme.md</code> amb documentació sobre el teu programa.</li>
+<li>Un script amb la creació de taules de la base de dades i alguna dada d'exemple. Has de generar-ho amb <strong>MySQL Workbench sql dump</strong>. Aquest scrip el tens que crear desprès d'haver inserit ja dades a la base de dades mitjançant el teu programa.</li>
+<li>Una imatge de l'estructura de la teva base de dades, creada amb <strong>MySQL Workbench reverse engineering</strong> o eina similar. Aquesta imatge s'eentrega al Checkpoint 1.</li>
+<li>El projecte Maven que implementi els requisits d'aquest text.</li>
+<li>Fitxer <code>Readme.md</code> amb documentació sobre el teu programa i característiques que consideres.</li>
 </ol>
 <h2 id="31-punt-de-control-1-la-base-de-dades">3.1. Punt de control 1. La base de dades.</h2>
-<p>En aquesta tasca has de presentar el teu repositori quan hagis acabat les parts 1 i 2. El professor ho marcarà com a <code>OK</code> abans de començar a programar la part 3.</p>
+<p>En aquesta tasca has de presentar el teu repositori quan hagis acabat les parts 1 del programa. El professor et donarà el <code>OK</code> abans de començar a programar la part 2.</p>
 <h2 id="32-punt-de-control-2-el-programa">3.2. Punt de control 2. El programa.</h2>
 <p>Quan hagis acabat la tasca, presenta el teu repositori.</p>
 <p>(c) Joan Gerard Camarena Estruch, novembre 2022</p>
@@ -1869,8 +1936,13 @@
 
 
 
+  
+  
 
 
+
+
+  
 
 
 

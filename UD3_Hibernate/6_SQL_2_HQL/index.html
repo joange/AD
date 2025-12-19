@@ -1021,8 +1021,24 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Aprofundim en HQL
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1040,6 +1056,627 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-la-base-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. La base de dades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-seccio-1-sql-enunciats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Secció 1. SQL. Enunciats
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Secció 1. SQL. Enunciats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-nivell-2-agregacio-simple-select-i-where" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Nivell 2: Agregació Simple (SELECT i WHERE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-nivell-3-unions-basiques-count-avg-max-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Nivell 3: Unions Bàsiques (COUNT, AVG, MAX, MIN)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-nivell-4-unions-complexes-inner-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Nivell 4: Unions Complexes (INNER JOIN)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-nivell-5-unions-externes-avancades-leftright-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Nivell 5: Unions Externes Avançades (LEFT/RIGHT JOIN)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-nivell-6-agrupacio-complexa-group-by-i-having" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Nivell 6: Agrupació Complexa (GROUP BY i HAVING)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-nivell-7-consultes-molt-complexes-subconsultes-avancades-i-logica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6. Nivell 7: Consultes Molt Complexes, Subconsultes Avançades i Lògica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-seccio-2-sql-solucions-explicades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Secció 2. SQL. Solucions Explicades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Secció 2. SQL. Solucions Explicades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-nivell-2-consultes-basiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Nivell 2: Consultes Bàsiques
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Nivell 2: Consultes Bàsiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-obtenir-totes-les-dades-de-tots-els-alumnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Obtenir totes les dades de tots els alumnes.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-llistar-nomes-el-nom-i-cognoms-dels-alumnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1. Llistar només el nom i cognoms dels alumnes.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-alumnes-amb-edat-major-o-igual-a-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2. Alumnes amb edat major o igual a 20.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-alumnes-repetidors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.3. Alumnes repetidors.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-alumnes-ordenats-per-edat-descendent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.4. Alumnes ordenats per edat descendent.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-nivell-3-agregacio-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Nivell 3: Agregació Simple
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. Nivell 3: Agregació Simple">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-comptar-alumnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1. Comptar alumnes.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-edat-mitjana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2. Edat mitjana.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-nota-mes-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.3. Nota més alta.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-suma-dedats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.4. Suma d'edats.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325-comptar-professors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.5. Comptar professors.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-nivell-4-unions-basiques-joins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Nivell 4: Unions Bàsiques (JOINs)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Nivell 4: Unions Bàsiques (JOINs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-nom-de-lalumne-i-nota-de-lexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1. Nom de l'alumne i nota de l'examen.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-nom-del-modul-i-nota-ordenat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2. Nom del mòdul i nota, ordenat.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-professor-i-moduls-que-imparteix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.3. Professor i mòduls que imparteix.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334-alumnes-examinats-del-modul-2-fol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.4. Alumnes examinats del mòdul 2 (FOL).
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#335-detall-complet-alumne-modul-i-nota" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.5. Detall complet: Alumne, Mòdul i Nota.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-nivell-5-unions-externes-left-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Nivell 5: Unions Externes (LEFT JOIN)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. Nivell 5: Unions Externes (LEFT JOIN)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341-tots-els-alumnes-i-les-seves-notes-fins-i-tot-si-no-en-tenen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.1. Tots els alumnes i les seves notes (fins i tot si no en tenen).
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342-alumnes-que-no-han-fet-examens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.2. Alumnes que NO han fet exàmens.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#343-tots-els-moduls-i-els-seus-professors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.3. Tots els mòduls i els seus professors.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#344-examens-de-moduls-impartits-per-mariano-faus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.4. Exàmens de mòduls impartits per 'Mariano Faus'.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-nivell-6-agrupacio-group-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5. Nivell 6: Agrupació (GROUP BY)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5. Nivell 6: Agrupació (GROUP BY)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351-nota-mitjana-per-id-dalumne" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.1. Nota mitjana per ID d'alumne.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#352-nota-mitjana-per-nom-dalumne" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.2. Nota mitjana per Nom d'alumne.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#353-quantitat-dexamens-per-modul" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.3. Quantitat d'exàmens per mòdul.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#354-alumnes-amb-mitjana-superior-a-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.4. Alumnes amb mitjana superior a 5.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#355-moduls-amb-mitjana-aprovada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.5. Mòduls amb mitjana aprovada.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#356-quants-moduls-imparteix-cada-professor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.6. Quants mòduls imparteix cada professor.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-nivell-7-consultes-avancades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6. Nivell 7: Consultes Avançades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6. Nivell 7: Consultes Avançades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-alumne-amb-la-nota-mes-alta-subconsulta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.1. Alumne amb la nota més alta (Subconsulta).
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#362-alumnes-majors-de-la-mitjana-dedat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.2. Alumnes majors de la mitjana d'edat.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#363-alumnes-que-han-suspes-algun-examen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.3. Alumnes que han suspès algun examen.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#364-nom-i-estat-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.4. Nom i Estat (CASE).
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#365-repte-professors-i-total-dexamens-corregits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.5. Repte: Professors i total d'exàmens corregits.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-seccio-3-hql-vs-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Secció 3. HQL vs Java
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Secció 3. HQL vs Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-entitat-alumno-amb-namedqueries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Entitat Alumno amb NamedQueries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-entitat-examen-amb-namedqueries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Entitat Examen amb NamedQueries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-entitat-modulo-amb-namedqueries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Entitat Modulo amb NamedQueries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-entitat-profesor-amb-namedqueries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. Entitat Profesor amb NamedQueries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1744,6 +2381,37 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practiques/APAC3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pràctica 3
+  
+
+    
+      <br>
+      <small>APAC3. 2DAM - Accés a Dades</small>
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1795,8 +2463,618 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-la-base-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. La base de dades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-seccio-1-sql-enunciats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Secció 1. SQL. Enunciats
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Secció 1. SQL. Enunciats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-nivell-2-agregacio-simple-select-i-where" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Nivell 2: Agregació Simple (SELECT i WHERE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-nivell-3-unions-basiques-count-avg-max-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Nivell 3: Unions Bàsiques (COUNT, AVG, MAX, MIN)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-nivell-4-unions-complexes-inner-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Nivell 4: Unions Complexes (INNER JOIN)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-nivell-5-unions-externes-avancades-leftright-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Nivell 5: Unions Externes Avançades (LEFT/RIGHT JOIN)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-nivell-6-agrupacio-complexa-group-by-i-having" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Nivell 6: Agrupació Complexa (GROUP BY i HAVING)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-nivell-7-consultes-molt-complexes-subconsultes-avancades-i-logica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6. Nivell 7: Consultes Molt Complexes, Subconsultes Avançades i Lògica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-seccio-2-sql-solucions-explicades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Secció 2. SQL. Solucions Explicades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Secció 2. SQL. Solucions Explicades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-nivell-2-consultes-basiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Nivell 2: Consultes Bàsiques
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Nivell 2: Consultes Bàsiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-obtenir-totes-les-dades-de-tots-els-alumnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Obtenir totes les dades de tots els alumnes.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-llistar-nomes-el-nom-i-cognoms-dels-alumnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1. Llistar només el nom i cognoms dels alumnes.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-alumnes-amb-edat-major-o-igual-a-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2. Alumnes amb edat major o igual a 20.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-alumnes-repetidors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.3. Alumnes repetidors.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-alumnes-ordenats-per-edat-descendent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.4. Alumnes ordenats per edat descendent.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-nivell-3-agregacio-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Nivell 3: Agregació Simple
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. Nivell 3: Agregació Simple">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-comptar-alumnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1. Comptar alumnes.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-edat-mitjana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2. Edat mitjana.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-nota-mes-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.3. Nota més alta.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-suma-dedats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.4. Suma d'edats.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325-comptar-professors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.5. Comptar professors.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-nivell-4-unions-basiques-joins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Nivell 4: Unions Bàsiques (JOINs)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Nivell 4: Unions Bàsiques (JOINs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-nom-de-lalumne-i-nota-de-lexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1. Nom de l'alumne i nota de l'examen.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-nom-del-modul-i-nota-ordenat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2. Nom del mòdul i nota, ordenat.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-professor-i-moduls-que-imparteix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.3. Professor i mòduls que imparteix.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334-alumnes-examinats-del-modul-2-fol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.4. Alumnes examinats del mòdul 2 (FOL).
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#335-detall-complet-alumne-modul-i-nota" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.5. Detall complet: Alumne, Mòdul i Nota.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-nivell-5-unions-externes-left-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Nivell 5: Unions Externes (LEFT JOIN)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. Nivell 5: Unions Externes (LEFT JOIN)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341-tots-els-alumnes-i-les-seves-notes-fins-i-tot-si-no-en-tenen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.1. Tots els alumnes i les seves notes (fins i tot si no en tenen).
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342-alumnes-que-no-han-fet-examens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.2. Alumnes que NO han fet exàmens.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#343-tots-els-moduls-i-els-seus-professors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.3. Tots els mòduls i els seus professors.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#344-examens-de-moduls-impartits-per-mariano-faus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.4. Exàmens de mòduls impartits per 'Mariano Faus'.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-nivell-6-agrupacio-group-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5. Nivell 6: Agrupació (GROUP BY)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5. Nivell 6: Agrupació (GROUP BY)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351-nota-mitjana-per-id-dalumne" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.1. Nota mitjana per ID d'alumne.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#352-nota-mitjana-per-nom-dalumne" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.2. Nota mitjana per Nom d'alumne.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#353-quantitat-dexamens-per-modul" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.3. Quantitat d'exàmens per mòdul.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#354-alumnes-amb-mitjana-superior-a-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.4. Alumnes amb mitjana superior a 5.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#355-moduls-amb-mitjana-aprovada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.5. Mòduls amb mitjana aprovada.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#356-quants-moduls-imparteix-cada-professor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.6. Quants mòduls imparteix cada professor.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-nivell-7-consultes-avancades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6. Nivell 7: Consultes Avançades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6. Nivell 7: Consultes Avançades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-alumne-amb-la-nota-mes-alta-subconsulta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.1. Alumne amb la nota més alta (Subconsulta).
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#362-alumnes-majors-de-la-mitjana-dedat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.2. Alumnes majors de la mitjana d'edat.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#363-alumnes-que-han-suspes-algun-examen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.3. Alumnes que han suspès algun examen.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#364-nom-i-estat-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.4. Nom i Estat (CASE).
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#365-repte-professors-i-total-dexamens-corregits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.5. Repte: Professors i total d'exàmens corregits.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-seccio-3-hql-vs-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Secció 3. HQL vs Java
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Secció 3. HQL vs Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-entitat-alumno-amb-namedqueries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Entitat Alumno amb NamedQueries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-entitat-examen-amb-namedqueries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Entitat Examen amb NamedQueries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-entitat-modulo-amb-namedqueries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Entitat Modulo amb NamedQueries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-entitat-profesor-amb-namedqueries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. Entitat Profesor amb NamedQueries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1813,11 +3091,13 @@
 
 
 
-<h1 id="1-la-base-de-dades">1. La base de dades</h1>
+  <h1>6. Aprofundim en HQL</h1>
+
+<h2 id="1-la-base-de-dades">1. La base de dades</h2>
 <p><img alt="BBDD" class="al90" src="../img/DocenciaHQL.png" /></p>
 <p>Aquest document conté 30 exercicis de dificultat progressiva basats en l'esquema de base de dades escolar (Alumne, Professor, Mòdul, Docència, Examen).</p>
-<h1 id="2-seccio-1-sql-enunciats">2. Secció 1. SQL.  Enunciats</h1>
-<h2 id="21-nivell-1-consultes-basiques-select-i-where">2.1. Nivell 1: Consultes Bàsiques (SELECT i WHERE)</h2>
+<h2 id="2-seccio-1-sql-enunciats">2. Secció 1. SQL.  Enunciats</h2>
+<h3 id="21-nivell-2-agregacio-simple-select-i-where">2.1. Nivell 2: Agregació Simple (SELECT i WHERE)</h3>
 <ol>
 <li>Obtenir totes les dades de tots els alumnes.</li>
 <li>Llistar només el nom i cognoms dels alumnes.</li>
@@ -1825,7 +3105,7 @@
 <li>Llistar els alumnes que són repetidors (el camp repetidor és 1 o true).</li>
 <li>Llistar els alumnes ordenats per edat de forma descendent (del més gran al més jove).</li>
 </ol>
-<h2 id="22-nivell-2-agregacio-simple-count-avg-max-min">2.2. Nivell 2: Agregació Simple (COUNT, AVG, MAX, MIN)</h2>
+<h3 id="22-nivell-3-unions-basiques-count-avg-max-min">2.2. Nivell 3: Unions Bàsiques (COUNT, AVG, MAX, MIN)</h3>
 <ol>
 <li>Comptar quants alumnes hi ha registrats a la base de dades.</li>
 <li>Calcular l'edat mitjana dels alumnes.</li>
@@ -1833,7 +3113,7 @@
 <li>Calcular la suma total de totes les edats dels alumnes.</li>
 <li>Comptar quants professors hi ha registrats.</li>
 </ol>
-<h2 id="23-nivell-3-unions-basiques-inner-join">2.3. Nivell 3: Unions Bàsiques (INNER JOIN)</h2>
+<h3 id="23-nivell-4-unions-complexes-inner-join">2.3. Nivell 4: Unions Complexes (INNER JOIN)</h3>
 <ol>
 <li>Llistar el nom de l'alumne i la nota de cada examen realitzat.</li>
 <li>Llistar el nom del mòdul i la nota de cada examen, ordenat per nota de major a menor.</li>
@@ -1841,14 +3121,14 @@
 <li>Llistar els noms dels alumnes que s'han examinat del mòdul amb id 2 ('FOL'), juntament amb la seva nota.</li>
 <li>Mostrar el nom de l'alumne, nom del mòdul i la nota de tots els exàmens.</li>
 </ol>
-<h2 id="24-nivell-4-unions-externes-i-filtrat-de-nuls-leftright-join">2.4. Nivell 4: Unions Externes i Filtrat de Nuls (LEFT/RIGHT JOIN)</h2>
+<h3 id="24-nivell-5-unions-externes-avancades-leftright-join">2.4. Nivell 5: Unions Externes Avançades (LEFT/RIGHT JOIN)</h3>
 <ol>
 <li>Llistar tots els alumnes i les seves notes d'examen. Si un alumne no ha fet exàmens, ha d'aparèixer a la llista amb la nota com NULL.</li>
 <li>Trobar els alumnes que NO han realitzat cap examen (els que no tenen registres a la taula Examen).</li>
 <li>Llistar tots els mòduls i els professors que els imparteixen. Si un mòdul no té professor assignat (encara que en les nostres dades tots en tenen), hauria d'aparèixer.</li>
 <li>Mostrar els exàmens realitzats en mòduls que imparteix el professor 'Mariano Faus'.</li>
 </ol>
-<h2 id="25-nivell-5-agrupacio-avancada-group-by-i-having">2.5. Nivell 5: Agrupació Avançada (GROUP BY i HAVING)</h2>
+<h3 id="25-nivell-6-agrupacio-complexa-group-by-i-having">2.5. Nivell 6: Agrupació Complexa (GROUP BY i HAVING)</h3>
 <ol>
 <li>Calcular la nota mitjana de cada alumne (mostrar idAlumne i la mitjana).</li>
 <li>Calcular la nota mitjana de cada alumne, però mostrant el nom de l'alumne en lloc del seu ID.</li>
@@ -1857,7 +3137,7 @@
 <li>Mostrar el nom del mòdul i la nota mitjana dels exàmens d'aquest mòdul, només pels mòduls la mitjana dels quals sigui aprovada (major o igual a 5).</li>
 <li>Comptar quants mòduls imparteix cada professor (mostrar nom del professor i quantitat).</li>
 </ol>
-<h2 id="26-nivell-6-consultes-complexes-subconsultes-i-logica">2.6. Nivell 6: Consultes Complexes, Subconsultes i Lògica</h2>
+<h3 id="26-nivell-7-consultes-molt-complexes-subconsultes-avancades-i-logica">2.6. Nivell 7: Consultes Molt Complexes, Subconsultes Avançades i Lògica</h3>
 <ol>
 <li>Obtenir el nom de l'alumne que va treure la nota més alta de tots els exàmens registrats (usant subconsulta o límit).</li>
 <li>Llistar els alumnes que tenen una edat superior a la mitjana d'edat de tots els alumnes.</li>
@@ -1865,53 +3145,53 @@
 <li>Mostrar el nom de l'alumne i una columna extra anomenada 'Estat' que digui 'APROVAT' si la seva nota a l'examen va ser &gt;= 5 o 'SUSPES' si va ser &lt; 5 (Ús de CASE).</li>
 <li>El Repte Final: Llistar el nom de cada professor i la quantitat total d'exàmens que han corregit (assumint que si un professor imparteix un mòdul, ell corregeix tots els exàmens d'aquest mòdul).</li>
 </ol>
-<h1 id="3-seccio-2-sql-solucions-explicades">3. Secció 2. SQL. Solucions Explicades</h1>
+<h2 id="3-seccio-2-sql-solucions-explicades">3. Secció 2. SQL. Solucions Explicades</h2>
 <p>A continuació, presento les consultes SQL per resoldre els exercicis. Recorda que en SQL a vegades hi ha vàries formes d'arribar al mateix resultat.</p>
-<h2 id="31-nivell-1-consultes-basiques">3.1. Nivell 1: Consultes Bàsiques</h2>
-<h3 id="1-obtenir-totes-les-dades-de-tots-els-alumnes">1. Obtenir totes les dades de tots els alumnes.</h3>
+<h3 id="31-nivell-2-consultes-basiques">3.1. Nivell 2: Consultes Bàsiques</h3>
+<h4 id="1-obtenir-totes-les-dades-de-tots-els-alumnes">1. Obtenir totes les dades de tots els alumnes.</h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Alumne</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Explicació: L'asterisc * selecciona totes les columnes de la taula.</p>
-<h3 id="311-llistar-nomes-el-nom-i-cognoms-dels-alumnes">3.1.1. Llistar només el nom i cognoms dels alumnes.</h3>
+<h4 id="311-llistar-nomes-el-nom-i-cognoms-dels-alumnes">3.1.1. Llistar només el nom i cognoms dels alumnes.</h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">cognoms</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Alumne</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Explicació: Especifiquem les columnes exactes per obtenir una projecció més neta.</p>
-<h3 id="312-alumnes-amb-edat-major-o-igual-a-20">3.1.2. Alumnes amb edat major o igual a 20.</h3>
+<h4 id="312-alumnes-amb-edat-major-o-igual-a-20">3.1.2. Alumnes amb edat major o igual a 20.</h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Alumne</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">edat</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Explicació: Filtrem files usant la clàusula WHERE i operadors de comparació.</p>
-<h3 id="313-alumnes-repetidors">3.1.3. Alumnes repetidors.</h3>
+<h4 id="313-alumnes-repetidors">3.1.3. Alumnes repetidors.</h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Alumne</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">repetidor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="c1">-- O alternativament en alguns dialectes: WHERE repetidor = TRUE</span>
 </code></pre></div></td></tr></table></div>
 <p>Explicació: Essent un camp BIT (Booleana), el comparem amb 1 o TRUE</p>
-<h3 id="314-alumnes-ordenats-per-edat-descendent">3.1.4. Alumnes ordenats per edat descendent.</h3>
+<h4 id="314-alumnes-ordenats-per-edat-descendent">3.1.4. Alumnes ordenats per edat descendent.</h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Alumne</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">edat</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Explicació: ORDER BY defineix el criteri d'ordenació, i DESC inverteix l'ordre natural.</p>
-<h2 id="32-nivell-2-agregacio-simple">3.2. Nivell 2: Agregació Simple</h2>
-<h3 id="321-comptar-alumnes">3.2.1. Comptar alumnes.</h3>
+<h3 id="32-nivell-3-agregacio-simple">3.2. Nivell 3: Agregació Simple</h3>
+<h4 id="321-comptar-alumnes">3.2.1. Comptar alumnes.</h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_alumnes</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Alumne</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Explicació: COUNT(*) compta el nombre total de files. AS ens permet donar-li un àlies a la columna resultant.</p>
-<h3 id="322-edat-mitjana">3.2.2. Edat mitjana.</h3>
+<h4 id="322-edat-mitjana">3.2.2. Edat mitjana.</h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">edat</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Alumne</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Explicació: AVG calcula el promig numèric de la columna indicada.</p>
-<h3 id="323-nota-mes-alta">3.2.3. Nota més alta.</h3>
+<h4 id="323-nota-mes-alta">3.2.3. Nota més alta.</h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">nota</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Examen</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Explicació: MAX busca el valor màxim en la columna nota.</p>
-<h3 id="324-suma-dedats">3.2.4. Suma d'edats.</h3>
+<h4 id="324-suma-dedats">3.2.4. Suma d'edats.</h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">edat</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Alumne</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Explicació: SUM realitza el sumatori dels valors.</p>
-<h3 id="325-comptar-professors">3.2.5. Comptar professors.</h3>
+<h4 id="325-comptar-professors">3.2.5. Comptar professors.</h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Professor</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="33-nivell-3-unions-basiques-joins">3.3. Nivell 3: Unions Bàsiques (JOINs)</h2>
-<h3 id="331-nom-de-lalumne-i-nota-de-lexamen">3.3.1. Nom de l'alumne i nota de l'examen.</h3>
+<h3 id="33-nivell-4-unions-basiques-joins">3.3. Nivell 4: Unions Bàsiques (JOINs)</h3>
+<h4 id="331-nom-de-lalumne-i-nota-de-lexamen">3.3.1. Nom de l'alumne i nota de l'examen.</h4>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
 <span class="normal"><a href="#__codelineno-10-2">2</a></span>
 <span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">nota</span>
@@ -1919,7 +3199,7 @@
 <a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Alumne</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">idAlumne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">idAlumne</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 Explicació: Unim Examen amb Alumne usant la clau forana. Usem àlies (e, a) per escriure menys.</p>
-<h3 id="332-nom-del-modul-i-nota-ordenat">3.3.2. Nom del mòdul i nota, ordenat.</h3>
+<h4 id="332-nom-del-modul-i-nota-ordenat">3.3.2. Nom del mòdul i nota, ordenat.</h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
 <span class="normal"><a href="#__codelineno-11-2">2</a></span>
 <span class="normal"><a href="#__codelineno-11-3">3</a></span>
@@ -1928,7 +3208,7 @@ Explicació: Unim Examen amb Alumne usant la clau forana. Usem àlies (e, a) per
 <a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Modul</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">idModul</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">idModul</span>
 <a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">nota</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="333-professor-i-moduls-que-imparteix">3.3.3.  Professor i mòduls que imparteix.</h3>
+<h4 id="333-professor-i-moduls-que-imparteix">3.3.3.  Professor i mòduls que imparteix.</h4>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
 <span class="normal"><a href="#__codelineno-12-2">2</a></span>
 <span class="normal"><a href="#__codelineno-12-3">3</a></span>
@@ -1938,7 +3218,7 @@ Explicació: Unim Examen amb Alumne usant la clau forana. Usem àlies (e, a) per
 <a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">Modul</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">idModul</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">idModul</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 Explicació: Aquesta és una relació N:M. Necessitem dos JOIN per saltar de Professor a la taula intermèdia (Docencia) i de là a Modul.</p>
-<h3 id="334-alumnes-examinats-del-modul-2-fol">3.3.4. Alumnes examinats del mòdul 2 (FOL).</h3>
+<h4 id="334-alumnes-examinats-del-modul-2-fol">3.3.4. Alumnes examinats del mòdul 2 (FOL).</h4>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
 <span class="normal"><a href="#__codelineno-13-2">2</a></span>
 <span class="normal"><a href="#__codelineno-13-3">3</a></span>
@@ -1948,7 +3228,7 @@ Explicació: Aquesta és una relació N:M. Necessitem dos JOIN per saltar de Pro
 <a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">idModul</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 Explicació: Fem el JOIN i després filtrem per l'ID del mòdul a la taula d'exàmens.</p>
-<h3 id="335-detall-complet-alumne-modul-i-nota">3.3.5. Detall complet: Alumne, Mòdul i Nota.</h3>
+<h4 id="335-detall-complet-alumne-modul-i-nota">3.3.5. Detall complet: Alumne, Mòdul i Nota.</h4>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
 <span class="normal"><a href="#__codelineno-14-2">2</a></span>
 <span class="normal"><a href="#__codelineno-14-3">3</a></span>
@@ -1958,8 +3238,8 @@ Explicació: Fem el JOIN i després filtrem per l'ID del mòdul a la taula d'ex�
 <a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">Modul</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">idModul</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">idModul</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 Explicació: Unim les tres taules principals implicades en una qualificació.</p>
-<h2 id="34-nivell-4-unions-externes-left-join">3.4. Nivell 4: Unions Externes (LEFT JOIN)</h2>
-<h3 id="341-tots-els-alumnes-i-les-seves-notes-fins-i-tot-si-no-en-tenen">3.4.1. Tots els alumnes i les seves notes (fins i tot si no en tenen).</h3>
+<h3 id="34-nivell-5-unions-externes-left-join">3.4. Nivell 5: Unions Externes (LEFT JOIN)</h3>
+<h4 id="341-tots-els-alumnes-i-les-seves-notes-fins-i-tot-si-no-en-tenen">3.4.1. Tots els alumnes i les seves notes (fins i tot si no en tenen).</h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
 <span class="normal"><a href="#__codelineno-15-2">2</a></span>
 <span class="normal"><a href="#__codelineno-15-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">nota</span>
@@ -1967,7 +3247,7 @@ Explicació: Unim les tres taules principals implicades en una qualificació.</p
 <a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Examen</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">idAlumne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">idAlumne</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Explicació: LEFT JOIN garanteix que es tragin totes les files de la taula de l'esquerra (Alumne), omplint amb NULL la part de la dreta (Examen) si no hi ha coincidència.</p>
-<h3 id="342-alumnes-que-no-han-fet-examens">3.4.2. Alumnes que NO han fet exàmens.</h3>
+<h4 id="342-alumnes-que-no-han-fet-examens">3.4.2. Alumnes que NO han fet exàmens.</h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
 <span class="normal"><a href="#__codelineno-16-2">2</a></span>
 <span class="normal"><a href="#__codelineno-16-3">3</a></span>
@@ -1977,7 +3257,7 @@ Explicació: Unim les tres taules principals implicades en una qualificació.</p
 <a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">idExamen</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Explicació: Usem el LEFT JOIN anterior i filtrem on la clau primària de la taula dreta sigui NULL. Això aïlla els que no tenen relació.</p>
-<h3 id="343-tots-els-moduls-i-els-seus-professors">3.4.3. Tots els mòduls i els seus professors.</h3>
+<h4 id="343-tots-els-moduls-i-els-seus-professors">3.4.3. Tots els mòduls i els seus professors.</h4>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
 <span class="normal"><a href="#__codelineno-17-2">2</a></span>
 <span class="normal"><a href="#__codelineno-17-3">3</a></span>
@@ -1987,7 +3267,7 @@ Explicació: Unim les tres taules principals implicades en una qualificació.</p
 <a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Professor</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">idProfessor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">idProfessor</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 Explicació: Assegurem llistar tots els mòduls, encara que no tinguessin professor assignat (encara que en les teves dades tots en tenen).</p>
-<h3 id="344-examens-de-moduls-impartits-per-mariano-faus">3.4.4. Exàmens de mòduls impartits per 'Mariano Faus'.</h3>
+<h4 id="344-examens-de-moduls-impartits-per-mariano-faus">3.4.4. Exàmens de mòduls impartits per 'Mariano Faus'.</h4>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
 <span class="normal"><a href="#__codelineno-18-2">2</a></span>
 <span class="normal"><a href="#__codelineno-18-3">3</a></span>
@@ -2001,8 +3281,8 @@ Explicació: Assegurem llistar tots els mòduls, encara que no tinguessin profes
 <a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Mariano Faus&#39;</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 Explicació: Connectem l'examen amb el mòdul, i el mòdul amb el professor per poder filtrar per el nom del docent.</p>
-<h2 id="35-nivell-5-agrupacio-group-by">3.5. Nivell 5: Agrupació (GROUP BY)</h2>
-<h3 id="351-nota-mitjana-per-id-dalumne">3.5.1. Nota mitjana per ID d'alumne.</h3>
+<h3 id="35-nivell-6-agrupacio-group-by">3.5. Nivell 6: Agrupació (GROUP BY)</h3>
+<h4 id="351-nota-mitjana-per-id-dalumne">3.5.1. Nota mitjana per ID d'alumne.</h4>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
 <span class="normal"><a href="#__codelineno-19-2">2</a></span>
 <span class="normal"><a href="#__codelineno-19-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">idAlumne</span><span class="p">,</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">nota</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">media</span>
@@ -2010,7 +3290,7 @@ Explicació: Connectem l'examen amb el mòdul, i el mòdul amb el professor per 
 <a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">idAlumne</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 Explicació: Agrupem els resultats per alumne abans de calcular el promig.</p>
-<h3 id="352-nota-mitjana-per-nom-dalumne">3.5.2. Nota mitjana per Nom d'alumne.</h3>
+<h4 id="352-nota-mitjana-per-nom-dalumne">3.5.2. Nota mitjana per Nom d'alumne.</h4>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
 <span class="normal"><a href="#__codelineno-20-2">2</a></span>
 <span class="normal"><a href="#__codelineno-20-3">3</a></span>
@@ -2020,7 +3300,7 @@ Explicació: Agrupem els resultats per alumne abans de calcular el promig.</p>
 <a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">idAlumne</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">nom</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 Explicació: Fem JOIN i agrupem. És bona pràctica agrupar també per idAlumne (clau primària) per si hi ha dos alumnes amb el mateix nom.</p>
-<h3 id="353-quantitat-dexamens-per-modul">3.5.3. Quantitat d'exàmens per mòdul.</h3>
+<h4 id="353-quantitat-dexamens-per-modul">3.5.3. Quantitat d'exàmens per mòdul.</h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
 <span class="normal"><a href="#__codelineno-21-2">2</a></span>
 <span class="normal"><a href="#__codelineno-21-3">3</a></span>
@@ -2029,7 +3309,7 @@ Explicació: Fem JOIN i agrupem. És bona pràctica agrupar també per idAlumne 
 <a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">Examen</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">idModul</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">idModul</span>
 <a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">idModul</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">nom</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="354-alumnes-amb-mitjana-superior-a-5">3.5.4. Alumnes amb mitjana superior a 5.</h3>
+<h4 id="354-alumnes-amb-mitjana-superior-a-5">3.5.4. Alumnes amb mitjana superior a 5.</h4>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
 <span class="normal"><a href="#__codelineno-22-2">2</a></span>
 <span class="normal"><a href="#__codelineno-22-3">3</a></span>
@@ -2041,7 +3321,7 @@ Explicació: Fem JOIN i agrupem. És bona pràctica agrupar també per idAlumne 
 <a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="k">HAVING</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">nota</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 Explicació: WHERE filtra files abans d'agrupar. HAVING filtra grups després de calcular els agregats (com la mitjana).</p>
-<h3 id="355-moduls-amb-mitjana-aprovada">3.5.5. Mòduls amb mitjana aprovada.</h3>
+<h4 id="355-moduls-amb-mitjana-aprovada">3.5.5. Mòduls amb mitjana aprovada.</h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
 <span class="normal"><a href="#__codelineno-23-2">2</a></span>
 <span class="normal"><a href="#__codelineno-23-3">3</a></span>
@@ -2052,7 +3332,7 @@ Explicació: WHERE filtra files abans d'agrupar. HAVING filtra grups després de
 <a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">idModul</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">nom</span>
 <a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="k">HAVING</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">nota</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="356-quants-moduls-imparteix-cada-professor">3.5.6. Quants mòduls imparteix cada professor.</h3>
+<h4 id="356-quants-moduls-imparteix-cada-professor">3.5.6. Quants mòduls imparteix cada professor.</h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
 <span class="normal"><a href="#__codelineno-24-2">2</a></span>
 <span class="normal"><a href="#__codelineno-24-3">3</a></span>
@@ -2061,8 +3341,8 @@ Explicació: WHERE filtra files abans d'agrupar. HAVING filtra grups després de
 <a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">Docencia</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">idProfessor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">idProfessor</span>
 <a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">idProfessor</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="36-nivell-6-consultes-avancades">3.6. Nivell 6: Consultes Avançades</h2>
-<h3 id="361-alumne-amb-la-nota-mes-alta-subconsulta">3.6.1. Alumne amb la nota més alta (Subconsulta).</h3>
+<h3 id="36-nivell-7-consultes-avancades">3.6. Nivell 7: Consultes Avançades</h3>
+<h4 id="361-alumne-amb-la-nota-mes-alta-subconsulta">3.6.1. Alumne amb la nota més alta (Subconsulta).</h4>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
 <span class="normal"><a href="#__codelineno-25-2">2</a></span>
 <span class="normal"><a href="#__codelineno-25-3">3</a></span>
@@ -2072,7 +3352,7 @@ Explicació: WHERE filtra files abans d'agrupar. HAVING filtra grups després de
 <a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">nota</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">nota</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Examen</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 Explicació: La subconsulta (SELECT MAX...) obté el 10. Després busquem qui té aquesta nota.</p>
-<h3 id="362-alumnes-majors-de-la-mitjana-dedat">3.6.2. Alumnes majors de la mitjana d'edat.</h3>
+<h4 id="362-alumnes-majors-de-la-mitjana-dedat">3.6.2. Alumnes majors de la mitjana d'edat.</h4>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
 <span class="normal"><a href="#__codelineno-26-2">2</a></span>
 <span class="normal"><a href="#__codelineno-26-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">edat</span>
@@ -2080,7 +3360,7 @@ Explicació: La subconsulta (SELECT MAX...) obté el 10. Després busquem qui t�
 <a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">edat</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">edat</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Alumne</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 Explicació: Comparem l'edat de cada fila amb un valor escalar calculat independentment (la mitjana total).</p>
-<h3 id="363-alumnes-que-han-suspes-algun-examen">3.6.3. Alumnes que han suspès algun examen.</h3>
+<h4 id="363-alumnes-que-han-suspes-algun-examen">3.6.3. Alumnes que han suspès algun examen.</h4>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
 <span class="normal"><a href="#__codelineno-27-2">2</a></span>
 <span class="normal"><a href="#__codelineno-27-3">3</a></span>
@@ -2090,7 +3370,7 @@ Explicació: Comparem l'edat de cada fila amb un valor escalar calculat independ
 <a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">nota</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 Explicació: Usem DISTINCT perquè si un alumne va suspendre 2 exàmens, no volem que el seu nom surti repetit.</p>
-<h3 id="364-nom-i-estat-case">3.6.4. Nom i Estat (CASE).</h3>
+<h4 id="364-nom-i-estat-case">3.6.4. Nom i Estat (CASE).</h4>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
 <span class="normal"><a href="#__codelineno-28-2">2</a></span>
 <span class="normal"><a href="#__codelineno-28-3">3</a></span>
@@ -2106,7 +3386,7 @@ Explicació: Usem DISTINCT perquè si un alumne va suspendre 2 exàmens, no vole
 <a id="__codelineno-28-7" name="__codelineno-28-7"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">Examen</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">idAlumne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">idAlumne</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 Explicació: CASE permet lògica condicional dins la selecció de columnes.</p>
-<h3 id="365-repte-professors-i-total-dexamens-corregits">3.6.5. Repte: Professors i total d'exàmens corregits.</h3>
+<h4 id="365-repte-professors-i-total-dexamens-corregits">3.6.5. Repte: Professors i total d'exàmens corregits.</h4>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
 <span class="normal"><a href="#__codelineno-29-2">2</a></span>
 <span class="normal"><a href="#__codelineno-29-3">3</a></span>
@@ -2120,194 +3400,100 @@ Explicació: CASE permet lògica condicional dins la selecció de columnes.</p>
 <a id="__codelineno-29-6" name="__codelineno-29-6"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">idProfessor</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 Explicació: Aquesta consulta recorre tot l'esquema. Professor -&gt; Docencia -&gt; Modul -&gt; Examen. Comptem els exàmens associats als mòduls que imparteix cada professor. Usem LEFT JOIN a l'últim pas per si hi ha un professor que imparteix un mòdul del qual encara no hi ha exàmens (apareixeria amb 0).</p>
-<h1 id="4-seccio-3-hql-vs-java">4. Secció 3. HQL vs Java</h1>
-<p>Hibernate Query Language (HQL) és un llenguatge de consulta orientat a objectes similar a SQL però dissenyat per treballar amb les entitats i les seves relacions en lloc de taules i columnes. A continuació, es mostren algunes diferències clau entre HQL i SQL:
-| Característica          | SQL                                      | HQL                                      |
-|-------------------------|------------------------------------------|------------------------------------------|
-| Nivell d'abstracció     | Baix nivell, treballa directament amb taules i columnes. | Alt nivell, treballa amb entitats i propietats. |
-| Sintaxi                 | Utilitza la sintaxi SQL estàndard.      | Sintaxi similar a SQL però adaptada a objectes. |
-| Consultes               | SELECT, INSERT, UPDATE, DELETE.          | SELECT, FROM, WHERE, JOIN (no INSERT/UPDATE/DELETE directament). |
-| Joins                   | Basat en claus foranes i relacions de tabales. | Basat en relacions d'objectes i associacions. |
-| Agregacions            | Funcions d'agregació SQL (COUNT, AVG, etc.). | Funcions d'agregació similars però aplicades a propietats d'entitats. |
-| Portabilitat            | Depèn del dialecte SQL de la base de dades. | Portabilitat entre diferents bases de dades suportades per Hibernate. |
-| Mapeig                 | No hi ha mapeig directe, es treballa amb l'esquema de la base de dades. || Mètodes d'execució      | Executat directament a la base de dades. | Executat a través de la sessió de Hibernate. |
-| Resultats               | Retorna conjunts de resultats basats en files. | Retorna objectes o col·leccions d'objectes. |  </p>
-<p>Al SQL habitualment feiem les consultes i ja portem la informació filtrada. En HQL podem fer eel matiex, però moltes vegades ens plantejarem el recuperar-ho tot i treballar een Java.</p>
+<h2 id="4-seccio-3-hql-vs-java">4. Secció 3. HQL vs Java</h2>
+<p>Hibernate Query Language (HQL) és un llenguatge de consulta orientat a objectes similar a SQL però dissenyat per treballar amb les entitats i les seves relacions en lloc de taules i columnes. A continuació, es mostren algunes diferències clau entre HQL i SQL:</p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>SQL</th>
+<th>HQL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nivell d'abstracció</td>
+<td>Baix nivell, treballa directament amb taules i columnes.</td>
+<td>Alt nivell, treballa amb entitats i propietats.</td>
+</tr>
+<tr>
+<td>Sintaxi</td>
+<td>Utilitza la sintaxi SQL estàndard.</td>
+<td>Sintaxi similar a SQL però adaptada a objectes.</td>
+</tr>
+<tr>
+<td>Consultes</td>
+<td>SELECT, INSERT, UPDATE, DELETE.</td>
+<td>SELECT, FROM, WHERE, JOIN (no INSERT/UPDATE/DELETE directament).</td>
+</tr>
+<tr>
+<td>Joins</td>
+<td>Basat en claus foranes i relacions de tabales.</td>
+<td>Basat en relacions d'objectes i associacions.</td>
+</tr>
+<tr>
+<td>Agregacions</td>
+<td>Funcions d'agregació SQL (COUNT, AVG, etc.).</td>
+<td>Funcions d'agregació similars però aplicades a propietats d'entitats.</td>
+</tr>
+<tr>
+<td>Portabilitat</td>
+<td>Depèn del dialecte SQL de la base de dades.</td>
+<td>Portabilitat entre diferents bases de dades suportades per Hibernate.</td>
+</tr>
+<tr>
+<td>Mapeig</td>
+<td>No hi ha mapeig directe, es treballa amb l'esquema de la base de dades.</td>
+<td></td>
+</tr>
+<tr>
+<td>Resultats</td>
+<td>Retorna conjunts de resultats basats en files.</td>
+<td>Retorna objectes o col·leccions d'objectes.</td>
+</tr>
+</tbody>
+</table>
+<p>Al SQL habitualment feiem les consultes i ja portem la informació filtrada. En HQL podem fer el mateix, però moltes vegades ens plantejarem el recuperar-ho tot i treballar en Java.</p>
 <p>Exemple: Quants alumens hi han?</p>
 <ol>
 <li>Solució SQL/HQL:</li>
 </ol>
-<p>=== SQL </p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>```sql
-String SQL=&quot;SELECT COUNT(*) FROM Alumne;&quot;
-Statement stmt = connection.createStatement();
-ResultSet rs = stmt.executeQuery(SQL);
-if (rs.next()) {
-    int numAlumnes = rs.getInt(1);
-}
-
-```
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">SQL amb connectors</label><label for="__tabbed_1_2">HQL amb Hibernate</label><label for="__tabbed_1_3">Fem la feina en Java sols</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
+<span class="normal"><a href="#__codelineno-30-2">2</a></span>
+<span class="normal"><a href="#__codelineno-30-3">3</a></span>
+<span class="normal"><a href="#__codelineno-30-4">4</a></span>
+<span class="normal"><a href="#__codelineno-30-5">5</a></span>
+<span class="normal"><a href="#__codelineno-30-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="n">String</span><span class="w"> </span><span class="n">SQL</span><span class="o">=</span><span class="s">&quot;SELECT COUNT(*) FROM Alumne;&quot;</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="n">Statement</span><span class="w"> </span><span class="n">stmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">connection</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stmt</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="n">SQL</span><span class="p">);</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numAlumnes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-30-6" name="__codelineno-30-6"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>=== HQL</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>```java
-Query query = session.createQuery(&quot;SELECT COUNT(a) FROM Alumne a&quot;);
-int numAlumnes = (int) query.uniqueResult();
-```
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
+<span class="normal"><a href="#__codelineno-31-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="n">Query</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">session</span><span class="p">.</span><span class="na">createQuery</span><span class="p">(</span><span class="s">&quot;SELECT COUNT(a) FROM Alumne a&quot;</span><span class="p">);</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">numAlumnes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="na">uniqueResult</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
-<p>Ara an java ho recupereem
-1. </p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<span class="normal"><a href="#__codelineno-32-2">2</a></span>
+<span class="normal"><a href="#__codelineno-32-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="n">Query</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">session</span><span class="p">.</span><span class="na">createQuery</span><span class="p">(</span><span class="s">&quot;FROM Alumne&quot;</span><span class="p">);</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">Alumno</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alumnes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="na">list</span><span class="p">();</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">numAlumnes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alumnes</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
 <p>Comparar l'enfocament de base de dades (HQL/SQL) amb l'enfocament en memòria (<code>Java</code>) és una de les lliçons més valuoses per a un futur desenvolupador, ja que sovint es cau en l'error de portar-ho tot a memòria, causant problemes de rendiment greus.</p>
 <p>Assumirem que les entitats (<code>Alumno</code>, <code>Profesor</code>, <code>Modulo</code>, <code>Examen</code>) estan correctament anotades amb les relacions JPA (<code>@OneToMany</code>, <code>@ManyToOne</code>, <code>@ManyToMany</code>).</p>
 <p>Aquí tens una selecció d'exercicis representatius de diferents nivells de complexitat, resolts amb NamedQueries i comparats amb la lògica en Java.</p>
-<h2 id="41-entitat-alumno-amb-namedqueries">4.1. Entitat <code>Alumno</code> amb NamedQueries</h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-32-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-32-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-32-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-32-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-32-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-32-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-32-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-32-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-32-10">10</a></span>
-<span class="normal"><a href="#__codelineno-32-11">11</a></span>
-<span class="normal"><a href="#__codelineno-32-12">12</a></span>
-<span class="normal"><a href="#__codelineno-32-13">13</a></span>
-<span class="normal"><a href="#__codelineno-32-14">14</a></span>
-<span class="normal"><a href="#__codelineno-32-15">15</a></span>
-<span class="normal"><a href="#__codelineno-32-16">16</a></span>
-<span class="normal"><a href="#__codelineno-32-17">17</a></span>
-<span class="normal"><a href="#__codelineno-32-18">18</a></span>
-<span class="normal"><a href="#__codelineno-32-19">19</a></span>
-<span class="normal"><a href="#__codelineno-32-20">20</a></span>
-<span class="normal"><a href="#__codelineno-32-21">21</a></span>
-<span class="normal"><a href="#__codelineno-32-22">22</a></span>
-<span class="normal"><a href="#__codelineno-32-23">23</a></span>
-<span class="normal"><a href="#__codelineno-32-24">24</a></span>
-<span class="normal"><a href="#__codelineno-32-25">25</a></span>
-<span class="normal"><a href="#__codelineno-32-26">26</a></span>
-<span class="normal"><a href="#__codelineno-32-27">27</a></span>
-<span class="normal"><a href="#__codelineno-32-28">28</a></span>
-<span class="normal"><a href="#__codelineno-32-29">29</a></span>
-<span class="normal"><a href="#__codelineno-32-30">30</a></span>
-<span class="normal"><a href="#__codelineno-32-31">31</a></span>
-<span class="normal"><a href="#__codelineno-32-32">32</a></span>
-<span class="normal"><a href="#__codelineno-32-33">33</a></span>
-<span class="normal"><a href="#__codelineno-32-34">34</a></span>
-<span class="normal"><a href="#__codelineno-32-35">35</a></span>
-<span class="normal"><a href="#__codelineno-32-36">36</a></span>
-<span class="normal"><a href="#__codelineno-32-37">37</a></span>
-<span class="normal"><a href="#__codelineno-32-38">38</a></span>
-<span class="normal"><a href="#__codelineno-32-39">39</a></span>
-<span class="normal"><a href="#__codelineno-32-40">40</a></span>
-<span class="normal"><a href="#__codelineno-32-41">41</a></span>
-<span class="normal"><a href="#__codelineno-32-42">42</a></span>
-<span class="normal"><a href="#__codelineno-32-43">43</a></span>
-<span class="normal"><a href="#__codelineno-32-44">44</a></span>
-<span class="normal"><a href="#__codelineno-32-45">45</a></span>
-<span class="normal"><a href="#__codelineno-32-46">46</a></span>
-<span class="normal"><a href="#__codelineno-32-47">47</a></span>
-<span class="normal"><a href="#__codelineno-32-48">48</a></span>
-<span class="normal"><a href="#__codelineno-32-49">49</a></span>
-<span class="normal"><a href="#__codelineno-32-50">50</a></span>
-<span class="normal"><a href="#__codelineno-32-51">51</a></span>
-<span class="normal"><a href="#__codelineno-32-52">52</a></span>
-<span class="normal"><a href="#__codelineno-32-53">53</a></span>
-<span class="normal"><a href="#__codelineno-32-54">54</a></span>
-<span class="normal"><a href="#__codelineno-32-55">55</a></span>
-<span class="normal"><a href="#__codelineno-32-56">56</a></span>
-<span class="normal"><a href="#__codelineno-32-57">57</a></span>
-<span class="normal"><a href="#__codelineno-32-58">58</a></span>
-<span class="normal"><a href="#__codelineno-32-59">59</a></span>
-<span class="normal"><a href="#__codelineno-32-60">60</a></span>
-<span class="normal"><a href="#__codelineno-32-61">61</a></span>
-<span class="normal"><a href="#__codelineno-32-62">62</a></span>
-<span class="normal"><a href="#__codelineno-32-63">63</a></span>
-<span class="normal"><a href="#__codelineno-32-64">64</a></span>
-<span class="normal"><a href="#__codelineno-32-65">65</a></span>
-<span class="normal"><a href="#__codelineno-32-66">66</a></span>
-<span class="normal"><a href="#__codelineno-32-67">67</a></span>
-<span class="normal"><a href="#__codelineno-32-68">68</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.persistence.*</span><span class="p">;</span>
-<a id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Set</span><span class="p">;</span>
-<a id="__codelineno-32-3" name="__codelineno-32-3"></a>
-<a id="__codelineno-32-4" name="__codelineno-32-4"></a><span class="nd">@Entity</span>
-<a id="__codelineno-32-5" name="__codelineno-32-5"></a><span class="nd">@Table</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno&quot;</span><span class="p">)</span>
-<a id="__codelineno-32-6" name="__codelineno-32-6"></a><span class="nd">@NamedQueries</span><span class="p">({</span>
-<a id="__codelineno-32-7" name="__codelineno-32-7"></a><span class="w">    </span><span class="c1">// --- Nivel 1: Básicos ---</span>
-<a id="__codelineno-32-8" name="__codelineno-32-8"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findAll&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-32-9" name="__codelineno-32-9"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a FROM Alumno a&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 1</span>
-<a id="__codelineno-32-10" name="__codelineno-32-10"></a>
-<a id="__codelineno-32-11" name="__codelineno-32-11"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findNombres&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-32-12" name="__codelineno-32-12"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a.nombre, a.apellidos FROM Alumno a&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 2</span>
-<a id="__codelineno-32-13" name="__codelineno-32-13"></a>
-<a id="__codelineno-32-14" name="__codelineno-32-14"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findByEdadMayor&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-32-15" name="__codelineno-32-15"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a FROM Alumno a WHERE a.edad &gt;= :edad&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 3</span>
-<a id="__codelineno-32-16" name="__codelineno-32-16"></a>
-<a id="__codelineno-32-17" name="__codelineno-32-17"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findRepetidores&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-32-18" name="__codelineno-32-18"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a FROM Alumno a WHERE a.repetidor = true&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 4</span>
-<a id="__codelineno-32-19" name="__codelineno-32-19"></a>
-<a id="__codelineno-32-20" name="__codelineno-32-20"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findAllOrderedByEdad&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-32-21" name="__codelineno-32-21"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a FROM Alumno a ORDER BY a.edad DESC&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 5</span>
-<a id="__codelineno-32-22" name="__codelineno-32-22"></a>
-<a id="__codelineno-32-23" name="__codelineno-32-23"></a><span class="w">    </span><span class="c1">// --- Nivel 2: Agregaciones ---</span>
-<a id="__codelineno-32-24" name="__codelineno-32-24"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.countAll&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-32-25" name="__codelineno-32-25"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT COUNT(a) FROM Alumno a&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 6</span>
-<a id="__codelineno-32-26" name="__codelineno-32-26"></a>
-<a id="__codelineno-32-27" name="__codelineno-32-27"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.avgEdad&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-32-28" name="__codelineno-32-28"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT AVG(a.edad) FROM Alumno a&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 7</span>
-<a id="__codelineno-32-29" name="__codelineno-32-29"></a>
-<a id="__codelineno-32-30" name="__codelineno-32-30"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.sumEdad&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-32-31" name="__codelineno-32-31"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT SUM(a.edad) FROM Alumno a&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 9</span>
-<a id="__codelineno-32-32" name="__codelineno-32-32"></a>
-<a id="__codelineno-32-33" name="__codelineno-32-33"></a><span class="w">    </span><span class="c1">// --- Nivel 4: Left Joins / Colecciones Vacías ---</span>
-<a id="__codelineno-32-34" name="__codelineno-32-34"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findAllWithNotes&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-32-35" name="__codelineno-32-35"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a.nombre, e.nota FROM Alumno a LEFT JOIN a.examenes e&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 16</span>
-<a id="__codelineno-32-36" name="__codelineno-32-36"></a>
-<a id="__codelineno-32-37" name="__codelineno-32-37"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findSinExamenes&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-32-38" name="__codelineno-32-38"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a.nombre FROM Alumno a WHERE a.examenes IS EMPTY&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 17</span>
-<a id="__codelineno-32-39" name="__codelineno-32-39"></a>
-<a id="__codelineno-32-40" name="__codelineno-32-40"></a><span class="w">    </span><span class="c1">// --- Nivel 5: Group By ---</span>
-<a id="__codelineno-32-41" name="__codelineno-32-41"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.avgNotas&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-32-42" name="__codelineno-32-42"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a.nombre, AVG(e.nota) FROM Alumno a JOIN a.examenes e GROUP BY a.nombre&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 21</span>
-<a id="__codelineno-32-43" name="__codelineno-32-43"></a>
-<a id="__codelineno-32-44" name="__codelineno-32-44"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findAprobadosMedia&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-32-45" name="__codelineno-32-45"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a.nombre, AVG(e.nota) FROM Alumno a JOIN a.examenes e GROUP BY a.nombre HAVING AVG(e.nota) &gt; 5&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 23</span>
-<a id="__codelineno-32-46" name="__codelineno-32-46"></a>
-<a id="__codelineno-32-47" name="__codelineno-32-47"></a><span class="w">    </span><span class="c1">// --- Nivel 6: Subconsultas ---</span>
-<a id="__codelineno-32-48" name="__codelineno-32-48"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findOlderThanAvg&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-32-49" name="__codelineno-32-49"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a.nombre, a.edad FROM Alumno a WHERE a.edad &gt; (SELECT AVG(a2.edad) FROM Alumno a2)&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 27</span>
-<a id="__codelineno-32-50" name="__codelineno-32-50"></a>
-<a id="__codelineno-32-51" name="__codelineno-32-51"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findSuspensos&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-32-52" name="__codelineno-32-52"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT DISTINCT e.alumno.nombre FROM Examen e WHERE e.nota &lt; 5&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Ej. 28 (Mapeada aquí por lógica de negocio, aunque usa Examen)</span>
-<a id="__codelineno-32-53" name="__codelineno-32-53"></a><span class="p">})</span>
-<a id="__codelineno-32-54" name="__codelineno-32-54"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Alumno</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-32-55" name="__codelineno-32-55"></a><span class="w">    </span><span class="nd">@Id</span>
-<a id="__codelineno-32-56" name="__codelineno-32-56"></a><span class="w">    </span><span class="nd">@GeneratedValue</span><span class="p">(</span><span class="n">strategy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenerationType</span><span class="p">.</span><span class="na">IDENTITY</span><span class="p">)</span>
-<a id="__codelineno-32-57" name="__codelineno-32-57"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">idAlumno</span><span class="p">;</span>
-<a id="__codelineno-32-58" name="__codelineno-32-58"></a>
-<a id="__codelineno-32-59" name="__codelineno-32-59"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
-<a id="__codelineno-32-60" name="__codelineno-32-60"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">apellidos</span><span class="p">;</span>
-<a id="__codelineno-32-61" name="__codelineno-32-61"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
-<a id="__codelineno-32-62" name="__codelineno-32-62"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Boolean</span><span class="w"> </span><span class="n">repetidor</span><span class="p">;</span>
-<a id="__codelineno-32-63" name="__codelineno-32-63"></a>
-<a id="__codelineno-32-64" name="__codelineno-32-64"></a><span class="w">    </span><span class="nd">@OneToMany</span><span class="p">(</span><span class="n">mappedBy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;alumno&quot;</span><span class="p">)</span>
-<a id="__codelineno-32-65" name="__codelineno-32-65"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Examen</span><span class="o">&gt;</span><span class="w"> </span><span class="n">examenes</span><span class="p">;</span>
-<a id="__codelineno-32-66" name="__codelineno-32-66"></a>
-<a id="__codelineno-32-67" name="__codelineno-32-67"></a><span class="w">    </span><span class="c1">// Getters y Setters...</span>
-<a id="__codelineno-32-68" name="__codelineno-32-68"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="42-entitat-examen-amb-namedqueries">4.2. Entitat <code>Examen</code> amb NamedQueries</h2>
+<h3 id="41-entitat-alumno-amb-namedqueries">4.1. Entitat <code>Alumno</code> amb NamedQueries</h3>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-33-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-33-3"> 3</a></span>
@@ -2361,62 +3547,90 @@ int numAlumnes = (int) query.uniqueResult();
 <span class="normal"><a href="#__codelineno-33-51">51</a></span>
 <span class="normal"><a href="#__codelineno-33-52">52</a></span>
 <span class="normal"><a href="#__codelineno-33-53">53</a></span>
-<span class="normal"><a href="#__codelineno-33-54">54</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.persistence.*</span><span class="p">;</span>
-<a id="__codelineno-33-2" name="__codelineno-33-2"></a>
-<a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="nd">@Entity</span>
-<a id="__codelineno-33-4" name="__codelineno-33-4"></a><span class="nd">@Table</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen&quot;</span><span class="p">)</span>
-<a id="__codelineno-33-5" name="__codelineno-33-5"></a><span class="nd">@NamedQueries</span><span class="p">({</span>
-<a id="__codelineno-33-6" name="__codelineno-33-6"></a><span class="w">    </span><span class="c1">// --- Nivel 2: Agregaciones ---</span>
-<a id="__codelineno-33-7" name="__codelineno-33-7"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen.maxNota&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-33-8" name="__codelineno-33-8"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT MAX(e.nota) FROM Examen e&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 8</span>
-<a id="__codelineno-33-9" name="__codelineno-33-9"></a>
-<a id="__codelineno-33-10" name="__codelineno-33-10"></a><span class="w">    </span><span class="c1">// --- Nivel 3: Navegación de Objetos (Path Navigation) ---</span>
-<a id="__codelineno-33-11" name="__codelineno-33-11"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen.findAlumnoAndNota&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-33-12" name="__codelineno-33-12"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT e.alumno.nombre, e.nota FROM Examen e&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 11</span>
+<span class="normal"><a href="#__codelineno-33-54">54</a></span>
+<span class="normal"><a href="#__codelineno-33-55">55</a></span>
+<span class="normal"><a href="#__codelineno-33-56">56</a></span>
+<span class="normal"><a href="#__codelineno-33-57">57</a></span>
+<span class="normal"><a href="#__codelineno-33-58">58</a></span>
+<span class="normal"><a href="#__codelineno-33-59">59</a></span>
+<span class="normal"><a href="#__codelineno-33-60">60</a></span>
+<span class="normal"><a href="#__codelineno-33-61">61</a></span>
+<span class="normal"><a href="#__codelineno-33-62">62</a></span>
+<span class="normal"><a href="#__codelineno-33-63">63</a></span>
+<span class="normal"><a href="#__codelineno-33-64">64</a></span>
+<span class="normal"><a href="#__codelineno-33-65">65</a></span>
+<span class="normal"><a href="#__codelineno-33-66">66</a></span>
+<span class="normal"><a href="#__codelineno-33-67">67</a></span>
+<span class="normal"><a href="#__codelineno-33-68">68</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.persistence.*</span><span class="p">;</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Set</span><span class="p">;</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a>
+<a id="__codelineno-33-4" name="__codelineno-33-4"></a><span class="nd">@Entity</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5"></a><span class="nd">@Table</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno&quot;</span><span class="p">)</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6"></a><span class="nd">@NamedQueries</span><span class="p">({</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7"></a><span class="w">    </span><span class="c1">// --- Nivel 2: Básicos ---</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findAll&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-33-9" name="__codelineno-33-9"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a FROM Alumno a&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 1</span>
+<a id="__codelineno-33-10" name="__codelineno-33-10"></a>
+<a id="__codelineno-33-11" name="__codelineno-33-11"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findNombres&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-33-12" name="__codelineno-33-12"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a.nombre, a.apellidos FROM Alumno a&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 2</span>
 <a id="__codelineno-33-13" name="__codelineno-33-13"></a>
-<a id="__codelineno-33-14" name="__codelineno-33-14"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen.findModuloAndNotaOrdered&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-33-15" name="__codelineno-33-15"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT e.modulo.nombre, e.nota FROM Examen e ORDER BY e.nota DESC&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 12</span>
+<a id="__codelineno-33-14" name="__codelineno-33-14"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findByEdadMayor&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-33-15" name="__codelineno-33-15"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a FROM Alumno a WHERE a.edad &gt;= :edad&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 3</span>
 <a id="__codelineno-33-16" name="__codelineno-33-16"></a>
-<a id="__codelineno-33-17" name="__codelineno-33-17"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen.findAlumnosByModuloId&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-33-18" name="__codelineno-33-18"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT e.alumno.nombre, e.nota FROM Examen e WHERE e.modulo.idModulo = :idModulo&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 14</span>
+<a id="__codelineno-33-17" name="__codelineno-33-17"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findRepetidores&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-33-18" name="__codelineno-33-18"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a FROM Alumno a WHERE a.repetidor = true&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 4</span>
 <a id="__codelineno-33-19" name="__codelineno-33-19"></a>
-<a id="__codelineno-33-20" name="__codelineno-33-20"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen.findDetalleCompleto&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-33-21" name="__codelineno-33-21"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT e.alumno.nombre, e.modulo.nombre, e.nota FROM Examen e&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 15</span>
+<a id="__codelineno-33-20" name="__codelineno-33-20"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findAllOrderedByEdad&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-33-21" name="__codelineno-33-21"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a FROM Alumno a ORDER BY a.edad DESC&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 5</span>
 <a id="__codelineno-33-22" name="__codelineno-33-22"></a>
-<a id="__codelineno-33-23" name="__codelineno-33-23"></a><span class="w">    </span><span class="c1">// --- Nivel 4: Navegación Compleja ---</span>
-<a id="__codelineno-33-24" name="__codelineno-33-24"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen.findByProfesorNombre&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-33-25" name="__codelineno-33-25"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT e FROM Examen e JOIN e.modulo m JOIN m.profesores p WHERE p.nombre = :nombreProf&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 19</span>
+<a id="__codelineno-33-23" name="__codelineno-33-23"></a><span class="w">    </span><span class="c1">// --- Nivel 3: Agregaciones ---</span>
+<a id="__codelineno-33-24" name="__codelineno-33-24"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.countAll&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-33-25" name="__codelineno-33-25"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT COUNT(a) FROM Alumno a&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 6</span>
 <a id="__codelineno-33-26" name="__codelineno-33-26"></a>
-<a id="__codelineno-33-27" name="__codelineno-33-27"></a><span class="w">    </span><span class="c1">// --- Nivel 5: Group By ---</span>
-<a id="__codelineno-33-28" name="__codelineno-33-28"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen.avgNotaByAlumnoId&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-33-29" name="__codelineno-33-29"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT e.alumno.idAlumno, AVG(e.nota) FROM Examen e GROUP BY e.alumno.idAlumno&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 20</span>
-<a id="__codelineno-33-30" name="__codelineno-33-30"></a>
-<a id="__codelineno-33-31" name="__codelineno-33-31"></a><span class="w">    </span><span class="c1">// --- Nivel 6: Complejas ---</span>
-<a id="__codelineno-33-32" name="__codelineno-33-32"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen.findBestStudent&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-33-33" name="__codelineno-33-33"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT e.alumno.nombre, e.nota FROM Examen e WHERE e.nota = (SELECT MAX(e2.nota) FROM Examen e2)&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 26</span>
-<a id="__codelineno-33-34" name="__codelineno-33-34"></a>
-<a id="__codelineno-33-35" name="__codelineno-33-35"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen.findEstadoBoletin&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-33-36" name="__codelineno-33-36"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT e.alumno.nombre, e.nota, CASE WHEN e.nota &gt;= 5 THEN &#39;APROBADO&#39; ELSE &#39;SUSPENSO&#39; END FROM Examen e&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Ej. 29</span>
-<a id="__codelineno-33-37" name="__codelineno-33-37"></a><span class="p">})</span>
-<a id="__codelineno-33-38" name="__codelineno-33-38"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Examen</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-33-39" name="__codelineno-33-39"></a><span class="w">    </span><span class="nd">@Id</span>
-<a id="__codelineno-33-40" name="__codelineno-33-40"></a><span class="w">    </span><span class="nd">@GeneratedValue</span><span class="p">(</span><span class="n">strategy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenerationType</span><span class="p">.</span><span class="na">IDENTITY</span><span class="p">)</span>
-<a id="__codelineno-33-41" name="__codelineno-33-41"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">idExamen</span><span class="p">;</span>
-<a id="__codelineno-33-42" name="__codelineno-33-42"></a>
-<a id="__codelineno-33-43" name="__codelineno-33-43"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Double</span><span class="w"> </span><span class="n">nota</span><span class="p">;</span>
-<a id="__codelineno-33-44" name="__codelineno-33-44"></a>
-<a id="__codelineno-33-45" name="__codelineno-33-45"></a><span class="w">    </span><span class="nd">@ManyToOne</span>
-<a id="__codelineno-33-46" name="__codelineno-33-46"></a><span class="w">    </span><span class="nd">@JoinColumn</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;idAlumno&quot;</span><span class="p">)</span>
-<a id="__codelineno-33-47" name="__codelineno-33-47"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Alumno</span><span class="w"> </span><span class="n">alumno</span><span class="p">;</span>
-<a id="__codelineno-33-48" name="__codelineno-33-48"></a>
-<a id="__codelineno-33-49" name="__codelineno-33-49"></a><span class="w">    </span><span class="nd">@ManyToOne</span>
-<a id="__codelineno-33-50" name="__codelineno-33-50"></a><span class="w">    </span><span class="nd">@JoinColumn</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;idModul&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// OJO: Tu tabla tiene la columna &#39;idModul&#39;</span>
-<a id="__codelineno-33-51" name="__codelineno-33-51"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Modulo</span><span class="w"> </span><span class="n">modulo</span><span class="p">;</span>
-<a id="__codelineno-33-52" name="__codelineno-33-52"></a>
-<a id="__codelineno-33-53" name="__codelineno-33-53"></a><span class="w">    </span><span class="c1">// Getters y Setters...</span>
-<a id="__codelineno-33-54" name="__codelineno-33-54"></a><span class="p">}</span>
+<a id="__codelineno-33-27" name="__codelineno-33-27"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.avgEdad&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-33-28" name="__codelineno-33-28"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT AVG(a.edad) FROM Alumno a&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 7</span>
+<a id="__codelineno-33-29" name="__codelineno-33-29"></a>
+<a id="__codelineno-33-30" name="__codelineno-33-30"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.sumEdad&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-33-31" name="__codelineno-33-31"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT SUM(a.edad) FROM Alumno a&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 9</span>
+<a id="__codelineno-33-32" name="__codelineno-33-32"></a>
+<a id="__codelineno-33-33" name="__codelineno-33-33"></a><span class="w">    </span><span class="c1">// --- Nivel 5: Left Joins / Colecciones Vacías ---</span>
+<a id="__codelineno-33-34" name="__codelineno-33-34"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findAllWithNotes&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-33-35" name="__codelineno-33-35"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a.nombre, e.nota FROM Alumno a LEFT JOIN a.examenes e&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 16</span>
+<a id="__codelineno-33-36" name="__codelineno-33-36"></a>
+<a id="__codelineno-33-37" name="__codelineno-33-37"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findSinExamenes&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-33-38" name="__codelineno-33-38"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a.nombre FROM Alumno a WHERE a.examenes IS EMPTY&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 17</span>
+<a id="__codelineno-33-39" name="__codelineno-33-39"></a>
+<a id="__codelineno-33-40" name="__codelineno-33-40"></a><span class="w">    </span><span class="c1">// --- Nivel 6: Group By ---</span>
+<a id="__codelineno-33-41" name="__codelineno-33-41"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.avgNotas&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-33-42" name="__codelineno-33-42"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a.nombre, AVG(e.nota) FROM Alumno a JOIN a.examenes e GROUP BY a.nombre&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 21</span>
+<a id="__codelineno-33-43" name="__codelineno-33-43"></a>
+<a id="__codelineno-33-44" name="__codelineno-33-44"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findAprobadosMedia&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-33-45" name="__codelineno-33-45"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a.nombre, AVG(e.nota) FROM Alumno a JOIN a.examenes e GROUP BY a.nombre HAVING AVG(e.nota) &gt; 5&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 23</span>
+<a id="__codelineno-33-46" name="__codelineno-33-46"></a>
+<a id="__codelineno-33-47" name="__codelineno-33-47"></a><span class="w">    </span><span class="c1">// --- Nivel 7: Subconsultas ---</span>
+<a id="__codelineno-33-48" name="__codelineno-33-48"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findOlderThanAvg&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-33-49" name="__codelineno-33-49"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT a.nombre, a.edad FROM Alumno a WHERE a.edad &gt; (SELECT AVG(a2.edad) FROM Alumno a2)&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 27</span>
+<a id="__codelineno-33-50" name="__codelineno-33-50"></a>
+<a id="__codelineno-33-51" name="__codelineno-33-51"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alumno.findSuspensos&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-33-52" name="__codelineno-33-52"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT DISTINCT e.alumno.nombre FROM Examen e WHERE e.nota &lt; 5&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Ej. 28 (Mapeada aquí por lógica de negocio, aunque usa Examen)</span>
+<a id="__codelineno-33-53" name="__codelineno-33-53"></a><span class="p">})</span>
+<a id="__codelineno-33-54" name="__codelineno-33-54"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Alumno</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-55" name="__codelineno-33-55"></a><span class="w">    </span><span class="nd">@Id</span>
+<a id="__codelineno-33-56" name="__codelineno-33-56"></a><span class="w">    </span><span class="nd">@GeneratedValue</span><span class="p">(</span><span class="n">strategy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenerationType</span><span class="p">.</span><span class="na">IDENTITY</span><span class="p">)</span>
+<a id="__codelineno-33-57" name="__codelineno-33-57"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">idAlumno</span><span class="p">;</span>
+<a id="__codelineno-33-58" name="__codelineno-33-58"></a>
+<a id="__codelineno-33-59" name="__codelineno-33-59"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<a id="__codelineno-33-60" name="__codelineno-33-60"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">apellidos</span><span class="p">;</span>
+<a id="__codelineno-33-61" name="__codelineno-33-61"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+<a id="__codelineno-33-62" name="__codelineno-33-62"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Boolean</span><span class="w"> </span><span class="n">repetidor</span><span class="p">;</span>
+<a id="__codelineno-33-63" name="__codelineno-33-63"></a>
+<a id="__codelineno-33-64" name="__codelineno-33-64"></a><span class="w">    </span><span class="nd">@OneToMany</span><span class="p">(</span><span class="n">mappedBy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;alumno&quot;</span><span class="p">)</span>
+<a id="__codelineno-33-65" name="__codelineno-33-65"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Examen</span><span class="o">&gt;</span><span class="w"> </span><span class="n">examenes</span><span class="p">;</span>
+<a id="__codelineno-33-66" name="__codelineno-33-66"></a>
+<a id="__codelineno-33-67" name="__codelineno-33-67"></a><span class="w">    </span><span class="c1">// Getters y Setters...</span>
+<a id="__codelineno-33-68" name="__codelineno-33-68"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="43-entitat-modulo-amb-namedqueries">4.3. Entitat <code>Modulo</code> amb NamedQueries</h2>
+<h3 id="42-entitat-examen-amb-namedqueries">4.2. Entitat <code>Examen</code> amb NamedQueries</h3>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-34-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-34-3"> 3</a></span>
@@ -2448,40 +3662,84 @@ int numAlumnes = (int) query.uniqueResult();
 <span class="normal"><a href="#__codelineno-34-29">29</a></span>
 <span class="normal"><a href="#__codelineno-34-30">30</a></span>
 <span class="normal"><a href="#__codelineno-34-31">31</a></span>
-<span class="normal"><a href="#__codelineno-34-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.persistence.*</span><span class="p">;</span>
-<a id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Set</span><span class="p">;</span>
-<a id="__codelineno-34-3" name="__codelineno-34-3"></a>
-<a id="__codelineno-34-4" name="__codelineno-34-4"></a><span class="nd">@Entity</span>
-<a id="__codelineno-34-5" name="__codelineno-34-5"></a><span class="nd">@Table</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Modulo&quot;</span><span class="p">)</span>
-<a id="__codelineno-34-6" name="__codelineno-34-6"></a><span class="nd">@NamedQueries</span><span class="p">({</span>
-<a id="__codelineno-34-7" name="__codelineno-34-7"></a><span class="w">    </span><span class="c1">// --- Nivel 4: Left Joins ---</span>
-<a id="__codelineno-34-8" name="__codelineno-34-8"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Modulo.findAllWithProfesores&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-34-9" name="__codelineno-34-9"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT m.nombre, p.nombre FROM Modulo m LEFT JOIN m.profesores p&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 18</span>
-<a id="__codelineno-34-10" name="__codelineno-34-10"></a>
-<a id="__codelineno-34-11" name="__codelineno-34-11"></a><span class="w">    </span><span class="c1">// --- Nivel 5: Agregaciones ---</span>
-<a id="__codelineno-34-12" name="__codelineno-34-12"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Modulo.countExamenes&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-34-13" name="__codelineno-34-13"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT m.nombre, COUNT(e) FROM Modulo m JOIN m.examenes e GROUP BY m.nombre&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 22</span>
-<a id="__codelineno-34-14" name="__codelineno-34-14"></a>
-<a id="__codelineno-34-15" name="__codelineno-34-15"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Modulo.findAprobadosMedia&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-34-16" name="__codelineno-34-16"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT m.nombre, AVG(e.nota) FROM Modulo m JOIN m.examenes e GROUP BY m.nombre HAVING AVG(e.nota) &gt;= 5&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Ej. 24</span>
-<a id="__codelineno-34-17" name="__codelineno-34-17"></a><span class="p">})</span>
-<a id="__codelineno-34-18" name="__codelineno-34-18"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Modulo</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-34-19" name="__codelineno-34-19"></a><span class="w">    </span><span class="nd">@Id</span>
-<a id="__codelineno-34-20" name="__codelineno-34-20"></a><span class="w">    </span><span class="nd">@GeneratedValue</span><span class="p">(</span><span class="n">strategy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenerationType</span><span class="p">.</span><span class="na">IDENTITY</span><span class="p">)</span>
-<a id="__codelineno-34-21" name="__codelineno-34-21"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">idModulo</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-34-32">32</a></span>
+<span class="normal"><a href="#__codelineno-34-33">33</a></span>
+<span class="normal"><a href="#__codelineno-34-34">34</a></span>
+<span class="normal"><a href="#__codelineno-34-35">35</a></span>
+<span class="normal"><a href="#__codelineno-34-36">36</a></span>
+<span class="normal"><a href="#__codelineno-34-37">37</a></span>
+<span class="normal"><a href="#__codelineno-34-38">38</a></span>
+<span class="normal"><a href="#__codelineno-34-39">39</a></span>
+<span class="normal"><a href="#__codelineno-34-40">40</a></span>
+<span class="normal"><a href="#__codelineno-34-41">41</a></span>
+<span class="normal"><a href="#__codelineno-34-42">42</a></span>
+<span class="normal"><a href="#__codelineno-34-43">43</a></span>
+<span class="normal"><a href="#__codelineno-34-44">44</a></span>
+<span class="normal"><a href="#__codelineno-34-45">45</a></span>
+<span class="normal"><a href="#__codelineno-34-46">46</a></span>
+<span class="normal"><a href="#__codelineno-34-47">47</a></span>
+<span class="normal"><a href="#__codelineno-34-48">48</a></span>
+<span class="normal"><a href="#__codelineno-34-49">49</a></span>
+<span class="normal"><a href="#__codelineno-34-50">50</a></span>
+<span class="normal"><a href="#__codelineno-34-51">51</a></span>
+<span class="normal"><a href="#__codelineno-34-52">52</a></span>
+<span class="normal"><a href="#__codelineno-34-53">53</a></span>
+<span class="normal"><a href="#__codelineno-34-54">54</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.persistence.*</span><span class="p">;</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2"></a>
+<a id="__codelineno-34-3" name="__codelineno-34-3"></a><span class="nd">@Entity</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4"></a><span class="nd">@Table</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen&quot;</span><span class="p">)</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5"></a><span class="nd">@NamedQueries</span><span class="p">({</span>
+<a id="__codelineno-34-6" name="__codelineno-34-6"></a><span class="w">    </span><span class="c1">// --- Nivel 3: Agregaciones ---</span>
+<a id="__codelineno-34-7" name="__codelineno-34-7"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen.maxNota&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-34-8" name="__codelineno-34-8"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT MAX(e.nota) FROM Examen e&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 8</span>
+<a id="__codelineno-34-9" name="__codelineno-34-9"></a>
+<a id="__codelineno-34-10" name="__codelineno-34-10"></a><span class="w">    </span><span class="c1">// --- Nivel 4: Navegación de Objetos (Path Navigation) ---</span>
+<a id="__codelineno-34-11" name="__codelineno-34-11"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen.findAlumnoAndNota&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-34-12" name="__codelineno-34-12"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT e.alumno.nombre, e.nota FROM Examen e&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 11</span>
+<a id="__codelineno-34-13" name="__codelineno-34-13"></a>
+<a id="__codelineno-34-14" name="__codelineno-34-14"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen.findModuloAndNotaOrdered&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-34-15" name="__codelineno-34-15"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT e.modulo.nombre, e.nota FROM Examen e ORDER BY e.nota DESC&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 12</span>
+<a id="__codelineno-34-16" name="__codelineno-34-16"></a>
+<a id="__codelineno-34-17" name="__codelineno-34-17"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen.findAlumnosByModuloId&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-34-18" name="__codelineno-34-18"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT e.alumno.nombre, e.nota FROM Examen e WHERE e.modulo.idModulo = :idModulo&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 14</span>
+<a id="__codelineno-34-19" name="__codelineno-34-19"></a>
+<a id="__codelineno-34-20" name="__codelineno-34-20"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen.findDetalleCompleto&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-34-21" name="__codelineno-34-21"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT e.alumno.nombre, e.modulo.nombre, e.nota FROM Examen e&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 15</span>
 <a id="__codelineno-34-22" name="__codelineno-34-22"></a>
-<a id="__codelineno-34-23" name="__codelineno-34-23"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
-<a id="__codelineno-34-24" name="__codelineno-34-24"></a>
-<a id="__codelineno-34-25" name="__codelineno-34-25"></a><span class="w">    </span><span class="nd">@ManyToMany</span><span class="p">(</span><span class="n">mappedBy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;modulos&quot;</span><span class="p">)</span>
-<a id="__codelineno-34-26" name="__codelineno-34-26"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Profesor</span><span class="o">&gt;</span><span class="w"> </span><span class="n">profesores</span><span class="p">;</span>
-<a id="__codelineno-34-27" name="__codelineno-34-27"></a>
-<a id="__codelineno-34-28" name="__codelineno-34-28"></a><span class="w">    </span><span class="nd">@OneToMany</span><span class="p">(</span><span class="n">mappedBy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;modulo&quot;</span><span class="p">)</span>
-<a id="__codelineno-34-29" name="__codelineno-34-29"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Examen</span><span class="o">&gt;</span><span class="w"> </span><span class="n">examenes</span><span class="p">;</span>
+<a id="__codelineno-34-23" name="__codelineno-34-23"></a><span class="w">    </span><span class="c1">// --- Nivel 5: Navegación Compleja ---</span>
+<a id="__codelineno-34-24" name="__codelineno-34-24"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen.findByProfesorNombre&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-34-25" name="__codelineno-34-25"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT e FROM Examen e JOIN e.modulo m JOIN m.profesores p WHERE p.nombre = :nombreProf&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 19</span>
+<a id="__codelineno-34-26" name="__codelineno-34-26"></a>
+<a id="__codelineno-34-27" name="__codelineno-34-27"></a><span class="w">    </span><span class="c1">// --- Nivel 6: Group By ---</span>
+<a id="__codelineno-34-28" name="__codelineno-34-28"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen.avgNotaByAlumnoId&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-34-29" name="__codelineno-34-29"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT e.alumno.idAlumno, AVG(e.nota) FROM Examen e GROUP BY e.alumno.idAlumno&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 20</span>
 <a id="__codelineno-34-30" name="__codelineno-34-30"></a>
-<a id="__codelineno-34-31" name="__codelineno-34-31"></a><span class="w">    </span><span class="c1">// Getters y Setters...</span>
-<a id="__codelineno-34-32" name="__codelineno-34-32"></a><span class="p">}</span>
+<a id="__codelineno-34-31" name="__codelineno-34-31"></a><span class="w">    </span><span class="c1">// --- Nivel 7: Complejas ---</span>
+<a id="__codelineno-34-32" name="__codelineno-34-32"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen.findBestStudent&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-34-33" name="__codelineno-34-33"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT e.alumno.nombre, e.nota FROM Examen e WHERE e.nota = (SELECT MAX(e2.nota) FROM Examen e2)&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 26</span>
+<a id="__codelineno-34-34" name="__codelineno-34-34"></a>
+<a id="__codelineno-34-35" name="__codelineno-34-35"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Examen.findEstadoBoletin&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-34-36" name="__codelineno-34-36"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT e.alumno.nombre, e.nota, CASE WHEN e.nota &gt;= 5 THEN &#39;APROBADO&#39; ELSE &#39;SUSPENSO&#39; END FROM Examen e&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Ej. 29</span>
+<a id="__codelineno-34-37" name="__codelineno-34-37"></a><span class="p">})</span>
+<a id="__codelineno-34-38" name="__codelineno-34-38"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Examen</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-34-39" name="__codelineno-34-39"></a><span class="w">    </span><span class="nd">@Id</span>
+<a id="__codelineno-34-40" name="__codelineno-34-40"></a><span class="w">    </span><span class="nd">@GeneratedValue</span><span class="p">(</span><span class="n">strategy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenerationType</span><span class="p">.</span><span class="na">IDENTITY</span><span class="p">)</span>
+<a id="__codelineno-34-41" name="__codelineno-34-41"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">idExamen</span><span class="p">;</span>
+<a id="__codelineno-34-42" name="__codelineno-34-42"></a>
+<a id="__codelineno-34-43" name="__codelineno-34-43"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Double</span><span class="w"> </span><span class="n">nota</span><span class="p">;</span>
+<a id="__codelineno-34-44" name="__codelineno-34-44"></a>
+<a id="__codelineno-34-45" name="__codelineno-34-45"></a><span class="w">    </span><span class="nd">@ManyToOne</span>
+<a id="__codelineno-34-46" name="__codelineno-34-46"></a><span class="w">    </span><span class="nd">@JoinColumn</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;idAlumno&quot;</span><span class="p">)</span>
+<a id="__codelineno-34-47" name="__codelineno-34-47"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Alumno</span><span class="w"> </span><span class="n">alumno</span><span class="p">;</span>
+<a id="__codelineno-34-48" name="__codelineno-34-48"></a>
+<a id="__codelineno-34-49" name="__codelineno-34-49"></a><span class="w">    </span><span class="nd">@ManyToOne</span>
+<a id="__codelineno-34-50" name="__codelineno-34-50"></a><span class="w">    </span><span class="nd">@JoinColumn</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;idModul&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// OJO: Tu tabla tiene la columna &#39;idModul&#39;</span>
+<a id="__codelineno-34-51" name="__codelineno-34-51"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Modulo</span><span class="w"> </span><span class="n">modulo</span><span class="p">;</span>
+<a id="__codelineno-34-52" name="__codelineno-34-52"></a>
+<a id="__codelineno-34-53" name="__codelineno-34-53"></a><span class="w">    </span><span class="c1">// Getters y Setters...</span>
+<a id="__codelineno-34-54" name="__codelineno-34-54"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="44-entitat-profesor-amb-namedqueries">4.4. Entitat <code>Profesor</code> amb NamedQueries</h2>
+<h3 id="43-entitat-modulo-amb-namedqueries">4.3. Entitat <code>Modulo</code> amb NamedQueries</h3>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-35-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-35-3"> 3</a></span>
@@ -2513,54 +3771,119 @@ int numAlumnes = (int) query.uniqueResult();
 <span class="normal"><a href="#__codelineno-35-29">29</a></span>
 <span class="normal"><a href="#__codelineno-35-30">30</a></span>
 <span class="normal"><a href="#__codelineno-35-31">31</a></span>
-<span class="normal"><a href="#__codelineno-35-32">32</a></span>
-<span class="normal"><a href="#__codelineno-35-33">33</a></span>
-<span class="normal"><a href="#__codelineno-35-34">34</a></span>
-<span class="normal"><a href="#__codelineno-35-35">35</a></span>
-<span class="normal"><a href="#__codelineno-35-36">36</a></span>
-<span class="normal"><a href="#__codelineno-35-37">37</a></span>
-<span class="normal"><a href="#__codelineno-35-38">38</a></span>
-<span class="normal"><a href="#__codelineno-35-39">39</a></span>
-<span class="normal"><a href="#__codelineno-35-40">40</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.persistence.*</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-35-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.persistence.*</span><span class="p">;</span>
 <a id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Set</span><span class="p">;</span>
 <a id="__codelineno-35-3" name="__codelineno-35-3"></a>
 <a id="__codelineno-35-4" name="__codelineno-35-4"></a><span class="nd">@Entity</span>
-<a id="__codelineno-35-5" name="__codelineno-35-5"></a><span class="nd">@Table</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Profesor&quot;</span><span class="p">)</span>
+<a id="__codelineno-35-5" name="__codelineno-35-5"></a><span class="nd">@Table</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Modulo&quot;</span><span class="p">)</span>
 <a id="__codelineno-35-6" name="__codelineno-35-6"></a><span class="nd">@NamedQueries</span><span class="p">({</span>
-<a id="__codelineno-35-7" name="__codelineno-35-7"></a><span class="w">    </span><span class="c1">// --- Nivel 2: Contador básico ---</span>
-<a id="__codelineno-35-8" name="__codelineno-35-8"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Profesor.countAll&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-35-9" name="__codelineno-35-9"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT COUNT(p) FROM Profesor p&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 10</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7"></a><span class="w">    </span><span class="c1">// --- Nivel 5: Left Joins ---</span>
+<a id="__codelineno-35-8" name="__codelineno-35-8"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Modulo.findAllWithProfesores&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-35-9" name="__codelineno-35-9"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT m.nombre, p.nombre FROM Modulo m LEFT JOIN m.profesores p&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 18</span>
 <a id="__codelineno-35-10" name="__codelineno-35-10"></a>
-<a id="__codelineno-35-11" name="__codelineno-35-11"></a><span class="w">    </span><span class="c1">// --- Nivel 3: Relación ManyToMany ---</span>
-<a id="__codelineno-35-12" name="__codelineno-35-12"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Profesor.findWithModulos&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-35-13" name="__codelineno-35-13"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT p.nombre, m.nombre FROM Profesor p JOIN p.modulos m&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 13</span>
+<a id="__codelineno-35-11" name="__codelineno-35-11"></a><span class="w">    </span><span class="c1">// --- Nivel 6: Agregaciones ---</span>
+<a id="__codelineno-35-12" name="__codelineno-35-12"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Modulo.countExamenes&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-35-13" name="__codelineno-35-13"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT m.nombre, COUNT(e) FROM Modulo m JOIN m.examenes e GROUP BY m.nombre&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 22</span>
 <a id="__codelineno-35-14" name="__codelineno-35-14"></a>
-<a id="__codelineno-35-15" name="__codelineno-35-15"></a><span class="w">    </span><span class="c1">// --- Nivel 5: Agregación ---</span>
-<a id="__codelineno-35-16" name="__codelineno-35-16"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Profesor.countModulos&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-35-17" name="__codelineno-35-17"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT p.nombre, COUNT(m) FROM Profesor p JOIN p.modulos m GROUP BY p.nombre&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 25</span>
-<a id="__codelineno-35-18" name="__codelineno-35-18"></a>
-<a id="__codelineno-35-19" name="__codelineno-35-19"></a><span class="w">    </span><span class="c1">// --- Nivel 6: El Reto Final (Relación Transitiva) ---</span>
-<a id="__codelineno-35-20" name="__codelineno-35-20"></a><span class="w">    </span><span class="c1">// Profesor -&gt; Modulos -&gt; Examenes</span>
-<a id="__codelineno-35-21" name="__codelineno-35-21"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Profesor.countExamenesCorregidos&quot;</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-35-22" name="__codelineno-35-22"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT p.nombre, COUNT(e) FROM Profesor p JOIN p.modulos m LEFT JOIN m.examenes e GROUP BY p.nombre&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Ej. 30</span>
-<a id="__codelineno-35-23" name="__codelineno-35-23"></a><span class="p">})</span>
-<a id="__codelineno-35-24" name="__codelineno-35-24"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Profesor</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-35-25" name="__codelineno-35-25"></a><span class="w">    </span><span class="nd">@Id</span>
-<a id="__codelineno-35-26" name="__codelineno-35-26"></a><span class="w">    </span><span class="nd">@GeneratedValue</span><span class="p">(</span><span class="n">strategy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenerationType</span><span class="p">.</span><span class="na">IDENTITY</span><span class="p">)</span>
-<a id="__codelineno-35-27" name="__codelineno-35-27"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">idProfesor</span><span class="p">;</span>
-<a id="__codelineno-35-28" name="__codelineno-35-28"></a>
-<a id="__codelineno-35-29" name="__codelineno-35-29"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<a id="__codelineno-35-15" name="__codelineno-35-15"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Modulo.findAprobadosMedia&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-35-16" name="__codelineno-35-16"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT m.nombre, AVG(e.nota) FROM Modulo m JOIN m.examenes e GROUP BY m.nombre HAVING AVG(e.nota) &gt;= 5&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Ej. 24</span>
+<a id="__codelineno-35-17" name="__codelineno-35-17"></a><span class="p">})</span>
+<a id="__codelineno-35-18" name="__codelineno-35-18"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Modulo</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-35-19" name="__codelineno-35-19"></a><span class="w">    </span><span class="nd">@Id</span>
+<a id="__codelineno-35-20" name="__codelineno-35-20"></a><span class="w">    </span><span class="nd">@GeneratedValue</span><span class="p">(</span><span class="n">strategy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenerationType</span><span class="p">.</span><span class="na">IDENTITY</span><span class="p">)</span>
+<a id="__codelineno-35-21" name="__codelineno-35-21"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">idModulo</span><span class="p">;</span>
+<a id="__codelineno-35-22" name="__codelineno-35-22"></a>
+<a id="__codelineno-35-23" name="__codelineno-35-23"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<a id="__codelineno-35-24" name="__codelineno-35-24"></a>
+<a id="__codelineno-35-25" name="__codelineno-35-25"></a><span class="w">    </span><span class="nd">@ManyToMany</span><span class="p">(</span><span class="n">mappedBy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;modulos&quot;</span><span class="p">)</span>
+<a id="__codelineno-35-26" name="__codelineno-35-26"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Profesor</span><span class="o">&gt;</span><span class="w"> </span><span class="n">profesores</span><span class="p">;</span>
+<a id="__codelineno-35-27" name="__codelineno-35-27"></a>
+<a id="__codelineno-35-28" name="__codelineno-35-28"></a><span class="w">    </span><span class="nd">@OneToMany</span><span class="p">(</span><span class="n">mappedBy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;modulo&quot;</span><span class="p">)</span>
+<a id="__codelineno-35-29" name="__codelineno-35-29"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Examen</span><span class="o">&gt;</span><span class="w"> </span><span class="n">examenes</span><span class="p">;</span>
 <a id="__codelineno-35-30" name="__codelineno-35-30"></a>
-<a id="__codelineno-35-31" name="__codelineno-35-31"></a><span class="w">    </span><span class="nd">@ManyToMany</span>
-<a id="__codelineno-35-32" name="__codelineno-35-32"></a><span class="w">    </span><span class="nd">@JoinTable</span><span class="p">(</span>
-<a id="__codelineno-35-33" name="__codelineno-35-33"></a><span class="w">        </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Docencia&quot;</span><span class="p">,</span>
-<a id="__codelineno-35-34" name="__codelineno-35-34"></a><span class="w">        </span><span class="n">joinColumns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nd">@JoinColumn</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;idProfesor&quot;</span><span class="p">),</span>
-<a id="__codelineno-35-35" name="__codelineno-35-35"></a><span class="w">        </span><span class="n">inverseJoinColumns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nd">@JoinColumn</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;idModulo&quot;</span><span class="p">)</span>
-<a id="__codelineno-35-36" name="__codelineno-35-36"></a><span class="w">    </span><span class="p">)</span>
-<a id="__codelineno-35-37" name="__codelineno-35-37"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Modulo</span><span class="o">&gt;</span><span class="w"> </span><span class="n">modulos</span><span class="p">;</span>
-<a id="__codelineno-35-38" name="__codelineno-35-38"></a>
-<a id="__codelineno-35-39" name="__codelineno-35-39"></a><span class="w">    </span><span class="c1">// Getters y Setters...</span>
-<a id="__codelineno-35-40" name="__codelineno-35-40"></a><span class="p">}</span>
+<a id="__codelineno-35-31" name="__codelineno-35-31"></a><span class="w">    </span><span class="c1">// Getters y Setters...</span>
+<a id="__codelineno-35-32" name="__codelineno-35-32"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="44-entitat-profesor-amb-namedqueries">4.4. Entitat <code>Profesor</code> amb NamedQueries</h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-36-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-36-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-36-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-36-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-36-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-36-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-36-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-36-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-36-10">10</a></span>
+<span class="normal"><a href="#__codelineno-36-11">11</a></span>
+<span class="normal"><a href="#__codelineno-36-12">12</a></span>
+<span class="normal"><a href="#__codelineno-36-13">13</a></span>
+<span class="normal"><a href="#__codelineno-36-14">14</a></span>
+<span class="normal"><a href="#__codelineno-36-15">15</a></span>
+<span class="normal"><a href="#__codelineno-36-16">16</a></span>
+<span class="normal"><a href="#__codelineno-36-17">17</a></span>
+<span class="normal"><a href="#__codelineno-36-18">18</a></span>
+<span class="normal"><a href="#__codelineno-36-19">19</a></span>
+<span class="normal"><a href="#__codelineno-36-20">20</a></span>
+<span class="normal"><a href="#__codelineno-36-21">21</a></span>
+<span class="normal"><a href="#__codelineno-36-22">22</a></span>
+<span class="normal"><a href="#__codelineno-36-23">23</a></span>
+<span class="normal"><a href="#__codelineno-36-24">24</a></span>
+<span class="normal"><a href="#__codelineno-36-25">25</a></span>
+<span class="normal"><a href="#__codelineno-36-26">26</a></span>
+<span class="normal"><a href="#__codelineno-36-27">27</a></span>
+<span class="normal"><a href="#__codelineno-36-28">28</a></span>
+<span class="normal"><a href="#__codelineno-36-29">29</a></span>
+<span class="normal"><a href="#__codelineno-36-30">30</a></span>
+<span class="normal"><a href="#__codelineno-36-31">31</a></span>
+<span class="normal"><a href="#__codelineno-36-32">32</a></span>
+<span class="normal"><a href="#__codelineno-36-33">33</a></span>
+<span class="normal"><a href="#__codelineno-36-34">34</a></span>
+<span class="normal"><a href="#__codelineno-36-35">35</a></span>
+<span class="normal"><a href="#__codelineno-36-36">36</a></span>
+<span class="normal"><a href="#__codelineno-36-37">37</a></span>
+<span class="normal"><a href="#__codelineno-36-38">38</a></span>
+<span class="normal"><a href="#__codelineno-36-39">39</a></span>
+<span class="normal"><a href="#__codelineno-36-40">40</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.persistence.*</span><span class="p">;</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Set</span><span class="p">;</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3"></a>
+<a id="__codelineno-36-4" name="__codelineno-36-4"></a><span class="nd">@Entity</span>
+<a id="__codelineno-36-5" name="__codelineno-36-5"></a><span class="nd">@Table</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Profesor&quot;</span><span class="p">)</span>
+<a id="__codelineno-36-6" name="__codelineno-36-6"></a><span class="nd">@NamedQueries</span><span class="p">({</span>
+<a id="__codelineno-36-7" name="__codelineno-36-7"></a><span class="w">    </span><span class="c1">// --- Nivel 3: Contador básico ---</span>
+<a id="__codelineno-36-8" name="__codelineno-36-8"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Profesor.countAll&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-36-9" name="__codelineno-36-9"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT COUNT(p) FROM Profesor p&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 10</span>
+<a id="__codelineno-36-10" name="__codelineno-36-10"></a>
+<a id="__codelineno-36-11" name="__codelineno-36-11"></a><span class="w">    </span><span class="c1">// --- Nivel 4: Relación ManyToMany ---</span>
+<a id="__codelineno-36-12" name="__codelineno-36-12"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Profesor.findWithModulos&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-36-13" name="__codelineno-36-13"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT p.nombre, m.nombre FROM Profesor p JOIN p.modulos m&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 13</span>
+<a id="__codelineno-36-14" name="__codelineno-36-14"></a>
+<a id="__codelineno-36-15" name="__codelineno-36-15"></a><span class="w">    </span><span class="c1">// --- Nivel 6: Agregación ---</span>
+<a id="__codelineno-36-16" name="__codelineno-36-16"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Profesor.countModulos&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-36-17" name="__codelineno-36-17"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT p.nombre, COUNT(m) FROM Profesor p JOIN p.modulos m GROUP BY p.nombre&quot;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Ej. 25</span>
+<a id="__codelineno-36-18" name="__codelineno-36-18"></a>
+<a id="__codelineno-36-19" name="__codelineno-36-19"></a><span class="w">    </span><span class="c1">// --- Nivel 7: El Reto Final (Relación Transitiva) ---</span>
+<a id="__codelineno-36-20" name="__codelineno-36-20"></a><span class="w">    </span><span class="c1">// Profesor -&gt; Modulos -&gt; Examenes</span>
+<a id="__codelineno-36-21" name="__codelineno-36-21"></a><span class="w">    </span><span class="nd">@NamedQuery</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Profesor.countExamenesCorregidos&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-36-22" name="__codelineno-36-22"></a><span class="w">                </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT p.nombre, COUNT(e) FROM Profesor p JOIN p.modulos m LEFT JOIN m.examenes e GROUP BY p.nombre&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Ej. 30</span>
+<a id="__codelineno-36-23" name="__codelineno-36-23"></a><span class="p">})</span>
+<a id="__codelineno-36-24" name="__codelineno-36-24"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Profesor</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-25" name="__codelineno-36-25"></a><span class="w">    </span><span class="nd">@Id</span>
+<a id="__codelineno-36-26" name="__codelineno-36-26"></a><span class="w">    </span><span class="nd">@GeneratedValue</span><span class="p">(</span><span class="n">strategy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenerationType</span><span class="p">.</span><span class="na">IDENTITY</span><span class="p">)</span>
+<a id="__codelineno-36-27" name="__codelineno-36-27"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">idProfesor</span><span class="p">;</span>
+<a id="__codelineno-36-28" name="__codelineno-36-28"></a>
+<a id="__codelineno-36-29" name="__codelineno-36-29"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<a id="__codelineno-36-30" name="__codelineno-36-30"></a>
+<a id="__codelineno-36-31" name="__codelineno-36-31"></a><span class="w">    </span><span class="nd">@ManyToMany</span>
+<a id="__codelineno-36-32" name="__codelineno-36-32"></a><span class="w">    </span><span class="nd">@JoinTable</span><span class="p">(</span>
+<a id="__codelineno-36-33" name="__codelineno-36-33"></a><span class="w">        </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Docencia&quot;</span><span class="p">,</span>
+<a id="__codelineno-36-34" name="__codelineno-36-34"></a><span class="w">        </span><span class="n">joinColumns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nd">@JoinColumn</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;idProfesor&quot;</span><span class="p">),</span>
+<a id="__codelineno-36-35" name="__codelineno-36-35"></a><span class="w">        </span><span class="n">inverseJoinColumns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nd">@JoinColumn</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;idModulo&quot;</span><span class="p">)</span>
+<a id="__codelineno-36-36" name="__codelineno-36-36"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-36-37" name="__codelineno-36-37"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Modulo</span><span class="o">&gt;</span><span class="w"> </span><span class="n">modulos</span><span class="p">;</span>
+<a id="__codelineno-36-38" name="__codelineno-36-38"></a>
+<a id="__codelineno-36-39" name="__codelineno-36-39"></a><span class="w">    </span><span class="c1">// Getters y Setters...</span>
+<a id="__codelineno-36-40" name="__codelineno-36-40"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 
 
