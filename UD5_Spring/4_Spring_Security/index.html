@@ -2583,8 +2583,7 @@
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>-storetype<span class="w"> </span>PKCS12<span class="w"> </span>-keystore<span class="w"> </span>jgce.p12<span class="w"> </span>-validity<span class="w"> </span><span class="m">3650</span>
 </code></pre></div></td></tr></table></div>
 <p>Després d'executar aquesta comanda, hem de respondre sobre qui som, de la següent manera:</p>
-<center>![keytool](./img/keytool.png){width=95%}</center>
-
+<p><img alt="keytool" class="al95" src="../img/keytool.png" /></p>
 <h3 id="12-configurar-spring">1.2. Configurar Spring</h3>
 <p>Un cop finalitzat el procés, hem d'afegir el certificat dins del nostre projecte. Per exemple, dins de <code>/resources/keystore</code>. Finalment, hem de carregar el certificat i habilitar SSL, simplement afegint aquestes línies a <code>application.properties</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
@@ -2609,16 +2608,13 @@
 <a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="c1"># Use HTTPS instead of HTTP</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11"></a>server.ssl.enabled<span class="o">=</span><span class="nb">true</span>
 </code></pre></div></td></tr></table></div>
-<center>![HTTPS_Spring_Project](./img/HTTPS_Spring_Project.png){width=95%}</center>
-
+<p><img alt="HTTPS_Spring_Project" class="al95" src="../img/HTTPS_Spring_Project.png" /></p>
 <p>I això és tot, quan Spring comenci veurem que està funcionant amb el protocol <code>https</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="m">2023</span>-01-13<span class="w"> </span><span class="m">08</span>:29:37.267<span class="w">  </span>INFO<span class="w"> </span><span class="m">83291</span><span class="w"> </span>---<span class="w"> </span><span class="o">[</span><span class="w">           </span>main<span class="o">]</span><span class="w"> </span>o.s.b.w.embedded.tomcat.TomcatWebServer<span class="w">  </span>:<span class="w"> </span>Tomcat<span class="w"> </span>initialized<span class="w"> </span>with<span class="w"> </span>port<span class="o">(</span>s<span class="o">)</span>:<span class="w"> </span><span class="m">9091</span><span class="w"> </span><span class="o">(</span>https<span class="o">)</span>
 </code></pre></div></td></tr></table></div>
-<center>![HTTPS_Working](./img/HTTPS_Working.png){width=95%}</center>
-
+<p><img alt="HTTPS_Working" class="al95" src="../img/HTTPS_Working.png" /></p>
 <p>i en la sol·licitud probablement els navegadors no confiaran en el nostre certificat (haurem d'afegir una excepció de confiança):</p>
-<center>![Certificate](./img/Certificate.png){width=95%}</center>
-
+<p><img alt="Certificate" class="al95" src="../img/Certificate.png" /></p>
 <h2 id="2-spring-security">2. Spring Security</h2>
 <p>Spring Security és un projecte paraigua que agrupa tots els mecanismes referents a la seguretat. Necessitem afegir:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">XML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
@@ -3093,14 +3089,12 @@ Tot i que podem utilitzar <code>JWT</code> amb qualsevol tipus de mètode de com
 <li>Normalment, aquest ID de sessió s'envia a l'usuari com una <strong>cookie</strong>.</li>
 </ul>
 <p>Aquí tens el diagrama de com funciona l'autenticació basada en sessions.</p>
-<center>![authentication-and-authorization-in-expressjs-using-jwt-1](./img/authentication-and-authorization-in-expressjs-using-jwt-1.png){width=95%}</center>
-
+<p><img alt="authentication-and-authorization-in-expressjs-using-jwt-1" class="al95" src="../img/authentication-and-authorization-in-expressjs-using-jwt-1.png" /></p>
 <p>D'altra banda, amb JWT, quan el client envia una sol·licitud d'autenticació al servidor, aquest enviarà un <strong>token</strong> JSON al client, que inclou tota la informació sobre l'usuari juntament amb la resposta.</p>
 <p>El client enviarà aquest token amb <strong>totes</strong> les sol·licituds posteriors. Per tant, el servidor no haurà d'emmagatzemar cap informació sobre la sessió. Però hi ha un problema amb aquest enfocament. Qualsevol pot enviar una sol·licitud falsa amb un token JSON fals i fer-se passar per algú que no és.</p>
 <p>Per exemple, suposem que després de l'autenticació, el servidor retorna un objecte JSON al client amb el nom d'usuari i el temps d'expiració. Així, com que l'objecte JSON és llegible, qualsevol pot editar aquesta informació i enviar una sol·licitud amb ella. El problema és que no hi ha manera de validar aquesta sol·licitud.</p>
 <p>Aquí és on entra en joc la <strong>signatura testimoni</strong>. Així que en lloc d'enviar només un token JSON normal, el servidor enviarà un token signat, que pot verificar que la informació no ha canviat.</p>
-<center>![authentication-and-authorization-in-expressjs-using-jwt-2](./img/authentication-and-authorization-in-expressjs-using-jwt-2.png){width=95%}</center>
-
+<p><img alt="authentication-and-authorization-in-expressjs-using-jwt-2" class="al95" src="../img/authentication-and-authorization-in-expressjs-using-jwt-2.png" /></p>
 <h3 id="32-estructura-dun-jwt">3.2. Estructura d'un JWT</h3>
 <p>Parlem de l'estructura d'un JWT a través d'un token d'exemple:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="err">eyJhbGciOiJIUzI</span><span class="mi">1</span><span class="err">NiIsI</span><span class="kc">n</span><span class="err">R</span><span class="mi">5</span><span class="err">cCI</span><span class="mi">6</span><span class="err">IkpXVCJ</span><span class="mf">9.e</span><span class="err">yJzdWIiOiIxMjM</span><span class="mi">0</span><span class="err">NTY</span><span class="mi">3</span><span class="err">ODkwIiwibmF</span><span class="kc">t</span><span class="err">ZSI</span><span class="mi">6</span><span class="err">IkpvaG</span><span class="mi">4</span><span class="err">gRG</span><span class="mi">9</span><span class="err">lIiwiaWF</span><span class="mi">0</span><span class="err">IjoxNTE</span><span class="mi">2</span><span class="err">MjM</span><span class="mi">5</span><span class="err">MDIy</span><span class="kc">f</span><span class="err">Q.S</span><span class="kc">fl</span><span class="err">KxwRJSMeKKF</span><span class="mi">2</span><span class="err">QT</span><span class="mi">4</span><span class="kc">f</span><span class="err">wpMeJ</span><span class="kc">f</span><span class="mi">36</span><span class="err">POk</span><span class="mi">6</span><span class="err">yJV_adQssw</span><span class="mi">5</span><span class="err">c</span>
@@ -3139,8 +3133,7 @@ Tot i que podem utilitzar <code>JWT</code> amb qualsevol tipus de mètode de com
 <p>Totes aquestes propietats són els <strong>claims</strong> del token, la informació.</p>
 <p>La secció final és la signatura del token. Aquesta es genera fent un hash de la cadena creada amb les dues seccions anteriors i una contrasenya secreta, utilitzant l'algoritme esmentat a la secció del header.</p>
 <p>Podeu visitar <a href="https://www.javainuse.com/jwtgenerator">https://www.javainuse.com/jwtgenerator</a> i <a href="https://jwt.io">https://jwt.io</a> per generar tokens i provar amb diverses dades, secrets i hashes.</p>
-<center>![authentication-and-authorization-in-expressjs-using-jwt-3](./img/authentication-and-authorization-in-expressjs-using-jwt-3.png){width=95%}</center>
-
+<p><img alt="authentication-and-authorization-in-expressjs-using-jwt-3" src="../img/authentication-and-authorization-in-expressjs-using-jwt-3.png" />{.al95</p>
 <h3 id="33-jwt-library-class">3.3. JWT Library class</h3>
 <p>Afegirem al <code>pom.xml</code> les següents dependències:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">XML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
@@ -3564,8 +3557,7 @@ Tot i que podem utilitzar <code>JWT</code> amb qualsevol tipus de mètode de com
 <p>La resposta, com estudiarem més endavant, és emmagatzemar-lo, i després enviar-lo al servidor en cada sol·licitud com a mètode d'Autenticació i Autorització.</p>
 <h3 id="51-enviant-tokens">5.1. Enviant tokens</h3>
 <p>Per enviar un token, necessitem adjuntar-lo a la secció <code>Header</code>, creant un paràmetre <code>Authorization</code> amb el valor <code>Bearer token_recieved</code>, com podeu veure en aquesta captura de pantalla de Postman:</p>
-<center>![Send_JWT](./img/Send_JWT.png){width=95%}</center>
-
+<p><img alt="Send_JWT" class="al95" src="../img/Send_JWT.png" /></p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Recorda: la paraula <code>Bearer</code> més un <em>espai en blanc</em> més tot el token rebut (com a <code>String</code>)</p>
@@ -3685,8 +3677,7 @@ Tot i que podem utilitzar <code>JWT</code> amb qualsevol tipus de mètode de com
 </ul>
 <p>Finalment, afegim el filtre abans i el proveïdor d'autenticació.</p>
 <p>En una visió relaxada, per entendre-ho, els filtres es combinen amb anotacions que indiquen on i quan hem de comprovar l'Autenticació i l'Autorització.</p>
-<center>![FilterChain](./img/FilterChain.png){width=95%}</center>
-
+<p><img alt="FilterChain" class="al95" src="../img/FilterChain.png" />  </p>
 <h3 id="61-authtokenfilter">6.1. AuthTokenFilter</h3>
 <p>Aquesta classe conté el procés del token rebut dels clients. Ha d'implementar <code>OncePerRequestFilter</code> i sobreescriure <code>doFilterInternal()</code>.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1"> 1</a></span>

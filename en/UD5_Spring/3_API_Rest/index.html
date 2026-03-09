@@ -2572,8 +2572,7 @@
 
 <h2 id="1-spring-layers">1. Spring layers</h2>
 <p>We are learning about some design patterns that we are going to use in our application, and that are necessary to define a correct architecture in a Spring application. Therefore, the first thing we will do is define the layers of our application structure, and once we define it we will define new design patterns that we will integrate our app.</p>
-<center>![SpringLayers](./img/SpringLayers.png){width=95%}</center>
-
+<p><img alt="SpringLayers" class="al95" src="../../../UD5_Spring/img/SpringLayers.png" /></p>
 <p>The idea is to create a package structure that groups the classes into 6 main packages: package that contains the main class, web layer that contains the controllers, data access layer that contains the repository, service layer, data model layer and <em>dto</em> layer. All these are included, basically in 3: web, service and repository.</p>
 <p>The objective is that, with a well-defined and coupled architecture it is possible to use Dependency Injection, since it will facilitate communication and access between the different layers.</p>
 <h3 id="11-main-class">1.1. Main Class</h3>
@@ -2602,8 +2601,7 @@
 <p>It will contain the mappings of the database tables into classes that represent entities. The layer will be named <code>model</code>.</p>
 <h3 id="16-dto-layer">1.6. DTO layer</h3>
 <p>Controllers usually handle <code>DTO</code> instead of pojos or beans, due to the structure of the API or rendering in views. Therefore, we will need to implement a <em>two-way conversion between a pojo and a DTO</em> model. Later we will define, in the design patterns, what a DTO is and we will see the bidirectional conversion, called mapping. In addition, these DTO's will be in a separate layer called <code>dto</code>.</p>
-<center>![SpringLayers2](./img/SpringLayers2.png){width=65%}</center>
-
+<p><img alt="SpringLayers2" class="al66" src="../../../UD5_Spring/img/SpringLayers2.png" /></p>
 <h2 id="2-design-patterns">2. Design patterns</h2>
 <p>A design pattern is a proven solution that solves a specific type of design problem in software development. There are lots of design patterns that are divided into categories, for example: creation, structural, behavioral, interaction, etc.</p>
 <p>Why use design patterns?: They allow you to have the code well organized, readable and maintainable, it also allows you to reuse code and increases scalability in your project.</p>
@@ -2640,8 +2638,7 @@ In the example that we are going to design below, we will see how to implement t
 <p>Throughout this example we will make use of this pattern.</p>
 <h2 id="3-creating-the-project-and-configuring-hibernate">3. Creating the project and configuring Hibernate</h2>
 <p>In this section we are going to create a simple Hibernate program with Spring, to apply all we have studied in previous units with Spring. We only have to create a new project, selecting dependencies that we usually use:</p>
-<center>![SpringRest](./img/SpringRest.png){width=95%}</center>
-
+<p><img alt="SpringRest" class="al66" src="../../../UD5_Spring/img/SpringRest.png" /></p>
 <p>This will generate <code>pom.xml</code> with all we need</p>
 <p>We need to set the parameters that we set in <code>hibernate.cfg.xml</code> in <code>application.properties</code> file:
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
@@ -2700,8 +2697,7 @@ In the example that we are going to design below, we will see how to implement t
 </div>
 <h3 id="31-the-model">3.1. The model</h3>
 <p>Let's go to use this model to our practice:</p>
-<center>![DBModel](./img/DBModel.png){width=95%}</center>
-
+<p><img alt="DBModel" class="al95" src="../../../UD5_Spring/img/DBModel.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>You have a script to create full database linked <a href="../../../UD5_Spring/AD_UD5_Clientes.sql">here</a>. In this unit we do not implement about <code>Movimientos</code>.</p>
@@ -3237,8 +3233,7 @@ In the example that we are going to design below, we will see how to implement t
 <li>This client is returned to the client</li>
 </ul>
 <p>In this picture you can view data sent to API and returned value. Notice that <code>Cuentas</code> and <code>Direcciones</code> are not present in that data. We will see later how to add this additional data.</p>
-<center>![Post_Cliente](./img/Post_Cliente.png){width=95%}</center>
-
+<p><img alt="Post_Cliente" class="al95" src="../../../UD5_Spring/img/Post_Cliente.png" />x</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>There is a lot of validations to do in order to verify data integrity. <a href="https://www.baeldung.com/spring-boot-bean-validation">Here</a> you can find an article about ho to validate data recieved from client applications.</p>

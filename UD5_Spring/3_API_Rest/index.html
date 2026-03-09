@@ -2575,8 +2575,7 @@
 
 <h2 id="1-nivells-capes-de-spring">1. Nivells (capes) de Spring</h2>
 <p>Estem aprenent sobre alguns patrons de disseny que utilitzarem en la nostra aplicació, i que són necessaris per definir una arquitectura correcta en una aplicació Spring. Per tant, la primera cosa que farem és definir les capes de l'estructura de la nostra aplicació, i un cop les definim, definirem nous patrons de disseny que integrarem a la nostra aplicació.</p>
-<center>![SpringLayers](./img/SpringLayers.png){width=95%}</center>
-
+<p><img alt="SpringLayers" class="al95" src="../img/SpringLayers.png" /></p>
 <p>La idea és crear una estructura de paquets que agrupi les classes en 6 paquets principals: paquet que conté la classe principal, capa web que conté els controladors, capa d'accés a dades que conté el repositori, capa de servei, capa de model de dades i capa <em>dto</em>. Tots aquests estan inclosos, bàsicament en 3: web, servei i repositori.</p>
 <p>L'objectiu és que, amb una arquitectura ben definida i acoblada, sigui possible utilitzar la Injecció de Dependències, ja que facilitarà la comunicació i l'accés entre les diferents capes.</p>
 <h3 id="11-classe-main">1.1. Classe Main</h3>
@@ -2605,8 +2604,7 @@
 <p>Contindrà els mapatges de les taules de la base de dades en classes que representen entitats. La capa es dirà <code>model</code>.</p>
 <h3 id="16-capa-dto">1.6. Capa DTO</h3>
 <p>Els controladors normalment gestionen <code>DTO</code> en lloc de pojos o beans, a causa de l'estructura de l'API o la representació en vistes. Per tant, necessitarem implementar una <em>conversió bidireccional entre un pojo i un model DTO</em>. Més endavant definirem, en els patrons de disseny, què és un DTO i veurem la conversió bidireccional, anomenada mapatge. A més, aquests DTO estaran en una capa separada anomenada <code>dto</code>.</p>
-<center>![SpringLayers2](./img/SpringLayers2.png){width=65%}</center>
-
+<p><img alt="SpringLayers2" class="al66" src="../img/SpringLayers2.png" /></p>
 <h2 id="2-patrons-de-disseny">2. Patrons de Disseny</h2>
 <p>Un patró de disseny és una solució provada que resol un tipus específic de problema de disseny en el desenvolupament de programari. Hi ha molts patrons de disseny que es divideixen en categories, per exemple: creació, estructural, comportamental, interacció, etc.</p>
 <p>Per què utilitzar patrons de disseny?: Permeten tenir el codi ben organitzat, llegible i mantenible, també permeten reutilitzar codi i augmenten l'escalabilitat en el teu projecte.</p>
@@ -2641,8 +2639,7 @@
 <p>Al llarg d'aquest exemple farem ús d'aquest patró.</p>
 <h2 id="3-creacio-del-projecte-i-configuracio-de-hibernate">3. Creació del projecte i configuració de Hibernate</h2>
 <p>En aquesta secció crearem un programa senzill de Hibernate amb Spring, per aplicar tot el que hem estudiat en unitats anteriors amb Spring. Només hem de crear un nou projecte, seleccionant les dependències que normalment utilitzem:</p>
-<center>![SpringRest](./img/SpringRest.png){width=95%}</center>
-
+<p><img alt="SpringRest" src="../img/SpringRest.png" />{.al95</p>
 <p>Això generarà un <code>pom.xml</code> amb tot el que necessitem.</p>
 <p>Necessitem establir els paràmetres que vam establir a <code>hibernate.cfg.xml</code> al fitxer <code>application.properties</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
@@ -2701,8 +2698,7 @@
 </div>
 <h3 id="31-el-model">3.1. El model.</h3>
 <p>Anem a utilitzar aquest model per a la nostra pràctica:</p>
-<center>![DBModel](./img/DBModel.png){width=95%}</center>
-
+<p><img alt="DBModel" class="al95" src="../img/DBModel.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Advertència</p>
 <p>Tens un script per crear la base de dades completa enllaçat <a href="../AD_UD5_Clientes.sql">ací</a>. En aquesta unitat no implementem sobre <code>Movimientos</code>.</p>
@@ -3242,8 +3238,7 @@
 <li>Aquest client es retorna al client.</li>
 </ul>
 <p>En aquesta imatge pots veure les dades enviades a l'API i el valor retornat. Tingues en compte que <code>Cuentas</code> i <code>Direcciones</code> no estan presents en aquestes dades. Veurem més endavant com afegir aquestes dades addicionals.</p>
-<center>![Post_Cliente](./img/Post_Cliente.png){width=95%}</center>
-
+<p><img alt="Post_Cliente" class="al95" src="../img/Post_Cliente.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Advertència</p>
 <p>Hi ha moltes validacions a fer per verificar la integritat de les dades. <a href="https://www.baeldung.com/spring-boot-bean-validation">Aquí</a> pots trobar un article sobre com validar les dades rebudes de les aplicacions client.</p>

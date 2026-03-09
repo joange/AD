@@ -2580,8 +2580,7 @@
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>-storetype<span class="w"> </span>PKCS12<span class="w"> </span>-keystore<span class="w"> </span>jgce.p12<span class="w"> </span>-validity<span class="w"> </span><span class="m">3650</span>
 </code></pre></div></td></tr></table></div>
 <p>After running this command, we must answer about who we are, as follows:</p>
-<center>![keytool](./img/keytool.png){width=95%}</center>
-
+<p><img alt="keytool" class="al95" src="../../../UD5_Spring/img/keytool.png" /></p>
 <h3 id="12-configure-spring">1.2. Configure Spring</h3>
 <p>Once the process has finished, we must add the certificate inside our project. For instance inside <code>/resources/keystore</code>. Finally, we must load the certificate and enable SSL, simply adding this lines on <code>application.properties</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
@@ -2606,16 +2605,13 @@
 <a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="c1"># Use HTTPS instead of HTTP</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11"></a>server.ssl.enabled<span class="o">=</span><span class="nb">true</span>
 </code></pre></div></td></tr></table></div>
-<center>![HTTPS_Spring_Project](./img/HTTPS_Spring_Project.png){width=95%}</center>
-
+<p><img alt="HTTPS_Spring_Project" class="a95" src="../../../UD5_Spring/img/HTTPS_Spring_Project.png" /></p>
 <p>And it is all, when Spring starts we will see that is working with <code>https</code> protocol:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="m">2023</span>-01-13<span class="w"> </span><span class="m">08</span>:29:37.267<span class="w">  </span>INFO<span class="w"> </span><span class="m">83291</span><span class="w"> </span>---<span class="w"> </span><span class="o">[</span><span class="w">           </span>main<span class="o">]</span><span class="w"> </span>o.s.b.w.embedded.tomcat.TomcatWebServer<span class="w">  </span>:<span class="w"> </span>Tomcat<span class="w"> </span>initialized<span class="w"> </span>with<span class="w"> </span>port<span class="o">(</span>s<span class="o">)</span>:<span class="w"> </span><span class="m">9091</span><span class="w"> </span><span class="o">(</span>https<span class="o">)</span>
 </code></pre></div></td></tr></table></div>
-<center>![HTTPS_Working](./img/HTTPS_Working.png){width=95%}</center>
-
+<p><img alt="HTTPS_Working" class="al95" src="../../../UD5_Spring/img/HTTPS_Working.png" /></p>
 <p>and in the request probably browsers will not trust with our certificate (we must add a confidence exception):</p>
-<center>![Certificate](./img/Certificate.png){width=95%}</center>
-
+<p><img alt="Certificate" class="al95" src="../../../UD5_Spring/img/Certificate.png" /></p>
 <h2 id="2-spring-security">2. Spring Security</h2>
 <p>Spring Security is an umbrella project that group all mechanisms referent to security. We need to add:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">XML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
@@ -3090,18 +3086,15 @@ Although we can use <code>JWT</code> with any kind of communication method, nowa
 <li>Normally, this session ID is sent to the user as a <strong>cookie</strong>.</li>
 </ul>
 <p>Here is the diagram of how session-based authentication works.</p>
-<center>![authentication-and-authorization-in-expressjs-using-jwt-1](./img/authentication-and-authorization-in-expressjs-using-jwt-1.png){width=95%}</center>
-
+<p><img alt="authentication-and-authorization-in-expressjs-using-jwt-1" class="al95" src="../../../UD5_Spring/img/authentication-and-authorization-in-expressjs-using-jwt-1.png" /></p>
 <p>On the other hand, with JWT, when the client sends an authentication request to the server, it will send a <strong>token</strong> (<em>token</em>) JSON to the client, which includes all the information about the user along with the response.</p>
 <p>The client will submit this token with <strong>all</strong> subsequent requests. Therefore, the server will not have to store any information about the session. But there is a problem with this approach. Anyone can send a fake request with a fake JSON token and pretend to be someone they're not.</p>
 <p>For example, let's say that after authentication, the server returns a JSON object to the client with the username and expiration time. So, since the JSON object is readable, anyone can edit this information and submit a request for it. The problem is that there is no way to validate this request.</p>
 <p>This is where the <strong>witness signature</strong> comes in. So instead of just sending a normal JSON token, the server will send a signed token, which can verify that the information doesn't change.</p>
-<center>![authentication-and-authorization-in-expressjs-using-jwt-2](./img/authentication-and-authorization-in-expressjs-using-jwt-2.png){width=95%}</center>
-
+<p><img alt="authentication-and-authorization-in-expressjs-using-jwt-2" class="al95" src="../../../UD5_Spring/img/authentication-and-authorization-in-expressjs-using-jwt-2.png" /></p>
 <h3 id="32-structure-of-jwt">3.2. Structure of JWT</h3>
 <p>Let's talk about the structure of a JWT through a sample token:</p>
-<center>![authentication-and-authorization-in-expressjs-using-jwt-3](./img/authentication-and-authorization-in-expressjs-using-jwt-3.png){width=95%}</center>
-
+<p><img alt="authentication-and-authorization-in-expressjs-using-jwt-3" class="al95" src="../../../UD5_Spring/img/authentication-and-authorization-in-expressjs-using-jwt-3.png" /></p>
 <p>As you can see, there are three sections to this JWT, each separated by a dot.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3559,8 +3552,7 @@ Although we can use <code>JWT</code> with any kind of communication method, nowa
 <p>The answer, as we will study later is store it, and then send to the server in each request as Authorization and Authentication method.</p>
 <h3 id="51-sending-tokens">5.1. Sending tokens</h3>
 <p>To send a token, we need to attach it in the <code>Header</code> section, creating an <code>Authorization</code> parameter with value <code>Bearer token_recieved</code>, as you can see on this Postman screenshot:</p>
-<center>![Send_JWT](./img/Send_JWT.png){width=95%}</center>
-
+<p><img alt="Send_JWT" class="al95" src="../../../UD5_Spring/img/Send_JWT.png" /></p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Remember: word <code>Bearer</code> plus <em>white space</em> plus the whole token recieved (as String)</p>
@@ -3680,8 +3672,7 @@ Although we can use <code>JWT</code> with any kind of communication method, nowa
 </ul>
 <p>Finaly we add the before filter and the authenticationprovider. </p>
 <p>In a relaxed view, to understand it, filters are combined with anotations that where and when we have to check Authentication and Authorization.</p>
-<center>![FilterChain](./img/FilterChain.png){width=95%}</center>
-
+<p><img alt="FilterChain" class="al95" src="../../../UD5_Spring/img/FilterChain.png" /></p>
 <h3 id="61-authtokenfilter">6.1. AuthTokenFilter</h3>
 <p>This class contains the process of the token received from clients. It must implement <code>OncePerRequestFilter</code> and override <code>doFilterInternal()</code>. </p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1"> 1</a></span>
