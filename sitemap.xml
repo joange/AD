@@ -57,6 +57,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/Practiques/APAC3/"/>
     </url>
     <url>
+        <loc>NonePractiques/APAC4/</loc>
+        <lastmod>2026-04-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ca" href="NonePractiques/APAC4/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Practiques/APAC4/"/>
+    </url>
+    <url>
         <loc>NoneUD1_Files/1_File_System/</loc>
         <lastmod>2026-04-21</lastmod>
         <changefreq>daily</changefreq>
@@ -384,6 +391,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/Practiques/APAC3/"/>
         <xhtml:link rel="alternate" hreflang="ca" href="NonePractiques/APAC3/"/>
+    </url>
+    <url>
+        <loc>Noneen/Practiques/APAC4/</loc>
+        <lastmod>2026-04-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/Practiques/APAC4/"/>
+        <xhtml:link rel="alternate" hreflang="ca" href="NonePractiques/APAC4/"/>
     </url>
     <url>
         <loc>Noneen/UD1_Files/00_Exercises/</loc>

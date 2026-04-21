@@ -9,12 +9,16 @@
       
       
       
+        <link rel="prev" href="../APAC3/">
+      
+      
+        <link rel="next" href="../../license/">
       
       
         
           <link rel="alternate" href="./" hreflang="en">
         
-          <link rel="alternate" href="../../../Practiques/APAC2_old/" hreflang="ca">
+          <link rel="alternate" href="../../../Practiques/APAC4/" hreflang="ca">
         
       
       
@@ -23,7 +27,7 @@
     
     
       
-        <title>1. Overview - Accés a Dades. IES Jaume II El Just</title>
+        <title>API REST amb Spring Boot - Accés a Dades. IES Jaume II El Just</title>
       
     
     
@@ -76,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-overview" class="md-skip">
+        <a href="#1-el-model-de-dades" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1. Overview
+              API REST amb Spring Boot
             
           </span>
         </div>
@@ -164,7 +168,7 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../../Practiques/APAC2_old/" hreflang="ca" class="md-select__link">
+            <a href="../../../Practiques/APAC4/" hreflang="ca" class="md-select__link">
               Valencià
             </a>
           </li>
@@ -231,6 +235,8 @@
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -1733,18 +1739,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -1765,7 +1773,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1870,10 +1878,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../APAC4/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1892,6 +1909,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1939,7 +1957,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1950,36 +1970,6 @@
   
     
   
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#11-server-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1. Server Mode
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#12-database-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2. Database Mode
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1993,125 +1983,44 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
 
 
 
-<h1 id="1-overview">1. Overview</h1>
-<p>Let's go to create a DBMS client, like MySQL workbench, but in a console version with a shell and a prompt. Our client allows us to connect to a server, select a database and finally throws several SQL queries.</p>
-<h2 id="11-server-mode">1.1. Server Mode</h2>
-<p>When starting our program, it will ask for server's data</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>gradle<span class="w"> </span>run<span class="w"> </span>--console<span class="w"> </span>plain
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>...
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>$<span class="w"> </span>Server:<span class="w"> </span><span class="m">127</span>.0.0.1
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>$<span class="w"> </span>Port:<span class="w"> </span><span class="m">3308</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>$<span class="w"> </span>Username:<span class="w"> </span>root
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>$<span class="w"> </span>Password:
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>$<span class="w"> </span><span class="o">(</span>root<span class="o">)</span><span class="w"> </span>on<span class="w"> </span><span class="m">127</span>.0.0.1:3308&gt;
-</code></pre></div></td></tr></table></div>
-<p>As you can see on last line, prompt is <code>(user) on IP:port&gt;</code>. Our client show where we are connected always.</p>
-<p>List of order tha will be accepted by or client when connected are (<strong>server mode</strong>):</p>
-<ul>
-<li><code>show databases</code> or <code>sh db</code> <span class="arithmatex">\(\rightarrow\)</span> show a list with all databases in our DBMS.</li>
-<li><code>info</code> <span class="arithmatex">\(\rightarrow\)</span> show information abaut DBMS and connection settings.</li>
-<li><code>import script_name</code> <span class="arithmatex">\(\rightarrow\)</span> Allow to load a sql scrip from a file.</li>
-<li><code>use db_name</code> <span class="arithmatex">\(\rightarrow\)</span> change our program to database mode.</li>
-<li><code>quit</code> <span class="arithmatex">\(\rightarrow\)</span> finish our program.</li>
-</ul>
-<h2 id="12-database-mode">1.2. Database Mode</h2>
-<p>Once we are connected to a server, and selected a database, our client will enter in database mode:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>$<span class="w"> </span><span class="o">(</span>root<span class="o">)</span><span class="w"> </span>on<span class="w"> </span><span class="m">127</span>.0.0.1:3308&gt;use<span class="w"> </span>Ciclismo
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>$<span class="w"> </span><span class="o">(</span>root<span class="o">)</span><span class="w"> </span>on<span class="w"> </span><span class="m">127</span>.0.0.1:3308<span class="o">[</span>Ciclismo<span class="o">]</span>&gt;
-</code></pre></div></td></tr></table></div>
-<p>you can view that database name is added to the prompt, and now the program is waiting for commands to the database. You must implement these orders :</p>
-<ul>
-<li><code>sh tables</code> <span class="arithmatex">\(\rightarrow\)</span> show all tables on selected database.</li>
-<li><code>describe table_name</code> <span class="arithmatex">\(\rightarrow\)</span> show description of this table: fields, data types and primary keys at least.</li>
-<li><code>insert Nom_de_la_Taula</code> <span class="arithmatex">\(\rightarrow\)</span>  on an interactive way, ask to the user for each field value, and insert a new row.</li>
-<li><code>sql</code> <span class="arithmatex">\(\rightarrow\)</span> It runs whatever query on selected database.</li>
-<li><code>quit</code> <span class="arithmatex">\(\rightarrow\)</span> returns to DBMS mode.</li>
-</ul>
-<h1 id="2-project-structure-and-tips">2. Project structure and tips</h1>
-<p>The project contains theses classes:</p>
-<p><img alt="CEPA2" class="al75" src="../../../Practiques/CEPA2.png" /></p>
-<p>Let's go to revise the class functions</p>
-<h2 id="21-servermanager">2.1. ServerManager</h2>
-<p>It contains main, and when starting, ask the user for the server information. Then, it starts <code>ConnectionManager</code> class with the given values.</p>
-<h2 id="22-connectionmanager">2.2. ConnectionManager</h2>
-<p>It manages the main program shell, and has as attributes:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">String</span><span class="w"> </span><span class="n">server</span><span class="p">;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">String</span><span class="w"> </span><span class="n">port</span><span class="p">;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">String</span><span class="w"> </span><span class="n">user</span><span class="p">;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">String</span><span class="w"> </span><span class="n">pass</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
-<p>and as methods:</p>
-<ul>
-<li><code>ConnectionManager()</code> <span class="arithmatex">\(\rightarrow\)</span> default const.</li>
-<li><code>ConnectionManager(String server, String port, String user, String pass)</code> <span class="arithmatex">\(\rightarrow\)</span> general const.</li>
-<li><code>public Connection connectDBMS()</code> <span class="arithmatex">\(\rightarrow\)</span> starts and returns a connection.</li>
-<li><code>public void showInfo()</code> <span class="arithmatex">\(\rightarrow\)</span>  show server's information.</li>
-<li><code>public void showDatabases()</code> <span class="arithmatex">\(\rightarrow\)</span> show server's tables.</li>
-<li><code>public void importScript(String script)</code> <span class="arithmatex">\(\rightarrow\)</span> loads and run a script.</li>
-<li><code>public void startShell()</code> <span class="arithmatex">\(\rightarrow\)</span> inits the server's mode shell. This shell is almost implemented.</li>
-</ul>
-<h2 id="23-databasemanager">2.3. DatabaseManager</h2>
-<p>It manage the database mode shell, and need an extra attribute than Connection manager:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">String</span><span class="w"> </span><span class="n">server</span><span class="p">;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">String</span><span class="w"> </span><span class="n">port</span><span class="p">;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">String</span><span class="w"> </span><span class="n">user</span><span class="p">;</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">String</span><span class="w"> </span><span class="n">pass</span><span class="p">;</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">String</span><span class="w"> </span><span class="n">dbname</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
-<p>and as methods:</p>
-<ul>
-<li><code>DatabaseManager()</code> <span class="arithmatex">\(\rightarrow\)</span> default const.</li>
-<li><code>DatabaseManager(String server, String port, String user, String pass,String dbname)</code> <span class="arithmatex">\(\rightarrow\)</span> general const.</li>
-<li><code>public Connection connectDatabase()</code> <span class="arithmatex">\(\rightarrow\)</span> starts and returns a connection to the current database.</li>
-<li><code>public void insertIntoTable(String table)</code> <span class="arithmatex">\(\rightarrow\)</span> starts the insertion assistant to the given table.</li>
-<li><code>public void showDescTable(String table)</code> <span class="arithmatex">\(\rightarrow\)</span> show table metadata.</li>
-<li><code>public void executeSelect(String query)</code> <span class="arithmatex">\(\rightarrow\)</span> run a given query (of any type) and show results on screen, if any.</li>
-<li><code>public void startShell()</code> <span class="arithmatex">\(\rightarrow\)</span> inits the database's mode shell. You have to do a full implementation.</li>
-</ul>
-<h1 id="3-tables-insertions">3. Table's insertions.</h1>
-<p>The <code>insertIntoTable</code> is probably the hardest method in the task, due to need to ask for table metadata first, in order to know the table fields and data types, and then ask to the user for the values and formats.</p>
-<p>The advice that will be given is to set three list with:</p>
-<ol>
-<li>Fields list that need to insert</li>
-<li>Values list to we are going to set</li>
-<li>Types list of each field</li>
-</ol>
-<p>Furthermore, you need to generate a placeholders list or String, with so many <code>?</code> as you need.</p>
-<div class="admonition tip">
-<p class="admonition-title">Advice</p>
-<p>Remember that asking for table metadata, the columns that you need are:</p>
-<ul>
-<li>Column 4 : column name</li>
-<li>Column 6: column data type</li>
-<li>Column 18 nullable or not. This field is mandatory if were not null.</li>
-<li>Column 23: incremental or not. You don't need this field, if were incremental.</li>
-</ul>
-<p>And last, a fine tunning is placeholders assignation, because it depends of data type. Take into account that:</p>
-<ul>
-<li>If data type is <code>INT</code>, we will use <code>setInt</code>.</li>
-<li>If data type is <code>DATETIME</code>, we will use <code>setDate</code> with a casting to <code>java.sql.Data</code> (not <code>java.Date</code>).</li>
-<li>For a default or very specific type, you could setString, and hope that casts works properly.</li>
-</ul>
+
+<div class="admonition info">
+<p class="admonition-title">Notes sobre l'enunciat i pràctica</p>
+<p>Aquesta pràctica continua com a '<strong>enunciat obert</strong>. Has de crear la teua pròpia tasca, amb certes limitacions, com comprendràs. </p>
+<p>Has de fer una API REST amb <code>Spring Boot</code> que faça el <strong>manteniment d'una base de dades</strong> a la teua elecció: podràs crear-la de zero o escollir-ne alguna que conegues o cercar a internet. Aquesta base de dades ha de ser la mateixa que has creat a l'APAC3, però si vols, pots crear una nova base de dades amb les mateixes característiques i limitacions que l'anterior.</p>
 </div>
-<p>© Joan Gerard Camarena, October-2022</p>
-<p>© Last revision, October-2024</p>
+<h1 id="1-el-model-de-dades">1. El model de dades</h1>
+<p>En principi tot aquest apartat ja el deus de tindre fet a l'APAC3. Has d'afegir ací les classes annotades amb <code>JPA</code>.</p>
+<h1 id="2-el-dto">2. El DTO</h1>
+<p>Has de crear classe DTO (Data Transfer Object) per a cada entitat de la teua base de dades. Aquestes classes seran les que s'utilitzaran per a transferir dades entre el client i el servidor. </p>
+<p>Per a simplificar les tasques, pots aplanar les relacions participants, de manera que per exemple:</p>
+<ul>
+<li>Si tens una entitat <code>Autor</code> que té una relació <code>1:M</code> amb l'entitat <code>Llibre</code>, el teu <code>AutorDTO</code> pot tindre un atribut <code>List&lt;String&gt; llibres</code> que continga els títols dels llibres d'eixe autor. </li>
+<li>Al llibreDTO, no cal que aparega l'autor, però si vols, pots posar un atribut <code>String autor</code> que continga el nom de l'autor d'eixe llibre o l'identificador de l'autor.</li>
+</ul>
+<p>Pots crear aquest objectes desde constructors a partir de les entitats, o mitjançant mètodes <code>static</code> a cada DTO, o mitjançant un <code>Mapper</code> (revisa les novetats dels apunts)</p>
+<h1 id="3-el-repositori">3. El Repositori</h1>
+<p>Crea per a cada entitat un repositori que estenga de <code>JpaRepository</code> amb les operacions bàsiques de CRUD. A més, has de crear algunes consultes personalitzades per a les consultes que has fet a l'APAC3. </p>
+<p>Pots reaprofitar els Queries que vas fer, i moure'ls de les classes al repositori. </p>
+<p>També pots crear noves consultes amb Query Methods.</p>
+<h1 id="4-el-servici">4. El Servici</h1>
+<p>Crea un servei per a cada entitat que utilitze els repositoris per a realitzar les operacions de CRUD i les consultes personalitzades. Aquest servei serà el que utilitzarà el controlador per a gestionar les peticions.</p>
+<p>Encarregat ací de la lògica de negoci i de tot el control d'errors.</p>
+<h1 id="5-el-controlador">5. El Controlador</h1>
+<p>Finalment, crea un controlador per a cada entitat que gestione les peticions HTTP i utilitze els serveis per a realitzar les operacions necessàries.</p>
+<h1 id="6-apartats-opcionals-dampliacio">6. Apartats opcionals d'ampliació</h1>
+<h2 id="61-opcional-1-hateoas">6.1. Opcional 1. HATEOAS</h2>
+<p>Afig una capa entra afegint la funcionalitat HATEOAS a la teua API REST. Aquesta capa permetrà que les respostes de la teua API incloguen enllaços a altres recursos relacionats, facilitant la navegació i l'ús de la teua API.</p>
+<h2 id="62-opcional-2-seguretat-amb-spring-security-i-jwt">6.2. Opcional 2. Seguretat amb Spring Security i JWT</h2>
+<p>Afig una capa extra de seguretat amb <code>Spring Security</code> per a protegir les teues rutes, mitjançant tokens JWT. Pots seguir l'exemple dels apunts</p>
+<h2 id="63-opcional-3-documentacio-amb-swagger-o-openapi">6.3. Opcional 3. Documentació amb Swagger o OpenAPI</h2>
+<p>Afig la opció de documentació amb <code>Swagger</code> o <code>OpenAPI</code> per a documentar la teua API REST de manera clara i accessible.</p>
+<h1 id="7-entregues-i-format-dentrega">7. Entregues i format d'entrega.</h1>
+<p>Penja el link al teu repositori de GitHub amb el projecte complet, i una imatge de l'estructura de la teua base de dades.</p>
 
 
 
@@ -2119,8 +2028,13 @@
 
 
 
+  
+  
 
 
+
+
+  
 
 
 
